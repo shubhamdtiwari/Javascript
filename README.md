@@ -9,7 +9,7 @@ Welcome to my **JavaScript learning repository**! This is where I’m building m
 Hi! I'm **SHUBHAM TIWARI**, a B.Tech student at **Technocrats Institute of Technology (CSE branch)**, graduating in **2028**. As my background is in Computer Science and Engineering, I’m deeply passionate about **software development** and welling to actively participate into the tech world.
 
 I’m currently learning:
-- 📌 **Java + DSA** (GeeksforGeeks, Self-paced)
+- 📌 **Java + DSA** (Self-paced ,GeeksforGeeks)
 - 🌐 **Web Development** (HTML, CSS, JavaScript, React)
 - ⚙️ **Backend Development** (Node.js, Express, MongoDB – in progress)
 
