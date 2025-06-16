@@ -82,7 +82,7 @@ If you have suggestions, ideas, or want to collaborate on mini-projects, feel fr
 
 ---
 
-> **"Learning to code isn’t just about syntax. It’s about solving problems, creating value, and building the future—one line at a time."**
+> **"Learning to code isn’t just about syntax.It's a way to talk to machines and also solving problems, creating value, and building the future—one line at a time."**
 
 ---
 
