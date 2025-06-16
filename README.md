@@ -4,9 +4,9 @@ Welcome to my **JavaScript learning repository**! This is where I’m building m
 
 ---
 
-## 👩‍💻 About Me
+## 👩‍💻 About Me🤵
 
-Hi! I'm **SHUBHAM TIWARI**, a B.Tech student at **Technocrats Institute of Technology (CSE branch)**, graduating in **2028**. As my background is in Computer Science and Engineering, I’m deeply passionate about **software development** and welling to actively participate into the tech world.
+Hi There! I'm **SHUBHAM TIWARI**, a B.Tech student at **Technocrats Institute of Technology (CSE branch)**, graduating in **2028**. As my background is in Computer Science and Engineering, I’m deeply passionate about **software development** and welling to actively participate into the tech world.
 
 I’m currently learning:
 - 📌 **Java + DSA** (Self-paced ,GeeksforGeeks)
