@@ -53,3 +53,9 @@ console.log(typeof dob);
 console.log(age);
 
 
+const now = 2037;
+const ageShubham = now - 2006;
+const ageShub = now - 2007;
+console.log(ageShubham, ageShub);
+
+
