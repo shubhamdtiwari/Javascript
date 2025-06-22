@@ -1,4 +1,4 @@
-/* let js = 'amazing';
+ let js = 'amazing';
 
 console.log(10 + 26 + 30 - 20);
 console.log("Shubham");
