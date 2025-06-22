@@ -113,7 +113,7 @@ const avgPop = 33000000;
 console.log(avgPop > indPop);
 // 5.
 var description = 'Portugal is in Europe and its 11 millon people speak portuguese';
-console.log(description); */
+console.log(description); 
 
 // Coding challenge #1
 // BMI = mass / height ** 2 = mass / (height * height)
@@ -130,4 +130,8 @@ const markHigherBMI = BMImark > BMIJohn
 console.log(BMImark);
 console.log(BMIJohn);
 console.log(markHigherBMI);
-console.log(BMIJohn, BMImark);
+console.log(BMIJohn, BMImark); */
+
+const firstName = 'Shubham';
+const job = 'teacher';
+const birthYear = '2006'
