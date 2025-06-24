@@ -58,7 +58,7 @@ const ageShub = now - 2007;
 console.log(ageShubham, ageShub);
 
 console.log(ageShubham * 2, ageShub / 10, 2 ** 3);
-// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2 
+// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
 
 const firstName = "Shubham";
 const lastName = "Tiwari";
@@ -73,7 +73,7 @@ x *= 4; // x = x * 4 = 100
 x++; // x = x + 1
 x--; // x = x - 1
 x--;
-console.log(x); 
+console.log(x);
 const now = 2037;
 const ageShubham = now - 1991;
 const ageShub = now - 2013;
@@ -92,7 +92,7 @@ x = y = 25 - 10 - 5;
 console.log(x, y);
 
 let avgAge = (ageShubham + ageShub) / 2;
-console.log(avgAge); 
+console.log(avgAge);
 
 // Asignment lecture: Basic Opertors
 // 1.
@@ -103,7 +103,7 @@ console.log(halfPop);
 //2.
 const newPop = indPop + 1;
 console.log(newPop);
-// 3. 
+// 3.
 const PopFinland = 6000000;
 console.log(indPop > PopFinland);
 
@@ -113,7 +113,7 @@ const avgPop = 33000000;
 console.log(avgPop > indPop);
 // 5.
 var description = 'Portugal is in Europe and its 11 millon people speak portuguese';
-console.log(description); 
+console.log(description);
 
 // Coding challenge #1
 // BMI = mass / height ** 2 = mass / (height * height)
@@ -130,7 +130,7 @@ const markHigherBMI = BMImark > BMIJohn
 console.log(BMImark);
 console.log(BMIJohn);
 console.log(markHigherBMI);
-console.log(BMIJohn, BMImark); */
+console.log(BMIJohn, BMImark);
 
 const firstName = 'Shubham';
 const job = 'teacher';
@@ -152,4 +152,14 @@ lines');
 
 console.log(`My name
 is
-Shubham`)
+Shubham`) */
+
+//Assigment lec 12
+const city = 'Protugal';
+const continent = 'Europe';
+const population = '11 millions';
+const lan = 'protuguese';
+
+const description = `${city} is in ${continent}, and its ${population} people speak ${lan}`
+
+console.log(description);
