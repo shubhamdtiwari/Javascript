@@ -164,5 +164,12 @@ const description = `${city} is in ${continent}, and its ${population} people sp
 
 console.log(description); */
 
-const age = 18;
-const isOld
+const age = 20;
+
+
+if (age >= 17) {
+    console.log("ujjwal can start driving license🚗");
+} else {
+    const yearsleft = 18 - age;
+    console.log(``)
+}
