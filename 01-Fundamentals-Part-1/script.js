@@ -173,3 +173,5 @@ if (age >= 17) {
     const yearsleft = 18 - age;
     console.log(`Ujjwal is too young. Wait another ${yearsleft} years :)`);
 }
+
+const birthyear = 1991;
