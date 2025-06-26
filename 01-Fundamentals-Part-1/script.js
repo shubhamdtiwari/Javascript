@@ -1,4 +1,4 @@
-/* let js = 'amazing';
+/*let js = 'amazing';
 
 console.log(10 + 26 + 30 - 20);
 console.log("Shubham");
@@ -152,7 +152,7 @@ lines');
 
 console.log(`My name
 is
-Shubham`) */
+Shubham`) 
 
 //Assigment lec 12
 const city = 'Protugal';
@@ -162,4 +162,7 @@ const lan = 'protuguese';
 
 const description = `${city} is in ${continent}, and its ${population} people speak ${lan}`
 
-console.log(description);
+console.log(description); */
+
+const age = 18;
+const isOld
