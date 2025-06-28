@@ -152,7 +152,7 @@ lines');
 
 console.log(`My name
 is
-Shubham`) 
+Shubham`)
 
 //Assigment lec 12
 const city = 'Protugal';
@@ -162,7 +162,7 @@ const lan = 'protuguese';
 
 const description = `${city} is in ${continent}, and its ${population} people speak ${lan}`
 
-console.log(description); */
+console.log(description);
 
 const age = 15;
 
@@ -174,10 +174,20 @@ if (age >= 17) {
     console.log(`Ujjwal is too young. Wait another ${yearsleft} years :)`);
 }
 
-const birthyear = 1991;
+const birthyear = 2004;
+
+let century;
 
 if (birthyear <= 2000) {
-    let century = 20;
+    century = 20;
 } else {
-    let century = 21;
+    century = 21;
 }
+console.log(century); 
+//Assingment :- lec 13
+let population = 13000000;
+if (population >= 33000000) {
+    console.log("Portugal's population is above average")
+} else {
+    console.log("Portugal's population is below average")
+} */
