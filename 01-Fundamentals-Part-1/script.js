@@ -192,3 +192,21 @@ if (population >= 33000000) {
     console.log("Portugal's population is below average")
 } */
 //coading challange 2
+const markMass = 95;
+const markHeight = 1.88;
+const johnMass = 85;
+const johnHeight = 1.76;
+
+const BMImark = markMass / markHeight ** 2;
+
+const BMIJohn = johnMass / johnHeight ** 2;
+console.log(BMIJohn, BMImark);
+if (BMIJohn > BMImark) {
+    console.log("John's BMI is higher than Mark's");
+} else {
+    console.log("Mark's BMI is higher than John's");
+}
+
+if (BMIJohn > BMImark) {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMImark})`);
+}
