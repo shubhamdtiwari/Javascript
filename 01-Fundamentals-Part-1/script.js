@@ -183,7 +183,7 @@ if (birthyear <= 2000) {
 } else {
     century = 21;
 }
-console.log(century); 
+console.log(century);
 //Assingment :- lec 13
 let population = 13000000;
 if (population >= 33000000) {
@@ -191,3 +191,4 @@ if (population >= 33000000) {
 } else {
     console.log("Portugal's population is below average")
 } */
+//coading challange 2
