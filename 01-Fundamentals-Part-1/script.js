@@ -190,7 +190,7 @@ if (population >= 33000000) {
     console.log("Portugal's population is above average")
 } else {
     console.log("Portugal's population is below average")
-} 
+}
 //coading challange 2
 const markMass = 95;
 const markHeight = 1.88;
@@ -209,7 +209,7 @@ if (BMIJohn > BMImark) {
 
 if (BMIJohn > BMImark) {
     console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMImark})`);
-} */
+}
 
 // type conversion
 const inputYear = '1991'; // here this is string
@@ -228,4 +228,14 @@ console.log('23' / '2');
 let n = '1' + 1; //11
 n = n - 1;
 console.log(n);
+
+//Assingnment :- lec 15
+console.log('9' - '5');
+console.log('19' - '13' + '17');
+console.log('19' - '13' + 17);
+console.log('123' < 57);
+console.log(5 + 6 + '4' + 9 - 4 - 2); */
+
+//lec :- 16
+
 
