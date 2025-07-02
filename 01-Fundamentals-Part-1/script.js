@@ -238,4 +238,11 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); */
 
 //lec :- 16
 
+//5 falsy value ; 0 , '',undefined ,null , NaN.
 
+console.log();
+console.log();
+console.log();
+console.log();
+console.log();
+console.log();
