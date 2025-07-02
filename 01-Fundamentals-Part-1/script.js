@@ -240,9 +240,9 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); */
 
 //5 falsy value ; 0 , '',undefined ,null , NaN.
 
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jones'));
+console.log(Boolean({}));
+console.log(Boolean(''));
 console.log();
