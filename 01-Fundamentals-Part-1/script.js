@@ -234,7 +234,7 @@ console.log('9' - '5');
 console.log('19' - '13' + '17');
 console.log('19' - '13' + 17);
 console.log('123' < 57);
-console.log(5 + 6 + '4' + 9 - 4 - 2); */
+console.log(5 + 6 + '4' + 9 - 4 - 2);
 
 //lec :- 16
 
@@ -246,16 +246,19 @@ console.log(Boolean('Jones'));//true
 console.log(Boolean({})); //true
 console.log(Boolean('')); //false
 
-const money = 0;
+const money = 1;
 if (money) {
     console.log("Don't spend it all ;)");
 } else {
     console.log("You should get a job!");
 } // here we get else statement b/c money is 0 and it is falsy
 
-let height;
+let height = 20;
 if (height) {
     console.log("YAY! Height is Defined");
 } else {
     console.log("Height is UNDEFINED");
-} // here code will give else statment b/c height is undefined
+} // here code will give else statment b/c height is undefined  */
+
+// Lec :- 17
+const age = 18;
