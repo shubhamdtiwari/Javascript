@@ -258,7 +258,7 @@ if (height) {
     console.log("YAY! Height is Defined");
 } else {
     console.log("Height is UNDEFINED");
-} // here code will give else statment b/c height is undefined  
+} // here code will give else statment b/c height is undefined
 
 // Lec :- 17
 const age = '18';
@@ -283,7 +283,7 @@ if (favourite === 23) {
 }
 
 
-if (favourite !== 23) console.log("why not 23 ?"); */
+if (favourite !== 23) console.log("why not 23 ?");
 
 // assingment
 // 1.
@@ -296,3 +296,30 @@ if (numNeighbours === 1) {
 } else {
     console.log("No borders");
 }
+
+// lecture :- 19
+
+const hasDriversLicence = true;
+const hasGoodVision = true;
+
+console.log(hasDriversLicence && hasGoodVision);
+console.log(hasDriversLicence || hasGoodVision);
+console.log(!hasDriversLicence);
+
+if (hasDriversLicence && hasGoodVision) {
+    console.log('Subh is able to drive!');
+} else {
+    console.log('Someone else should drive...')
+}
+const isTired = true;
+console.log(hasDriversLicence && hasGoodVision && isTired);
+
+if (hasDriversLicence && hasGoodVision && !isTired) {
+    console.log('Subh is able to drive!');
+} else {
+    console.log('Someone else should drive...')
+}
+    */
+
+// assignment
+
