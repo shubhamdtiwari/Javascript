@@ -261,4 +261,26 @@ if (height) {
 } // here code will give else statment b/c height is undefined  */
 
 // Lec :- 17
-const age = 18;
+const age = '18';
+if (age === 18) console.log('you just become an adult :D (strict');
+
+if (age == 18) console.log('you just become an adult :D (loose');
+console.log(typeof age); // == should be avoided
+
+
+const favourite = Number(prompt("what's you favourite number"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+    console.log("cool! 23 is amazing number");
+} else if (favourite === 7) {
+    console.log("7 is cool number");
+} else if (favourite === 9) {
+    console.log("9 is amazing number");
+} else {
+    console.log("why not 23 or 7 or 9 ?");
+}
+
+
+if (favourite !== 23) console.log("why not 23 ?");
