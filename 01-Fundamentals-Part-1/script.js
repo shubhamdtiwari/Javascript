@@ -258,7 +258,7 @@ if (height) {
     console.log("YAY! Height is Defined");
 } else {
     console.log("Height is UNDEFINED");
-} // here code will give else statment b/c height is undefined  */
+} // here code will give else statment b/c height is undefined  
 
 // Lec :- 17
 const age = '18';
@@ -283,4 +283,16 @@ if (favourite === 23) {
 }
 
 
-if (favourite !== 23) console.log("why not 23 ?");
+if (favourite !== 23) console.log("why not 23 ?"); */
+
+// assingment
+// 1.
+var numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
+console.log(typeof numNeighbours);
+if (numNeighbours === 1) {
+    console.log("only one border");
+} else if (numNeighbours > 1) {
+    console.log("More than 1 border!");
+} else {
+    console.log("No borders");
+}
