@@ -319,7 +319,45 @@ if (hasDriversLicence && hasGoodVision && !isTired) {
 } else {
     console.log('Someone else should drive...')
 }
-    */
+    
 
 // assignment
 
+const speakEnglish = true;
+const populess = true;
+const notAnIsland = true;
+
+console.log(speakEnglish && populess);
+
+if (speakEnglish && populess && notAnIsland) {
+    console.log("You can live in India");
+} else {
+    console.log("you cann't live in India");
+}
+// coding challenge
+
+const AvgDolphins = (96 + 108 + 89) / 3;
+const AvgKoalas = (88 + 91 + 110) / 3;
+console.log(AvgDolphins, AvgKoalas);
+
+if (AvgDolphins > AvgKoalas) {
+    console.log("Dolphins team wins");
+} else if (AvgDolphins < AvgKoalas) {
+    console.log("Koalas team wins");
+} else if (AvgDolphins === AvgKoalas) {
+    console.log("Both teams win");
+} */
+// bonus 1
+const scoreDolphins = (97 + 112 + 102) / 3;
+const scoreKoalas = (97 + 102 + 112) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins wins the trophy🏆");
+} else if (scoreDolphins < scoreKoalas && scoreKoalas >= 100) {
+    console.log("Koalas wins the trophy🏆");
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+    console.log("Both wins");
+} else {
+    console.log("No teams win");
+}
