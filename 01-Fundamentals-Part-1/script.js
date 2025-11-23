@@ -360,7 +360,7 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
     console.log("Both wins");
 } else {
     console.log("No teams win");
-} 
+}
 // Lecture :- 21
 const day = 'monday';
 
@@ -386,7 +386,7 @@ switch (day) {
     default:
         console.log('Not a valid day!');
 }
-*/
+
 const day = 'friday'
 if (day === 'monday') {
     console.log("Plan to course structure");
@@ -402,3 +402,64 @@ if (day === 'monday') {
 } else {
     console.log("Not a valid day!");
 }
+// Assignments
+const language = 'tamil'
+switch (language) {
+    case 'chinese':
+        console.log("MOST number of native speakers!");
+        break;
+    case 'spanish':
+        console.log("2nd place in number of native speakers");
+        break;
+    case 'english':
+        console.log("3rd place");
+        break;
+    case 'hindi':
+        console.log("Number 4");
+        break;
+    case 'arabic':
+        console.log("5th most spoken language");
+    default:
+        console.log("Great language too :D")
+        break;
+}
+//lecture :- 22
+
+// 22 + 3 it is an expression
+// 99 it is also
+// expression produce some values
+// but statement does not produce value of its own
+//example of statement
+if (23 > 4) {
+    const str = '23 is bigger';
+} // this is a statement b/c is does not produce any value
+// but '23 is bigger' is an expression
+
+console.log(`I'm ${2025 - 2004} years old`) // it is an expression
+
+// there is differnce b/w  a statement and an expression
+
+// lecture :- 23
+// conditional or ternery opreator
+const age = 13;
+age >= 18 ? console.log("I live to drink wine🍷") : console.log("I like to drink water💧");
+*/
+const age = 4;
+const drink = age >= 18 ? 'wine🍷' : 'water💧';
+console.log(drink) // it helps to reduce lines of code
+
+//example of if else statement
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine🍷';
+} else {
+    drink2 = 'water💧';
+}
+console.log(drink2);
+// conditional opretor helps to reduce he long code
+
+//take a example again
+console.log(`I like to drink ${age >= 18 ? 'wine🍷' : 'water💧'}`);
+
+console.log(`I like to drink ${drink2}`);
+console.log(`I like to drink ${drink}`);
