@@ -443,7 +443,7 @@ console.log(`I'm ${2025 - 2004} years old`) // it is an expression
 // conditional or ternery opreator
 const age = 13;
 age >= 18 ? console.log("I live to drink wine🍷") : console.log("I like to drink water💧");
-*/
+
 const age = 4;
 const drink = age >= 18 ? 'wine🍷' : 'water💧';
 console.log(drink) // it helps to reduce lines of code
@@ -463,3 +463,14 @@ console.log(`I like to drink ${age >= 18 ? 'wine🍷' : 'water💧'}`);
 
 console.log(`I like to drink ${drink2}`);
 console.log(`I like to drink ${drink}`);
+*/
+// Assingment
+const NumPopulation = 30;
+NumPopulation > 33 ? console.log("population is above average") : console.log("population is below average");
+
+const country = 'India';
+const population = '13'
+console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`);
+
+
+// coding challenge #4
