@@ -463,7 +463,7 @@ console.log(`I like to drink ${age >= 18 ? 'wine🍷' : 'water💧'}`);
 
 console.log(`I like to drink ${drink2}`);
 console.log(`I like to drink ${drink}`);
-*/
+
 // Assingment
 const NumPopulation = 30;
 NumPopulation > 33 ? console.log("population is above average") : console.log("population is below average");
@@ -473,4 +473,16 @@ const population = '13'
 console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`);
 
 
-// coding challenge #4
+// coding challenge #4  */
+
+
+const bill = 430;
+
+//const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+//console.log(`The bill is ${bill} , the tip is ${tip} and the total bill is ${bill + tip}`);
+if (bill <= 300 && bill >= 50) {
+    tip = bill * 0.15;
+} else {
+    tip = bill * 0.2;
+}
+console.log(`The bill is ${bill} ,the tip is ${tip} and the total bill is ${bill + tip}`);
