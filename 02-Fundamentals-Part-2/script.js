@@ -49,9 +49,47 @@ console.log(line3);
 let place = 'USA';
 let City = 'Dc';
 const line4 = describeCountry(place, 60, City);
-console.log(line4) */
+console.log(line4) 
 
 // lecture :- 4
 
-function
+// Function declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+const age1 = calcAge1(1991);
 
+// Function expression
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
+// assingment */
+// function declaration
+function percentageOfworld1(population) {
+    return (population / 7900) * 100
+}
+const percentage1 = percentageOfworld1(1441);
+console.log(`China's population is ${percentage1} % of total population.`);
+const percentage2 = percentageOfworld1(1500);
+console.log(`India's population is ${percentage2} % of total population.`);
+const percentage3 = percentageOfworld1(170);
+console.log(`USA population is ${percentage3} % of total population.`);
+
+//function expression
+
+const percentageOfworld2 = function (population) {
+    return (population / 7900) * 100
+}
+const percentage4 = percentageOfworld2(6);
+console.log(`Finland's population id ${percentage4} % of total population`);
+const percentage5 = percentageOfworld2(110);
+console.log(`Pakistan's population id ${percentage5} % of total population`);
+const percentage6 = percentageOfworld2(10);
+console.log(`Bhutan's population id ${percentage6} % of total population`);
+
+
+
+// lecture 5 :- 
