@@ -66,7 +66,7 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1991);
 
 console.log(age1, age2);
-// assingment */
+// assingment 
 // function declaration
 function percentageOfworld1(population) {
     return (population / 7900) * 100
@@ -90,6 +90,41 @@ console.log(`Pakistan's population id ${percentage5} % of total population`);
 const percentage6 = percentageOfworld2(10);
 console.log(`Bhutan's population id ${percentage6} % of total population`);
 
-
-
 // lecture 5 :- 
+
+//Arrow function
+const calcAge3 = birthYear => 2037 - birthYear;
+const age3 = calcAge3(1991);
+console.log(age3);
+
+const yearsUntilRetirment = (birthyear, firstname) => {
+    const age = 2037 - birthyear;
+    const retirement = 65 - age;
+    return `${firstname} will retire in ${retirement} years`;
+}
+console.log(yearsUntilRetirment(1991, "Shubham"));
+//Assingmentf
+const percentageOfWorld3 = (population, country) => {
+
+    const percentage = (population / 7900) * 100;
+    return `${country}'s poopulation is ${percentage} % of total population`
+}
+console.log(percentageOfWorld3(1441, 'China'));
+console.log(percentageOfWorld3(1500, 'India'));
+console.log(percentageOfWorld3(60, 'Finland')); */
+
+// lecture :- 6
+
+const cutPieces = function (fruit) {
+    return fruit * 4;
+};
+function fruitProcesser(apples, oranges) {
+    const applePieces = cutPieces(apples);
+    const orangePieces = cutPieces(oranges);
+
+    const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
+    return juice;
+};
+console.log(fruitProcesser(3, 6));
+
+
