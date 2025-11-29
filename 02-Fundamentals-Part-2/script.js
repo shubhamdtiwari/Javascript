@@ -103,7 +103,7 @@ const yearsUntilRetirment = (birthyear, firstname) => {
     return `${firstname} will retire in ${retirement} years`;
 }
 console.log(yearsUntilRetirment(1991, "Shubham"));
-//Assingmentf
+//Assingment
 const percentageOfWorld3 = (population, country) => {
 
     const percentage = (population / 7900) * 100;
@@ -111,7 +111,7 @@ const percentageOfWorld3 = (population, country) => {
 }
 console.log(percentageOfWorld3(1441, 'China'));
 console.log(percentageOfWorld3(1500, 'India'));
-console.log(percentageOfWorld3(60, 'Finland')); */
+console.log(percentageOfWorld3(60, 'Finland')); 
 
 // lecture :- 6
 
@@ -128,3 +128,36 @@ function fruitProcesser(apples, oranges) {
 console.log(fruitProcesser(3, 6));
 
 
+//Assingment
+const percentageOfworld2 = function (population) {
+    return (population / 7900) * 100
+}
+function describePopulation(country, population) {
+    const percentage = percentageOfworld2(population);
+    return `${country}'s has ${population} million people,which is about ${percentage} of the world;`;
+}
+console.log(describePopulation('India', '1500'));
+console.log(describePopulation('China', '1441'));
+console.log(describePopulation('Finland', '6')); */
+
+//lecture :- 07
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const yearsUntilRetirment = function (birthyear, firstname) {
+
+    const age = calcAge(birthyear);
+    const retirement = 65 - age;
+    if (retirement > 0) {
+        console.log(`${firstname} retires in ${retirement} years`)
+        return retirement
+    } else {
+        console.log(`${firstname} has already retired🎉`)
+        return -1;
+    }
+
+}
+console.log(yearsUntilRetirment(1991, "Shubham"));
+console.log(yearsUntilRetirment(1950, "Shub"));
