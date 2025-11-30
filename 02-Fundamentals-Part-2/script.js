@@ -3,8 +3,8 @@
 let hasDriversLicense = false;
 const passTest = true;
 
-if (passTest) hasDriversLicense = true; 
-if (hasDriversLicense) console.log('I can drive!') 
+if (passTest) hasDriversLicense = true;
+if (hasDriversLicense) console.log('I can drive!')
 // lecture :- function
 function logger() {
     console.log('My name is Shubham')
@@ -26,7 +26,7 @@ const appleJuice = fruitProcesser(5, 0);
 console.log(appleJuice);
 
 const appleorangeJuice = fruitProcesser(2, 3);
-console.log(appleorangeJuice); 
+console.log(appleorangeJuice);
 
 // assingment :- 03 function
 function describeCountry(country, population, capitalCity) {
@@ -49,7 +49,7 @@ console.log(line3);
 let place = 'USA';
 let City = 'Dc';
 const line4 = describeCountry(place, 60, City);
-console.log(line4) 
+console.log(line4)
 
 // lecture :- 4
 
@@ -66,7 +66,7 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1991);
 
 console.log(age1, age2);
-// assingment 
+// assingment
 // function declaration
 function percentageOfworld1(population) {
     return (population / 7900) * 100
@@ -90,7 +90,7 @@ console.log(`Pakistan's population id ${percentage5} % of total population`);
 const percentage6 = percentageOfworld2(10);
 console.log(`Bhutan's population id ${percentage6} % of total population`);
 
-// lecture 5 :- 
+// lecture 5 :-
 
 //Arrow function
 const calcAge3 = birthYear => 2037 - birthYear;
@@ -111,7 +111,7 @@ const percentageOfWorld3 = (population, country) => {
 }
 console.log(percentageOfWorld3(1441, 'China'));
 console.log(percentageOfWorld3(1500, 'India'));
-console.log(percentageOfWorld3(60, 'Finland')); 
+console.log(percentageOfWorld3(60, 'Finland'));
 
 // lecture :- 6
 
@@ -138,7 +138,7 @@ function describePopulation(country, population) {
 }
 console.log(describePopulation('India', '1500'));
 console.log(describePopulation('China', '1441'));
-console.log(describePopulation('Finland', '6')); */
+console.log(describePopulation('Finland', '6'));
 
 //lecture :- 07
 
@@ -160,4 +160,5 @@ const yearsUntilRetirment = function (birthyear, firstname) {
 
 }
 console.log(yearsUntilRetirment(1991, "Shubham"));
-console.log(yearsUntilRetirment(1950, "Shub"));
+console.log(yearsUntilRetirment(1950, "Shub")); */
+// coding challenge
