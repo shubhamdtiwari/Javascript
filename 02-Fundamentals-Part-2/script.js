@@ -162,3 +162,21 @@ const yearsUntilRetirment = function (birthyear, firstname) {
 console.log(yearsUntilRetirment(1991, "Shubham"));
 console.log(yearsUntilRetirment(1950, "Shub")); */
 // coding challenge
+
+const calcAverage = (s1, s2, s3) => (s1 + s2 + s3) / 3;
+
+// Test 1
+const avgDolphines = calcAverage(44, 23, 71);
+const avgKoalas = calcAverage(65, 54, 49);
+console.log(avgDolphines, avgKoalas);
+
+function cheakWinner(avgDolphines, avgKoalas) {
+    if (avgDolphines >= 2 * avgKoalas) {
+        console.log(`dolphins team wins (${avgDolphines} vs ${avgKoalas})`);
+    } else if (avgKoalas >= 2 * avgDolphines) {
+        console.log(`Koalas team wins (${avgKoalas} vs ${avgDolphines})`);
+    } else {
+        console.log('noone wins...;');
+    }
+}
+cheakWinner(avgDolphines, avgKoalas);
