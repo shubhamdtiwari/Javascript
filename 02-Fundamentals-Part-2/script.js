@@ -160,23 +160,75 @@ const yearsUntilRetirment = function (birthyear, firstname) {
 
 }
 console.log(yearsUntilRetirment(1991, "Shubham"));
-console.log(yearsUntilRetirment(1950, "Shub")); */
-// coding challenge
+console.log(yearsUntilRetirment(1950, "Shub")); 
+// coding challenge #1
 
 const calcAverage = (s1, s2, s3) => (s1 + s2 + s3) / 3;
 
 // Test 1
-const avgDolphines = calcAverage(44, 23, 71);
-const avgKoalas = calcAverage(65, 54, 49);
+let avgDolphines = calcAverage(44, 23, 71);
+let avgKoalas = calcAverage(65, 54, 49);
 console.log(avgDolphines, avgKoalas);
 
 function cheakWinner(avgDolphines, avgKoalas) {
     if (avgDolphines >= 2 * avgKoalas) {
-        console.log(`dolphins team wins (${avgDolphines} vs ${avgKoalas})`);
+        console.log(`dolphins team wins 🏆 (${avgDolphines} vs ${avgKoalas})`);
     } else if (avgKoalas >= 2 * avgDolphines) {
-        console.log(`Koalas team wins (${avgKoalas} vs ${avgDolphines})`);
+        console.log(`Koalas team wins 🏆 (${avgKoalas} vs ${avgDolphines})`);
     } else {
         console.log('noone wins...;');
     }
 }
 cheakWinner(avgDolphines, avgKoalas);
+cheakWinner(500, 100);
+
+//test 2
+avgDolphines = calcAverage(85, 54, 41);
+avgKoalas = calcAverage(23, 34, 27);
+console.log(avgDolphines, avgKoalas);
+cheakWinner(avgDolphines, avgKoalas); */
+
+// Lecture :- 09 Arrays
+
+const friend1 = 'chintu';
+const friend2 = 'surya';
+const friend3 = 'vikash'
+
+const friends = ['chintu', 'surya', 'vikash'];
+console.log(friends);
+
+const year = new Array(1991, 1984, 2004, 2023);
+
+console.log(friends[0]);
+console.log(friends[2]);
+console.log(friends.length);
+console.log(friends.length - 1);
+// we can change the value of any array at a time
+friends[2] = 'jonas';
+console.log(friends);
+// but we cann't change all names 
+//ex :- freinds = ['bob' , 'alice']
+// this will throw error
+
+const firstName = "Jonas";
+const jonas = [firstName, 'Shubham', 2037 - 2004, 'teacher', friends];
+console.log(jonas);
+// we can add anything in array , even array
+
+//exercise
+const ageCalc = function (birthYear) {
+    return 2037 - birthYear;
+}
+const years = [1990, 2002, 2004, 2010];
+
+const age1 = ageCalc(years[0]);
+const age2 = ageCalc(year[3]);
+const age3 = ageCalc(years[years.length - 1]);
+
+
+console.log(age1, age2, age3);
+const ages1 = [age1, age2, age3];
+console.log(ages1);
+
+const ages2 = [ageCalc(years[0]), ageCalc(years[3]), ageCalc(years[years.length - 1])];
+console.log(ages2);
