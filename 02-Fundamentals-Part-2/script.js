@@ -160,7 +160,7 @@ const yearsUntilRetirment = function (birthyear, firstname) {
 
 }
 console.log(yearsUntilRetirment(1991, "Shubham"));
-console.log(yearsUntilRetirment(1950, "Shub")); 
+console.log(yearsUntilRetirment(1950, "Shub"));
 // coding challenge #1
 
 const calcAverage = (s1, s2, s3) => (s1 + s2 + s3) / 3;
@@ -186,7 +186,7 @@ cheakWinner(500, 100);
 avgDolphines = calcAverage(85, 54, 41);
 avgKoalas = calcAverage(23, 34, 27);
 console.log(avgDolphines, avgKoalas);
-cheakWinner(avgDolphines, avgKoalas); 
+cheakWinner(avgDolphines, avgKoalas);
 
 // Lecture :- 09 Arrays
 
@@ -206,7 +206,7 @@ console.log(friends.length - 1);
 // we can change the value of any array at a time
 friends[2] = 'jonas';
 console.log(friends);
-// but we cann't change all names 
+// but we cann't change all names
 //ex :- freinds = ['bob' , 'alice']
 // this will throw error
 
@@ -232,7 +232,7 @@ console.log(ages1);
 
 const ages2 = [ageCalc(years[0]), ageCalc(years[3]), ageCalc(years[years.length - 1])];
 console.log(ages2);
-// assignment 
+// assignment
 
 const populations = [1500, 1441, 60, 150,];
 if (populations.length === 4) {
@@ -257,7 +257,7 @@ const percentages = [percentage1, percentage2, percentage3, percentage4];
 console.log(percentages);
 
 
-console.log(percentages.length); */
+console.log(percentages.length);
 
 const friends = ['chintu', 'surya', 'vikash'];
 //friends.push('Balaji');
@@ -296,4 +296,28 @@ if (friends.includes("vikash")) {
     console.log("YOu have a friend name Vikash");
 } else {
     console.log("You have not;");
-}
+} */
+// coding challenge :- 2
+
+// function calcTip(totalBill) {
+//     if (totalBill >= 50 && totalBill <= 300) {
+//         const tip = totalBill * 0.15;
+//         return tip;
+//     } else {
+//         const tip = totalBill * 0.2;
+//         return tip;
+//     }
+
+// }
+// const calcTip = function (bill) {
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+
+const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const bill = [125, 555, 44];
+const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+console.log(tips);
+
+const totalBills = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
+console.log(totalBills);
