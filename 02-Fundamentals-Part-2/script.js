@@ -296,7 +296,7 @@ if (friends.includes("vikash")) {
     console.log("YOu have a friend name Vikash");
 } else {
     console.log("You have not;");
-} */
+}
 // coding challenge :- 2
 
 // function calcTip(totalBill) {
@@ -321,3 +321,50 @@ console.log(tips);
 
 const totalBills = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
 console.log(totalBills);
+
+//lecture :- 12 intro to objects
+//for arrays order matters
+const jonasArray = [
+    'Shubham',
+    'Tiwari',
+    2037 - 2006,
+    'Student',
+    ['Vikash', 'Peter', 'Tony']
+];
+// there is no way we can name each elements
+// Objects
+// orders do not matters
+const shubh = {
+    firstName: 'Shubham',
+    lastName: 'Tiwari',
+    age: 2037 - 2006,
+    job: 'Student',
+    friends: ['Vikash', 'Peter', 'Tony']
+}
+//lecture :- 13
+console.log(shubh);
+
+console.log(shubh.lastName); // dot notation
+console.log(shubh['lastName']); //bracket notation
+
+const nameKey = 'Name';
+console.log(shubh['first' + nameKey]);
+console.log(shubh['last' + nameKey]);
+
+console.log(shubh['first' + nameKey] + shubh['last' + nameKey]);
+
+const interestedIn = prompt('What do you want to know about shubh? Choose b/w firstName , lastName , age , job and friends');
+
+if (shubh[interestedIn]) {
+    console.log(shubh[interestedIn]);
+} else {
+    console.log('wrong request! Choose b/w firstName , lastName , age , job and friends')
+}
+shubh.location = 'India'
+shubh['insta'] = 'shubhamdtiwari';
+console.log(shubh);
+console.log(shubh['firstName'] + ' has ' + shubh.friends.length + ' friends' + ' , ' + 'and his best friend is called' + ' ' + shubh.friends[0] + ';');
+
+console.log(`${shubh['firstName']} has ${shubh.friends.length} friends , and his best friend is called ${shubh.friends[0]} ;`);
+*/
+//lecture :- 14
