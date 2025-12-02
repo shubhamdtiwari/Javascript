@@ -186,7 +186,7 @@ cheakWinner(500, 100);
 avgDolphines = calcAverage(85, 54, 41);
 avgKoalas = calcAverage(23, 34, 27);
 console.log(avgDolphines, avgKoalas);
-cheakWinner(avgDolphines, avgKoalas); */
+cheakWinner(avgDolphines, avgKoalas); 
 
 // Lecture :- 09 Arrays
 
@@ -232,3 +232,30 @@ console.log(ages1);
 
 const ages2 = [ageCalc(years[0]), ageCalc(years[3]), ageCalc(years[years.length - 1])];
 console.log(ages2);
+// assignment */
+
+const populations = [1500, 1441, 60, 150,];
+if (populations.length === 4) {
+    console.log(`True and have ${populations.length} elements`);
+} else {
+    console.log(`False and have ${populations.length} elements`);
+}
+function percentageOfworld1(population) {
+    return (population / 7900) * 100
+}
+const percentage1 = percentageOfworld1(1441);
+console.log(`China's population is ${percentage1} % of total population.`);
+const percentage2 = percentageOfworld1(1500);
+console.log(`India's population is ${percentage2} % of total population.`);
+const percentage3 = percentageOfworld1(170);
+console.log(`USA population is ${percentage3} % of total population.`);
+const percentage4 = percentageOfworld1(10);
+console.log(`Norway population is ${percentage3} % of total population.`);
+
+const percentages = [percentage1, percentage2, percentage3, percentage4];
+
+console.log(percentages);
+
+
+console.log(percentages.length);
+
