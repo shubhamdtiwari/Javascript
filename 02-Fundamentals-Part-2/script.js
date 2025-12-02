@@ -232,7 +232,7 @@ console.log(ages1);
 
 const ages2 = [ageCalc(years[0]), ageCalc(years[3]), ageCalc(years[years.length - 1])];
 console.log(ages2);
-// assignment */
+// assignment 
 
 const populations = [1500, 1441, 60, 150,];
 if (populations.length === 4) {
@@ -257,5 +257,43 @@ const percentages = [percentage1, percentage2, percentage3, percentage4];
 console.log(percentages);
 
 
-console.log(percentages.length);
+console.log(percentages.length); */
 
+const friends = ['chintu', 'surya', 'vikash'];
+//friends.push('Balaji');
+// this new function return lenght of array
+// to capture this data we need to create anew variable
+//add elements
+const newLength = friends.push("Balaji");
+console.log(friends);
+console.log(newLength);
+
+//add element at first position in array
+friends.unshift("Pandey");
+console.log(friends);
+
+//remove element
+const popped = friends.pop(); //last element
+// it returns popped element
+console.log(friends);
+console.log(popped);
+
+friends.shift(); // remove first
+console.log(friends);
+
+console.log(friends.indexOf('vikash'));
+console.log(friends.indexOf('balaji'));
+
+console.log(friends.includes('surya'));
+console.log(friends.includes('pandey'));
+friends.push(23);
+//console.log(friends.includes("23"));
+// then it will show false b/c in push function 23 is number and in console it is string
+//it does not do type coversion
+console.log(friends.includes(23));
+
+if (friends.includes("vikash")) {
+    console.log("YOu have a friend name Vikash");
+} else {
+    console.log("You have not;");
+}
