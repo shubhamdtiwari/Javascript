@@ -444,7 +444,7 @@ if (mark.BMI > john.BMI) {
 } else if (john.BMI > mark.BMI) {
     console.log(`${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s (${mark.BMI})`);
 }
-*/
+
 // Lecture :- 16 Loops
 // console.log('Lifiting weights repetition 1 🏋️');
 // console.log('Lifiting weights repetition 2 🏋️');
@@ -459,4 +459,21 @@ if (mark.BMI > john.BMI) {
 
 for (let rep = 1; rep <= 10; rep++) {
     console.log(`Lifiting weights repetition ${rep}🏋️`);
+} */
+// lecture :- 17
+const jonas = [
+    'Shubham',
+    'Tiwari',
+    2037 - 2006,
+    'Student',
+    ['Vikash', 'Peter', 'Tony']
+];
+
+//console.log(jonas[0]);
+//console.log(jonas[1]);
+// ...
+//console.log(jonas[4]);
+//jonas[5] does not exit
+for (let i = 0; i < 6; i++) {
+    console.log(jonas[i]);
 }
