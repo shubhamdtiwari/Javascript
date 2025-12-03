@@ -380,12 +380,33 @@ const shubh = {
     //     return 2037 - birthYear;
     // }
 
+    // calcage: function () {
+    //     console.log(this)
+    //     return 2037 - this.birthYear;
+    //     // we can use shubh.birthYear but we have to make a generalise code and have to foll the DRY rule
+    // }
     calcage: function () {
-        console.log(this)
-        return 2037 - this.birthYear;
-    }
-}
+        this.age = 2037 - this.birthYear;
+        //by this code we store age in shubh object
+        //this will reduce the long computation
+        return this.age;
 
-console.log(shubh.calcage(2006));
+    }
+};
+
+console.log(shubh.calcage());
+
 
 // console.log(shubh['calcage'](2006));
+
+// console.log(shubh.calcage());
+// console.log(shubh.calcage());
+// console.log(shubh.calcage());
+// here by calling function so many times creates load so instead of calling it lets make it easier
+
+console.log(shubh.age);
+console.log(shubh.age);
+console.log(shubh.age);
+console.log(shubh.age);
+
+console.log(`${shubh.firstName} is a ${shubh.age}-year old ${shubh.job}, and he has `)
