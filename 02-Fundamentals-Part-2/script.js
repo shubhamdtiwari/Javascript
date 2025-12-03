@@ -368,3 +368,17 @@ console.log(shubh['firstName'] + ' has ' + shubh.friends.length + ' friends' + '
 console.log(`${shubh['firstName']} has ${shubh.friends.length} friends , and his best friend is called ${shubh.friends[0]} ;`);
 */
 //lecture :- 14
+const shubh = {
+    firstName: 'Shubham',
+    lastName: 'Tiwari',
+    age: 2037 - 2006,
+    job: 'Student',
+    friends: ['Vikash', 'Peter', 'Tony'],
+    hasDriversLicence: true,
+
+    calcage: function (birthYear) {
+        return 2037 - birthYear;
+    }
+}
+
+console.log(shubh.calcage(2006));
