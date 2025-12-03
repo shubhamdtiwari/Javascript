@@ -508,7 +508,7 @@ for (let i = 0; i < jonas.length; i++) {
     if (typeof jonas[i] === 'number') break;
     console.log(jonas[i], typeof jonas[i]);
 }
-    */
+
 //lecture :- 18
 const shubh = [
     'Shubham',
@@ -531,3 +531,23 @@ for (let exercise = 1; exercise < 4; exercise++) {
         console.log(`Execrise ${exercise}: Lifiting weight repetition ${rep} 🏋️`);
     }
 }
+// Lecture :- 19
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifiting weights repetition ${rep}🏋️`);
+// }
+
+let rep = 1;
+while (rep <= 10) {
+    // console.log(`WHILE: Lifiting weights repetition ${rep} 🏋️`)
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`you rolled ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end;');
+} */
+// Challenge :-  4
+
