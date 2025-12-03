@@ -371,14 +371,21 @@ console.log(`${shubh['firstName']} has ${shubh.friends.length} friends , and his
 const shubh = {
     firstName: 'Shubham',
     lastName: 'Tiwari',
-    age: 2037 - 2006,
+    birthYear: 2006,
     job: 'Student',
     friends: ['Vikash', 'Peter', 'Tony'],
     hasDriversLicence: true,
 
-    calcage: function (birthYear) {
-        return 2037 - birthYear;
+    // calcage: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    calcage: function () {
+        console.log(this)
+        return 2037 - this.birthYear;
     }
 }
 
 console.log(shubh.calcage(2006));
+
+// console.log(shubh['calcage'](2006));
