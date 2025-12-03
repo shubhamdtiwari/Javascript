@@ -466,14 +466,32 @@ const jonas = [
     'Tiwari',
     2037 - 2006,
     'Student',
-    ['Vikash', 'Peter', 'Tony']
+    ['Vikash', 'Peter', 'Tony'],
+    true
 ];
+
+const type = [];
 
 //console.log(jonas[0]);
 //console.log(jonas[1]);
 // ...
 //console.log(jonas[4]);
 //jonas[5] does not exit
-for (let i = 0; i < 6; i++) {
-    console.log(jonas[i]);
+for (let i = 0; i < jonas.length; i++) {
+    //reading from jonas array
+    console.log(jonas[i], typeof jonas[i]);
+
+    //filling types array
+    //type[i] = typeof jonas[i];
+    type.push(typeof jonas[i]);
 }
+
+console.log(type);
+
+const years = [1991, 2002, 2006, 2004, 2008];
+const ages = [];
+
+for (i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
