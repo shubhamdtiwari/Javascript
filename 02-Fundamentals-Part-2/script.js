@@ -412,7 +412,7 @@ console.log(shubh.age);
 console.log(shubh.age);
 console.log(shubh.age);
 
-console.log(shubh.getSummary()); */
+console.log(shubh.getSummary());
 // coding challenge :- 3
 const mark = {
     fullName: 'Mark Miller',
@@ -443,4 +443,20 @@ if (mark.BMI > john.BMI) {
     console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s (${john.BMI})`);
 } else if (john.BMI > mark.BMI) {
     console.log(`${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s (${mark.BMI})`);
+}
+*/
+// Lecture :- 16 Loops
+// console.log('Lifiting weights repetition 1 🏋️');
+// console.log('Lifiting weights repetition 2 🏋️');
+// console.log('Lifiting weights repetition 3 🏋️');
+// console.log('Lifiting weights repetition 4 🏋️');
+// console.log('Lifiting weights repetition 5 🏋️');
+// console.log('Lifiting weights repetition 6 🏋️');
+// console.log('Lifiting weights repetition 7 🏋️');
+// console.log('Lifiting weights repetition 8 🏋️');
+// console.log('Lifiting weights repetition 9 🏋️');
+// console.log('Lifiting weights repetition 10🏋️');
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifiting weights repetition ${rep}🏋️`);
 }
