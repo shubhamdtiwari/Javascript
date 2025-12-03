@@ -391,6 +391,9 @@ const shubh = {
         //this will reduce the long computation
         return this.age;
 
+    },
+    getSummary: function () {
+        return `${this.firstName} is a ${this.age}-years old ${shubh.job} and he has ${this.hasDriversLicence ? 'a' : 'no'} driver licence;`
     }
 };
 
@@ -409,4 +412,4 @@ console.log(shubh.age);
 console.log(shubh.age);
 console.log(shubh.age);
 
-console.log(`${shubh.firstName} is a ${shubh.age}-year old ${shubh.job}, and he has `)
+console.log(shubh.getSummary());
