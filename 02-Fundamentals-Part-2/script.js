@@ -366,7 +366,7 @@ console.log(shubh);
 console.log(shubh['firstName'] + ' has ' + shubh.friends.length + ' friends' + ' , ' + 'and his best friend is called' + ' ' + shubh.friends[0] + ';');
 
 console.log(`${shubh['firstName']} has ${shubh.friends.length} friends , and his best friend is called ${shubh.friends[0]} ;`);
-*/
+
 //lecture :- 14
 const shubh = {
     firstName: 'Shubham',
@@ -412,4 +412,35 @@ console.log(shubh.age);
 console.log(shubh.age);
 console.log(shubh.age);
 
-console.log(shubh.getSummary());
+console.log(shubh.getSummary()); */
+// coding challenge :- 3
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
+    },
+
+};
+const john = {
+    fullName: 'John smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
+    },
+}
+
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.BMI);
+console.log(john.BMI);
+
+if (mark.BMI > john.BMI) {
+    console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s (${john.BMI})`);
+} else if (john.BMI > mark.BMI) {
+    console.log(`${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s (${mark.BMI})`);
+}
