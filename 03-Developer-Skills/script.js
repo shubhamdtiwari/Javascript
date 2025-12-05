@@ -4,7 +4,8 @@
 // const x = '23';
 
 // if (x === 23) console.log(23);
-
+// lecture :- 7
+/*
 // const calcAge = birthYear => 2037 - birthYear;
 // console.log(calcAge(2006));
 //calculate the temperature amplitude : differnce b/w highest and lowest temperature
@@ -59,4 +60,23 @@ const calcTempAmplitudeNew = function (t1, t2) {
   return max - min;
 };
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
-console.log(amplitudeNew);
+console.log(amplitudeNew); */
+
+// Lecture :- 9
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+
+    value: Number(prompt('Degrees celsius')),
+  };
+
+  console.table(measurement);
+  // console.log(measurement);
+  // console.warn(measurement)
+  // console.error(measurement);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+console.log(measureKelvin());
