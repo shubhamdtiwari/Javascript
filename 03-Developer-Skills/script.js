@@ -60,7 +60,7 @@ const calcTempAmplitudeNew = function (t1, t2) {
   return max - min;
 };
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
-console.log(amplitudeNew); */
+console.log(amplitudeNew);
 
 // Lecture :- 9
 const measureKelvin = function () {
@@ -96,4 +96,5 @@ const calcTempAmplitudeNew = function (t1, t2) {
   return max - min;
 };
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
-console.log(amplitudeNew);
+console.log(amplitudeNew);  */
+// Chanllenge :- 1
