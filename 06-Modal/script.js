@@ -17,6 +17,24 @@ const OpenModal = function () {
 //     overlay.classList.remove('hidden');
 //   });
 for (let i = 0; i < btnOpenModal.length; i++)
+<<<<<<< HEAD
+  btnOpenModal[i].addEventListener("click", function () {
+    console.log("Button clicked");
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+ß
+  });
+btnCloseModal.addEventListener("click", function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+
+overlay.addEventListener("click", function () {
+  modal.classList.add("hidden");
+  overlay.classList.add('hidden');
+
+
+
   btnOpenModal[i].addEventListener('click', OpenModal);
 // btnCloseModal.addEventListener('click', function () {
 //   modal.classList.add('hidden');
@@ -43,4 +61,5 @@ document.addEventListener('keydown', function (e) {
     closeModal();
     // }
   }
+
 });
