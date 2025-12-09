@@ -34,7 +34,7 @@ overlay.addEventListener("click", function () {
   overlay.classList.add('hidden');
 
 
-=======
+
   btnOpenModal[i].addEventListener('click', OpenModal);
 // btnCloseModal.addEventListener('click', function () {
 //   modal.classList.add('hidden');
@@ -61,5 +61,5 @@ document.addEventListener('keydown', function (e) {
     closeModal();
     // }
   }
->>>>>>> 48ddfa27f0c3325064a92d1a000f277faa70ebc2
+
 });
