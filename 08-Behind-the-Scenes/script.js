@@ -11,9 +11,16 @@ function calcAge(birthYear) {
       var millenial = true;
       const str = `oh! you're a millenial , ${firstName}`;
       console.log(str);
+
+      function add(a, b) {
+        //block scoped
+        return a + b;
+      }
     }
     // console.log(str); it willl show error b/c it is not define in printAge() function
     console.log(millenial); // but this can acceced outside b/c it is a function scoped, they simply ignore the block as they are not block scoped
+    // console.log(add(2, 3)); //here gives error b/c fuction is a block scoped
+    //but when we off the strict mode we can get no error
   }
   printAge();
   return age;
