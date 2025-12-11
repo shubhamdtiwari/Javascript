@@ -4,13 +4,18 @@ function calcAge(birthYear) {
   //   console.log(firstName);
 
   function printAge() {
-    const output = `${firstName} is ${age} , born in ${birthYear}`;
+    let output = `${firstName} is ${age} , born in ${birthYear}`;
     console.log(output);
 
     if (birthYear >= 1981 && birthYear <= 1996) {
       var millenial = true;
       //if we add a new firstname here thenn it read it b/c js always reads current scope first
+
+      //creating new variable with same name as outer scope's variable
       const firstName = "Ujjwal";
+
+      //reassingning outer scope's variable
+      output = "New OUTPUT";
       const str = `oh! you're a millenial , ${firstName}`;
       console.log(str);
 
@@ -23,6 +28,8 @@ function calcAge(birthYear) {
     console.log(millenial); // but this can acceced outside b/c it is a function scoped, they simply ignore the block as they are not block scoped
     // console.log(add(2, 3)); //here gives error b/c fuction is a block scoped
     //but when we off the strict mode we can get no error
+
+    console.log(output);
   }
   printAge();
   return age;
