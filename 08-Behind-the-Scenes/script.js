@@ -9,6 +9,8 @@ function calcAge(birthYear) {
 
     if (birthYear >= 1981 && birthYear <= 1996) {
       var millenial = true;
+      //if we add a new firstname here thenn it read it b/c js always reads current scope first
+      const firstName = "Ujjwal";
       const str = `oh! you're a millenial , ${firstName}`;
       console.log(str);
 
