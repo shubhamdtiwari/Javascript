@@ -1,5 +1,5 @@
 "use strict";
-function calcAge(birthYear) {
+/* function calcAge(birthYear) {
   const age = 2037 - birthYear;
   //   console.log(firstName);
 
@@ -39,4 +39,4 @@ calcAge(1991);
 
 // console.log(age); we cannt use age here b/c it is not define here
 // it only define inside calcAge function and there inside function
-//also printAge()
+//also printAge() */
