@@ -40,13 +40,44 @@ calcAge(1991);
 // console.log(age); we cannt use age here b/c it is not define here
 // it only define inside calcAge function and there inside function
 //also printAge() */
+
+// lecture  :-  9 Hoisting and TDZ
 // const myName = 'Shubham';
 
+// variables
 // if (myName === 'Shubham') {
 //   console.log(`jonas is a ${job}`);
 //   // we will get error b/c we use job before declearing
 //   const age = 2037 - 2006;
 //   console.log(age);
 //   const job = 'student';
-  
+
 // }
+// function
+
+// console.log(addDecl(2, 3));
+
+// // console.log(addExp(2, 3));
+
+// console.log(addArrow(2, 3));
+
+// function addDecl(a, b) {
+//   return a + b;
+// }
+
+// const addExp = function (a, b) {
+//   return a + b;
+// };
+
+// var addArrow = (a, b) => a + b;
+
+// Example
+
+console.log(numProduct)
+if (!numProduct) deleteShoppingCart();
+
+var numProduct = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted!');
+}
