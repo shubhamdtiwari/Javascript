@@ -40,3 +40,13 @@ calcAge(1991);
 // console.log(age); we cannt use age here b/c it is not define here
 // it only define inside calcAge function and there inside function
 //also printAge() */
+// const myName = 'Shubham';
+
+// if (myName === 'Shubham') {
+//   console.log(`jonas is a ${job}`);
+//   // we will get error b/c we use job before declearing
+//   const age = 2037 - 2006;
+//   console.log(age);
+//   const job = 'student';
+  
+// }
