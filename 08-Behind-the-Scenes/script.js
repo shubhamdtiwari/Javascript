@@ -118,30 +118,38 @@ matilda.calcAge(); */
 
 //Lecture :- 12
 // var firstName = 'matilda'
+
 const jonas = {
   firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
     // console.log(this);
-
-    const self = this;
     console.log(2037 - this.year);
 
 
+    const self = this; //self or that
+
     const isMilenial = function () {
       console.log(self);
-
-      // console.log(this.year >= 1981 && this.year <= 1996);
       console.log(self.year >= 1981 && self.year <= 1996);
 
-    }
+      // console.log(this.year >= 1981 && this.year <= 1996);
+
+    };
     isMilenial();
   },
-  greet: () => console.log(`Hey ${this.firstName}`), // by creating var we gave it firstname
-  // arrow function does not gets this keyword 
-  //it gets its this keyword from its parent this keyword
-  //here its parent keyword is global keyword
-}
+
+
+
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`); // by creating var we gave it firstname
+    // arrow function does not gets this keyword 
+    //it gets its this keyword from its parent this keyword
+    //here its parent keyword is global keyword
+  },
+};
+
 jonas.greet();
 jonas.calcAge();
 
