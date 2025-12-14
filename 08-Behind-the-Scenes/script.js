@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /* function calcAge(birthYear) {
   const age = 2037 - birthYear;
   //   console.log(firstName);
@@ -175,15 +175,18 @@ var addArrow = (a, b) => {
 }
 addArrow(2, 5, 8)
 // arguments keywords only exit in only regular function not in arrow function
- */
+ 
 
 // Lecture :- 13
+
+// Primitive value
 let age = 30;
 let oldAge = age;
 age = 31;
 console.log(age);
 console.log(oldAge);
 
+// Refrence value
 const me = {
   name: 'jonas',
   age: 30,
@@ -192,3 +195,37 @@ const friend = me;
 friend.age = 27;
 console.log('Friend:', friend);
 console.log('Me', me);
+*/
+//Lecture :- 14
+
+//Primitive type
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+//Refrence Type
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('before marriage :', jessica);
+console.log('After marriage:', marriedJessica);
+
+// marriedJessica = {};
+//we cann't change here
+
+//copying object
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+console.log('before marriage :', jessica2);
+console.log('After marriage:', jessicaCopy);
