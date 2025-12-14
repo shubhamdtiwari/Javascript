@@ -138,11 +138,10 @@ const jonas = {
     // };
     // solution 2
 
-    const isMilenial = function () {
+    const isMilenial = () => {
       console.log(this);
       console.log(this.year >= 1981 && this.year <= 1996);
-
-      // console.log(this.year >= 1981 && this.year <= 1996);
+      // here this keyword inherit from parent scope as in arrow function it is jonas
 
     };
     isMilenial();
