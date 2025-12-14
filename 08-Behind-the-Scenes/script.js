@@ -39,7 +39,7 @@ calcAge(1991);
 
 // console.log(age); we cannt use age here b/c it is not define here
 // it only define inside calcAge function and there inside function
-//also printAge() */
+//also printAge()
 
 // lecture  :-  9 Hoisting and TDZ
 // const myName = 'Shubham';
@@ -73,11 +73,22 @@ calcAge(1991);
 
 // Example
 
-console.log(numProduct)
-if (!numProduct) deleteShoppingCart();
+// console.log(numProduct)
+// if (!numProduct) deleteShoppingCart();
 
-var numProduct = 10;
+// var numProduct = 10;
 
-function deleteShoppingCart() {
-  console.log('All products deleted!');
-}
+// function deleteShoppingCart() {
+//   console.log('All products deleted!');
+// }
+
+var x = 1;
+const y = 2;
+let z = 3;
+
+console.log(x === window.x);
+console.log(y === window.y);
+
+console.log(z === window.z);
+*/
+// Lecture :- 11 this keyword
