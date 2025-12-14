@@ -90,5 +90,58 @@ console.log(x === window.x);
 console.log(y === window.y);
 
 console.log(z === window.z);
-*/
+
 // Lecture :- 11 this keyword
+
+console.log(this);
+
+const calcAge = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this);
+}
+calcAge(1991);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+  },
+}
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge; // method brrowingh
+matilda.calcAge(); */
+
+//Lecture :- 12
+// var firstName = 'matilda'
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    // console.log(this);
+
+    const self = this;
+    console.log(2037 - this.year);
+
+
+    const isMilenial = function () {
+      console.log(self);
+
+      // console.log(this.year >= 1981 && this.year <= 1996);
+      console.log(self.year >= 1981 && self.year <= 1996);
+
+    }
+    isMilenial();
+  },
+  greet: () => console.log(`Hey ${this.firstName}`), // by creating var we gave it firstname
+  // arrow function does not gets this keyword 
+  //it gets its this keyword from its parent this keyword
+  //here its parent keyword is global keyword
+}
+jonas.greet();
+jonas.calcAge();
+
