@@ -114,7 +114,7 @@ const matilda = {
 };
 
 matilda.calcAge = jonas.calcAge; // method brrowingh
-matilda.calcAge(); */
+matilda.calcAge();
 
 //Lecture :- 12
 // var firstName = 'matilda'
@@ -152,7 +152,7 @@ const jonas = {
   greet: () => {
     console.log(this);
     console.log(`Hey ${this.firstName}`); // by creating var we gave it firstname
-    // arrow function does not gets this keyword 
+    // arrow function does not gets this keyword
     //it gets its this keyword from its parent this keyword
     //here its parent keyword is global keyword
   },
@@ -175,3 +175,11 @@ var addArrow = (a, b) => {
 }
 addArrow(2, 5, 8)
 // arguments keywords only exit in only regular function not in arrow function
+ */
+
+// Lecture :- 13
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
