@@ -59,8 +59,11 @@ const [x, y, z] = arr;
 console.log(x, y, z);
 console.log(arr);
 
-// let [main, , secondary] = restaurant.categories;
-// console.log(main, secondary);
+// const [first, second] = restaurant.categories;
+// console.log(first, second);
+
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
 
 // //Switching variables
 // // const temp = main;
