@@ -62,6 +62,8 @@ console.log(arr);
 // const [first, second] = restaurant.categories;
 // console.log(first, second);
 
+// for first and third we can use extra ,
+
 let [main, , secondary] = restaurant.categories;
 console.log(main, secondary);
 
