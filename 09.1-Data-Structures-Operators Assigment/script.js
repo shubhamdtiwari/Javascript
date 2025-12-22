@@ -224,3 +224,11 @@ const books = [
     highlighted: true,
   },
 ];
+
+const [firstBook, secondBook] = books;
+const [, , thirdBook] = books;
+
+const rating = [
+  ["rating", 4.19],
+  ["ratingCount", 144584],
+];
