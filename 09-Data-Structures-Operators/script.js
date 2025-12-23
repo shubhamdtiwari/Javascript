@@ -36,6 +36,7 @@ const restaurant = {
     );
   },
 };
+/*
 //lecture : - 05
 
 const arr = [7, 8, 9];
@@ -74,7 +75,7 @@ let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 ({ a, b } = obj);
 console.log(a, b);
-
+*/
 //Lecture :- 03 Destructuring Arrays
 const arr = [2, 3, 4];
 const a = arr[0];
