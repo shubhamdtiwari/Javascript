@@ -40,7 +40,7 @@ const restaurant = {
 
 const arr = [7, 8, 9];
 const newBadarr = [1, 2, arr[0], arr[1], arr[2]];
-/*
+
 // lecture :- 04 Destructring objects
 restaurant.orderDelivery({
   time: "22:30",
@@ -74,13 +74,6 @@ let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 ({ a, b } = obj);
 console.log(a, b);
-
-// Nested objects
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
-
 
 //Lecture :- 03 Destructuring Arrays
 const arr = [2, 3, 4];
@@ -140,4 +133,3 @@ console.log(p, q, r);
 //   'garlic',
 //   'basil',
 // ]);
-*/
