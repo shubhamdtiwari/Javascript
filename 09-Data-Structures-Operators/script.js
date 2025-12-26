@@ -118,8 +118,8 @@ const [i, , [j, k]] = nested;
 console.log(i, j, k);
 
 //defult values
-const [p = 1, q = 1, r = 1] = [8, 9];
-console.log(p, q, r);
+// const [p = 1, q = 1, r = 1] = [8, 9];
+// console.log(p, q, r);
 
 // Data needed for a later exercise
 
