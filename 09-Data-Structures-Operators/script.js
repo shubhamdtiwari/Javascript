@@ -38,7 +38,7 @@ const restaurant = {
 };
 
 //Lecture :- 03 Destructuring Arrays
-const arr = [2, 3, 4];
+const arr = [2, 3, 6];
 const a = arr[0];
 const b = arr[1];
 const c = arr[3];
@@ -79,8 +79,8 @@ const [i, , [j, k]] = nested;
 console.log(i, j, k);
 
 //defult values
-// const [p = 1, q = 1, r = 1] = [8, 9];
-// console.log(p, q, r);
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
 
 // Data needed for a later exercise
 
