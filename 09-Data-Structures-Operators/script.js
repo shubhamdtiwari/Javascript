@@ -55,7 +55,7 @@ console.log(arr);
 let [main, , secondary] = restaurant.categories;
 console.log(main, secondary);
 
-// Switching variables
+// Switching variablespoko
 
 // const temp = main;
 // main = secondary;
