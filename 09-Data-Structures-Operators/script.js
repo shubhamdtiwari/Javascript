@@ -36,6 +36,7 @@ const restaurant = {
     );
   },
 };
+/*
 // Desturcturing objects
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
@@ -65,7 +66,7 @@ const {
 } = openingHours;
 console.log(o, c);
 
-/*
+
 ///////////////////////////
 //Lecture :- 03 Destructuring Arrays
 const arr = [2, 3, 6];
