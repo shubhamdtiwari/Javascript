@@ -239,3 +239,18 @@ const ratings = [
   ['rating', 4.19],
   ['ratingsCount', 144584],
 ];
+// long form explaination
+// const [rating, ratingsCount] = ratings;
+// console.log(rating, ratingsCount);
+// const [, j] = rating;
+// console.log(j);
+// const [, i] = ratingsCount;
+// console.log(i);
+
+// effective way
+const [[, rating], [, ratingsCount]] = ratings;
+console.log(rating, ratingsCount);
+
+//1.4
+
+const 
