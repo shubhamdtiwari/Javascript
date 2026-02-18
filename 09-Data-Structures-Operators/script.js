@@ -66,7 +66,7 @@ const {
 } = openingHours;
 console.log(o, c);
 
-
+*/
 ///////////////////////////
 //Lecture :- 03 Destructuring Arrays
 const arr = [2, 3, 6];
