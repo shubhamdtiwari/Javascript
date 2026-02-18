@@ -269,3 +269,11 @@ const { title, author, ISBN } = books[0];
 const [i, j] = author;
 console.log(i, j);
 console.log(title, author, ISBN);
+
+//2.2
+// we have to assign the value of keyword to tags
+// const { keywords } = books[0];
+// const [tags] = keywords;
+// console.log(tags);
+
+const { keywords: tags } = books[0];
