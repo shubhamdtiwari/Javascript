@@ -22,22 +22,33 @@ const restaurant = {
     },
   },
 
-  order: function (staterIndex, mainIndex) {
-    return [this.starterMenu[staterIndex], this.mainMenu[mainIndex]];
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
   orderDelivery: function ({
-    mainIndex = 0,
-    staterIndex = 1,
+    mainIndex = 1,
+    starterIndex = 0,
     time = '20:00',
     address,
   }) {
     console.log(
-      `Order recevied! ${this.starterMenu[staterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
+      `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
     );
   },
 };
-/*
-// Desturcturing objects
+
+restaurant.orderDelivery({
+  time: '22:00',
+  address: 'Patel Nagar',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  address: 'Patel Nagar',
+  starterIndex: 2,
+});
+// Lec :- 04 Desturcturing objects
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
@@ -50,8 +61,8 @@ console.log(restaurantName, hours, tags);
 
 // seting defult value
 // defult values
-const { menu = [], starterMenu: starter = [] } = restaurant;
-console.log(menu, starter);
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
 
 // Mutating variables
 let a = 111;
@@ -66,7 +77,7 @@ const {
 } = openingHours;
 console.log(o, c);
 
-*/
+/*
 
 ///////////////////////////
 //Lecture :- 03 Destructuring Arrays
@@ -118,7 +129,7 @@ console.log(i, j, k);
 // so we give defult values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
-
+*/
 // Data needed for a later exercise
 
 // const flights =
