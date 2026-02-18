@@ -258,3 +258,14 @@ const ratingStars = [63405, 1808];
 const [fiveStarRating, oneStarRating, threeStarRatings = 0] = ratingStars;
 
 console.log(fiveStarRating, oneStarRating, threeStarRatings);
+
+// Destructuring cbjects
+// 2.1
+//method :- 1 but we cannot destucture more than one
+// const [{ title, author, ISBN }] = books;
+// console.log(title, author, ISBN);
+
+const { title, author, ISBN } = books[0];
+const [i, j] = author;
+console.log(i, j);
+console.log(title, author, ISBN);
