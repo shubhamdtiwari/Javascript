@@ -67,6 +67,7 @@ const {
 console.log(o, c);
 
 */
+
 ///////////////////////////
 //Lecture :- 03 Destructuring Arrays
 const arr = [2, 3, 6];
@@ -92,12 +93,14 @@ console.log(main, secondary);
 // secondary = temp;
 // console.log(main, secondary);
 
+// Switching variables by using arrays
+// reassine value without using variables
 [main, secondary] = [secondary, main];
 console.log(main, secondary);
 
-// console.log(restaurant.order(2, 0));
+console.log(restaurant.order(2, 0)); // it gives arrays
 
-// Recive 2 return values from a function
+// Recive 2 return values from a function by destructuring arrays
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse);
 
@@ -116,7 +119,7 @@ console.log(p, q, r);
 
 // const flights =
 //   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
-*/
+
 const italianFoods = new Set([
   'pasta',
   'gnocchi',
