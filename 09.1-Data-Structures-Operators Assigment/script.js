@@ -254,3 +254,7 @@ console.log(rating, ratingsCount);
 //1.4
 
 const ratingStars = [63405, 1808];
+
+const [fiveStarRating, oneStarRating, threeStarRatings = 0] = ratingStars;
+
+console.log(fiveStarRating, oneStarRating, threeStarRatings);
