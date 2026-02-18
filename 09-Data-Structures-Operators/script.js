@@ -112,6 +112,10 @@ const [i, , [j, k]] = nested;
 console.log(i, j, k);
 
 //defult values
+//const [p , q , r] = [8,9]
+//if we console.log(p,q,r)
+// then r is undifined
+// so we give defult values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
 
