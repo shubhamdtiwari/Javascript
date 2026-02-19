@@ -277,3 +277,5 @@ console.log(title, author, ISBN);
 // console.log(tags);
 
 const { keywords: tags } = books[0];
+//2.3
+const {} = books[6];
