@@ -278,4 +278,6 @@ console.log(title, author, ISBN);
 
 const { keywords: tags } = books[0];
 //2.3
-const {} = books[6];
+
+const { language, programmingLanguage = 'Unknown' } = books[6];
+console.log(language, programmingLanguage);
