@@ -290,3 +290,13 @@ let bookAuthor = 'unknown';
 
 ({ title: bookTitle, author: bookAuthor } = books[0]);
 console.log(bookTitle, bookAuthor);
+
+//2.5
+
+const {
+  thirdParty: {
+    goodreads: { rating: bookRating },
+  },
+} = books[0];
+
+console.log(bookRating);
