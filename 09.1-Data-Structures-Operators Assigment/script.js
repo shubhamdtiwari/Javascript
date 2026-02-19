@@ -302,7 +302,3 @@ const {
 console.log(bookRating);
 
 //2.5
-
-printBookInfo: function() {
-  
-}
