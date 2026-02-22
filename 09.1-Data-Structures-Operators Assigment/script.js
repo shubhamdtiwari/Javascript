@@ -301,5 +301,12 @@ const {
 
 console.log(bookRating);
 
-//2.
+//2.6
 
+function printBookInfo({ title, author, year = 'year unknown' }) {
+  console.log(`"${title} by ${author}, ${year}"`);
+}
+printBookInfo({
+  title: 'Algorithms',
+  author: 'Robert Sedgewick',
+});
