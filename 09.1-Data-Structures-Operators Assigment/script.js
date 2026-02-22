@@ -224,7 +224,7 @@ const books = [
     highlighted: true,
   },
 ];
-
+/*
 //Destructuring Arrays
 // 1.1
 const [firstBook, secondBook] = books;
@@ -314,4 +314,9 @@ printBookInfo({
 printBookInfo({
   title: 'Algorithms',
   author: 'Robert Sedgewick',
-});
+}); */
+
+// 3.1  const bookAuthors = [...books[0]];
+
+const bookAuthor = [...books[0].author, ...books[0].author];
+console.log(bookAuthor);
