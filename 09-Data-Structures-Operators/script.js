@@ -53,7 +53,14 @@ console.log(...newArr);
 const newMenu = [...restaurant.mainMenu, 'Matar Panner'];
 console.log(newMenu);
 
-// spread operator is similar to destructuring but it uses all elements of array
+// spread operator is similar to destructuring of array but it uses all elements of array and dont create any variable
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
 
 /*
 restaurant.orderDelivery({
