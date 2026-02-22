@@ -35,6 +35,12 @@ const restaurant = {
       `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`
+    );
+  },
 };
 
 // lecture :- 05 The Spread Operator
@@ -68,7 +74,20 @@ const str = 'Shubham';
 const letters = [...str, ' ', 'S.'];
 console.log(letters);
 console.log(...str);
-console.log();
+// console.log(`${...str} tiwari`);
+
+const ingredients = [
+  prompt("Let's make pasta! Ingredient 1? "),
+  prompt('Ingredients 2?'),
+  prompt('Ingredients 3?'),
+];
+console.log(ingredients);
+
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
+
+//Objects
+
 /*
 restaurant.orderDelivery({
   time: '22:00',
