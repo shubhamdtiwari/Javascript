@@ -37,6 +37,16 @@ const restaurant = {
   },
 };
 
+// lecture :- 05 The Spread Operator
+
+const arr = [5, 6, 7];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+/*
 restaurant.orderDelivery({
   time: '22:00',
   address: 'Patel Nagar',
