@@ -62,6 +62,13 @@ const mainMenuCopy = [...restaurant.mainMenu];
 const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(menu);
 
+// Iterables: arrays, strings, maps, sets. NOT OBJECTS
+
+const str = 'Shubham';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+console.log(...str);
+console.log();
 /*
 restaurant.orderDelivery({
   time: '22:00',
