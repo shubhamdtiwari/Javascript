@@ -309,4 +309,9 @@ function printBookInfo({ title, author, year = 'year unknown' }) {
 printBookInfo({
   title: 'Algorithms',
   author: 'Robert Sedgewick',
+  year: '2011',
+});
+printBookInfo({
+  title: 'Algorithms',
+  author: 'Robert Sedgewick',
 });
