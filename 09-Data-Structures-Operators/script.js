@@ -45,6 +45,15 @@ console.log(badNewArr);
 
 const newArr = [1, 2, ...arr];
 console.log(newArr);
+//when we need arrays individually we use spread operator
+console.log(...newArr);
+
+// bolding new array using exsisting array
+
+const newMenu = [...restaurant.mainMenu, 'Matar Panner'];
+console.log(newMenu);
+
+// spread operator is similar to destructuring but it uses all elements of array
 
 /*
 restaurant.orderDelivery({
