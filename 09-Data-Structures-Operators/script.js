@@ -77,9 +77,9 @@ console.log(...str);
 // console.log(`${...str} tiwari`);
 
 const ingredients = [
-  prompt("Let's make pasta! Ingredient 1? "),
-  prompt('Ingredients 2?'),
-  prompt('Ingredients 3?'),
+  // prompt("Let's make pasta! Ingredient 1? "),
+  // prompt('Ingredients 2?'),
+  // prompt('Ingredients 3?'),
 ];
 console.log(ingredients);
 
@@ -89,6 +89,11 @@ restaurant.orderPasta(...ingredients);
 //Objects
 const newRestaurant = { foundedIn: 1998, ...restaurant, fonder: 'Shubham' };
 console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Rome';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
 /*
 restaurant.orderDelivery({
   time: '22:00',
