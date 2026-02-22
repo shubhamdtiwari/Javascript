@@ -320,3 +320,10 @@ printBookInfo({
 
 const bookAuthor = [...books[0].author, ...books[0].author];
 console.log(bookAuthor);
+
+// 3.2
+
+function spellWord(word) {
+  console.log(...word);
+}
+spellWord('javascript');
