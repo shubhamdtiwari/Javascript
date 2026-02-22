@@ -87,7 +87,8 @@ console.log(ingredients);
 restaurant.orderPasta(...ingredients);
 
 //Objects
-
+const newRestaurant = { foundedIn: 1998, ...restaurant, fonder: 'Shubham' };
+console.log(newRestaurant);
 /*
 restaurant.orderDelivery({
   time: '22:00',
