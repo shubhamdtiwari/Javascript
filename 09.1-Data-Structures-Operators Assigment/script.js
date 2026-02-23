@@ -327,3 +327,4 @@ function spellWord(word) {
   console.log(...word);
 }
 spellWord('javascript');
+spellWord('Shubham');
