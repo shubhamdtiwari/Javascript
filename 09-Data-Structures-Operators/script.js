@@ -43,7 +43,14 @@ const restaurant = {
   },
 };
 
-// lecture :- 05 The Spread Operator
+// Lecture :- 06 Rest Pattern and parameter
+// SPREAD, because on RIGHT side of =
+const arr = [1, 2, ...[3, 4]];
+
+const [] = [1, 2];
+
+/*
+// lecture :- 05 The Spread Operator (...)
 
 const arr = [5, 6, 7];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
@@ -94,7 +101,7 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Rome';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
-/*
+
 restaurant.orderDelivery({
   time: '22:00',
   address: 'Patel Nagar',
