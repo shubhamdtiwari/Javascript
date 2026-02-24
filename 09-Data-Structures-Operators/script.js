@@ -44,12 +44,15 @@ const restaurant = {
 };
 
 // Lecture :- 06 Rest Pattern and parameter
+
 // SPREAD, because on RIGHT side of =
 const arr = [1, 2, ...[3, 4]];
 
 const [] = [1, 2];
 
 /*
+
+
 // lecture :- 05 The Spread Operator (...)
 
 const arr = [5, 6, 7];
