@@ -45,6 +45,8 @@ const restaurant = {
 
 // Lecture :- 06 Rest Pattern and parameter
 
+// 1) destructuring
+
 // SPREAD, because on RIGHT side of =
 const arr = [1, 2, ...[3, 4]];
 
@@ -57,6 +59,11 @@ const [pizza, , risotto, ...otherFood] = [
   ...restaurant.starterMenu,
 ];
 console.log(pizza, risotto, otherFood);
+
+//objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+// 2) Function
 
 /*
 // lecture :- 05 The Spread Operator (...)
