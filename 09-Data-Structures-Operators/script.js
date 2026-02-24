@@ -48,11 +48,17 @@ const restaurant = {
 // SPREAD, because on RIGHT side of =
 const arr = [1, 2, ...[3, 4]];
 
-const [] = [1, 2];
+// REST, because on LEFT side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
 
 /*
-
-
 // lecture :- 05 The Spread Operator (...)
 
 const arr = [5, 6, 7];
