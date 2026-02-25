@@ -90,6 +90,9 @@ add(...x);
 restaurant.orderPizza('Mushrooms', 'onoin', 'olives', 'spinach');
 
 restaurant.orderPizza('Mushrooms');
+//spread is use to write values separated by comma
+//rest is use to write variables anmes separated by commas
+
 /*
 // lecture :- 05 The Spread Operator (...)
 
