@@ -64,6 +64,17 @@ console.log(pizza, risotto, otherFood);
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
 // 2) Function
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+add(2, 3);
+add(5, 6, 7);
+add(8, 9, 4, 5, 6, 7);
+
+const x = [23, 5, 7];
+add(...x);
 
 /*
 // lecture :- 05 The Spread Operator (...)
