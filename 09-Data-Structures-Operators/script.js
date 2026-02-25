@@ -41,6 +41,11 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 // Lecture :- 06 Rest Pattern and parameter
@@ -76,6 +81,7 @@ add(8, 9, 4, 5, 6, 7);
 const x = [23, 5, 7];
 add(...x);
 
+restaurant.orderPizza('Mushrooms', 'onoin', 'olives', 'spinach');
 /*
 // lecture :- 05 The Spread Operator (...)
 
