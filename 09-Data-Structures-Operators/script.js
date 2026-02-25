@@ -45,6 +45,12 @@ const restaurant = {
   orderPizza: function (mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
+    const taste = otherIngredients.length === 0 ? 'bad' : 'delicious';
+    const topping =
+      otherIngredients.length === 0 ? 'none' : otherIngredients.join(',');
+    console.log(
+      `Main ingredient in this pizza is made of ${mainIngredient} and topings are made up of ${topping}. and it's looks ${taste}`
+    );
   },
 };
 
@@ -82,6 +88,8 @@ const x = [23, 5, 7];
 add(...x);
 
 restaurant.orderPizza('Mushrooms', 'onoin', 'olives', 'spinach');
+
+restaurant.orderPizza('Mushrooms');
 /*
 // lecture :- 05 The Spread Operator (...)
 
