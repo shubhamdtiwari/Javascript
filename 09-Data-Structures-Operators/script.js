@@ -54,6 +54,8 @@ const restaurant = {
   },
 };
 
+/*
+//////////////////////////////////////
 // Lecture :- 06 Rest Pattern and parameter
 
 // 1) destructuring
@@ -94,6 +96,7 @@ restaurant.orderPizza('Mushrooms');
 //rest is use to write variables anmes separated by commas
 
 /*
+//////////////////////////////////
 // lecture :- 05 The Spread Operator (...)
 
 const arr = [5, 6, 7];
@@ -157,6 +160,8 @@ restaurant.orderDelivery({
   address: 'Patel Nagar',
   starterIndex: 2,
 });
+
+//////////////////////////////////////
 // Lec :- 04 Desturcturing objects
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
