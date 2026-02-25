@@ -314,7 +314,7 @@ printBookInfo({
 printBookInfo({
   title: 'Algorithms',
   author: 'Robert Sedgewick',
-}); */
+}); 
 
 // 3.1  const bookAuthors = [...books[0]];
 
@@ -328,3 +328,4 @@ function spellWord(word) {
 }
 spellWord('javascript');
 spellWord('Shubham');
+*/
