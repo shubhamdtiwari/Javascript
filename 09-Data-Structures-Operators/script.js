@@ -1,4 +1,5 @@
 'use strict';
+
 // Data needed for first part of the section
 
 const restaurant = {
@@ -56,7 +57,7 @@ const restaurant = {
 
 /*
 //////////////////////////////////////
-// Lecture :- 06 Rest Pattern and parameter
+// Lecture :- 06 Rest Pattern and parameterr 
 
 // 1) destructuring
 
