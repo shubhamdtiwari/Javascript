@@ -330,4 +330,7 @@ spellWord('javascript');
 spellWord('Shubham');
 */
 
-//
+// 4.1
+
+const { mainKeywords } = books[1].keywords;
+console.log(mainKeywords);
