@@ -332,5 +332,12 @@ spellWord('Shubham');
 
 // 4.1
 
-const { mainKeywords } = books[1].keywords;
+const [mainKeywords, ...rest] = books[1].keywords;
+console.log(rest);
 console.log(mainKeywords);
+// 4.2
+
+const { publisher: bookPublisher, ...restOfBook } = books[1];
+
+console.log(bookPublisher);
+console.log(restOfBook);
