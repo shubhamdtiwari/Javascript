@@ -328,7 +328,7 @@ function spellWord(word) {
 }
 spellWord('javascript');
 spellWord('Shubham');
-*/
+
 
 // 4.1
 
@@ -347,3 +347,4 @@ function printBookAuthorsCount(title, ...authors) {
   console.log(`The book "${title}" has ${authors.length} authors`);
 }
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
+*/
