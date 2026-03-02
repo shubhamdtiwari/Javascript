@@ -55,6 +55,8 @@ const restaurant = {
   },
 };
 
+//Use ANY data type, return ANY data type,short-circuiting
+console.log(5 || 'Shubham');
 /*
 //////////////////////////////////////
 // Lecture :- 06 Rest Pattern and parameterr 
