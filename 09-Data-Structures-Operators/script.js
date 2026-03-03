@@ -60,6 +60,8 @@ const restaurant = {
 console.log(5 || 'Shubham');
 
 console.log('' || 'shubham');
+console.log(true || 0);
+console.log(undefined || null);
 
 /*
 //////////////////////////////////////
