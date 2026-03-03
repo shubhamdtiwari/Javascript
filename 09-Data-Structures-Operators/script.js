@@ -91,6 +91,7 @@ if (restaurant.orderPizza) {
 }
 //else we can use
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
 /*
 //////////////////////////////////////
 // Lecture :- 06 Rest Pattern and parameterr 
