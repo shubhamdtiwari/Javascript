@@ -63,6 +63,7 @@ console.log('' || 'shubham');
 console.log(true || 0);
 console.log(undefined || null);
 
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 /*
 //////////////////////////////////////
 // Lecture :- 06 Rest Pattern and parameterr 
