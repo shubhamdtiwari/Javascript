@@ -85,6 +85,12 @@ console.log(7 && 'shubham');
 //it gets null b/c null is falsy
 console.log('hello' && 23 && null && 'jonas');
 
+//practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+//else we can use
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 /*
 //////////////////////////////////////
 // Lecture :- 06 Rest Pattern and parameterr 
