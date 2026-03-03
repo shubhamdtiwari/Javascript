@@ -71,7 +71,7 @@ const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guests1);
 // we can use short-circuiting
 // when numGuests is not defines then resturant.numGuests is falsy value then it will show the value 10
-// but when
+// but when we define the value of numGuest then it short-circuit the give truthy value
 const guest2 = restaurant.numGuests || 10;
 console.log(guest2);
 
