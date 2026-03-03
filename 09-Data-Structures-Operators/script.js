@@ -64,6 +64,17 @@ console.log(true || 0);
 console.log(undefined || null);
 
 console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// if the restaurant.numGuests is not defined we get other value
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+// we can use short-circuiting
+// when numGuests is not defines then resturant.numGuests is falsy value then it will show the value 10
+// but when
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+
 /*
 //////////////////////////////////////
 // Lecture :- 06 Rest Pattern and parameterr 
