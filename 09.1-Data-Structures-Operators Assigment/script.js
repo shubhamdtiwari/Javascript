@@ -330,21 +330,3 @@ spellWord('javascript');
 spellWord('Shubham');
 
 
-// 4.1
-
-const [mainKeywords, ...rest] = books[1].keywords;
-console.log(rest);
-console.log(mainKeywords);
-// 4.2
-
-const { publisher: bookPublisher, ...restOfBook } = books[1];
-
-console.log(bookPublisher);
-console.log(restOfBook);
-
-//4.3
-function printBookAuthorsCount(title, ...authors) {
-  console.log(`The book "${title}" has ${authors.length} authors`);
-}
-printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
-*/
