@@ -251,4 +251,100 @@ const ratings = [
 const [[, rating], [, ratingsCount]] = ratings;
 console.log(rating, ratingsCount);
 
+//1.4
 
+const ratingStars = [63405, 1808];
+
+const [fiveStarRating, oneStarRating, threeStarRatings = 0] = ratingStars;
+
+console.log(fiveStarRating, oneStarRating, threeStarRatings);
+
+// Destructuring cbjects
+// 2.1
+//method :- 1 but we cannot destucture more than one
+// const [{ title, author, ISBN }] = books;
+// console.log(title, author, ISBN);
+
+const { title, author, ISBN } = books[0];
+const [i, j] = author;
+console.log(i, j);
+console.log(title, author, ISBN);
+
+//2.2
+// we have to assign the value of keyword to tags
+// const { keywords } = books[0];
+// const [tags] = keywords;
+// console.log(tags);
+
+const { keywords: tags } = books[0];
+
+//2.3
+
+const { language, programmingLanguage = 'Unknown' } = books[6];
+console.log(language, programmingLanguage);
+
+//2.4
+
+let bookTitle = 'unknown';
+let bookAuthor = 'unknown';
+
+({ title: bookTitle, author: bookAuthor } = books[0]);
+console.log(bookTitle, bookAuthor);
+
+//2.5
+
+const {
+  thirdParty: {
+    goodreads: { rating: bookRating },
+  },
+} = books[0];
+
+console.log(bookRating);
+
+//2.6
+
+function printBookInfo({ title, author, year = 'year unknown' }) {
+  console.log(`"${title} by ${author}, ${year}"`);
+}
+printBookInfo({
+  title: 'Algorithms',
+  author: 'Robert Sedgewick',
+  year: '2011',
+});
+printBookInfo({
+  title: 'Algorithms',
+  author: 'Robert Sedgewick',
+}); 
+
+// 3.1  const bookAuthors = [...books[0]];
+
+const bookAuthor = [...books[0].author, ...books[0].author];
+console.log(bookAuthor);
+
+// 3.2
+
+function spellWord(word) {
+  console.log(...word);
+}
+spellWord('javascript');
+spellWord('Shubham');
+
+
+// 4.1
+
+const [mainKeywords, ...rest] = books[1].keywords;
+console.log(rest);
+console.log(mainKeywords);
+// 4.2
+
+const { publisher: bookPublisher, ...restOfBook } = books[1];
+
+console.log(bookPublisher);
+console.log(restOfBook);
+
+//4.3
+function printBookAuthorsCount(title, ...authors) {
+  console.log(`The book "${title}" has ${authors.length} authors`);
+}
+printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
+*/
