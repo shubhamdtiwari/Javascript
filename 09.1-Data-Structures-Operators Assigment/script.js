@@ -356,3 +356,5 @@ function hasExampleInJava(books) {
 }
 
 hasExampleInJava(books[0]);
+
+// 5.2
