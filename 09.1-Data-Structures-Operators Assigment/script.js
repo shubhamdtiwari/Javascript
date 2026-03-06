@@ -347,7 +347,7 @@ function printBookAuthorsCount(title, ...authors) {
   console.log(`The book "${title}" has ${authors.length} authors`);
 }
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
-*/
+
 // 5.1
 
 function hasExampleInJava(books) {
@@ -361,3 +361,4 @@ for (let i = 0; i < books.length; i++) {
   books[i].onlineContent &&
     console.log(`"${books[i].title}" provides online content`);
 }
+*/
