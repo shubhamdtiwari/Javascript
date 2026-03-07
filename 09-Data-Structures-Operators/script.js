@@ -55,6 +55,49 @@ const restaurant = {
   },
 };
 
+///////////////////////////////
+/*
+console.log('----OR----');
+//Use ANY data type, return ANY data type,short-circuiting
+
+console.log(5 || 'Shubham');
+
+console.log('' || 'shubham');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// if the restaurant.numGuests is not defined we get other value
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+// we can use short-circuiting
+// when numGuests is not defines then resturant.numGuests is falsy value then it will show the value 10
+// but when we define the value of numGuest then it short-circuit the give truthy value
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+
+console.log('----AND----');
+
+// here && gives result if it is false as here we get 0  as it is a falsy value
+console.log(0 && 'jonas');
+// here we get shubham as 7 is a truthy value
+
+console.log(7 && 'shubham');
+//it gets null b/c null is falsy
+console.log('hello' && 23 && null && 'jonas');
+
+//practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+//else we can use
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+// OR opretor return first Turthy value or last if all them are falsy and AND opretor return first falsy value or last is all are true
+
+
 //////////////////////////////////////
 // Lecture :- 06 Rest Pattern and parameterr
 
