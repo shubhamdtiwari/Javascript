@@ -54,13 +54,14 @@ const restaurant = {
     );
   },
 };
-// lecture :- 08
+// lecture :- 08 Nullish Coalescing Operator
 
 restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
 console.log(guests);
 
-const guestCorrect = restaurant.numGuests;
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
 ///////////////////////////////
 
 // lecture :- 07
