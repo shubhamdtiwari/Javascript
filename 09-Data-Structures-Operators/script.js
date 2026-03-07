@@ -33,13 +33,13 @@ const restaurant = {
     address,
   }) {
     console.log(
-      `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
+      `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
 
   orderPasta: function (ing1, ing2, ing3) {
     console.log(
-      `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`,
+      `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`
     );
   },
 
@@ -50,56 +50,13 @@ const restaurant = {
     const topping =
       otherIngredients.length === 0 ? 'none' : otherIngredients.join(',');
     console.log(
-      `Main ingredient in this pizza is made of ${mainIngredient} and topings are made up of ${topping}. and it's looks ${taste}`,
+      `Main ingredient in this pizza is made of ${mainIngredient} and topings are made up of ${topping}. and it's looks ${taste}`
     );
   },
 };
 
-///////////////////////////////
-/*
-console.log('----OR----');
-//Use ANY data type, return ANY data type,short-circuiting
-
-console.log(5 || 'Shubham');
-
-console.log('' || 'shubham');
-console.log(true || 0);
-console.log(undefined || null);
-
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
-
-// if the restaurant.numGuests is not defined we get other value
-restaurant.numGuests = 23;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1);
-// we can use short-circuiting
-// when numGuests is not defines then resturant.numGuests is falsy value then it will show the value 10
-// but when we define the value of numGuest then it short-circuit the give truthy value
-const guest2 = restaurant.numGuests || 10;
-console.log(guest2);
-
-console.log('----AND----');
-
-// here && gives result if it is false as here we get 0  as it is a falsy value
-console.log(0 && 'jonas');
-// here we get shubham as 7 is a truthy value
-
-console.log(7 && 'shubham');
-//it gets null b/c null is falsy
-console.log('hello' && 23 && null && 'jonas');
-
-//practical example
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'spinach');
-}
-//else we can use
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
-
-// OR opretor return first Turthy value or last if all them are falsy and AND opretor return first falsy value or last is all are true
-
-
 //////////////////////////////////////
-// Lecture :- 06 Rest Pattern and parameterr 
+// Lecture :- 06 Rest Pattern and parameterr
 
 // 1) destructuring
 
