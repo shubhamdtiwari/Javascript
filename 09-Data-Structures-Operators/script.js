@@ -62,6 +62,7 @@ console.log(guests);
 
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
+
 ///////////////////////////////
 
 // lecture :- 07
