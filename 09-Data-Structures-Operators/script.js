@@ -54,8 +54,16 @@ const restaurant = {
     );
   },
 };
+// lecture :- 08
 
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+const 
 ///////////////////////////////
+
+// lecture :- 07
 /*
 console.log('----OR----');
 //Use ANY data type, return ANY data type,short-circuiting
