@@ -33,13 +33,13 @@ const restaurant = {
     address,
   }) {
     console.log(
-      `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
+      `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
 
   orderPasta: function (ing1, ing2, ing3) {
     console.log(
-      `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`,
+      `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`
     );
   },
 
@@ -50,48 +50,11 @@ const restaurant = {
     const topping =
       otherIngredients.length === 0 ? 'none' : otherIngredients.join(',');
     console.log(
-      `Main ingredient in this pizza is made of ${mainIngredient} and topings are made up of ${topping}. and it's looks ${taste}`,
+      `Main ingredient in this pizza is made of ${mainIngredient} and topings are made up of ${topping}. and it's looks ${taste}`
     );
   },
 };
-// lecture :- 09 Logical Assignment Operators
 
-const rest1 = {
-  name: 'Capri',
-  // numGuests: 20,
-  numGuests: 0,
-};
-
-const rest2 = {
-  name: 'Shubham',
-  owner: 'Giovani',
-};
-// OR assignment operator
-
-// rest1.numGuests = rest1.numGuests || 10;
-
-// rest1.numGuests ||= 10; // instead of writing long form we can use short form called L.A.O.
-
-// // rest2.numGuests = rest2.numGuests || 10;
-
-// rest2.numGuests ||= 10;
-
-// Nullish assignment operator
-
-rest1.numGuests ??= 10;
-rest2.numGuests ??= 10;
-
-//AND assignment operator
-// rest1.owner = rest1.owner && '<Anonymous>';
-// rest2.owner = rest2.owner && '<Anonymous>';
-
-rest1.owner &&= '<Anonymous>';
-rest2.owner &&= '<Anonymous>';
-
-console.log(rest1);
-console.log(rest2);
-
-/*
 //////////////////////////////////
 // lecture :- 08 Nullish Coalescing Operator
 
@@ -146,7 +109,6 @@ if (restaurant.orderPizza) {
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 // OR opretor return first Turthy value or last if all them are falsy and AND opretor return first falsy value or last is all are true
-
 
 //////////////////////////////////////
 // Lecture :- 06 Rest Pattern and parameterr
