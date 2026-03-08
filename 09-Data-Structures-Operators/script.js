@@ -33,13 +33,13 @@ const restaurant = {
     address,
   }) {
     console.log(
-      `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+      `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
     );
   },
 
   orderPasta: function (ing1, ing2, ing3) {
     console.log(
-      `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`
+      `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`,
     );
   },
 
@@ -50,7 +50,7 @@ const restaurant = {
     const topping =
       otherIngredients.length === 0 ? 'none' : otherIngredients.join(',');
     console.log(
-      `Main ingredient in this pizza is made of ${mainIngredient} and topings are made up of ${topping}. and it's looks ${taste}`
+      `Main ingredient in this pizza is made of ${mainIngredient} and topings are made up of ${topping}. and it's looks ${taste}`,
     );
   },
 };
@@ -80,6 +80,13 @@ const rest2 = {
 
 rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
+
+//AND assignment operator
+// rest1.owner = rest1.owner && '<Anonymous>';
+// rest2.owner = rest2.owner && '<Anonymous>';
+
+rest1.owner &&= '<Anonymous>';
+rest2.owner &&= '<Anonymous>';
 
 console.log(rest1);
 console.log(rest2);
