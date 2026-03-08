@@ -54,7 +54,7 @@ const restaurant = {
     );
   },
 };
-// lecture :- 09
+// lecture :- 09 Logical Assignment Operators
 
 const rest1 = {
   name: 'Capri',
@@ -62,8 +62,19 @@ const rest1 = {
 };
 
 const rest2 = {
-  name:
-}
+  name: 'Shubham',
+  owner: 'Giovani',
+};
+// rest1.numGuests = rest1.numGuests || 10;
+
+rest1.numGuests ||= 10; // instead of writing long form we can use short form called L.A.O.
+
+// rest2.numGuests = rest2.numGuests || 10;
+
+rest2.numGuests ||= 10;
+
+console.log(rest1);
+console.log(rest2);
 
 /*
 //////////////////////////////////
