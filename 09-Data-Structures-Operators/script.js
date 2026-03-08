@@ -54,6 +54,19 @@ const restaurant = {
     );
   },
 };
+// lecture :- 09
+
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+};
+
+const rest2 = {
+  name:
+}
+
+/*
+//////////////////////////////////
 // lecture :- 08 Nullish Coalescing Operator
 
 restaurant.numGuests = 0;
@@ -67,7 +80,7 @@ console.log(guestCorrect);
 ///////////////////////////////
 
 // lecture :- 07
-/*
+
 console.log('----OR----');
 //Use ANY data type, return ANY data type,short-circuiting
 
