@@ -371,9 +371,18 @@ for (let i = 0; i < books.length; i++) {
       `"${books[i].title}" provides no data about its online content`
     );
 }
-*/
+
 // 7.1
 
 for (let i = 0; i < books.length; i++) {
   console.log(`${books[i].title} has ${(books[i].edition ||= 1)} edition `);
 }
+// 7.2
+
+for (let l = 0; l < books.length; l++) {
+  if (books[l].thirdParty.goodreads.rating < 4.2) {
+    books[l].highlighted &&= false;
+  }
+  console.log(`${books[l].title} has ${books[l].highlighted} `);
+}
+*/
