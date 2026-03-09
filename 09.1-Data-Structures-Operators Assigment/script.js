@@ -386,3 +386,7 @@ for (let l = 0; l < books.length; l++) {
   console.log(`${books[l].title} has ${books[l].highlighted} `);
 }
 */
+for (let i = 0; i < books.length; i++) {
+  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
+  console.log(`${books[i].title} has ${books[i].highlighted} `);
+}
