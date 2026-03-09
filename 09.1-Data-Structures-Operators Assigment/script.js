@@ -391,11 +391,14 @@ for (let i = 0; i < books.length; i++) {
   console.log(`${books[i].title} has ${books[i].highlighted} `);
 }
 */
-/* We're building a football betting app (soccer for my American friends 
-�
-�)! 
+//////////////////////////////
+// Coding Challenge :- 1
+
+/* We're building a football betting app (soccer for my American friends)! 
 Suppose we get data from a web service about a certain game ('game' variable on 
 next page). In this challenge we're gonna work with that data. 
+
+///////////////////////////////
 Your tasks: 
 1. Create one player array for each team (variables 'players1' and 
 'players2') 
