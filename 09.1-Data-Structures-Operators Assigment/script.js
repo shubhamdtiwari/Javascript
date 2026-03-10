@@ -477,3 +477,11 @@ console.log(fieldPlayers);
 const allPlayers = [...player1, ...player2];
 
 console.log(allPlayers);
+
+// 4.
+
+const players1Final = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
+
+console.log(players1Final);
+
+// 5.
