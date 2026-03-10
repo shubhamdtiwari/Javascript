@@ -475,4 +475,5 @@ console.log(fieldPlayers);
 
 //3.
 
-const
+const [allPlayers] = ;
+console.log(allPlayers);
