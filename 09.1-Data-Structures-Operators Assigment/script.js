@@ -496,3 +496,7 @@ const {
 } = game;
 
 console.log(team1, draw, team2);
+
+// 6.
+
+const printGoals = function () {};
