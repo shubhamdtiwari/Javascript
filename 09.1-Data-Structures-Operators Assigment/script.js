@@ -486,4 +486,5 @@ console.log(players1Final);
 
 // 5.
 const { team1, x: draw, team2 } = game.odds;
+
 console.log(team1, draw, team2);
