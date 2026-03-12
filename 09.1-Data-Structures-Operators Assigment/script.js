@@ -390,9 +390,27 @@ for (let i = 0; i < books.length; i++) {
   books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
   console.log(`${books[i].title} has ${books[i].highlighted} `);
 }
-*/
+
 // 8.1
-let;
+let pageSum = 0;
+
+for (let book of books) {
+  pageSum += book.pages;
+}
+console.log(pageSum);*/
+
+// 8.2
+const allAuthors = [];
+for (const book of books) {
+  if (typeof book.author === 'string') {
+    allAuthors.push(book.author);
+  } else {
+    for (const author of book.author) {
+      allAuthors.push(author);
+    }
+  }
+}
+console.log(allAuthors);
 
 //////////////////////////////
 /////////////////////
