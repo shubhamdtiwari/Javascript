@@ -58,6 +58,7 @@ const restaurant = {
 
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
+for (const item of menu) console.log(item);
 /*
 
 // lecture :- 09 Logical Assignment Operators
