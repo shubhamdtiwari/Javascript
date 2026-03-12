@@ -391,7 +391,10 @@ for (let i = 0; i < books.length; i++) {
   console.log(`${books[i].title} has ${books[i].highlighted} `);
 }
 */
+// 8.1
+
 //////////////////////////////
+/////////////////////
 // Coding Challenge :- 1
 
 /* We're building a football betting app (soccer for my American friends)! 
@@ -507,3 +510,7 @@ printGoals('Davies', 'Muller');
 printGoals(...game.scored);
 
 // 7.
+
+team1 < team2 && console.log('Team 1 is most likely to win');
+
+team1 > team2 && console.log('Team 2 is most likely to win');
