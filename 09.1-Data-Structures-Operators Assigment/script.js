@@ -392,6 +392,7 @@ for (let i = 0; i < books.length; i++) {
 }
 */
 // 8.1
+let;
 
 //////////////////////////////
 /////////////////////
@@ -424,7 +425,7 @@ team is more likely to win, without using an if/else statement or the ternary
 operator. 
 Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. 
 Then, call the function again with players from game.scored 
-*/
+
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -514,3 +515,4 @@ printGoals(...game.scored);
 team1 < team2 && console.log('Team 1 is most likely to win');
 
 team1 > team2 && console.log('Team 2 is most likely to win');
+*/
