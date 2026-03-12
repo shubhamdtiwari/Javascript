@@ -498,4 +498,6 @@ console.log(team1, draw, team2);
 
 // 6.
 
-const printGoals = function () {};
+const printGoals = function (...names) {};
+
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
