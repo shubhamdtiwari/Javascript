@@ -54,6 +54,9 @@ const restaurant = {
     );
   },
 };
+// Lecture :- 10 Looping Arrays - The for-of Loop
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 /*
 
