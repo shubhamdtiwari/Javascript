@@ -411,7 +411,10 @@ for (const book of books) {
   }
 }
 console.log(allAuthors);
-
+//8.3
+for (const [index, author] of allAuthors.entries()) {
+  console.log(`${index + 1}: ${author}`);
+}
 //////////////////////////////
 /////////////////////
 // Coding Challenge :- 1
