@@ -2,7 +2,7 @@
 
 // Data needed for first part of the section
 
-const openingHours = {
+const hours = {
   thu: {
     open: 12,
     close: 22,
@@ -26,6 +26,8 @@ const restaurant = {
   // openingHours: openingHours,
 
   //ES6 enhanced object literals
+  hours,
+
 
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
