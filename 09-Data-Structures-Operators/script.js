@@ -58,7 +58,31 @@ const restaurant = {
 
 
 /* 
+// Lecture :- 10 Looping Arrays - The for-of Loop
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
+// console.log([...menu.entries()]);
+
+
+// lecture :- 09 Logical Assignment Operators
+
+const rest1 = {
+  name: 'Capri',
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'Shubham',
+  owner: 'Giovani',
+};
 // OR assignment operator
 
 // rest1.numGuests = rest1.numGuests || 10;
