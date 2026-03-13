@@ -22,8 +22,10 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto', 'Mashroom Masala'],
+  //here we can insert object directly but variable name is same for the object 
+  // openingHours: openingHours,
 
-  openingHours: openingHours,
+  //ES6 enhanced object literals
 
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
