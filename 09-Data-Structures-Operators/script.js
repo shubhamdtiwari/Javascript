@@ -29,10 +29,17 @@ const restaurant = {
   hours,
 
 
-  order: function (starterIndex, mainIndex) {
+  // here fuction syntax can be removed to make the code simple
+
+  // order: function (starterIndex, mainIndex) {
+  //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  // },
+
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-  orderDelivery: function ({
+  // same for this
+  orderDelivery({
     mainIndex = 1,
     starterIndex = 0,
     time = '20:00',
