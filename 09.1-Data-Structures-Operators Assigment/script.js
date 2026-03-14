@@ -416,7 +416,7 @@ for (const [index, author] of allAuthors.entries()) {
   console.log(`${index + 1}: ${author}`);
 }
 */
-// 9.1
+9.1;
 const bookData = [
   ['title', 'Computer Networking: A Top-Down Approach'],
   ['author', ['James F. Kurose', 'Keith W. Ross']],
@@ -439,6 +439,16 @@ const newBook2 = {
   pages,
 };
 console.log(newBook2);
+
+//10.1
+
+function getfirstKeyword(books) {
+  console.log(books.keywords?.[0]);
+  // return book.keywords?.[0];
+}
+getfirstKeyword(books[0]);
+getfirstKeyword(newBook2);
+
 //////////////////////////////
 /////////////////////
 // Coding Challenge :- 1
