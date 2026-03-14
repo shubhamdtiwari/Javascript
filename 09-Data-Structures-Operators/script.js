@@ -75,6 +75,23 @@ if (restaurant.openingHours && restaurant.openingHours.mon)
 console.log(restaurant.openingHours.mon?.open);
 console.log(restaurant.openingHours?.mon?.open); // above ? is present after openingHours helps to cheak if (restaurant.openingHours) exists or not , it if does not exists then it will not process further
 
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
+for (const day of days) {
+  // console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// Methods
+// it can be used on Methods
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exit');
+
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exit');
+
+// Arrays
+const users = [{ name: 'Jonas', email: 'hellojonas.io' }];
 /* 
 // Lecture :- 11 Looping Arrays - The for-of Loop
 
