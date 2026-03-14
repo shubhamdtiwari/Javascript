@@ -73,6 +73,8 @@ if (restaurant.openingHours && restaurant.openingHours.mon)
 // with optional chining
 // this will give undefined when prop. do not exit
 console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open); // above ? is present after openingHours helps to cheak if (restaurant.openingHours) exists or not , it if does not exists then it will not process further
+
 /* 
 // Lecture :- 11 Looping Arrays - The for-of Loop
 
