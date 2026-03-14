@@ -2,7 +2,7 @@
 
 // Data needed for first part of the section
 
-const hours = {
+const openingHours = {
   thu: {
     open: 12,
     close: 22,
@@ -26,7 +26,7 @@ const restaurant = {
   // openingHours: openingHours,
 
   //ES6 enhanced object literals
-  hours,
+  openingHours,
 
   // here fuction syntax can be removed to make the code simple
 
