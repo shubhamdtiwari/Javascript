@@ -61,6 +61,18 @@ const restaurant = {
     );
   },
 };
+// lecture :- 14 Looping Objects
+////////
+// Properties Name
+const Properties = Object.keys(openingHours);
+console.log(Properties);
+
+let openStr = `We are open on ${Properties.length} days: `;
+for (const day of Properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+/* 
 // lecture :- 13 Optional chining
 
 if (restaurant.openingHours && restaurant.openingHours.mon)
@@ -98,7 +110,7 @@ console.log(users[0]?.name ?? 'User array is empty');
 if (users.length > 0) console.log(users[0].name);
 else console.log('User array is empty');
 
-/* 
+
 // Lecture :- 11 Looping Arrays - The for-of Loop
 
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
