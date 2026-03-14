@@ -22,12 +22,11 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto', 'Mashroom Masala'],
-  //here we can insert object directly but variable name is same for the object 
+  //here we can insert object directly but variable name is same for the object
   // openingHours: openingHours,
 
   //ES6 enhanced object literals
   hours,
-
 
   // here fuction syntax can be removed to make the code simple
 
@@ -39,24 +38,19 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
   // same for this
-  orderDelivery({
-    mainIndex = 1,
-    starterIndex = 0,
-    time = '20:00',
-    address,
-  }) {
+  orderDelivery({ mainIndex = 1, starterIndex = 0, time = '20:00', address }) {
     console.log(
       `Order recevied! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`,
     );
   },
 
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(
       `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`,
     );
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
     const taste = otherIngredients.length === 0 ? 'bad' : 'delicious';
