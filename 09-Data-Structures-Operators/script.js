@@ -61,10 +61,20 @@ const restaurant = {
     );
   },
 };
-// Lecture :- 11
+// lecture :- 13 Optional chining
 
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// console.log(restaurant.openingHours.mon.open); -- this is undefined
+
+//code become more unreadable so we use optional chining
+
+// with optional chining
+// this will give undefined when prop. do not exit
+console.log(restaurant.openingHours.mon?.open);
 /* 
-// Lecture :- 10 Looping Arrays - The for-of Loop
+// Lecture :- 11 Looping Arrays - The for-of Loop
 
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
