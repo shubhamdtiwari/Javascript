@@ -423,10 +423,12 @@ const bookData = [
   ['publisher', 'Addison Wesley'],
 ];
 
-// Do the rest
 const newBook = {
   [bookData[0][0]]: bookData[0][1],
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
 };
+console.log(newBook);
 
 //////////////////////////////
 /////////////////////
