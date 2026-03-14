@@ -430,6 +430,15 @@ const newBook = {
 };
 console.log(newBook);
 
+//9.2
+const pages = 880;
+
+const newBook2 = {
+  title: 'The C Programming Language',
+  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+  pages,
+};
+console.log(newBook2);
 //////////////////////////////
 /////////////////////
 // Coding Challenge :- 1
