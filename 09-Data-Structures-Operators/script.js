@@ -91,7 +91,7 @@ console.log(restaurant.order?.(0, 1) ?? 'Method does not exit');
 console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exit');
 
 // Arrays
-
+const users = [{ name: 'Jonas', email: 'hellojonas.io' }];
 /* 
 // Lecture :- 11 Looping Arrays - The for-of Loop
 
