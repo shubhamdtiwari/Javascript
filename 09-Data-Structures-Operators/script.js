@@ -92,6 +92,12 @@ console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exit');
 
 // Arrays
 const users = [{ name: 'Jonas', email: 'hellojonas.io' }];
+
+console.log(users[0]?.name ?? 'User array is empty');
+// if we dont use optional chining then if look like thus
+if (users.length > 0) console.log(users[0].name);
+else console.log('User array is empty');
+
 /* 
 // Lecture :- 11 Looping Arrays - The for-of Loop
 
