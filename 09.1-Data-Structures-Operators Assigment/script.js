@@ -397,7 +397,7 @@ let pageSum = 0;
 for (let book of books) {
   pageSum += book.pages;
 }
-console.log(pageSum);*/
+console.log(pageSum);
 
 // 8.2
 const allAuthors = [];
@@ -415,6 +415,8 @@ console.log(allAuthors);
 for (const [index, author] of allAuthors.entries()) {
   console.log(`${index + 1}: ${author}`);
 }
+*/
+
 //////////////////////////////
 /////////////////////
 // Coding Challenge :- 1
