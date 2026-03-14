@@ -416,6 +416,17 @@ for (const [index, author] of allAuthors.entries()) {
   console.log(`${index + 1}: ${author}`);
 }
 */
+// 9.1
+const bookData = [
+  ['title', 'Computer Networking: A Top-Down Approach'],
+  ['author', ['James F. Kurose', 'Keith W. Ross']],
+  ['publisher', 'Addison Wesley'],
+];
+
+// Do the rest
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+};
 
 //////////////////////////////
 /////////////////////
