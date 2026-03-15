@@ -61,6 +61,7 @@ const restaurant = {
     );
   },
 };
+
 // lecture :- 14 Looping Objects
 ////////
 // Properties Name
@@ -72,6 +73,11 @@ for (const day of Properties) {
   openStr += `${day}, `;
 }
 console.log(openStr);
+
+//Property VALUES
+
+Object.values();
+
 /* 
 // lecture :- 13 Optional chining
 
