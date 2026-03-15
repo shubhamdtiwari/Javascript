@@ -415,7 +415,7 @@ console.log(allAuthors);
 for (const [index, author] of allAuthors.entries()) {
   console.log(`${index + 1}: ${author}`);
 }
-*/
+
 9.1;
 const bookData = [
   ['title', 'Computer Networking: A Top-Down Approach'],
@@ -448,8 +448,9 @@ function getfirstKeyword(books) {
 }
 getfirstKeyword(books[0]);
 getfirstKeyword(newBook2);
+*/
+//11.1
 
-//////////////////////////////
 /////////////////////
 // Coding Challenge :- 1
 
