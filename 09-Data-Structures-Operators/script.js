@@ -76,7 +76,7 @@ console.log(openStr);
 
 //Property VALUES
 
-Object.values();
+const values = Object.values(openingHours);
 
 /* 
 // lecture :- 13 Optional chaining
