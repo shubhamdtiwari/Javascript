@@ -75,6 +75,7 @@ for (const day of Properties) {
 console.log(openStr);
 
 //Property VALUES
+// this gives the value of given object
 
 const values = Object.values(openingHours);
 
