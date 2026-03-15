@@ -79,16 +79,16 @@ console.log(openStr);
 Object.values();
 
 /* 
-// lecture :- 13 Optional chining
+// lecture :- 13 Optional chaining
 
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
 // console.log(restaurant.openingHours.mon.open); -- this is undefined
 
-//code become more unreadable so we use optional chining
+//code become more unreadable so we use optional chaining
 
-// with optional chining
+// with optional chaining
 // this will give undefined when prop. do not exit
 console.log(restaurant.openingHours.mon?.open);
 console.log(restaurant.openingHours?.mon?.open); // above ? is present after openingHours helps to cheak if (restaurant.openingHours) exists or not , it if does not exists then it will not process further
@@ -112,7 +112,7 @@ console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exit');
 const users = [{ name: 'Jonas', email: 'hellojonas.io' }];
 
 console.log(users[0]?.name ?? 'User array is empty');
-// if we dont use optional chining then if look like thus
+// if we dont use optional chaining then if look like thus
 if (users.length > 0) console.log(users[0].name);
 else console.log('User array is empty');
 
