@@ -74,20 +74,6 @@ for (const day of Properties) {
 }
 console.log(openStr);
 
-//Property VALUES
-// this gives the value of given object
-
-const values = Object.values(openingHours);
-
-console.log(values);
-
-//Entire object
-const entries = Object.entries(openingHours);
-// console.log(entries);
-
-for (const [key, { open, close }] of entries) {
-  console.log(`On ${key} we open at ${open} and close at ${close} `);
-}
 /* 
 // lecture :- 13 Optional chaining
 
