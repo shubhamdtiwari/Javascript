@@ -573,7 +573,8 @@ team1 < team2 && console.log('Team 1 is most likely to win');
 team1 > team2 && console.log('Team 2 is most likely to win');
 
 // CHALLENGE :- 2
-Let's continue with our football betting app! Keep using the 'game' variable from 
+
+/* Let's continue with our football betting app! Keep using the 'game' variable from 
 before. 
 Your tasks: 
 1. Loop over the game.scored array and print each player name to the console, 
@@ -596,4 +597,4 @@ game, it will look like this:
 } 
 Gnarby: 1, 
 Hummels: 1, 
-Lewandowski: 2 
+Lewandowski: 2 */
