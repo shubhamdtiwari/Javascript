@@ -273,7 +273,58 @@ restaurant.orderPizza('Mushrooms');
 //rest is use to write variables anmes separated by commas
 
 /*
-;
+//////////////////////////////////
+// lecture :- 05 The Spread Operator (...)
+
+const arr = [5, 6, 7];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+//when we need arrays individually we use spread operator
+console.log(...newArr);
+
+// bolding new array using exsisting array
+
+const newMenu = [...restaurant.mainMenu, 'Matar Panner'];
+console.log(newMenu);
+
+// spread operator is similar to destructuring of array but it uses all elements of array and dont create any variable
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+
+// Iterables: arrays, strings, maps, sets. NOT OBJECTS
+
+const str = 'Shubham';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+console.log(...str);
+// console.log(`${...str} tiwari`);
+
+const ingredients = [
+  // prompt("Let's make pasta! Ingredient 1? "),
+  // prompt('Ingredients 2?'),
+  // prompt('Ingredients 3?'),
+];
+console.log(ingredients);
+
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
+
+//Objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, fonder: 'Shubham' };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Rome';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
 
 restaurant.orderDelivery({
   time: '22:00',
