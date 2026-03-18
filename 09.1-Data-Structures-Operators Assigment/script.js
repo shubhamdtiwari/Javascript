@@ -607,3 +607,5 @@ for (const [key, player] of entries) {
 // we can change string to number by above method or by using "Number()"
 
 //2
+const value = Object.values(game.odds);
+console.log(value);
