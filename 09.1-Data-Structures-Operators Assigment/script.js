@@ -622,13 +622,19 @@ Lewandowski: 2
 */
 
 // 1
-const entries = Object.entries(game.scored);
-console.log(entries);
-for (const [key, player] of entries) {
-  console.log(`Goal ${+key + 1}: ${player}`);
+// const entries = Object.entries(game.scored);
+// console.log(entries);
+// for (const [key, player] of Object.entries(game.scored)) {
+//   console.log(`Goal ${+key + 1}: ${player}`);
+// }
+// or
+
+for (const [key, player] of game.scored.entries()) {
+  console.log(`Goal ${key + 1}: ${player}`);
 }
 // we can change string to number by above method or by using "Number()"
 
 //2
-const value = Object.values(game.odds);
-console.log(value);
+let avg = 0;
+for (const data of Object.values(game.odds)) avg += data;
+console.log(avg);
