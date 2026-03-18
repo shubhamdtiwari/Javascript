@@ -635,6 +635,11 @@ for (const [key, player] of game.scored.entries()) {
 // we can change string to number by above method or by using "Number()"
 
 //2
+const datas = Object.values(game.odds);
 let avg = 0;
-for (const data of Object.values(game.odds)) avg += data;
+for (const data of datas) avg += data;
 console.log(avg);
+avg /= datas.length;
+console.log(avg);
+
+// 3
