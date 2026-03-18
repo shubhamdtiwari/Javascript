@@ -448,7 +448,7 @@ function getfirstKeyword(books) {
 }
 getfirstKeyword(books[0]);
 getfirstKeyword(newBook2);
-*/
+
 
 //11.1
 
@@ -472,6 +472,7 @@ console.log(entries);
 const entries2 = Object.entries(books[0].thirdParty.goodreads);
 
 console.log(entries2);
+*/
 /////////////////////
 // Coding Challenge :- 1
 
@@ -618,6 +619,7 @@ game, it will look like this:
 Gnarby: 1, 
 Hummels: 1, 
 Lewandowski: 2 
+*/
 
 // 1
 const entries = Object.entries(game.scored);
@@ -630,4 +632,3 @@ for (const [key, player] of entries) {
 //2
 const value = Object.values(game.odds);
 console.log(value);
-*/
