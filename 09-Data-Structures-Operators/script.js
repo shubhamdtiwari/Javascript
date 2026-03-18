@@ -62,7 +62,6 @@ const restaurant = {
   },
 };
 
-/* 
 // lecture :- 14 Looping Objects
 ////////
 // Properties Name
@@ -83,8 +82,9 @@ const values = Object.values(openingHours);
 console.log(values);
 
 //Entire object
+// which contains entire object
 const entries = Object.entries(openingHours);
-// console.log(entries);
+console.log(entries);
 
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close} `);
@@ -127,6 +127,7 @@ console.log(users[0]?.name ?? 'User array is empty');
 if (users.length > 0) console.log(users[0].name);
 else console.log('User array is empty');
 
+/*
 
 // Lecture :- 11 Looping Arrays - The for-of Loop
 
@@ -139,7 +140,6 @@ for (const [i, el] of menu.entries()) {
 }
 
 // console.log([...menu.entries()]);
-
 
 // lecture :- 09 Logical Assignment Operators
 
