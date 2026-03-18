@@ -458,10 +458,10 @@ for (const key of Object.keys(books[0].thirdParty.goodreads)) {
   entries.push([key]);
 }
 
-// for (const key of Object.keys(books[0].thirdParty.goodreads)) {
-//   entries.push([key]);
-// }
 console.log(entries);
+
+// 11.2
+
 /////////////////////
 // Coding Challenge :- 1
 
