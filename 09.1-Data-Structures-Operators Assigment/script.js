@@ -466,6 +466,12 @@ for (const [index, value] of Object.values(
   entries[index].push(value);
 }
 console.log(entries);
+
+// 11.3
+
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
+
+console.log(entries2);
 /////////////////////
 // Coding Challenge :- 1
 
