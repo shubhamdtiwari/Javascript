@@ -449,9 +449,34 @@ function getfirstKeyword(books) {
 getfirstKeyword(books[0]);
 getfirstKeyword(newBook2);
 
+//11.1
 
+const entries = [];
 
-// 12
+for (const key of Object.keys(books[0].thirdParty.goodreads)) {
+  entries.push([key]);
+}
+
+// 11.2
+
+for (const [index, value] of Object.values(
+  books[0].thirdParty.goodreads,
+).entries()) {
+  entries[index].push(value);
+}
+console.log(entries);
+
+// 11.3
+
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
+
+console.log(entries2);
+*/
+
+// 12.1
+
+const allKeywords = [];
+for(const )
 /////////////////////
 // Coding Challenge :- 1
 
