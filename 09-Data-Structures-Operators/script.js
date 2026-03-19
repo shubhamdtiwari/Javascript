@@ -61,7 +61,20 @@ const restaurant = {
     );
   },
 };
+//Lecture :- 14 Sets
+const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
 
+console.log(ordersSet);
+
+//Strings are also iterable
+
+console.log(new Set('Shubham'));
+
+console.log(ordersSet.size);
+
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('bread'));
+/*
 // lecture :- 14 Looping Objects
 ////////
 // Properties Name
@@ -127,7 +140,7 @@ console.log(users[0]?.name ?? 'User array is empty');
 if (users.length > 0) console.log(users[0].name);
 else console.log('User array is empty');
 
-/*
+
 
 // Lecture :- 11 Looping Arrays - The for-of Loop
 
