@@ -644,5 +644,7 @@ console.log(avg);
 
 // 3.
 for (const [team, odd] of Object.entries(game.odds)) {
-  console.log(team, odd);
+  // console.log(team, odd);
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} : ${odd}`);
 }
