@@ -74,6 +74,23 @@ console.log(ordersSet.size);
 
 console.log(ordersSet.has('Pizza'));
 console.log(ordersSet.has('bread'));
+
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+console.log(ordersSet);
+
+ordersSet.delete('Risotto');
+
+// ordersSet.clear() helps to clear all data
+console.log(ordersSet);
+
+for (const order of ordersSet) console.log(order);
+
+//example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const staffUnique = new Set(staff);
+console.log(staffUnique);
 /*
 // lecture :- 14 Looping Objects
 ////////
