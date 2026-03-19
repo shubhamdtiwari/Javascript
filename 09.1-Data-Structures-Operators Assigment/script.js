@@ -476,7 +476,9 @@ console.log(entries2);
 // 12.1
 
 const allKeywords = [];
-for(const )
+for (const data of books.keywords) {
+  allKeywords.push(new Set(data));
+}
 /////////////////////
 // Coding Challenge :- 1
 
@@ -507,7 +509,7 @@ team is more likely to win, without using an if/else statement or the ternary
 operator. 
 Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. 
 Then, call the function again with players from game.scored 
-*/
+
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -548,7 +550,7 @@ const game = {
     team2: 6.5,
   },
 };
-/*
+
 //1.
 const [player1, player2] = game.players;
 
