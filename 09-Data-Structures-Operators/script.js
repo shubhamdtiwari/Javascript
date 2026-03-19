@@ -92,6 +92,9 @@ const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 console.log(new Set(staff).size);
+
+console.log(new Set('Shubham').size);
+
 /*
 // lecture :- 14 Looping Objects
 ////////
