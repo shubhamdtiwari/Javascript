@@ -619,7 +619,7 @@ game, it will look like this:
 Gnarby: 1, 
 Hummels: 1, 
 Lewandowski: 2 
-*/
+
 
 // 1
 // const entries = Object.entries(game.scored);
@@ -648,3 +648,9 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr} : ${odd}`);
 }
+*/
+// 4.
+let scorers = {};
+for (const values of game.scored) {
+}
+console.log(scorers);
