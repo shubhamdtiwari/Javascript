@@ -95,6 +95,8 @@ console.log(new Set(staff).size);
 
 console.log(new Set('Shubham').size);
 
+// it is uses when unique values are required
+
 /*
 // lecture :- 14 Looping Objects
 ////////
