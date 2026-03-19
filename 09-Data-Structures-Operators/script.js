@@ -89,7 +89,7 @@ for (const order of ordersSet) console.log(order);
 //example
 const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 
-const staffUnique = new Set(staff);
+const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 /*
 // lecture :- 14 Looping Objects
