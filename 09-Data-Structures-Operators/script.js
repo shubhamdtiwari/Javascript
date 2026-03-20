@@ -126,6 +126,18 @@ const commonFood = italianFood.intersection(mexicanFood);
 console.log('Intersection:', commonFood);
 console.log([...commonFood]);
 
+const italianMexicanFusion = italianFood.union(mexicanFood);
+
+console.log('Union:', italianMexicanFusion);
+// we can use spread method but it creates duplicates so we use union
+
+console.log([new Set([...italianFood, ...mexicanFood])]);
+
+const uniqueItalianFood = italianFood.difference(mexicanFood);
+console.log('Differnce:', uniqueItalianFood);
+
+const uniqueMexicanFood = mexicanFood.difference(italianFood);
+console.log('Differnce Mexican:', uniqueMexicanFood);
 /*
 ///////////////////////////////////////
 // lecture :- 14 Looping Objects
