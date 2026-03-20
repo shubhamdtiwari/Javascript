@@ -476,9 +476,24 @@ console.log(entries2);
 // 12.1
 
 const allKeywords = [];
-for (const data of books.keywords) {
-  allKeywords.push(new Set(data));
+for (const data of books) {
+  allKeywords.push(...data.keywords);
 }
+console.log(allKeywords);
+
+// 12.2
+const uniqueKeywords = new Set(allKeywords);
+
+console.log(uniqueKeywords);
+
+// 12.3
+uniqueKeywords.add('coding');
+uniqueKeywords.add('science');
+
+console.log(uniqueKeywords);
+
+//12.4
+
 /////////////////////
 // Coding Challenge :- 1
 
