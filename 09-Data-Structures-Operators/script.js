@@ -138,6 +138,14 @@ console.log('Differnce:', uniqueItalianFood);
 
 const uniqueMexicanFood = mexicanFood.difference(italianFood);
 console.log('Differnce Mexican:', uniqueMexicanFood);
+
+const uniqueItalianAndMexicanFood =
+  italianFood.symmetricDifference(mexicanFood);
+
+console.log(uniqueItalianAndMexicanFood);
+
+console.log(italianFood.isDisjointFrom(mexicanFood));
+
 /*
 ///////////////////////////////////////
 // lecture :- 14 Looping Objects
