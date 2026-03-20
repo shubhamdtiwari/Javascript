@@ -61,6 +61,24 @@ const restaurant = {
     );
   },
 };
+// lecture :- 16 Maps Itration
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct🎉'],
+  [false, 'Try again!'],
+]);
+
+console.log(question);
+
+console.log(Object.entries(openingHours));
+
+/*
+///////////////////////////////
 // Lecture :- 15 Maps Fundamental
 
 const rest = new Map();
@@ -96,7 +114,7 @@ console.log(rest.size);
 
 console.log(rest.get(arr));
 
-/*
+
 /////////////////////////////////////////
 //Lecture :- 14 Sets
 const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
