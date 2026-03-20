@@ -493,6 +493,13 @@ uniqueKeywords.add('science');
 console.log(uniqueKeywords);
 
 //12.4
+uniqueKeywords.delete('business');
+
+// 12.5
+
+const uniqueKeywordsArr = [...new Set(uniqueKeywords)];
+
+console.log(uniqueKeywordsArr);
 
 /////////////////////
 // Coding Challenge :- 1
