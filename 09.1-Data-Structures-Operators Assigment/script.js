@@ -503,6 +503,7 @@ console.log(uniqueKeywordsArr);
 //12.6
 
 uniqueKeywords.clear();
+console.log(uniqueKeywords);
 /////////////////////
 // Coding Challenge :- 1
 
