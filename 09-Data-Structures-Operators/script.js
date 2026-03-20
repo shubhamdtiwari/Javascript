@@ -79,6 +79,20 @@ console.log(rest.get('name'));
 console.log(rest.get(true));
 console.log(rest.get(1));
 
+const time = 10;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+
+rest.delete(2);
+rest.set([1, 2], 'Test');
+console.log(rest);
+console.log(rest.size);
+// rest.clear();
+// console.log(rest);
+
+console.log(rest.get());
+
 /*
 /////////////////////////////////////////
 //Lecture :- 14 Sets
