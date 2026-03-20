@@ -61,6 +61,9 @@ const restaurant = {
     );
   },
 };
+// Lecture :- 15 Maps Fundamental
+
+/////////////////////////////////////////
 //Lecture :- 14 Sets
 const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
 
@@ -97,7 +100,29 @@ console.log(new Set('Shubham').size);
 
 // it is uses when unique values are required
 
+/////////////////
+//New Opreations to make Sets Use
+
+const italianFood = new Set([
+  'pasta',
+  'gnocchi',
+  'tomatoes',
+  'olive oil',
+  'garlic',
+  'basil',
+]);
+
+const maxicanFood = new Set([
+  'tortillas',
+  'beans',
+  'rice',
+  'tomatoes',
+  'avocado',
+  'garlic',
+]);
+
 /*
+///////////////////////////////////////
 // lecture :- 14 Looping Objects
 ////////
 // Properties Name
