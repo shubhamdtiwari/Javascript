@@ -471,7 +471,7 @@ console.log(entries);
 const entries2 = Object.entries(books[0].thirdParty.goodreads);
 
 console.log(entries2);
-*/
+
 
 // 12.1
 
@@ -504,6 +504,10 @@ console.log(uniqueKeywordsArr);
 
 uniqueKeywords.clear();
 console.log(uniqueKeywords);
+*/
+
+// 13.1
+
 /////////////////////
 // Coding Challenge :- 1
 
