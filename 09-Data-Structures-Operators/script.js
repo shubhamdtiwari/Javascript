@@ -63,6 +63,23 @@ const restaurant = {
 };
 // Lecture :- 15 Maps Fundamental
 
+const rest = new Map();
+rest.set('name', 'Classico Itsliano');
+rest.set(1, 'Firemze , Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are closed :(');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+/*
 /////////////////////////////////////////
 //Lecture :- 14 Sets
 const ordersSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
@@ -146,7 +163,7 @@ console.log(uniqueItalianAndMexicanFood);
 
 console.log(italianFood.isDisjointFrom(mexicanFood));
 
-/*
+
 ///////////////////////////////////////
 // lecture :- 14 Looping Objects
 ////////
