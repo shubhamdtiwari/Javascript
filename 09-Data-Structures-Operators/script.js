@@ -112,7 +112,7 @@ const italianFood = new Set([
   'basil',
 ]);
 
-const maxicanFood = new Set([
+const mexicanFood = new Set([
   'tortillas',
   'beans',
   'rice',
@@ -120,6 +120,11 @@ const maxicanFood = new Set([
   'avocado',
   'garlic',
 ]);
+
+const commonFood = italianFood.intersection(mexicanFood);
+
+console.log('Intersection:', commonFood);
+console.log([...commonFood]);
 
 /*
 ///////////////////////////////////////
