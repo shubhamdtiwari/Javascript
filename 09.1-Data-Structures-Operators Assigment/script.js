@@ -500,7 +500,9 @@ uniqueKeywords.delete('business');
 const uniqueKeywordsArr = [...new Set(uniqueKeywords)];
 
 console.log(uniqueKeywordsArr);
+//12.6
 
+uniqueKeywords.clear();
 /////////////////////
 // Coding Challenge :- 1
 
