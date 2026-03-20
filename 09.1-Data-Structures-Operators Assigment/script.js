@@ -507,6 +507,30 @@ console.log(uniqueKeywords);
 */
 
 // 13.1
+const bookMap = new Map([
+  ['title', 'Clean Code'],
+  ['author', 'Robert C. Martin'],
+]);
+
+// bookMap.set('title', 'Clean Code');
+// bookMap.set('author', 'Robert C. Martin');
+
+// 13.2
+bookMap.set('pages', 464);
+
+//13.3
+console.log(`${bookMap.get('title')} by ${bookMap.get('author')}`);
+//13.4
+console.log(bookMap.size);
+
+//13.5
+console.log(
+  bookMap.get('author')
+    ? 'the author of the book is known'
+    : 'The author is unknown',
+);
+
+console.log(bookMap);
 
 /////////////////////
 // Coding Challenge :- 1
