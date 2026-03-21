@@ -61,6 +61,9 @@ const restaurant = {
     );
   },
 };
+//Lecture :- 17 Which Data stracture use
+
+//////////////////////////////
 // lecture :- 16 Maps Itration
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
@@ -84,7 +87,8 @@ console.log(hoursMap);
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer ${key}: ${value} `);
 }
-const answer = Number(prompt('Your Answer'));
+// const answer = Number(prompt('Your Answer'));
+const answer = 3;
 console.log(answer);
 
 // long way to go
@@ -98,7 +102,16 @@ console.log(answer);
 // };
 // printanswer(answer);
 
+// short and effective way
+
 console.log(question.get(question.get('correct') === answer));
+
+//convert mao to array
+
+console.log([...question]);
+// console.log(question.entries());
+console.log([...question.keys()]);
+console.log([...question.values()]);
 
 /*
 ///////////////////////////////
