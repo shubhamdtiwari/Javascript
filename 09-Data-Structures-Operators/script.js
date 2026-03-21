@@ -100,7 +100,7 @@ console.log(answer);
 // };
 // printanswer(answer);
 
-console.log();
+console.log(question.get(question.get('correct') === answer));
 /*
 ///////////////////////////////
 // Lecture :- 15 Maps Fundamental
