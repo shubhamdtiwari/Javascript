@@ -63,6 +63,7 @@ const restaurant = {
 };
 //Lecture :- 17 Which Data stracture use
 
+/*
 //////////////////////////////
 // lecture :- 16 Maps Itration
 const question = new Map([
@@ -113,7 +114,7 @@ console.log([...question]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
 
-/*
+
 ///////////////////////////////
 // Lecture :- 15 Maps Fundamental
 
