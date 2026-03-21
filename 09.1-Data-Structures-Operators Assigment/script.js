@@ -504,7 +504,7 @@ console.log(uniqueKeywordsArr);
 
 uniqueKeywords.clear();
 console.log(uniqueKeywords);
-*/
+
 
 // 13.1
 const bookMap = new Map([
@@ -531,6 +531,14 @@ console.log(
 );
 
 console.log(bookMap);
+*/
+
+//14.1
+
+const firstBookMap = new Map(Object.entries(books[0]));
+console.log(firstBookMap);
+
+// 14.2
 
 /////////////////////
 // Coding Challenge :- 1
