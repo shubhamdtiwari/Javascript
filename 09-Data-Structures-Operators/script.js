@@ -106,7 +106,7 @@ console.log(answer);
 
 console.log(question.get(question.get('correct') === answer));
 
-//convert mao to array
+//convert map to array
 
 console.log([...question]);
 // console.log(question.entries());
