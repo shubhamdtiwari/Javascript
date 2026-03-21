@@ -539,7 +539,9 @@ const firstBookMap = new Map(Object.entries(books[0]));
 console.log(firstBookMap);
 
 // 14.2
-
+for (const [keys, values] of firstBookMap) {
+  if (typeof values === 'number') console.log(keys);
+}
 /////////////////////
 // Coding Challenge :- 1
 
