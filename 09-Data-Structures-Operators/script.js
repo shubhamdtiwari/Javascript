@@ -89,14 +89,19 @@ for (const [key, value] of question) {
 const answer = Number(prompt('Your Answer'));
 console.log(answer);
 
-const printanswer = function (answer) {
-  if (answer === 3) {
-    console.log(question.get(true));
-  } else {
-    console.log(question.get(false));
-  }
-};
-printanswer(answer);
+// long way to go
+
+// const printanswer = function (answer) {
+//   if (answer === 3) {
+//     console.log(question.get(true));
+//   } else {
+//     console.log(question.get(false));
+//   }
+// };
+// printanswer(answer);
+
+console.log();
+
 /*
 ///////////////////////////////
 // Lecture :- 15 Maps Fundamental
