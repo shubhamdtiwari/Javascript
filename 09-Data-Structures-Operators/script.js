@@ -63,16 +63,6 @@ const restaurant = {
 };
 // lecture :- 16 Maps Itration
 
-const question = new Map([
-  ['question', 'What is the best programming language in the world?'],
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'JavaScript'],
-  ['correct', 3],
-  [true, 'Correct🎉'],
-  [false, 'Try again!'],
-]);
-
 console.log(question);
 
 // convert objects to map
