@@ -71,7 +71,12 @@ const question = new Map([
   [true, 'Correct🎉'],
   [false, 'Try again!'],
 ]);
+console.log(question);
 
+// convert objects to map
+console.log(Object.entries(openingHours));
+
+const hoursMap = new Map(Object.entries(openingHours));
 // so we cannot iterate an object so we use Object.entries() to iterate it
 
 console.log(hoursMap);
