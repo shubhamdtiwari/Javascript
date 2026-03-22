@@ -61,7 +61,16 @@ const restaurant = {
     );
   },
 };
-//Lecture :- 17 Which Data stracture use
+//Lecture :-Working with Strings - part 1
+
+const airline = 'Tap Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+
+console.log();
 
 /*
 //////////////////////////////
