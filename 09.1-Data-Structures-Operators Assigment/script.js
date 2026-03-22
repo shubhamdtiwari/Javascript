@@ -754,3 +754,8 @@ const gameEvents = new Map([
 ]);
 
 //1.
+
+// for making unique value in array we need sets
+
+const events = new Set(gameEvents.values());
+console.log(events);
