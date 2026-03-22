@@ -774,10 +774,17 @@ console.log(
 );
 //4.
 
+// for (const [key, value] of gameEvents) {
+//   if (key < 45) {
+//     console.log(`[First Half]: ${key}  ${value}`);
+//   } else {
+//     console.log(`[Second Half]: ${key}  ${value}`);
+//   }
+// }
+
+// other short method
+
 for (const [key, value] of gameEvents) {
-  if (key < 45) {
-    console.log(`[First Half]: ${key}  ${value}`);
-  } else {
-    console.log(`[Second Half]: ${key}  ${value}`);
-  }
+  const half = key <= 45 ? 'First' : 'Second';
+  console.log(`[${half} Half]: ${key}  ${value}`);
 }
