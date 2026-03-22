@@ -559,6 +559,25 @@ console.log(quote.indexOf('chess'));
 //15.3
 console.log(quote.slice(quote.lastIndexOf(' ') + 1));
 
+//15.4
+
+const isContributor = function (author) {
+  //long method
+  // if (author.indexOf('Contributor') >= 0) console.log(true);
+  // else console.log(false);
+
+  //some refined but we directly log true or false as string
+
+  // author.indexOf('Contributor') >= 0 ? console.log(true) : console.log(false);
+
+  // it returns boolean
+  return author.indexOf('(Contributor)') !== -1;
+};
+
+console.log(isContributor('Julie Sussman (Contributor)'));
+
+console.log(isContributor('Robert Sedgewick'));
+
 /////////////////////////////////////////
 ///////////////////////////////////////
 ////////////////////////////////////////////
