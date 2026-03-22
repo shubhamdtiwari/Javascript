@@ -82,6 +82,25 @@ console.log(airline.lastIndexOf('r'));
 console.log(airline.indexOf('portugal'));
 
 console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+//  here 7 help to stop the extraction
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const cheakMiddleSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') console.log('You got the middle seat');
+};
+
+cheakMiddleSeat('11B');
+cheakMiddleSeat('23C');
+cheakMiddleSeat('3E');
 
 /*
 //////////////////////////////
