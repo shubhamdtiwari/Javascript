@@ -108,6 +108,8 @@ cheakMiddleSeat('3E');
 console.log(new String('shubham'));
 console.log(typeof new String('shubham'));
 
+console.log(typeof new String('shubham').slice(1));
+
 /*
 //////////////////////////////
 // lecture :- 16 Maps Itration
