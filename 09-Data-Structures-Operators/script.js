@@ -80,6 +80,7 @@ console.log(airline.lastIndexOf('r'));
 // space also count as charcter
 
 console.log(airline.indexOf('Portugal'));
+// if the string is not present in string then it gives (-1)
 
 console.log(airline.slice(4));
 console.log(airline.slice(4, 7));
