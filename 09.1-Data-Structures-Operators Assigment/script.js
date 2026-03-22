@@ -773,3 +773,11 @@ console.log(
   `An event happened, on average, every ${time / gameEvents.size} minutes`,
 );
 //4.
+
+for (const [key, value] of gameEvents) {
+  if (key < 45) {
+    console.log(`[First Half]: ${key}  ${value}`);
+  } else {
+    console.log(`[Second Half]: ${key}  ${value}`);
+  }
+}
