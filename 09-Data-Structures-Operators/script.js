@@ -79,7 +79,7 @@ console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
 // space also count as charcter
 
-console.log(airline.indexOf('portugal'));
+console.log(airline.indexOf('Portugal'));
 
 console.log(airline.slice(4));
 console.log(airline.slice(4, 7));
