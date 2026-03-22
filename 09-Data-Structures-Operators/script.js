@@ -61,6 +61,25 @@ const restaurant = {
     );
   },
 };
+//Lecture :- part 2
+const airline = 'TAP Air Portugal';
+
+console.log(airline.toLowerCase());
+console.log('shubham'.toUpperCase());
+
+//Fix the capitalization
+
+const passenger = 'jOnAS'; //Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+console.log(passengerCorrect);
+
+// Comapirng email
+
+/*
+///////////////////////////////////////////
 //Lecture :- Working with Strings - part 1
 
 const airline = 'TAP Air Portugal';
@@ -111,7 +130,7 @@ console.log(typeof new String('shubham'));
 
 console.log(typeof new String('shubham').slice(1));
 
-/*
+
 //////////////////////////////
 // lecture :- 16 Maps Itration
 const question = new Map([
