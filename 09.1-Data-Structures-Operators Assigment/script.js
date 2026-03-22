@@ -543,6 +543,25 @@ for (const [keys, values] of firstBookMap) {
   if (typeof values === 'number') console.log(keys);
 }
   */
+// 15.1
+
+console.log(books[0].ISBN[6]);
+console.log(books[0].ISBN[4]);
+console.log(books[0].ISBN[9]);
+console.log(books[0].ISBN[8]);
+
+//15.2
+const quote =
+  'A computer once beat me at chess, but it was no match for me at kick boxing';
+
+console.log(quote.indexOf('chess'));
+
+//15.3
+console.log(quote.slice(quote.lastIndexOf(' ') + 1));
+
+/////////////////////////////////////////
+///////////////////////////////////////
+////////////////////////////////////////////
 /////////////////////
 // Coding Challenge :- 1
 
@@ -724,7 +743,7 @@ let scorers = {};
 for (const values of game.scored) {
 }
 console.log(scorers);
-*/
+
 
 // Coding Challenge #3
 
@@ -788,3 +807,4 @@ for (const [key, value] of gameEvents) {
   const half = key <= 45 ? 'First' : 'Second';
   console.log(`[${half} Half]: ${key}  ${value}`);
 }
+*/
