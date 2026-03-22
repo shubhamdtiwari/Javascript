@@ -95,12 +95,18 @@ console.log(airline.slice(1, -1));
 const cheakMiddleSeat = function (seat) {
   // B and E are middle seats
   const s = seat.slice(-1);
-  if (s === 'B' || s === 'E') console.log('You got the middle seat');
+  if (s === 'B' || s === 'E') console.log('You got the middle seat😒');
+  else console.log('You got lucky😎');
 };
 
 cheakMiddleSeat('11B');
 cheakMiddleSeat('23C');
 cheakMiddleSeat('3E');
+
+// so javaScipt converts the primitive string to object to apply the function
+
+console.log(new String('shubham'));
+console.log(typeof new String('shubham'));
 
 /*
 //////////////////////////////
