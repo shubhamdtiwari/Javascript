@@ -585,12 +585,14 @@ const normalizeAuthorName = function (author) {
   const FirstName = author.slice(0, author.indexOf(' '));
 
   let lastName = '';
-
   if (author.indexOf(' ') === author.lastIndexOf(' ')) {
     lastName = author.slice(author.indexOf(' ') + 1, author.length);
   } else {
     lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
   }
+
+  console.log(FirstName);
+  console.log(lastName);
 
   const capitalizedFirstName =
     FirstName[0].toUpperCase() + FirstName.slice(1).toLowerCase();
@@ -602,6 +604,19 @@ const normalizeAuthorName = function (author) {
 };
 
 console.log(normalizeAuthorName('  JuliE sussMan (Contributor)'));
+
+//16.2
+
+const title = books[1].title;
+console.log(title);
+
+//Long Form
+// const newBookTitle = title.slice(0, title.lastIndexOf(' ')) + ' ' + 'Software';
+
+// short form using replace
+const newBookTitle = title.replace('Program', 'Software');
+
+console.log(newBookTitle);
 
 /////////////////////////////////////////
 ///////////////////////////////////////
