@@ -92,8 +92,20 @@ capitalizeName('shubham tiwari');
 
 //padding
 const message = 'Go to gate 23!';
-console.log(message.padStart(25, '+').padEnd(35, '+'));
-console.log('Jonas'.padStart(25, '+'));
+console.log(message.padStart(25, '+').padEnd(30, '+'));
+console.log('Jonas'.padStart(25, '+').padEnd(30, '+'));
+
+// real life example
+
+const maskedCreditCard = function (number) {
+  const str = number + '';
+
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskedCreditCard(464161965464564));
+console.log(maskedCreditCard('461687843434314310789'));
 
 /*
 /////////////////////////
