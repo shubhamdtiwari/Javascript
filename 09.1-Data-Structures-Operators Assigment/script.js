@@ -591,9 +591,17 @@ const normalizeAuthorName = function (author) {
   } else {
     lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
   }
+
+  const capitalizedFirstName =
+    FirstName[0].toUpperCase() + FirstName.slice(1).toLowerCase();
+
+  const capitalizedLastName =
+    lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+
+  return capitalizedFirstName + ' ' + capitalizedLastName;
 };
 
-normalizeAuthorName('  JuliE sussMan (Contributor)');
+console.log(normalizeAuthorName('  JuliE sussMan (Contributor)'));
 
 /////////////////////////////////////////
 ///////////////////////////////////////
