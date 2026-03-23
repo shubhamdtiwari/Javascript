@@ -61,6 +61,19 @@ const restaurant = {
     );
   },
 };
+// Lecture :- part 3
+
+console.log('a+very+mice+string'.split('+'));
+
+console.log('Shubham Tiwari'.split(' '));
+
+const [FirstName, lastName] = 'Shubham TIwari'.split(' ');
+
+const newName = ['Mr.', FirstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+/*
+/////////////////////////
 //Lecture :- part 2
 const airline = 'TAP Air Portugal';
 
@@ -126,7 +139,7 @@ cheakBaggage('I have a laptop, some Food and a pocket Knife');
 cheakBaggage('Socks and camera');
 cheakBaggage('Got some snacks and a gun for protection');
 
-/*
+
 ///////////////////////////////////////////
 //Lecture :- Working with Strings - part 1
 
