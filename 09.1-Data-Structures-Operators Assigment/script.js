@@ -622,8 +622,28 @@ console.log(newBookTitle);
 */
 // 16.3
 
-const logBookTheme = function (title) {};
+const logBookTheme = function (title) {
+  title = title.toLowerCase();
+
+  if (title.startsWith('computer')) {
+    console.log('This book is about computers');
+  } else if (title.includes('algorithms') && title.includes('structures')) {
+    console.log('This book is about algorithms and data structures');
+  } else if (
+    title.endsWith('system') ||
+    (title.endsWith('systems') && !title.includes('operating'))
+  ) {
+    console.log(
+      'This book is about some systems, but definitely not about operating systems',
+    );
+  }
+};
 logBookTheme('Computer Science');
+logBookTheme('Data Structures and Algorithms');
+logBookTheme('Electrical Systems');
+logBookTheme(books[2].title);
+logBookTheme(books[3].title);
+logBookTheme(books[4].title);
 
 /////////////////////////////////////////
 ///////////////////////////////////////
