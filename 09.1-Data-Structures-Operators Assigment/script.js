@@ -619,7 +619,7 @@ const newBookTitle = title.replace('Program', 'Software');
 console.log(newBookTitle);
 /////////////////////
 
-*/
+
 // 16.3
 
 const logBookTheme = function (title) {
@@ -646,6 +646,9 @@ logBookTheme('Electrical Systems');
 logBookTheme(books[2].title);
 logBookTheme(books[3].title);
 logBookTheme(books[4].title);
+*/
+
+//17.1
 
 /////////////////////////////////////////
 ///////////////////////////////////////
@@ -898,4 +901,43 @@ for (const [key, value] of gameEvents) {
   const half = key <= 45 ? 'First' : 'Second';
   console.log(`[${half} Half]: ${key}  ${value}`);
 }
+
+/////////////////////////
+
+//Coading Challenge :- 4
+
+Write a program that receives a list of variable names written in underscore_case 
+and convert them to camelCase. 
+The input will come from a textarea inserted into the DOM (see code below to 
+insert the elements), and conversion will happen when the button is pressed. 
+Test data (pasted to textarea, including spaces): 
+underscore_case 
+first_name 
+Some_Variable  
+calculate_AGE 
+delayed_departure 
+Should produce this output (5 separate console.log outputs): 
+underscoreCase      
+✅ 
+firstName           
+✅✅ 
+someVariable        
+✅✅✅ 
+calculateAge        
+✅✅✅✅ 
+delayedDeparture    
+✅✅✅✅✅ 
+Hints: 
+§ Remember which character defines a new line in the textarea 
+�
+� 
+§ The solution only needs to work for a variable made out of 2 words, like a_b 
+§ Start without worrying about the 
+name conversion working 
+✅. Tackle that only after you have the variable 
+�
+� 
+§ This challenge is difficult on purpose, so start watching the solution in case 
+you're stuck. Then pause and continue! 
+Afterwards, test with your own test data! 
 */
