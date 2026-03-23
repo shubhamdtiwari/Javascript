@@ -542,7 +542,7 @@ console.log(firstBookMap);
 for (const [keys, values] of firstBookMap) {
   if (typeof values === 'number') console.log(keys);
 }
-  */
+  
 // 15.1
 
 console.log(books[0].ISBN[6]);
@@ -617,16 +617,24 @@ console.log(title);
 const newBookTitle = title.replace('Program', 'Software');
 
 console.log(newBookTitle);
+/////////////////////
+
+*/
+// 16.3
+
+const logBookTheme = function (title) {};
+logBookTheme('Computer Science');
 
 /////////////////////////////////////////
 ///////////////////////////////////////
 ////////////////////////////////////////////
 /////////////////////
-// Coding Challenge :- 1
 
-/* We're building a football betting app (soccer for my American friends)! 
+// Coding Challenge :- 1
+/*
+ We're building a football betting app (soccer for my American friends)! 
 Suppose we get data from a web service about a certain game ('game' variable on 
-next page). In this challenge we're gonna work with that data. 
+next page). In this challenge we're gonna work with that data.//  
 
 ///////////////////////////////
 Your tasks: 
@@ -741,11 +749,13 @@ printGoals(...game.scored);
 
 team1 < team2 && console.log('Team 1 is most likely to win');
 
-team1 > team2 && console.log('Team 2 is most likely to win'); */
+team1 > team2 && console.log('Team 2 is most likely to win'); 
 
+*/
 // CHALLENGE :- 2
 
-/* Let's continue with our football betting app! Keep using the 'game' ariable from 
+/*
+ Let's continue with our football betting app! Keep using the 'game' ariable from 
 before. 
 Your tasks: 
 1. Loop over the game.scored array and print each player name to the console, 
