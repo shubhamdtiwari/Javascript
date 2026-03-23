@@ -63,6 +63,7 @@ const restaurant = {
 };
 // Lecture :- part 3
 
+//Split and join
 console.log('a+very+mice+string'.split('+'));
 
 console.log('Shubham Tiwari'.split(' '));
@@ -71,6 +72,19 @@ const [FirstName, lastName] = 'Shubham TIwari'.split(' ');
 
 const newName = ['Mr.', FirstName, lastName.toUpperCase()].join(' ');
 console.log(newName);
+
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('jessica ann smith davis');
+capitalizeName('shubham tiwari');
 
 /*
 /////////////////////////
