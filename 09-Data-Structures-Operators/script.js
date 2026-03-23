@@ -78,13 +78,22 @@ const capitalizeName = function (name) {
   const namesUpper = [];
 
   for (const n of names) {
-    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    //   namesUpper.push(n[0].toUpperCase() + n.slice(1));
+
+    //other way
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
   }
+
   console.log(namesUpper.join(' '));
 };
 
 capitalizeName('jessica ann smith davis');
 capitalizeName('shubham tiwari');
+
+//padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+').padEnd(35, '+'));
+console.log('Jonas'.padStart(25, '+'));
 
 /*
 /////////////////////////
