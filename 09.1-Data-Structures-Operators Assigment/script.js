@@ -636,6 +636,8 @@ const logBookTheme = function (title) {
     console.log(
       'This book is about some systems, but definitely not about operating systems',
     );
+  } else {
+    console.log('Not any Data Avilable');
   }
 };
 logBookTheme('Computer Science');
