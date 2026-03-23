@@ -578,6 +578,23 @@ console.log(isContributor('Julie Sussman (Contributor)'));
 
 console.log(isContributor('Robert Sedgewick'));
 
+//16.1
+
+const normalizeAuthorName = function (author) {
+  author = author.trim();
+  const FirstName = author.slice(0, author.indexOf(' '));
+
+  let lastName = '';
+
+  if (author.indexOf(' ') === author.lastIndexOf(' ')) {
+    lastName = author.slice(author.indexOf(' ') + 1, author.length);
+  } else {
+    lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
+  }
+};
+
+normalizeAuthorName('  JuliE sussMan (Contributor)');
+
 /////////////////////////////////////////
 ///////////////////////////////////////
 ////////////////////////////////////////////
