@@ -654,14 +654,22 @@ const bookCategories =
   'science;computing;computer science;algorithms;business;operating systems;networking;electronics';
 
 const logBookCategories = function (str) {
-  const categories = str.split(';');
-  console.log(categories);
-  for (let category of categories) {
-    console.log(category);
+  const arrays = str.split(';');
+
+  for (let array of arrays) {
+    console.log(array);
   }
 };
 
 logBookCategories(bookCategories);
+
+// 17.2
+
+const getKeywordsAsString = function (books) {
+  const str = books.join(';');
+  console.log(str);
+};
+getKeywordsAsString(books[0].keywords);
 
 /////////////////////////////////////////
 ///////////////////////////////////////
