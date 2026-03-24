@@ -665,11 +665,26 @@ logBookCategories(bookCategories);
 
 // 17.2
 
+// it is for one element but we need for all
+
+// const getKeywordsAsString = function (books) {
+//   const str = books.join(';');
+//   console.log(str);
+// };
+// getKeywordsAsString(books[0].keywords);
+
 const getKeywordsAsString = function (books) {
-  const str = books.join(';');
-  console.log(str);
+  const keywords = [];
+
+  for (const book of books) {
+    keywords.push(...book.keywords);
+  }
+  const uniqueKeyword = [...new Set(keywords)];
+
+  return uniqueKeyword.join(';');
 };
-getKeywordsAsString(books[0].keywords);
+
+console.log(getKeywordsAsString(books));
 
 /////////////////////////////////////////
 ///////////////////////////////////////
