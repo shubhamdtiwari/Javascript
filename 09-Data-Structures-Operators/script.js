@@ -61,6 +61,7 @@ const restaurant = {
     );
   },
 };
+/*
 // Lecture :- part 3
 
 //Split and join
@@ -118,7 +119,7 @@ const planesInLine = function (n) {
 planesInLine(5);
 planesInLine(3);
 planesInLine(12);
-/*
+*/
 /////////////////////////
 //Lecture :- part 2
 const airline = 'TAP Air Portugal';
@@ -185,7 +186,7 @@ cheakBaggage('I have a laptop, some Food and a pocket Knife');
 cheakBaggage('Socks and camera');
 cheakBaggage('Got some snacks and a gun for protection');
 
-
+/*
 ///////////////////////////////////////////
 //Lecture :- Working with Strings - part 1
 
@@ -201,9 +202,10 @@ console.log('B737'[0]);
 console.log(airline.length);
 console.log('B737'.length);
 
-console.log(airline.indexOf('r'));
+// console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
-// space also count as charcter
+// space also count as charcte
+// r
 
 console.log(airline.indexOf('Portugal'));
 // if the string is not present in string then it gives (-1)
@@ -237,7 +239,10 @@ console.log(typeof new String('shubham'));
 
 console.log(typeof new String('shubham').slice(1));
 
+console.log(' shubham'.lastIndexOf('h'));
+console.log('shubham'.slice(4, 6));
 
+/*
 //////////////////////////////
 // lecture :- 16 Maps Itration
 const question = new Map([
