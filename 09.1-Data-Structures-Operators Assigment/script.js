@@ -967,9 +967,9 @@ insert the elements), and conversion will happen when the button is pressed.
 
 Test data (pasted to textarea, including spaces): 
 underscore_case 
-first_name 
+ first_name 
 Some_Variable  
-calculate_AGE 
+  calculate_AGE 
 delayed_departure 
 
 
@@ -996,6 +996,17 @@ Afterwards, test with your own test data!
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
 
-const text = document.querySelector('textarea').value;
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  console.log(text);
 
-console.log(text);
+  const rows = text.split('\n');
+  console.log(rows);
+
+  for (const row of rows) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+
+    const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`;
+    console.log(output);
+  }
+});
