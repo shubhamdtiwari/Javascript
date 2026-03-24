@@ -686,6 +686,14 @@ const getKeywordsAsString = function (books) {
 
 console.log(getKeywordsAsString(books));
 
+// 17.3
+
+const logBookChapters = function (chapters) {
+  for (const [chapter, pages] of chapters) {
+    console.log(chapter.padEnd(15, '_') + ' ' + pages);
+  }
+};
+
 /////////////////////////////////////////
 ///////////////////////////////////////
 ////////////////////////////////////////////
