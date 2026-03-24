@@ -646,7 +646,7 @@ logBookTheme('Electrical Systems');
 logBookTheme(books[2].title);
 logBookTheme(books[3].title);
 logBookTheme(books[4].title);
-*/
+
 
 //17.1
 
@@ -993,3 +993,9 @@ you're stuck. Then pause and continue!
 
 Afterwards, test with your own test data! 
 */
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+const text = document.querySelector('textarea').value;
+
+console.log(text);
