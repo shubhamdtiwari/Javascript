@@ -650,6 +650,19 @@ logBookTheme(books[4].title);
 
 //17.1
 
+const bookCategories =
+  'science;computing;computer science;algorithms;business;operating systems;networking;electronics';
+
+const logBookCategories = function (str) {
+  const categories = str.split(';');
+  console.log(categories);
+  for (let category of categories) {
+    console.log(category);
+  }
+};
+
+logBookCategories(bookCategories);
+
 /////////////////////////////////////////
 ///////////////////////////////////////
 ////////////////////////////////////////////
