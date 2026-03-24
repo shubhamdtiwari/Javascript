@@ -693,7 +693,13 @@ const logBookChapters = function (chapters) {
     console.log(chapter.padEnd(15, '_') + ' ' + pages);
   }
 };
-
+const bookChapters = [
+  ['The Basics', 14],
+  ['Sorting', 254],
+  ['Searching', 372],
+  ['Graphs', 526],
+  ['Strings', 706],
+];
 /////////////////////////////////////////
 ///////////////////////////////////////
 ////////////////////////////////////////////
