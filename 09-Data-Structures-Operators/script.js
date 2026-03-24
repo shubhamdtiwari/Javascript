@@ -61,7 +61,7 @@ const restaurant = {
     );
   },
 };
-/*
+
 // Lecture :- part 3
 
 //Split and join
@@ -119,7 +119,8 @@ const planesInLine = function (n) {
 planesInLine(5);
 planesInLine(3);
 planesInLine(12);
-*/
+
+/*
 /////////////////////////
 //Lecture :- part 2
 const airline = 'TAP Air Portugal';
@@ -136,6 +137,7 @@ const passengerCorrect =
 
 console.log(passengerCorrect);
 
+console.log(passengerLower.slice(1));
 // Comapirng email
 
 const email = 'hello@jonas.io';
@@ -159,7 +161,7 @@ console.log(announcement.replace('door', 'gate'));
 
 console.log(announcement.replaceAll('door', 'gate'));
 
-console.log(announcement.replace(/dooe/g, 'gate'));
+console.log(announcement.replace(/door/g, 'gate'));
 
 //Booleans
 const plane = 'Airbus A320neo';
@@ -186,7 +188,7 @@ cheakBaggage('I have a laptop, some Food and a pocket Knife');
 cheakBaggage('Socks and camera');
 cheakBaggage('Got some snacks and a gun for protection');
 
-/*
+
 ///////////////////////////////////////////
 //Lecture :- Working with Strings - part 1
 
