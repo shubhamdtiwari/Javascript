@@ -40,4 +40,15 @@ const shubham = {
 const cheakIn = function (flightNum, passenger) {
   flightNum = 'LH199';
   passenger.name = 'Mr. ' + passenger.name;
+
+  if (passenger.passport === 6564644445646) {
+    alert('Cheak in');
+  } else {
+    alert('Wrong Passport');
+  }
 };
+
+cheakIn(flight, shubham);
+console.log(flight); //this is primitive type so on passing it only pass the copy of original value , so it does not affect the original,as copy is passed into the function
+
+console.log(shubham); // when we pass object (shubham) in the function as argument it also change the value
