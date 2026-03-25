@@ -1,5 +1,8 @@
 'use strict';
 /*
+///////////
+Lecture :- Default Parameter
+
 const bookings = [];
 const createBooking = function (
   flightNum,
@@ -9,7 +12,8 @@ const createBooking = function (
   //ES6
   //   numPassengers = numPassengers || 1;
   //   price = price || 199;
-
+  // but instead of doing above we use default parameter in the fuction directly
+  
   const booking = {
     flightNum,
     numPassengers,
