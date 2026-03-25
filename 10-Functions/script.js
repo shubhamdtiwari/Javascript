@@ -94,3 +94,13 @@ const counter = {
 // here we can see that we can store a function in variables
 
 //we can pass function as argument to other functions
+///////////////
+
+//Higher order functions
+
+// function that recives another function as an argument that returns a new function
+
+// Example
+
+const greet = () => console.log('Hey Shubham');
+btnClose: addEventListener('click', greet);
