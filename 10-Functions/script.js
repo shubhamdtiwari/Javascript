@@ -56,6 +56,14 @@ console.log(flight); //this is primitive type so on passing it only pass the cop
 console.log(shubham); // it is a refrence type when we pass object (shubham) in the function as argument it also change the value
 
 //is the same as doing...
+
 // flightNum = flight
-passenger = shubham;
+// passenger = shubham;
 //When we copy object like above we only copy the refrence to the object in the memory heap but the bot point to the same object in memory
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 100000000000);
+};
+
+newPassport(shubham);
+cheakIn(flight, shubham);
