@@ -104,3 +104,13 @@ const counter = {
 
 const greet = () => console.log('Hey Shubham');
 btnClose: addEventListener('click', greet);
+
+// function that returns new function
+function count() {
+  // upper function is a higher order function
+  let counter = 0;
+  return function () {
+    // this is returned function
+    counter++;
+  };
+}
