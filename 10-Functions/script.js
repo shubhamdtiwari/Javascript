@@ -76,3 +76,21 @@ cheakIn(flight, shubham);
 ///////////////////////////////////////
 
 // Lecture :- First -class and higher-order functions
+//First Class function are also called first-class citizens
+// they are simply values
+// it is just another type of object
+
+//store functions in variables or properties
+
+const add = (a, b) => a + b;
+
+const counter = {
+  value: 23,
+  inc: function () {
+    this.value++;
+  },
+};
+
+// here we can see that we can store a function in variables
+
+//we can pass function as argument to other functions
