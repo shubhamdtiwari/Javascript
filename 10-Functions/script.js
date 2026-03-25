@@ -38,8 +38,10 @@ const shubham = {
 };
 
 const cheakIn = function (flightNum, passenger) {
+  // so above flightNum store a copy of passed arugment as it is a primitive value
   flightNum = 'LH199';
   passenger.name = 'Mr. ' + passenger.name;
+  // so here by maupulating passenger object it is exatcly the same as manipulating the shubham object as they are same in the memory
 
   if (passenger.passport === 6564644445646) {
     alert('Cheak in');
@@ -51,4 +53,9 @@ const cheakIn = function (flightNum, passenger) {
 cheakIn(flight, shubham);
 console.log(flight); //this is primitive type so on passing it only pass the copy of original value , so it does not affect the original,as copy is passed into the function
 
-console.log(shubham); // when we pass object (shubham) in the function as argument it also change the value
+console.log(shubham); // it is a refrence type when we pass object (shubham) in the function as argument it also change the value
+
+//is the same as doing...
+// flightNum = flight
+passenger = shubham;
+//When we copy object like above we only copy the refrence to the object in the memory heap but the bot point to the same object in memory
