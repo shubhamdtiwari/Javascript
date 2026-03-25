@@ -30,7 +30,7 @@ createBooking('LH123', 5);
 //for leaving num  of passengers
 createBooking('LH123', undefined, 1000);
 
-*/
+
 const flight = 'LH1223';
 const shubham = {
   name: 'Shubham Tiwari',
@@ -113,3 +113,14 @@ function count() {
     counter++;
   };
 }
+*/
+// Lecture :- Functions accepting callback functions
+
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
