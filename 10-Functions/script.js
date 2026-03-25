@@ -67,3 +67,12 @@ const newPassport = function (person) {
 
 newPassport(shubham);
 cheakIn(flight, shubham);
+/////////////////////////////////////////
+
+// Java Script do not contain passing by refrence.For object it do pass in a refrence but it is the memory address of the object, this refrence still a value
+
+// so basically we do not pass by refrence , we pass a reference to the function
+
+///////////////////////////////////////
+
+// Lecture :- First -class and higher-order functions
