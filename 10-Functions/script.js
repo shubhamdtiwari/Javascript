@@ -149,4 +149,8 @@ document.body.addEventListener('click', high5);
 
 // Lecture :- Function returing Function
 
-const greet =
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
