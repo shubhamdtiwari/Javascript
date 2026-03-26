@@ -200,7 +200,7 @@ const book = lufthansa.book;
 // book(23, 'Shubham'); it will throw an error as this keyword is undefined here
 
 // above does not work
-
+// call method
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
 
@@ -215,3 +215,13 @@ const swiss = {
 
 book.call(swiss, 583, 'Mary Copper');
 console.log(swiss);
+
+// Apply method
+
+const filghtData = [583, 'Sapna Kumari'];
+book.apply(swiss, filghtData);
+console.log(swiss);
+
+// wec don't use apply method insted of this we can use spread function here
+
+book.call(swiss, ...filghtData);
