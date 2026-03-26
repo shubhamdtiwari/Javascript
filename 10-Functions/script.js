@@ -169,8 +169,9 @@ greet('Hello')('Shubham');
 const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
 
 greetArr('Hello')('Darling');
-*/
 
+// Lecture :- Call and Apply method
+*/
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
@@ -225,3 +226,5 @@ console.log(swiss);
 // wec don't use apply method insted of this we can use spread function here
 
 book.call(swiss, ...filghtData);
+
+// Lecture :- Bind method
