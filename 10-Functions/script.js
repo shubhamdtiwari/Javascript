@@ -179,8 +179,20 @@ const lufthansa = {
     console.log(
       `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`,
     );
+    this.booking.push({ flight: `flight ${this.iataCode}${flightNum}`, name });
   },
 };
 
 lufthansa.book(2339, 'Shubham');
 lufthansa.book(2339, 'Sapna');
+console.log(lufthansa);
+
+const eurowings = {
+  name: 'Eurowings',
+  iatacode: 'EW',
+  booking: [],
+};
+
+// here we can store the function in new variable
+const book = lufthansa.book;
+book(23, 'Shubham');
