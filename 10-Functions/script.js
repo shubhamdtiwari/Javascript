@@ -174,12 +174,12 @@ greetArr('Hello')('Darling');
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
-  booking: [],
+  bookings: [],
   book(flightNum, name) {
     console.log(
       `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`,
     );
-    this.booking.push({ flight: `flight ${this.iataCode}${flightNum}`, name });
+    this.bookings.push({ flight: `flight ${this.iataCode}${flightNum}`, name });
   },
 };
 
@@ -188,13 +188,30 @@ lufthansa.book(2339, 'Sapna');
 console.log(lufthansa);
 
 const eurowings = {
-  name: 'Eurowings',
-  iatacode: 'EW',
-  booking: [],
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
 };
 
 // here we can store the function in new variable. So when we store it a variable it now become regular function not method so this keyword is undefined
 const book = lufthansa.book;
 
 // here book function become a regural function call and in a regural function call this keyword points to undefined in strict mode
-book(23, 'Shubham'); // it will throw an error as this keyword is undefined here
+// book(23, 'Shubham'); it will throw an error as this keyword is undefined here
+
+// above does not work
+
+book.call(eurowings, 23, 'Sarah Williams');
+console.log(eurowings);
+
+book.call(lufthansa, 239, 'Shubham');
+console.log(lufthansa);
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'LX',
+  bookings: [],
+};
+
+book.call(swiss, 583, 'Mary Copper');
+console.log(swiss);
