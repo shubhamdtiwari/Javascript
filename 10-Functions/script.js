@@ -193,6 +193,8 @@ const eurowings = {
   booking: [],
 };
 
-// here we can store the function in new variable
+// here we can store the function in new variable. So when we store it a variable it now become regular function not method so this keyword is undefined
 const book = lufthansa.book;
-book(23, 'Shubham');
+
+// here book function become a regural function call and in a regural function call this keyword points to undefined in strict mode
+book(23, 'Shubham'); // it will throw an error as this keyword is undefined here
