@@ -113,7 +113,7 @@ function count() {
     counter++;
   };
 }
-*/
+
 // Lecture :- Functions accepting callback functions
 
 const oneWord = function (str) {
@@ -147,6 +147,8 @@ document.body.addEventListener('click', high5);
 
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 
+*/
+
 // Lecture :- Function returing Function
 
 const greet = function (greeting) {
@@ -154,3 +156,12 @@ const greet = function (greeting) {
     console.log(`${greeting} ${name}`);
   };
 };
+
+const greeterHey = greet('Hey');
+
+greeterHey('Jonas');
+greeterHey('Shubham');
+
+greet('Hello')('Shubham');
+
+const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
