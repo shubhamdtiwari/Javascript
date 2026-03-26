@@ -147,7 +147,7 @@ document.body.addEventListener('click', high5);
 
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 
-*/
+
 
 // Lecture :- Function returing Function
 
@@ -164,4 +164,23 @@ greeterHey('Shubham');
 
 greet('Hello')('Shubham');
 
+// by using array function
+
 const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
+
+greetArr('Hello')('Darling');
+*/
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  booking: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`,
+    );
+  },
+};
+
+lufthansa.book(2339, 'Shubham');
+lufthansa.book(2339, 'Sapna');
