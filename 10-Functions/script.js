@@ -31,7 +31,7 @@ createBooking('LH123', 5);
 createBooking('LH123', undefined, 1000);
 
 
-const flight = 'LH1223';
+const flight = 'LH1223';//primitive type
 const shubham = {
   name: 'Shubham Tiwari',
   passport: 6564644445646,
@@ -77,7 +77,7 @@ console.log(shubham);
 // so basically we do not pass by refrence , we pass a reference to the function
 
 ///////////////////////////////////////
-*/
+
 // Lecture :- First -class and higher-order functions
 
 //First Class function are also called first-class citizens
@@ -151,7 +151,7 @@ document.body.addEventListener('click', high5);
 
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 
-/*
+
 // Lecture :- Function returing Function
 
 const greet = function (greeting) {
@@ -204,6 +204,7 @@ const book = lufthansa.book;
 // book(23, 'Shubham'); it will throw an error as this keyword is undefined here
 
 // above does not work
+
 // call method
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
@@ -284,7 +285,7 @@ const addTaxRate = function (rate) {
 const AddVAT2 = addTaxRate(0.23);
 
 console.log(AddVAT2(100));
-*/
+
 /////////////////////////////
 // Coding Challenge #1
 /*
@@ -335,9 +336,29 @@ const poll = {
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
   // This generates [0, 0, 0, 0]. More in the next section!
   answers: new Array(4).fill(0),
+
+  //1.1
   resisterNewAnswer() {
-    const answer = prompt(
-      `${this.question} \n ${this.options.join('\n')}\n(Write option number) `,
+    const answer = Number(
+      prompt(
+        `${this.question}\n${this.options.join('\n')}\n(Write option number) `,
+      ),
     );
+    console.log(answer);
+
+    //Resister answer
+    //1.2
+
+    typeof answer === 'number' &&
+      answer < this.options.length &&
+      this.answers[answer]++;
+    console.log(this.answers);
   },
 };
+
+// poll.resisterNewAnswer();
+//1.3
+
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.resisterNewAnswer.bind(poll));
