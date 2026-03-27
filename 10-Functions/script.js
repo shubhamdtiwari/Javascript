@@ -410,15 +410,21 @@ runOnce();
 console.log(notPrivate);
 */
 
-// Lecture :- Closures
+// Lecture :- Closures(imp)
 
 const secureBooking = function () {
   let passengerCount = 0;
 
   return function () {
     passengerCount++;
-    console.log(`${passengerCount} passengers`);
+    passengerCount < 2
+      ? console.log(`${passengerCount} passenger`)
+      : console.log(`${passengerCount} passengers`);
   };
 };
 
 const booker = secureBooking();
+
+booker();
+booker();
+booker();
