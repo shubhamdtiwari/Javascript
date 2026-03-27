@@ -249,8 +249,25 @@ lufthansa.buyplane = function () {
   this.planes++;
   console.log(this.planes);
 };
+// lufthansa.buyplane();
 
-document.querySelector('.buy').addEventListener('click', lufthansa.buyplane);
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyplane.bind(lufthansa));
+
+// we use bind() function to define the this keyword
+
 // in the above code this keyword point to  buy button element
 
 //as in eventhandeler function, this keyword always point to the element on which that handler is attached to
+
+// Partil application
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
+//first argument of bind function is this keyword
+// addVAT = (rate, value) => value + value * 0.23
+console.log(addVAT(100));
+console.log(addVAT(23));
