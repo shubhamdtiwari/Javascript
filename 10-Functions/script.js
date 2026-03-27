@@ -29,7 +29,7 @@ createBooking('LH123', 2);
 createBooking('LH123', 5);
 //for leaving num  of passengers
 createBooking('LH123', undefined, 1000);
-*/
+
 
 const flight = 'LH1223';
 const shubham = {
@@ -68,7 +68,8 @@ const newPassport = function (person) {
 newPassport(shubham);
 cheakIn(flight, shubham);
 console.log(shubham);
-// here we can se thaton passing the object shubham in the function it also change the object
+
+// here we can se that on passing the object shubham in the function it also change the object
 /////////////////////////////////////////
 
 // Java Script do not contain passing by refrence.For object it do pass in a refrence but it is the memory address of the object, this refrence still a value
@@ -76,22 +77,14 @@ console.log(shubham);
 // so basically we do not pass by refrence , we pass a reference to the function
 
 ///////////////////////////////////////
-/*
+*/
 // Lecture :- First -class and higher-order functions
+
 //First Class function are also called first-class citizens
 // they are simply values
 // it is just another type of object
 
 //store functions in variables or properties
-
-const add = (a, b) => a + b;
-
-const counter = {
-  value: 23,
-  inc: function () {
-    this.value++;
-  },
-};
 
 // here we can see that we can store a function in variables
 
@@ -149,8 +142,7 @@ document.body.addEventListener('click', high5);
 
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 
-
-
+/*
 // Lecture :- Function returing Function
 
 const greet = function (greeting) {
