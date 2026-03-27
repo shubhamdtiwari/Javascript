@@ -384,7 +384,7 @@ poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] });
 // [5, 2, 3]
 // [1, 5, 3, 9, 6, 1]
 
-*/
+
 
 // Lecture :- Immediately Invoked Function Expression (IIFE)
 
@@ -397,4 +397,28 @@ runOnce();
 //IIFE
 (function () {
   console.log('This will never run again');
+  const isPrivate = 23;
 })();
+
+(() => console.log('This will never run again'))();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 25;
+}
+// console.log(isPrivate);
+console.log(notPrivate);
+*/
+
+// Lecture :- Closures
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
