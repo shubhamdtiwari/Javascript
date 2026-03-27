@@ -171,7 +171,7 @@ const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
 greetArr('Hello')('Darling');
 
 // Lecture :- Call and Apply method
-*/
+
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
@@ -281,7 +281,7 @@ const addTaxRate = function (rate) {
 const AddVAT2 = addTaxRate(0.23);
 
 console.log(AddVAT2(100));
-
+*/
 /////////////////////////////
 // Coding Challenge #1
 /*
@@ -332,4 +332,9 @@ const poll = {
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
   // This generates [0, 0, 0, 0]. More in the next section!
   answers: new Array(4).fill(0),
+  resisterNewAnswer() {
+    const answer = prompt(
+      `${this.question} \n ${this.options.join('\n')}\n(Write option number) `,
+    );
+  },
 };
