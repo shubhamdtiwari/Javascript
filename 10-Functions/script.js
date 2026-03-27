@@ -194,7 +194,7 @@ const eurowings = {
   bookings: [],
 };
 
-// here we can store the function in new variable. So when we store it a variable it now become regular function not method so this keyword is undefined
+// here we can store the function in new variable. So when we store it in a variable it now become regular function, not a method. so this keyword is undefined
 const book = lufthansa.book;
 
 // here book function become a regural function call and in a regural function call this keyword points to undefined in strict mode
@@ -223,8 +223,20 @@ const filghtData = [583, 'Sapna Kumari'];
 book.apply(swiss, filghtData);
 console.log(swiss);
 
-// wec don't use apply method insted of this we can use spread function here
+// we don't use apply method insted of this we can use spread function here
 
 book.call(swiss, ...filghtData);
 
 // Lecture :- Bind method
+
+// book.call(eurowings, 23, 'Sarah Williams')
+
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
+bookEW(23, 'Steven williams');
+
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('Shubham Tiwari');
+bookEW23('Sapna Kumari');
