@@ -352,13 +352,34 @@ const poll = {
     typeof answer === 'number' &&
       answer < this.options.length &&
       this.answers[answer]++;
-    console.log(this.answers);
+
+    //4
+    this.displayResult();
+    this.displayResult('string');
+  },
+  //3
+  displayResult(type = 'array') {
+    if (type === 'array') {
+      console.log(this.answers);
+    } else if (type === 'string') {
+      console.log(`Poll Results are ${this.answers.join(', ')}`);
+    }
   },
 };
 
 // poll.resisterNewAnswer();
-//1.3
+//2
 
 document
   .querySelector('.poll')
   .addEventListener('click', poll.resisterNewAnswer.bind(poll));
+
+//Bonous
+
+poll.displayResult.call({ answers: [5, 2, 3] }, 'string');
+
+poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
+poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] });
+
+// [5, 2, 3]
+// [1, 5, 3, 9, 6, 1]
