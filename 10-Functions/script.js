@@ -143,6 +143,13 @@ transformer('JavaScript is the best!', oneWord);
 // here upperfirstword and one word is call back function
 //and transformer is high-order function
 //JS uses callbacks all the time
+const high5 = function () {
+  console.log('👋');
+};
+
+document.body.addEventListener('click', high5);
+
+['Jonas', 'Martha', 'Adam'].forEach(high5);
 
 /*
 // Lecture :- Function returing Function
