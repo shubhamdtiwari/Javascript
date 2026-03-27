@@ -240,3 +240,17 @@ bookEW(23, 'Steven williams');
 const bookEW23 = book.bind(eurowings, 23);
 bookEW23('Shubham Tiwari');
 bookEW23('Sapna Kumari');
+
+// With Event Listerners
+lufthansa.planes = 300;
+lufthansa.buyplane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+
+document.querySelector('.buy').addEventListener('click', lufthansa.buyplane);
+// in the above code this keyword point to  buy button element
+
+//as in eventhandeler function, this keyword always point to the element on which that handler is attached to
