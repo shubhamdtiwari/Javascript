@@ -29,7 +29,7 @@ createBooking('LH123', 2);
 createBooking('LH123', 5);
 //for leaving num  of passengers
 createBooking('LH123', undefined, 1000);
-
+*/
 
 const flight = 'LH1223';
 const shubham = {
@@ -53,13 +53,13 @@ const cheakIn = function (flightNum, passenger) {
 cheakIn(flight, shubham);
 console.log(flight); //this is primitive type so on passing it only pass the copy of original value , so it does not affect the original,as copy is passed into the function
 
-console.log(shubham); // it is a refrence type when we pass object (shubham) in the function as argument it also change the value
+console.log(shubham); // it is a refrence type when we pass object (shubham) in the function as argument on changing somethng in the function it also change the value in the object
 
 //is the same as doing...
 
 // flightNum = flight
 // passenger = shubham;
-//When we copy object like above we only copy the refrence to the object in the memory heap but the bot point to the same object in memory
+// When we copy object like above we only copy the refrence to the object in the memory heap but the both point refer the same object in memory
 
 const newPassport = function (person) {
   person.passport = Math.trunc(Math.random() * 100000000000);
@@ -67,6 +67,8 @@ const newPassport = function (person) {
 
 newPassport(shubham);
 cheakIn(flight, shubham);
+console.log(shubham);
+// here we can se thaton passing the object shubham in the function it also change the object
 /////////////////////////////////////////
 
 // Java Script do not contain passing by refrence.For object it do pass in a refrence but it is the memory address of the object, this refrence still a value
@@ -74,7 +76,7 @@ cheakIn(flight, shubham);
 // so basically we do not pass by refrence , we pass a reference to the function
 
 ///////////////////////////////////////
-
+/*
 // Lecture :- First -class and higher-order functions
 //First Class function are also called first-class citizens
 // they are simply values
