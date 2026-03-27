@@ -329,7 +329,7 @@ Test data for bonus:
 § Data 2: [1, 5, 3, 9, 6, 1] 
 
 Hints: Use many of the tools you learned about in this and the last section 
-*/
+
 
 const poll = {
   question: 'What is your favourite programming language?',
@@ -383,3 +383,18 @@ poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] });
 
 // [5, 2, 3]
 // [1, 5, 3, 9, 6, 1]
+
+*/
+
+// Lecture :- Immediately Invoked Function Expression (IIFE)
+
+const runOnce = function () {
+  console.log('This will never run again');
+};
+
+runOnce();
+
+//IIFE
+(function () {
+  console.log('This will never run again');
+})();
