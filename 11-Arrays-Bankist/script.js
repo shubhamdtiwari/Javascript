@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
-
+/*
 // Data
 const account1 = {
   owner: 'Jonas Schmedtmann',
@@ -106,3 +106,27 @@ console.log(letters);
 console.log([...arr, ...arr2]);
 
 //JOIN
+console.log(letters.join(' - '));
+
+
+
+// Lecture :- The New at Method
+
+const arr = [23, 11, 64];
+console.log(arr[0]);
+console.log(arr.at(0));
+
+// getting the last element
+
+console.log(arr[arr.length - 1]);
+
+console.log(arr.slice(-1)[0]);
+
+console.log(arr.at(-1));
+
+// also works on string
+console.log('shubham'.at(1));
+console.log('shubham'.at(-1));
+*/
+// lecture :- Looping Arrays: FOREACH
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
