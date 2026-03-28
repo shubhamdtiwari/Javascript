@@ -127,7 +127,7 @@ console.log(arr.at(-1));
 // also works on string
 console.log('shubham'.at(1));
 console.log('shubham'.at(-1));
-*/
+
 // lecture :- Looping Arrays: FOREACH
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -151,3 +151,25 @@ movements.forEach(function (mov, i, arr) {
 // 1: function(450)
 // 3: function(400)
 // ...
+*/
+
+// Lecture :- forEach with maps and sets
+
+// Map
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`);
+});
+
+//Set
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+console.log(currenciesUnique);
+
+currenciesUnique.forEach(function (value, key, mao) {
+  console.log(`${key}: ${value}`);
+});
