@@ -428,3 +428,9 @@ const booker = secureBooking();
 booker();
 booker();
 booker();
+
+// We know that after the excution of given function in call stack it is removed from the stack by garbage collector
+
+//in the above code when secureBooking() function is called it return another function to the booker and due to clouser the variable enviornment passengerCount move to memory heap and not garbage collected
+
+// A function has access to the variable environment (VE) of the execution contex in which it was created
