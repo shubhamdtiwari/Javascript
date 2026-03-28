@@ -408,7 +408,7 @@ runOnce();
 }
 // console.log(isPrivate);
 console.log(notPrivate);
-*/
+
 
 // Lecture :- Closures(imp)
 
@@ -434,3 +434,10 @@ booker();
 //in the above code when secureBooking() function is called it return another function to the booker and due to clouser the variable enviornment passengerCount move to memory heap and not garbage collected
 
 // A function has access to the variable environment (VE) of the execution contex in which it was created
+
+// A closure gives a function access to all the variables of its parent function, even after that parent function has returned. the function keeps a refernce to its outer scope, which preserve the scope chain throughout time
+
+console.dir(booker);
+*/
+
+// Lecture :- examples of Clouser
