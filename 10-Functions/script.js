@@ -442,6 +442,7 @@ console.dir(booker);
 
 // Lecture :- examples of Clouser
 
+// Example :- 1
 let f;
 
 const g = function () {
@@ -459,8 +460,23 @@ const h = function () {
 };
 g();
 f();
+console.dir(f);
 
 //Re-assigning f function
 h();
 f();
 console.dir(f);
+
+// Example :- 2
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups,each with ${perGroup} passenger`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} second`);
+};
+
+boardPassengers(180, 3);
