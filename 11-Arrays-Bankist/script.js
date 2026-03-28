@@ -1,9 +1,9 @@
 'use strict';
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
 // BANKIST APP
-/*
+
 // Data
 const account1 = {
   owner: 'Jonas Schmedtmann',
@@ -61,6 +61,25 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+////////////////////////////
+// coading started from here
+
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+    const html = ` 
+      <div class="movements__row">
+          <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
+          <div class="movements__value">${mov}</div>
+        </div>`;
+
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+
+displayMovements(account1.movements);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -73,9 +92,10 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+//////////////////////////////////////
 //////////////////////////////////////////////
 // Lecture :- Simple Array Methods
-
+/*
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
 console.log(arr.slice(2));
@@ -151,7 +171,7 @@ movements.forEach(function (mov, i, arr) {
 // 1: function(450)
 // 3: function(400)
 // ...
-*/
+
 
 // Lecture :- forEach with maps and sets
 
@@ -170,6 +190,7 @@ currencies.forEach(function (value, key, map) {
 const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
 console.log(currenciesUnique);
 
-currenciesUnique.forEach(function (value, key, mao) {
-  console.log(`${key}: ${value}`);
+currenciesUnique.forEach(function (value, _, map) {
+  console.log(`${value}: ${value}`);
 });
+*/
