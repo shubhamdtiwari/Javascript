@@ -210,9 +210,8 @@ const eurToUsd = 1.1;
 // const movementsUSD = movements.map(function (mov) {
 //   return mov * eurToUSD;
 // });
-const movementsUsd = movements.map((mov) => {
-  return mov * eurToUsd;
-});
+
+const movementsUsd = movements.map((mov) => mov * eurToUsd);
 
 console.log(movements);
 console.log(movementsUsd);
@@ -220,6 +219,15 @@ console.log(movementsUsd);
 const movementsUSDfor = [];
 for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
 console.log(movementsUSDfor);
+
+const movementDescription = movements.map((mov, i, arr) => {
+  if (mov > 0) {
+    return `Movement ${i + 1}: You Deposited ${mov}`;
+  } else {
+    return `Movement ${i + 1}: You withdraw ${Math.abs(mov)}`;
+  }
+});
+console.log(movementDescription);
 
 /*
 ///////////////////////////////////////////////
