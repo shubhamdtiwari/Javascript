@@ -245,10 +245,10 @@ const movementDescription = movements.map(
 );
 
 console.log(movementDescription);
-*/
+
 // Lecture :- The filter Method
 
-const deposits = movements.filter(function (mov) {
+const deposits = movements.filter(function (mov, i, arr) {
   return mov > 0;
 });
 console.log(movements);
@@ -260,6 +260,19 @@ console.log(depositsFor);
 
 const withdrawals = movements.filter((mov) => mov < 0);
 console.log(withdrawals);
+*/
+// Lecture :- Reduce Method
+
+console.log(movements);
+
+// accumulator -> Snowball
+const balance = movements.reduce(function (acc, cur, i, arr) {
+  console.log(`Iteration ${i}: ${acc}`);
+  return acc + cur;
+}, 0);
+
+console.log(balance);
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
