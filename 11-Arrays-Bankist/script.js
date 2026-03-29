@@ -84,6 +84,12 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+calcDisplayBalance(account1.movements);
+
 const createUsernames = function (accs) {
   accs.forEach(
     (acc) =>
@@ -266,12 +272,20 @@ console.log(withdrawals);
 console.log(movements);
 
 // accumulator -> Snowball
-const balance = movements.reduce(function (acc, cur, i, arr) {
-  console.log(`Iteration ${i}: ${acc}`);
-  return acc + cur;
-}, 0);
+// const balance = movements.reduce(function (acc, cur, i, arr) {
+//   console.log(`Iteration ${i}: ${acc}`);
+//   return acc + cur;
+// }, 0);
+
+//Reeduced form
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
 
 console.log(balance);
+
+// This method is easy use for one arrat but when we have to pass many arrays it is impractisable. so we use reduce() method
+let balanceFor = 0;
+for (const mov of movements) balanceFor += mov;
+console.log(balanceFor);
 
 /*
 ///////////////////////////////////////////////
