@@ -201,8 +201,21 @@ console.log(currenciesUnique);
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
+*/
 
-/////////////////////////////////
+// Lecture :- The map method
+
+const eurToUsd = 1.1;
+
+const movementsUSD = movements.map(function (mov) {
+  return mov * eurToUsd;
+});
+
+console.log(movements);
+console.log(movementsUSD);
+/*
+///////////////////////////////////////////////
+/////////////////////////////////////////
 // Chanllenge :- 1
 Julia and Kate are doing a study on dogs. So each of them asked 5 dog owners 
 about their dog's age, and stored the data into an array (one array for each). For 
@@ -231,7 +244,7 @@ Test data:
 § Data 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4] 
 Hints: Use tools from all lectures in this section so far
 
-*/
+
 
 const checkDogs = function (dogsJulia, dogsKate) {
   //1.
@@ -239,11 +252,12 @@ const checkDogs = function (dogsJulia, dogsKate) {
   const shallowDogsJulia = dogsJulia.slice(1, 3);
 
   //2.
-  const joinDogs = shallowDogsJulia.concat(dogsKate);
+  const dogs = shallowDogsJulia.concat(dogsKate);
+  console.log(dogs);
 
   //3.
 
-  joinDogs.forEach(function (dogs, i, arr) {
+  dogs.forEach(function (dogs, i, arr) {
     if (dogs >= 3) {
       console.log(`Dog number ${i + 1} is an adult, and is ${dogs} years old`);
     } else {
@@ -258,3 +272,5 @@ const dogsJulia = [3, 5, 2, 12, 7];
 const dogsKate = [4, 1, 15, 8, 3];
 
 checkDogs(dogsJulia, dogsKate);
+checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+*/
