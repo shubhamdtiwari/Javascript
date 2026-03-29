@@ -84,6 +84,19 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map((name) => name[0])
+      .join('');
+  });
+};
+
+createUsernames(accounts);
+console.log(accounts);
+
 // console.log(containerMovements.innerHTML);
 // this shows the html created for the incoming values
 
@@ -201,7 +214,7 @@ console.log(currenciesUnique);
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
-*/
+
 
 // Lecture :- The map method
 
@@ -232,7 +245,7 @@ const movementDescription = movements.map(
 );
 
 console.log(movementDescription);
-
+*/
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
