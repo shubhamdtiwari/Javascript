@@ -207,12 +207,20 @@ currenciesUnique.forEach(function (value, _, map) {
 
 const eurToUsd = 1.1;
 
-const movementsUSD = movements.map(function (mov) {
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUSD;
+// });
+const movementsUsd = movements.map((mov) => {
   return mov * eurToUsd;
 });
 
 console.log(movements);
-console.log(movementsUSD);
+console.log(movementsUsd);
+
+const movementsUSDfor = [];
+for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
