@@ -220,13 +220,17 @@ const movementsUSDfor = [];
 for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
 console.log(movementsUSDfor);
 
-const movementDescription = movements.map((mov, i, arr) => {
-  if (mov > 0) {
-    return `Movement ${i + 1}: You Deposited ${mov}`;
-  } else {
-    return `Movement ${i + 1}: You withdraw ${Math.abs(mov)}`;
-  }
-});
+const movementDescription = movements.map(
+  (mov, i) =>
+    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdraw'} ${Math.abs(mov)}`,
+
+  // if (mov > 0) {
+  //   return `Movement ${i + 1}: You Deposited ${mov}`;
+  // } else {
+  //   return `Movement ${i + 1}: You withdraw ${Math.abs(mov)}`;
+  // }
+);
+
 console.log(movementDescription);
 
 /*
