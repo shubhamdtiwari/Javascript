@@ -82,14 +82,11 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
-
 // It helps to show the balance
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} €`;
 };
-calcDisplayBalance(account1.movements);
 
 const calcDisplaySummary = function (movements) {
   const incomes = movements
@@ -139,6 +136,23 @@ btnLogin.addEventListener('click', function (e) {
     (acc) => acc.username === inputLoginUsername.value,
   );
   console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI a welcome message
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
+
+    containerApp.style.opacity = 100;
+
+    // clear the input fields
+    inputLoginUsername.value = inputLoginPin.value = '';
+
+    // Display movement
+    displayMovements(currentAccount.movements);
+    // Display balance
+    calcDisplayBalance(currentAccount.movements);
+    // display summary
+    calcDisplaySummary(currentAccount.movements);
+  }
 });
 
 // console.log(containerMovements.innerHTML);
