@@ -444,4 +444,22 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 
 console.log(avg1, avg2);
+/////////////////////////////
+// Challenge :- 3
+
+Rewrite the 'calcAverageHumanAge' function from Challenge #2, but this time 
+as an arrow function, and using chaining! 
+Test data: 
+§ Data 1: [5, 2, 4, 1, 15, 8, 3] 
+§ Data 2: [16, 6, 10, 5, 6, 1, 4]
 */
+const calcAverageHumanAge = (ages) =>
+  ages
+    .map((ages) => (ages <= 2 ? 2 * ages : 16 + ages * 4))
+    .filter((hum) => hum >= 18)
+    .reduce((curr, ages, i, arr) => curr + ages / arr.length, 0);
+
+const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+
+console.log(avg1, avg2);
