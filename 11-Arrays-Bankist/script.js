@@ -88,20 +88,20 @@ const calcDisplayBalance = function (movements) {
   labelBalance.textContent = `${balance} €`;
 };
 
-const calcDisplaySummary = function (movements) {
-  const incomes = movements
+const calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
 
-  const out = movements
+  const out = acc.movements
     .filter((mov) => mov < 0)
     .reduce((acc, arr) => acc + arr, 0);
   labelSumOut.textContent = `${Math.abs(out)}€`;
 
-  const interest = movements
+  const interest = acc.movements
     .filter((mov) => mov > 0)
-    .map((deposit) => (deposit * 1.2) / 100)
+    .map((deposit) => (deposit * acc.interest) / 100)
     .filter((int, i, arr) => {
       console.log(arr);
       return int >= 1;
@@ -145,13 +145,17 @@ btnLogin.addEventListener('click', function (e) {
 
     // clear the input fields
     inputLoginUsername.value = inputLoginPin.value = '';
+    inputLoginPin.blur();
 
     // Display movement
     displayMovements(currentAccount.movements);
     // Display balance
     calcDisplayBalance(currentAccount.movements);
     // display summary
-    calcDisplaySummary(currentAccount.movements);
+    calcDisplaySummary(currentAccount);
+  } else {
+    alert('Worng Pin');
+    containerApp.style.opacity = 0;
   }
 });
 
