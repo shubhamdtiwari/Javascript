@@ -156,8 +156,7 @@ btnLogin.addEventListener('click', function (e) {
   } else {
     alert('Worng Pin');
     containerApp.style.opacity = 0;
-    inputLoginUsername.value = inputLoginPin.value = '';
-    inputLoginPin.blur();
+    inputLoginPin.value = '';
   }
 });
 
