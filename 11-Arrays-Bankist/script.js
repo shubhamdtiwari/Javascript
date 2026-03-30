@@ -112,7 +112,7 @@ const calcDisplaySummary = function (movements) {
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
-calcDisplaySummary(account1.movements);
+// calcDisplaySummary(account1.movements);
 
 // It helps to create username
 const createUsernames = function (accs) {
@@ -320,7 +320,7 @@ const max = movements.reduce(
 
 console.log(max);
 
-*/
+
 // Lectuire :- The magic of Chain Method
 
 const eurToUsd = 1.1;
@@ -338,6 +338,19 @@ const totalDepositsUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
 
 console.log(totalDepositsUSD);
+*/
+// Lecture :- The Find Method
+// this method returns only first element
+
+const firstWithdrawal = movements.find((mov) => mov < 0);
+
+console.log(movements);
+console.log(firstWithdrawal);
+
+console.log(accounts);
+
+const account = accounts.find((acc) => acc.owner === 'Jessica Davis');
+console.log(account);
 
 /*
 ///////////////////////////////////////////////
@@ -452,7 +465,7 @@ as an arrow function, and using chaining!
 Test data: 
 § Data 1: [5, 2, 4, 1, 15, 8, 3] 
 § Data 2: [16, 6, 10, 5, 6, 1, 4]
-*/
+
 const calcAverageHumanAge = (ages) =>
   ages
     .map((ages) => (ages <= 2 ? 2 * ages : 16 + ages * 4))
@@ -463,3 +476,4 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 
 console.log(avg1, avg2);
+*/
