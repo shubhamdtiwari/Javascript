@@ -101,7 +101,7 @@ const calcDisplaySummary = function (acc) {
 
   const interest = acc.movements
     .filter((mov) => mov > 0)
-    .map((deposit) => (deposit * acc.interest) / 100)
+    .map((deposit) => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
       console.log(arr);
       return int >= 1;
@@ -156,6 +156,8 @@ btnLogin.addEventListener('click', function (e) {
   } else {
     alert('Worng Pin');
     containerApp.style.opacity = 0;
+    inputLoginUsername.value = inputLoginPin.value = '';
+    inputLoginPin.blur();
   }
 });
 
