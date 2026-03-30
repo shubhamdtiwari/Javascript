@@ -352,6 +352,13 @@ console.log(accounts);
 const account = accounts.find((acc) => acc.owner === 'Jessica Davis');
 console.log(account);
 
+for (const acc of accounts) {
+  // console.log(acc);
+  if (acc.owner === 'Jessica Davis') {
+    console.log(acc);
+  }
+}
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
