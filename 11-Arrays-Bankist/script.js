@@ -298,6 +298,18 @@ const max = movements.reduce(
 console.log(max);
 
 */
+// Lectuire :- The magic of Chain Method
+
+const eurToUsd = 1.1;
+
+// PIPELINE
+const totalDepositsUSD = movements
+  .filter((mov) => mov > 0)
+  .map((mov) => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(totalDepositsUSD);
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
