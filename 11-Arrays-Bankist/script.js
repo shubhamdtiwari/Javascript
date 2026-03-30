@@ -338,7 +338,7 @@ const totalDepositsUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
 
 console.log(totalDepositsUSD);
-*/
+
 // Lecture :- The Find Method
 // this method returns only first element
 
@@ -352,13 +352,14 @@ console.log(accounts);
 const account = accounts.find((acc) => acc.owner === 'Jessica Davis');
 console.log(account);
 
+// by using for of loop method
 for (const acc of accounts) {
   // console.log(acc);
   if (acc.owner === 'Jessica Davis') {
     console.log(acc);
   }
 }
-
+*/
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
