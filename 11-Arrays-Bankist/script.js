@@ -160,6 +160,18 @@ btnLogin.addEventListener('click', function (e) {
   }
 });
 
+//Tranfer feature
+
+btnTransfer.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const amount = Number(inputTransferAmount.value);
+
+  const reciverAcc = accounts.find(
+    (acc) => acc.username === inputTransferTo.value,
+  );
+});
+
 // console.log(containerMovements.innerHTML);
 // this shows the html created for the incoming values
 
