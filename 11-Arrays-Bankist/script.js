@@ -459,8 +459,20 @@ const latestLargeMovementIndex = movements.findLastIndex((mov) =>
 );
 console.log(latestLargeMovementIndex);
 console.log(
-  `Your latest large movement was ${latestLargeMovementIndex} movements ago`,
+  `Your latest large movement was ${movements.length - latestLargeMovementIndex} movements ago`,
 );
+
+//Lecture :- Some and Every
+
+console.log(movements);
+
+// only cheak for Equality
+console.log(movements.includes(-130));
+
+// CONDITION
+const anyDeposit = movements.some((mov) => mov > 1500);
+
+console.log(anyDeposit);
 
 /*
 ///////////////////////////////////////////////
