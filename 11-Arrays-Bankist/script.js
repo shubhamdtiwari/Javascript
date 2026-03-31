@@ -204,8 +204,15 @@ btnClose.addEventListener('click', function (e) {
       (acc) => acc.username === currentAccount.username,
     );
 
+    //delete account
     accounts.splice(index, 1);
+
+    //hide UI
+    containerApp.style.opacity = 0;
   }
+
+  inputCloseUsername.value = inputClosePin.value = '';
+  labelWelcome.textContent = `Log in to get started`;
 });
 // console.log(containerMovements.innerHTML);
 // this shows the html created for the incoming values
@@ -439,6 +446,9 @@ for (const acc of accounts) {
   }
 }
 */
+// Lecture :- The findLast and findLastIndex Method
+
+console.log(movements);
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
