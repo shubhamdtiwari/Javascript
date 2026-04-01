@@ -750,6 +750,17 @@ const dogBothActivities = breeds.find(
 
 console.log(dogBothActivities);
 
+//3.
+
+// const allActivities1 = breeds.map((obj) => obj.activities).flat();
+
+const allActivities = breeds.flatMap((obj) => obj.activities);
+
+// for making arr containing unique elements
+// const allActivities = new Set(allActivities1);
+
+console.log(allActivities);
+
 /*
 // Coding Challenge #5 
 
