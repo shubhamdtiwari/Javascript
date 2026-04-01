@@ -193,6 +193,15 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+
+if(amount > 0 && currentAccount.movements)
+
+});
+
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
 
