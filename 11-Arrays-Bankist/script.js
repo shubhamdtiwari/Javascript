@@ -796,15 +796,16 @@ console.log(breeds.some((breed) => breed.activities.length >= 3));
 
 //bonus
 
-const similar = [
-  ...new Set(
-    breeds
-      .filter((breed) => (breed.activities = 'fetch'))
-      .filter((breed) => breed.averageWeight),
-  ),
-];
+const fetchWeight = breeds
+  .filter((breed) => breed.activities.includes('fetch'))
+  .map((breed) => breed.averageWeight);
 
-console.log(similar);
+// we use to get the max value
+
+const heaviest = Math.max(...fetchWeight);
+
+console.log(fetchWeight);
+console.log(heaviest);
 
 /*
 // Coding Challenge #5 
