@@ -531,6 +531,12 @@ const allMovements = accountMovement.flat();
 
 console.log(allMovements);
 
+const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+
+console.log(overalBalance);
+
+const overalBalance1 = 
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
