@@ -542,6 +542,13 @@ const overalBalance1 = accounts
 
 console.log(overalBalance1);
 
+// Flatmap method
+
+const overalBalance2 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overalBalance2);
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
