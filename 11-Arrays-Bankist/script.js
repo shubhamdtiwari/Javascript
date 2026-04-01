@@ -569,16 +569,21 @@ console.log(movements);
 //return > 0 B, A (switch order)
 
 // acending
-movements.sort((a, b) => {
-  if (a > b) return 1;
-  if (b > a) return -1;
-});
+// movements.sort((a, b) => {
+//   if (a > b) return 1; // return 1 means difference is positive so it switch places
+//   if (a < b) return -1; // negative means not going to change the place
+// });
+
+movements.sort((a, b) => a - b);
+console.log(movements);
 
 // decending
-movements.sort((a, b) => {
-  if (a > b) return -1;
-  if (b > a) return 1;
-});
+// movements.sort((a, b) => {
+//   if (a > b) return -1;
+//   if (a < b) return 1;
+// });
+
+movements.sort((a, b) => b - a);
 console.log(movements);
 
 /*
