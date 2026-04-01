@@ -560,7 +560,7 @@ const overalBalance2 = accounts
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overalBalance2);
 
-*/
+
 
 //lecture :- Sorting Arrays
 
@@ -596,6 +596,15 @@ console.log(movements);
 
 movements.sort((a, b) => b - a);
 console.log(movements);
+*/
+//Array Groping
+
+console.log(movements);
+
+const groupedMovements = Object.groupBy(movements, (movement) =>
+  movement > 0 ? 'deposits' : 'withdrawals',
+);
+console.log(groupedMovements);
 
 /*
 ///////////////////////////////////////////////
