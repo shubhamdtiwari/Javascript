@@ -518,6 +518,9 @@ console.log(arr.flat());
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 
 console.log(arrDeep.flat());
+// flat method only one level; of nesting like in arr but not erase nested arr in arrDeep
+
+console.log(arrDeep.flat(2));
 
 /*
 ///////////////////////////////////////////////
