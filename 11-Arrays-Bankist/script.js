@@ -464,7 +464,7 @@ for (const acc of accounts) {
     console.log(acc);
   }
 }
-*/
+
 // Lecture :- The findLast and findLastIndex Method
 
 console.log(movements);
@@ -505,6 +505,15 @@ const deposits = (mov) => mov > 0;
 console.log(movements.some(deposits));
 console.log(movements.every(deposits));
 console.log(movements.filter(deposits));
+*/
+
+// Lecture :- Flat And FlatMap
+
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+
+// it helps to remove all nested arrays
+
+console.log(arr.flat());
 
 /*
 ///////////////////////////////////////////////
