@@ -790,6 +790,22 @@ console.log(swimmingAdjacent);
 
 console.log(breeds.every((breed) => breed.averageWeight >= 10));
 
+//7
+
+console.log(breeds.some((breed) => breed.activities.length >= 3));
+
+//bonus
+
+const similar = [
+  ...new Set(
+    breeds
+      .filter((breed) => (breed.activities = 'fetch'))
+      .filter((breed) => breed.averageWeight),
+  ),
+];
+
+console.log(similar);
+
 /*
 // Coding Challenge #5 
 
