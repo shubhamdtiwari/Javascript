@@ -673,4 +673,16 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 
 console.log(avg1, avg2);
+
+
+// Coding Challenge #4 
+
+
+Julia and Kate are still studying dogs, and this time they are studying if dogs are 
+eating too much or too little. 
+Eating too much means the dog's current food portion is larger than the 
+recommended portion, and eating too little is the opposite. 
+Eating an okay amount means the dog's current food portion is within a range 10% 
+above and 10% below the recommended portion (see hint).
+
 */
