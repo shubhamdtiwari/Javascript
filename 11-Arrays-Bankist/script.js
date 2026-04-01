@@ -761,6 +761,11 @@ const allActivities = breeds.flatMap((obj) => obj.activities);
 
 console.log(allActivities);
 
+// 4
+const uniqueActivities = new Set(allActivities);
+
+console.log(uniqueActivities);
+
 /*
 // Coding Challenge #5 
 
