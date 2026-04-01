@@ -560,7 +560,18 @@ const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
 console.log(owners.sort());
 console.log(owners);
 
-//
+// Numbers
+console.log(movements);
+// console.log(movements.sort());
+// here above we dont get the result b/c deafult sort() method only works on string
+
+//return <0, A, B (keep order)
+//return > 0 B, A (switch order)
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
+console.log(movements);
 
 /*
 ///////////////////////////////////////////////
