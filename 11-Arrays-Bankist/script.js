@@ -505,7 +505,7 @@ const deposits = (mov) => mov > 0;
 console.log(movements.some(deposits));
 console.log(movements.every(deposits));
 console.log(movements.filter(deposits));
-*/
+
 
 // Lecture :- Flat And FlatMap
 
@@ -548,6 +548,19 @@ const overalBalance2 = accounts
   .flatMap((acc) => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overalBalance2);
+
+*/
+
+//lecture :- Sorting Arrays
+
+// String
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+
+// it mutate the og arr
+console.log(owners.sort());
+console.log(owners);
+
+//
 
 /*
 ///////////////////////////////////////////////
@@ -694,7 +707,7 @@ YOUR TASKS:
 7. Are there any breeds that are "active"? "Active" means that the dog has 3 or more activities. Log to the console whether "true" or "false".
 
 BONUS: What's the average weight of the heaviest breed that likes to fetch? HINT: Use the "Math.max" method along with the ... operator.
-*/
+
 
 const breeds = [
   {
