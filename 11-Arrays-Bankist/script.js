@@ -522,6 +522,15 @@ console.log(arrDeep.flat());
 
 console.log(arrDeep.flat(2));
 
+// geting movements arr out of accounts arr
+
+const accountMovement = accounts.map((acc) => acc.movements);
+console.log(accountMovement);
+
+const allMovements = accountMovement.flat();
+
+console.log(allMovements);
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
