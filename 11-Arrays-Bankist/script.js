@@ -567,9 +567,17 @@ console.log(movements);
 
 //return <0, A, B (keep order)
 //return > 0 B, A (switch order)
+
+// acending
 movements.sort((a, b) => {
   if (a > b) return 1;
   if (b > a) return -1;
+});
+
+// decending
+movements.sort((a, b) => {
+  if (a > b) return -1;
+  if (b > a) return 1;
 });
 console.log(movements);
 
