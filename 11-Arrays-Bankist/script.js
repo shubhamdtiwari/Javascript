@@ -779,6 +779,17 @@ const swimmingAdjacent = [
 
 console.log(swimmingAdjacent);
 
+//6.
+
+// i have get for all individually but we need for all onces
+// breeds.forEach((breed, i, arr) =>
+//   breed.averageWeight >= 10
+//     ? console.log(`${i + 1} - ${breed.breed}: true`)
+//     : console.log(`${breed.breed}: false`),
+// );
+
+console.log(breeds.every((breed) => breed.averageWeight >= 10));
+
 /*
 // Coding Challenge #5 
 
