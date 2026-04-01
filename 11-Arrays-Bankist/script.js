@@ -734,6 +734,12 @@ const breeds = [
   },
 ];
 
+// 1.
+
+const huskyWeight = breeds.find((obj) => obj.breed === 'Husky').averageWeight;
+
+console.log(huskyWeight);
+
 /*
 // Coding Challenge #5 
 
