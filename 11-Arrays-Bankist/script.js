@@ -762,9 +762,22 @@ const allActivities = breeds.flatMap((obj) => obj.activities);
 console.log(allActivities);
 
 // 4
-const uniqueActivities = new Set(allActivities);
+const uniqueActivities = [...new Set(allActivities)];
 
 console.log(uniqueActivities);
+
+//5.
+
+const swimmingAdjacent = [
+  ...new Set(
+    breeds
+      .filter((breed) => breed.activities.includes('swimming'))
+      .flatMap((breed) => breed.activities)
+      .filter((activities) => activities !== 'swimming'),
+  ),
+];
+
+console.log(swimmingAdjacent);
 
 /*
 // Coding Challenge #5 
