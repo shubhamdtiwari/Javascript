@@ -606,6 +606,17 @@ const groupedMovements = Object.groupBy(movements, (movement) =>
 );
 console.log(groupedMovements);
 
+const groupByActivity = Object.groupBy(accounts, (account) => {
+  const movementCount = account.movements.length;
+
+  if (movementCount >= 8) return 'very active';
+  if (movementCount >= 4) return 'active';
+
+  if (movementCount >= 1) return 'modrate';
+  return 'inactive';
+});
+console.log(groupByActivity);
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
