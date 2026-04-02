@@ -623,7 +623,7 @@ console.log(groupByActivity);
 
 const groupedAccounts = Object.groupBy(accounts, ({ type }) => type);
 console.log(groupedAccounts);
-*/
+
 // more ways of creating and filling arrays
 
 const arr = [1, 2, 3, 4, 5, 6, 7];
@@ -654,9 +654,22 @@ console.log(z);
 labelBalance.addEventListener('click', function () {
   const movementsUI = Array.from(
     document.querySelectorAll('.movements__value'),
+    (el) => Number(el.textContent.replace('€', '')),
   );
-  console.log(movementsUI.map((el) => el.textContent.replace('€', '')));
+  console.log(movementsUI);
+
+  const movement2 = [document.querySelectorAll('.movements__value')];
 });
+*/
+
+// Lecture :- Non destructive alternatives: TOREVERSE, TOSORTED, TOSPLICE, with
+
+// here reverse method is destructive method as it mutate the original array
+
+console.log(movements);
+const reversedMov = movements.reverse();
+console.log(reversedMov);
+console.log(movements);
 
 /*
 ///////////////////////////////////////////////
