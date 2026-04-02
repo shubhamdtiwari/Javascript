@@ -648,8 +648,15 @@ console.log(arr);
 const y = Array.from({ length: 7 }, () => 1);
 console.log(y);
 
-const z = Array.from({ length: 7 }, (cur, i) => i + 1);
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(z);
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+  );
+  console.log(movementsUI.map((el) => el.textContent.replace('€', '')));
+});
 
 /*
 ///////////////////////////////////////////////
