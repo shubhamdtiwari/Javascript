@@ -660,16 +660,35 @@ labelBalance.addEventListener('click', function () {
 
   const movement2 = [document.querySelectorAll('.movements__value')];
 });
-*/
+
 
 // Lecture :- Non destructive alternatives: TOREVERSE, TOSORTED, TOSPLICE, with
 
 // here reverse method is destructive method as it mutate the original array
 
+// console.log(movements);
+// const reversedMov = movements.reverse();
+// console.log(reversedMov);
+// console.log(movements);
+
+// to preserve the og array we use reversed
+
 console.log(movements);
-const reversedMov = movements.reverse();
+const reversedMov = movements.toReversed();
 console.log(reversedMov);
+
+// toSorted (sort), toSplice (splice)
+
+// movements[1] = 2000;
+
+const newMovements = movements.with(1, 2000);
+
+console.log(newMovements);
+
 console.log(movements);
+*/
+
+// Array Methods Practise
 
 /*
 ///////////////////////////////////////////////
