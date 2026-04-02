@@ -600,7 +600,7 @@ console.log(movements);
 
 movements.sort((a, b) => b - a);
 console.log(movements);
-*/
+
 //Array Groping
 
 console.log(movements);
@@ -623,8 +623,17 @@ console.log(groupByActivity);
 
 const groupedAccounts = Object.groupBy(accounts, ({ type }) => type);
 console.log(groupedAccounts);
+*/
+// more ways of creating and filling arrays
 
-//
+console.log([1, 2, 3, 4, 5, 6, 7]);
+
+console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+
+// if we pass only one element then it will create empty array of length of passed arguments
+
+const x = new Array(7);
+console.log(x);
 
 /*
 ///////////////////////////////////////////////
