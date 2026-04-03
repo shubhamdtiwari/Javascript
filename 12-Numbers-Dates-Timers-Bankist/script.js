@@ -253,6 +253,7 @@ btnSort.addEventListener('click', function (e) {
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+/*
 // LECTURES :- converting and cheaking numbers
 
 console.log(23 === 23.0);
@@ -278,7 +279,30 @@ console.log(Number.parseFloat('  2.5rem  '));
 
 // console.log(parseFloat('  2.5rem  '));
 
+// cheak if value is not a number
 console.log(Number.isNaN(10)); // false
 console.log(Number.isNaN('20')); // false
 console.log(Number.isNaN(+'20X')); // true
 console.log(Number.isNaN(23 / 0)); // false
+
+// Cheaking if value is number
+console.log(Number.isFinite(20)); //true
+console.log(Number.isFinite('20')); //false
+console.log(Number.isFinite(+'20X')); //false
+console.log(Number.isFinite(23 / 0)); //false
+
+console.log(Number.isInteger(23)); //true
+console.log(Number.isInteger(23.0)); //true
+*/
+
+// Lecture :- Math and ronding
+
+console.log(Math.sqrt(25)); //5
+console.log(25 ** (1 / 2)); // 5
+console.log(8 ** (1 / 3));
+
+console.log(Math.max(5, 10, 15, 23)); //23
+console.log(Math.max(5, 10, 15, '23')); // 23
+console.log(Math.max(5, 10, 15, '23px')); // NaN
+
+console.log(Math.min(5, 10, 15, 23)); //5
