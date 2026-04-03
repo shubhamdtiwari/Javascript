@@ -690,6 +690,10 @@ console.log(movements);
 
 // Array Methods Practise
 
+const bankDepositSum = accounts.map((acc) => acc.movements).flat();
+
+console.log(bankDepositSum);
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
