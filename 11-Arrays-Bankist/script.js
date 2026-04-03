@@ -689,10 +689,22 @@ console.log(movements);
 */
 
 // Array Methods Practise
+//1.
 
-const bankDepositSum = accounts.map((acc) => acc.movements).flat();
+const bankDepositSum = accounts
+  .flatMap((acc) => acc.movements)
+  .filter((dep) => dep > 0)
+  .reduce((acc, mov) => acc + mov, 0);
 
 console.log(bankDepositSum);
+
+//2.
+
+const numdeposits1000 = accounts
+  .flatMap((acc) => acc.movements)
+  .filter((mov) => mov > 1000).length;
+
+console.log(numdeposits1000);
 
 /*
 ///////////////////////////////////////////////
