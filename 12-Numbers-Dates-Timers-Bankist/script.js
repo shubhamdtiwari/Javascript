@@ -272,3 +272,13 @@ console.log(Number.parseInt('30px', 10));
 //it will b/c number if it started with number
 console.log(Number.parseInt('rf30', 10));
 // it cann't changhe to number
+
+console.log(Number.parseInt('  2.5rem  '));
+console.log(Number.parseFloat('  2.5rem  '));
+
+// console.log(parseFloat('  2.5rem  '));
+
+console.log(Number.isNaN(10)); // false
+console.log(Number.isNaN('20')); // false
+console.log(Number.isNaN(+'20X')); // true
+console.log(Number.isNaN(23 / 0)); // false
