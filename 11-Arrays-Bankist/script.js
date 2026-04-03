@@ -1028,8 +1028,8 @@ console.log(heaviest);
 
 Julia and Kate are still studying dogs, and this time they are studying if dogs are 
 eating too much or too little. 
-Eating too much means the dog's current food portion is larger than the 
-recommended portion, and eating too little is the opposite. 
+
+Eating too much means the dog's current food portion is larger than the recommended portion, and eating too little is the opposite. 
 Eating an okay amount means the dog's current food portion is within a range 10% 
 above and 10% below the recommended portion (see hint).
 
@@ -1038,8 +1038,8 @@ Your tasks:
 
 
 1. Loop over the 'dogs' array containing dog objects, and for each dog, calculate 
-the recommended food portion and add it to the object as a new property. Do 
-not create a new array, simply loop over the array. Forumla: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg) 
+the recommended food portion and add it to the object as a new property.Do not create a new array, simply loop over the array. 
+Forumla: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg) 
 
 2. Find Sarah's dog and log to the console whether it's eating too much or too 
 little. Hint: Some dogs have multiple owners, so you first need to find Sarah in 
@@ -1083,3 +1083,6 @@ const dogs = [
   { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
   { weight: 32, curFood: 340, owners: ['Michael'] },
 ];
+
+// 1.
+dogs.forEach((dog) => dog.curFood);
