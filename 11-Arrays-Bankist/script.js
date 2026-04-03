@@ -79,10 +79,10 @@ const displayMovements = function (movements, sort = false) {
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = ` 
-      <div class="movements__row">
-          <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
-          <div class="movements__value">${mov}€</div>
-        </div>`;
+    <div class="movements__row">
+        <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
+        <div class="movements__value">${mov}€</div>
+      </div>`;
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
@@ -323,21 +323,21 @@ console.log('shubham'.at(-1));
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 for (const [i, movement] of movements.entries()) {
-  if (movement > 0) {
-    console.log(`Movement ${i + 1}: You Deposited ${movement}`);
-  } else {
-    console.log(`Movement ${i + 1}: You withdraw ${Math.abs(movement)}`);
-  }
+if (movement > 0) {
+  console.log(`Movement ${i + 1}: You Deposited ${movement}`);
+} else {
+  console.log(`Movement ${i + 1}: You withdraw ${Math.abs(movement)}`);
+}
 }
 
 console.log('---- FOREACH ----');
 
 movements.forEach(function (mov, i, arr) {
-  if (mov > 0) {
-    console.log(`Movement ${i + 1}: You Deposited ${mov}`);
-  } else {
-    console.log(`Movement ${i + 1}: You withdraw ${Math.abs(mov)}`);
-  }
+if (mov > 0) {
+  console.log(`Movement ${i + 1}: You Deposited ${mov}`);
+} else {
+  console.log(`Movement ${i + 1}: You withdraw ${Math.abs(mov)}`);
+}
 });
 // 0: function(200)
 // 1: function(450)
@@ -349,13 +349,13 @@ movements.forEach(function (mov, i, arr) {
 
 // Map
 const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
+['USD', 'United States dollar'],
+['EUR', 'Euro'],
+['GBP', 'Pound sterling'],
 ]);
 
 currencies.forEach(function (value, key, map) {
-  console.log(`${key}: ${value}`);
+console.log(`${key}: ${value}`);
 });
 
 //Set
@@ -363,7 +363,7 @@ const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
 console.log(currenciesUnique);
 
 currenciesUnique.forEach(function (value, _, map) {
-  console.log(`${value}: ${value}`);
+console.log(`${value}: ${value}`);
 });
 
 
@@ -385,14 +385,14 @@ for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
 console.log(movementsUSDfor);
 
 const movementDescription = movements.map(
-  (mov, i) =>
-    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdraw'} ${Math.abs(mov)}`,
+(mov, i) =>
+  `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdraw'} ${Math.abs(mov)}`,
 
-  // if (mov > 0) {
-  //   return `Movement ${i + 1}: You Deposited ${mov}`;
-  // } else {
-  //   return `Movement ${i + 1}: You withdraw ${Math.abs(mov)}`;
-  // }
+// if (mov > 0) {
+//   return `Movement ${i + 1}: You Deposited ${mov}`;
+// } else {
+//   return `Movement ${i + 1}: You withdraw ${Math.abs(mov)}`;
+// }
 );
 
 console.log(movementDescription);
@@ -400,7 +400,7 @@ console.log(movementDescription);
 // Lecture :- The filter Method
 
 const deposits = movements.filter(function (mov, i, arr) {
-  return mov > 0;
+return mov > 0;
 });
 console.log(movements);
 console.log(deposits);
@@ -434,8 +434,8 @@ console.log(balanceFor);
 
 // Maximum value
 const max = movements.reduce(
-  (acc, mov) => (acc > mov ? acc : mov),
-  movements[0],
+(acc, mov) => (acc > mov ? acc : mov),
+movements[0],
 );
 
 console.log(max);
@@ -448,14 +448,14 @@ console.log(movements);
 
 // PIPELINE
 const totalDepositsUSD = movements
-  .filter((mov) => mov > 0)
-  .map((mov, i, arr) => {
-    console.log(arr);
-    return mov * eurToUsd;
-  })
+.filter((mov) => mov > 0)
+.map((mov, i, arr) => {
+  console.log(arr);
+  return mov * eurToUsd;
+})
 
-  // .map((mov) => mov * eurToUsd)
-  .reduce((acc, mov) => acc + mov, 0);
+// .map((mov) => mov * eurToUsd)
+.reduce((acc, mov) => acc + mov, 0);
 
 console.log(totalDepositsUSD);
 
@@ -474,10 +474,10 @@ console.log(account);
 
 // by using for of loop method
 for (const acc of accounts) {
-  // console.log(acc);
-  if (acc.owner === 'Jessica Davis') {
-    console.log(acc);
-  }
+// console.log(acc);
+if (acc.owner === 'Jessica Davis') {
+  console.log(acc);
+}
 }
 
 // Lecture :- The findLast and findLastIndex Method
@@ -489,11 +489,11 @@ const lastWithdrawal = movements.findLast((mov) => mov < 0);
 console.log(lastWithdrawal);
 
 const latestLargeMovementIndex = movements.findLastIndex((mov) =>
-  Math.abs(mov > 1000),
+Math.abs(mov > 1000),
 );
 console.log(latestLargeMovementIndex);
 console.log(
-  `Your latest large movement was ${movements.length - latestLargeMovementIndex} movements ago`,
+`Your latest large movement was ${movements.length - latestLargeMovementIndex} movements ago`,
 );
 
 //Lecture :- Some and Every
@@ -551,17 +551,17 @@ const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
 console.log(overalBalance);
 
 const overalBalance1 = accounts
-  .map((acc) => acc.movements)
-  .flat()
-  .reduce((acc, mov) => acc + mov, 0);
+.map((acc) => acc.movements)
+.flat()
+.reduce((acc, mov) => acc + mov, 0);
 
 console.log(overalBalance1);
 
 // Flatmap method
 
 const overalBalance2 = accounts
-  .flatMap((acc) => acc.movements)
-  .reduce((acc, mov) => acc + mov, 0);
+.flatMap((acc) => acc.movements)
+.reduce((acc, mov) => acc + mov, 0);
 console.log(overalBalance2);
 
 
@@ -606,18 +606,18 @@ console.log(movements);
 console.log(movements);
 
 const groupedMovements = Object.groupBy(movements, (movement) =>
-  movement > 0 ? 'deposits' : 'withdrawals',
+movement > 0 ? 'deposits' : 'withdrawals',
 );
 console.log(groupedMovements);
 
 const groupByActivity = Object.groupBy(accounts, (account) => {
-  const movementCount = account.movements.length;
+const movementCount = account.movements.length;
 
-  if (movementCount >= 8) return 'very active';
-  if (movementCount >= 4) return 'active';
+if (movementCount >= 8) return 'very active';
+if (movementCount >= 4) return 'active';
 
-  if (movementCount >= 1) return 'modrate';
-  return 'inactive';
+if (movementCount >= 1) return 'modrate';
+return 'inactive';
 });
 console.log(groupByActivity);
 
@@ -652,13 +652,13 @@ const z = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(z);
 
 labelBalance.addEventListener('click', function () {
-  const movementsUI = Array.from(
-    document.querySelectorAll('.movements__value'),
-    (el) => Number(el.textContent.replace('€', '')),
-  );
-  console.log(movementsUI);
+const movementsUI = Array.from(
+  document.querySelectorAll('.movements__value'),
+  (el) => Number(el.textContent.replace('€', '')),
+);
+console.log(movementsUI);
 
-  const movement2 = [document.querySelectorAll('.movements__value')];
+const movement2 = [document.querySelectorAll('.movements__value')];
 });
 
 
@@ -745,9 +745,18 @@ console.log(deposits, withdrawals);
 // this is a nice title -> This Is a Nice Title
 
 const convertTitleCase = function (title) {
-  const expections = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
+  const capitlize = (str) => str[0].toUpperCase() + str.slice(1);
+  const exceptions = ['a', 'an', 'the', 'and', 'but', 'or', 'on', 'in', 'with'];
 
-  const titleCase = title.toLowerCase();
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map((word) =>
+      exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1),
+    )
+    .join(' ');
+
+  return capitlize(titleCase);
 };
 
 console.log(convertTitleCase('this is a nice title'));
@@ -788,25 +797,25 @@ Hints: Use tools from all lectures in this section so far
 
 
 const checkDogs = function (dogsJulia, dogsKate) {
-  //1.
+//1.
 
-  const shallowDogsJulia = dogsJulia.slice(1, 3);
+const shallowDogsJulia = dogsJulia.slice(1, 3);
 
-  //2.
-  const dogs = shallowDogsJulia.concat(dogsKate);
-  console.log(dogs);
+//2.
+const dogs = shallowDogsJulia.concat(dogsKate);
+console.log(dogs);
 
-  //3.
+//3.
 
-  dogs.forEach(function (dogs, i, arr) {
-    if (dogs >= 3) {
-      console.log(`Dog number ${i + 1} is an adult, and is ${dogs} years old`);
-    } else {
-      console.log(
-        `Dog number ${i + 1} is still a puppy🐶 and ${dogs} years old`,
-      );
-    }
-  });
+dogs.forEach(function (dogs, i, arr) {
+  if (dogs >= 3) {
+    console.log(`Dog number ${i + 1} is an adult, and is ${dogs} years old`);
+  } else {
+    console.log(
+      `Dog number ${i + 1} is still a puppy🐶 and ${dogs} years old`,
+    );
+  }
+});
 };
 
 const dogsJulia = [3, 5, 2, 12, 7];
@@ -840,19 +849,19 @@ Test data:
 
 
 const calcAverageHumanAge = function (ages) {
-  const humanAges = ages.map((age) => (age <= 2 ? 2 * age : 16 + age * 4));
+const humanAges = ages.map((age) => (age <= 2 ? 2 * age : 16 + age * 4));
 
-  const adults = humanAges.filter((hum) => hum >= 18);
-  console.log(humanAges);
-  console.log(adults);
+const adults = humanAges.filter((hum) => hum >= 18);
+console.log(humanAges);
+console.log(adults);
 
-  // const avgAge = adults.reduce((acc, ages) => acc + ages, 0) / adults.length;
+// const avgAge = adults.reduce((acc, ages) => acc + ages, 0) / adults.length;
 
-  const avgAge = adults.reduce(
-    (acc, ages, i, arr) => acc + ages / arr.length,
-    0,
-  );
-  return avgAge;
+const avgAge = adults.reduce(
+  (acc, ages, i, arr) => acc + ages / arr.length,
+  0,
+);
+return avgAge;
 };
 
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
@@ -869,10 +878,10 @@ Test data:
 § Data 2: [16, 6, 10, 5, 6, 1, 4]
 
 const calcAverageHumanAge = (ages) =>
-  ages
-    .map((ages) => (ages <= 2 ? 2 * ages : 16 + ages * 4))
-    .filter((hum) => hum >= 18)
-    .reduce((curr, ages, i, arr) => curr + ages / arr.length, 0);
+ages
+  .map((ages) => (ages <= 2 ? 2 * ages : 16 + ages * 4))
+  .filter((hum) => hum >= 18)
+  .reduce((curr, ages, i, arr) => curr + ages / arr.length, 0);
 
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
@@ -902,41 +911,41 @@ BONUS: What's the average weight of the heaviest breed that likes to fetch? HINT
 
 
 const breeds = [
-  {
-    breed: 'German Shepherd',
-    averageWeight: 32,
-    activities: ['fetch', 'swimming'],
-  },
-  {
-    breed: 'Dalmatian',
-    averageWeight: 24,
-    activities: ['running', 'fetch', 'agility'],
-  },
-  {
-    breed: 'Labrador',
-    averageWeight: 28,
-    activities: ['swimming', 'fetch'],
-  },
-  {
-    breed: 'Beagle',
-    averageWeight: 12,
-    activities: ['digging', 'fetch'],
-  },
-  {
-    breed: 'Husky',
-    averageWeight: 26,
-    activities: ['running', 'agility', 'swimming'],
-  },
-  {
-    breed: 'Bulldog',
-    averageWeight: 36,
-    activities: ['sleeping'],
-  },
-  {
-    breed: 'Poodle',
-    averageWeight: 18,
-    activities: ['agility', 'fetch'],
-  },
+{
+  breed: 'German Shepherd',
+  averageWeight: 32,
+  activities: ['fetch', 'swimming'],
+},
+{
+  breed: 'Dalmatian',
+  averageWeight: 24,
+  activities: ['running', 'fetch', 'agility'],
+},
+{
+  breed: 'Labrador',
+  averageWeight: 28,
+  activities: ['swimming', 'fetch'],
+},
+{
+  breed: 'Beagle',
+  averageWeight: 12,
+  activities: ['digging', 'fetch'],
+},
+{
+  breed: 'Husky',
+  averageWeight: 26,
+  activities: ['running', 'agility', 'swimming'],
+},
+{
+  breed: 'Bulldog',
+  averageWeight: 36,
+  activities: ['sleeping'],
+},
+{
+  breed: 'Poodle',
+  averageWeight: 18,
+  activities: ['agility', 'fetch'],
+},
 ];
 
 // 1.
@@ -948,9 +957,9 @@ console.log(huskyWeight);
 //2.
 
 const dogBothActivities = breeds.find(
-  (breed) =>
-    // breed.activities.find((obj) => obj === 'running' && 'fetch'),
-    breed.activities.includes('running') && breed.activities.includes('fetch'),
+(breed) =>
+  // breed.activities.find((obj) => obj === 'running' && 'fetch'),
+  breed.activities.includes('running') && breed.activities.includes('fetch'),
 ).breed;
 
 console.log(dogBothActivities);
@@ -974,12 +983,12 @@ console.log(uniqueActivities);
 //5.
 
 const swimmingAdjacent = [
-  ...new Set(
-    breeds
-      .filter((breed) => breed.activities.includes('swimming'))
-      .flatMap((breed) => breed.activities)
-      .filter((activities) => activities !== 'swimming'),
-  ),
+...new Set(
+  breeds
+    .filter((breed) => breed.activities.includes('swimming'))
+    .flatMap((breed) => breed.activities)
+    .filter((activities) => activities !== 'swimming'),
+),
 ];
 
 console.log(swimmingAdjacent);
@@ -1002,8 +1011,8 @@ console.log(breeds.some((breed) => breed.activities.length >= 3));
 //bonus
 
 const fetchWeight = breeds
-  .filter((breed) => breed.activities.includes('fetch'))
-  .map((breed) => breed.averageWeight);
+.filter((breed) => breed.activities.includes('fetch'))
+.map((breed) => breed.averageWeight);
 
 // we use to get the max value
 
@@ -1068,9 +1077,9 @@ recommended portion.
 
 
 const dogs = [
-  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
-  { weight: 8, curFood: 200, owners: ['Matilda'] },
-  { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
-  { weight: 32, curFood: 340, owners: ['Michael'] },
+{ weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+{ weight: 8, curFood: 200, owners: ['Matilda'] },
+{ weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+{ weight: 32, curFood: 340, owners: ['Michael'] },
 ];
 */
