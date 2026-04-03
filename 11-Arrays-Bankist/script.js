@@ -728,6 +728,19 @@ console.log(a);
 
 // 3.
 
+const { deposits, withdrawals } = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce(
+    (sums, curr) => {
+      // curr > 0 ? (sums.deposits += curr) : (sums.withdrawals += curr);
+      sums[curr > 0 ? 'deposits' : 'withdrawals'] += curr;
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 },
+  );
+
+console.log(deposits, withdrawals);
+
 /*
 ///////////////////////////////////////////////
 /////////////////////////////////////////
