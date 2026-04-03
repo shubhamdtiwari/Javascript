@@ -691,10 +691,18 @@ console.log(movements);
 // Array Methods Practise
 //1.
 
+// const bankDepositSum = accounts
+//   .flatMap((acc) => acc.movements)
+//   .filter((dep) => dep > 0)
+//   .reduce((acc, mov) => acc + mov, 0);
+
+// console.log(bankDepositSum);
+
+// by using reduce method
+
 const bankDepositSum = accounts
   .flatMap((acc) => acc.movements)
-  .filter((dep) => dep > 0)
-  .reduce((acc, mov) => acc + mov, 0);
+  .reduce((acc, mov) => (mov >= 0 ? acc + mov : acc), 0);
 
 console.log(bankDepositSum);
 
@@ -706,7 +714,8 @@ console.log(bankDepositSum);
 
 const numdeposits1000 = accounts
   .flatMap((acc) => acc.movements)
-  .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
+  // .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
+  .reduce((count, cur) => (cur >= 1000 ? count++ : count), 0);
 
 console.log(numdeposits1000);
 
