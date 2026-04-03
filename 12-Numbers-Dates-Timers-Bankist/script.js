@@ -306,3 +306,13 @@ console.log(Math.max(5, 10, 15, '23')); // 23
 console.log(Math.max(5, 10, 15, '23px')); // NaN
 
 console.log(Math.min(5, 10, 15, 23)); //5
+
+console.log(Math.PI * Number.parseFloat('10px') ** 2);
+
+// getting random number b/n 1 to 6
+console.log(Math.trunc(Math.random() * 6) + 1);
+
+const randomInt = (min, max) => Math.random() * 2;
+
+randomInt(10, 20);
+randomInt(0, 3);
