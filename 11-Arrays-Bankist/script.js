@@ -686,7 +686,7 @@ const newMovements = movements.with(1, 2000);
 console.log(newMovements);
 
 console.log(movements);
-*/
+
 
 // Array Methods Practise
 //1.
@@ -762,6 +762,7 @@ const convertTitleCase = function (title) {
 console.log(convertTitleCase('this is a nice title'));
 console.log(convertTitleCase('this is a LONG title but not too long'));
 console.log(convertTitleCase('and here is another title with an EXAMPLE'));
+*/
 
 /*
 ///////////////////////////////////////////////
@@ -1074,12 +1075,11 @@ lecture to choose between them
 current > (recommended * 0.90) && current < (recommended * 
 1.10). Basically, the current portion should be between 90% and 110% of the 
 recommended portion. 
-
+*/
 
 const dogs = [
-{ weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
-{ weight: 8, curFood: 200, owners: ['Matilda'] },
-{ weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
-{ weight: 32, curFood: 340, owners: ['Michael'] },
+  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+  { weight: 8, curFood: 200, owners: ['Matilda'] },
+  { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+  { weight: 32, curFood: 340, owners: ['Michael'] },
 ];
-*/
