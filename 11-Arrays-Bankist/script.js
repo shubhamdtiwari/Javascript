@@ -704,7 +704,9 @@ console.log(bankDepositSum);
 //   .flatMap((acc) => acc.movements)
 //   .filter((mov) => mov >= 1000).length;
 
-const numdeposits1000 = accounts.flatMap((acc) => acc.movements).reduce();
+const numdeposits1000 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
 
 console.log(numdeposits1000);
 
