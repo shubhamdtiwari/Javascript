@@ -715,9 +715,18 @@ console.log(bankDepositSum);
 const numdeposits1000 = accounts
   .flatMap((acc) => acc.movements)
   // .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
-  .reduce((count, cur) => (cur >= 1000 ? count++ : count), 0);
+  .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0);
 
 console.log(numdeposits1000);
+
+// Prefixed ++ opretor
+let a = 10;
+console.log(++a);
+console.log(a);
+
+// as we use a++  as it is postfix opretor it increase the value but it directly not show the value yhe time it happens
+
+// 3.
 
 /*
 ///////////////////////////////////////////////
