@@ -340,7 +340,7 @@ console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
 console.log((2.345).toFixed(2));
 console.log(+(2.345).toFixed(2));
-*/
+
 
 // Remainder oprator
 
@@ -371,3 +371,10 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.background = 'blue';
   });
 });
+*/
+
+// 287,460,000,000
+const diameter = 287_460_000_000;
+console.log(diameter);
+
+const priceCents = 345_990;
