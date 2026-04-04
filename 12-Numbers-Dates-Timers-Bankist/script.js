@@ -411,10 +411,21 @@ console.log(BigInt(546344568989546));
 console.log(10000n + 10000n);
 
 console.log(54687498745613456545645654n * 1000000n);
+// console.log(Math.sqrt(16n)); no gonna happen
 
 const huge = 7898541512312312345345n;
 const num = 23;
 // console.log(huge * num);  we cannot do opreation like this
 console.log(huge * BigInt(num));
 
-cl;
+console.log(20n > 15); //true
+console.log(20n === 20); //false
+console.log(typeof 20n); // bigint
+console.log(20n == '20');
+
+console.log(huge + ' is really big');
+
+// dividon
+
+console.log(11n / 3n); // 3n
+console.log(10 / 3);
