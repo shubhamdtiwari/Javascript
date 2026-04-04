@@ -434,12 +434,4 @@ console.log(10 / 3);
 
 // create a date
 
-const now = new Date();
-console.log(now);
-
-console.log(new Date('Aug 02 2026 18:00:73'));
-console.log(new Date('December 24, 2026'));
-console.log(new Date(account1.movementsDates[0]));
-
-console.log(new Date(2037, 10, 19, 15, 23, 5));
-console.log(new Date(2037, 10, 31));
+c;
