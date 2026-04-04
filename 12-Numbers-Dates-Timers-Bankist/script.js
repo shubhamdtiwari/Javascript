@@ -371,7 +371,7 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.background = 'blue';
   });
 });
-*/
+
 
 // 287,460,000,000
 const diameter = 287_460_000_000;
@@ -389,3 +389,17 @@ console.log(PI);
 console.log(Number('230000')); // we can not use _ in string number
 
 console.log(parseInt('230_000')); // here things after _ will bne ignored
+*/
+
+// Lecture :- Working with Bigint
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+console.log(2 ** 53 + 5);
+// sometimes it does not get the correct answer
+
+//bigint
+console.log(546344568989546156154455445645645456545n);
