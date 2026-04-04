@@ -161,7 +161,15 @@ updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
 const now = new Date();
-labelDate.textContent = now;
+const day = `${now.getDate()}`.padStart(2, 0);
+const month = now.getMonth() + 1; // b/c it is zero based
+const year = now.getFullYear();
+const hour = now.getHours();
+const min = now.getMinutes();
+
+labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+
+// day/month/year
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
