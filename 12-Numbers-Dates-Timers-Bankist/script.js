@@ -403,3 +403,18 @@ console.log(2 ** 53 + 5);
 
 //bigint
 console.log(546344568989546156154455445645645456545n);
+
+console.log(BigInt(546344568989546));
+
+//operations
+
+console.log(10000n + 10000n);
+
+console.log(54687498745613456545645654n * 1000000n);
+
+const huge = 7898541512312312345345n;
+const num = 23;
+// console.log(huge * num);  we cannot do opreation like this
+console.log(huge * BigInt(num));
+
+cl;
