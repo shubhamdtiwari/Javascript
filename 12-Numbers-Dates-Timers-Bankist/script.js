@@ -429,3 +429,13 @@ console.log(huge + ' is really big');
 
 console.log(11n / 3n); // 3n
 console.log(10 / 3);
+
+// Leacture :- creating dates
+
+// create a date
+
+const now = new Date();
+console.log(now);
+
+console.log(new Date('Aug 02 2026 18:00:73'));
+console.log(new Date('December 24, 2026'));
