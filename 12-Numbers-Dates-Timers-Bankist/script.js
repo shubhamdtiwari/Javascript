@@ -155,6 +155,14 @@ const updateUI = function (acc) {
 // Event handlers
 let currentAccount;
 
+// FAKE ALWAYS LOGGED IN
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+
+const now = new Date();
+labelDate.textContent = now;
+
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
   e.preventDefault();
@@ -447,7 +455,7 @@ console.log(new Date(2037, 10, 31));
 console.log(new Date(0));
 console.log(new Date(3 * 24 * 60 * 60 * 1000));
 
-*/
+
 //working with dates
 const future = new Date(2037, 10, 19, 15, 23, 5);
 console.log(future);
@@ -467,3 +475,4 @@ console.log(Date.now()); // give the timestamp
 
 future.setFullYear(2040);
 console.log(future);
+*/
