@@ -312,7 +312,24 @@ console.log(Math.PI * Number.parseFloat('10px') ** 2);
 // getting random number b/n 1 to 6
 console.log(Math.trunc(Math.random() * 6) + 1);
 
-const randomInt = (min, max) => Math.random() * 2;
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
 
-randomInt(10, 20);
-randomInt(0, 3);
+console.log(randomInt(10, 20));
+console.log(randomInt(0, 3));
+
+// Rounding Integers
+
+console.log(Math.round(23.3));
+console.log(Math.round(23.9));
+
+console.log(Math.ceil(23.3));
+console.log(Math.ceil(23.9));
+
+console.log(Math.floor(23.3));
+console.log(Math.floor(23.9));
+
+console.log(Math.trunc(23.3));
+
+console.log(Math.trunc(-23.3));
+console.log(Math.floor(-23.3));
