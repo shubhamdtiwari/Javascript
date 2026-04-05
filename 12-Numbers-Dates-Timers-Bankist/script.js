@@ -91,8 +91,13 @@ const displayMovements = function (acc, sort = false) {
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
-    new Date(acc.movementsDates[i]);
+    const date = new Date(acc.movementsDates[i]);
+    const day = `${now.getDate()}`.padStart(2, 0);
+    const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
+    const year = now.getFullYear();
+    const min = now.getMinutes();
 
+    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
