@@ -81,7 +81,10 @@ const inputClosePin = document.querySelector('.form__input--pin');
 ///////////////////////////////////////////////
 // Functions
 
+const displayMovements = function (acc, sort = false) {
+  containerMovements.innerHTML = '';
 
+ 
 
     const html = `
       <div class="movements__row">
