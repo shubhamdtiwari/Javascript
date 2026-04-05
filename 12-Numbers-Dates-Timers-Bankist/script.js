@@ -94,8 +94,8 @@ const displayMovements = function (acc, sort = false) {
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
-          i + 1
-        } ${type}</div>
+      i + 1
+    } ${type}</div>
         <div class="movements__value">${mov.toFixed(2)}€</div>
       </div>
     `;
@@ -161,6 +161,9 @@ let currentAccount;
 currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
+labelWelcome.textContent = `Welcome back, ${
+  currentAccount.owner.split(' ')[0]
+}`;
 
 const now = new Date();
 const day = `${now.getDate()}`.padStart(2, 0);
@@ -178,7 +181,7 @@ btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
 
   currentAccount = accounts.find(
-    (acc) => acc.username === inputLoginUsername.value,
+    (acc) => acc.username === inputLoginUsername.value
   );
   console.log(currentAccount);
 
@@ -202,7 +205,7 @@ btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = +inputTransferAmount.value;
   const receiverAcc = accounts.find(
-    (acc) => acc.username === inputTransferTo.value,
+    (acc) => acc.username === inputTransferTo.value
   );
   inputTransferAmount.value = inputTransferTo.value = '';
 
@@ -247,7 +250,7 @@ btnClose.addEventListener('click', function (e) {
     +inputClosePin.value === currentAccount.pin
   ) {
     const index = accounts.findIndex(
-      (acc) => acc.username === currentAccount.username,
+      (acc) => acc.username === currentAccount.username
     );
     console.log(index);
     // .indexOf(23)
