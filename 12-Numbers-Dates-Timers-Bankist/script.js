@@ -95,9 +95,8 @@ const displayMovements = function (acc, sort = false) {
     const day = `${now.getDate()}`.padStart(2, 0);
     const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
     const year = now.getFullYear();
-    const min = now.getMinutes();
 
-    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+    const displayDate = `${day}/${month}/${year}, ${hour}:${min}`;
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
