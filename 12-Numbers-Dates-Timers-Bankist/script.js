@@ -91,7 +91,7 @@ const displayMovements = function (acc, sort = false) {
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
-    acc.movementsDates[i];
+    new Date(acc.movementsDates[i]);
 
     const html = `
       <div class="movements__row">
