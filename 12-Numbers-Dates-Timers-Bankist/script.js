@@ -131,16 +131,7 @@ const calcDisplaySummary = function (acc) {
     .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
 
-  const interest = acc.movements
-    .filter((mov) => mov > 0)
-    .map((deposit) => (deposit * acc.interestRate) / 100)
-    .filter((int, i, arr) => {
-      // console.log(arr);
-      return int >= 1;
-    })
-    .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
-};
+ 
 
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
