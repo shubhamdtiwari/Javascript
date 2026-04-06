@@ -84,6 +84,11 @@ const inputClosePin = document.querySelector('.form__input--pin');
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
 
+  const combinedMovementDates = acc.movements.map((mov, i) => ({
+    mov,
+    date: acc.movementsDates.at(i),
+  }));
+
   const movs = sort
     ? acc.movements.slice().sort((a, b) => a - b)
     : acc.movements;
@@ -169,21 +174,21 @@ const updateUI = function (acc) {
 let currentAccount;
 
 // FAKE ALWAYS LOGGED IN
-currentAccount = account1;
-updateUI(currentAccount);
-containerApp.style.opacity = 100;
-labelWelcome.textContent = `Welcome back, ${
-  currentAccount.owner.split(' ')[0]
-}`;
+// currentAccount = account1;
+// updateUI(currentAccount);
+// containerApp.style.opacity = 100;
+// labelWelcome.textContent = `Welcome back, ${
+//   currentAccount.owner.split(' ')[0]
+// }`;
 
-const now = new Date();
-const day = `${now.getDate()}`.padStart(2, 0);
-const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
-const year = now.getFullYear();
-const hour = now.getHours();
-const min = now.getMinutes();
+// const now = new Date();
+// const day = `${now.getDate()}`.padStart(2, 0);
+// const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
+// const year = now.getFullYear();
+// const hour = now.getHours();
+// const min = now.getMinutes();
 
-labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+// labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
 // day/month/year
 
@@ -209,8 +214,9 @@ btnLogin.addEventListener('click', function (e) {
     const day = `${now.getDate()}`.padStart(2, 0);
     const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
     const year = now.getFullYear();
-    const hour = now.getHours();
-    const min = now.getMinutes();
+    const hour = `${now.getHours()}`.padStart(2, 0);
+    const min = `${now.getMinutes()}`.padStart(2, 0);
+    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
@@ -292,10 +298,10 @@ btnClose.addEventListener('click', function (e) {
   inputCloseUsername.value = inputClosePin.value = '';
 });
 
-let sorted = false;
+let sorted = true;
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
-  displayMovements(acc.movements, !sorted);
+  displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
 
