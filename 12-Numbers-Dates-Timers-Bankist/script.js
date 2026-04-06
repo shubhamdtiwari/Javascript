@@ -81,6 +81,15 @@ const inputClosePin = document.querySelector('.form__input--pin');
 ///////////////////////////////////////////////
 // Functions
 
+const formateMovementDate = function (date) {
+  // Create date and time for the transations
+  const day = `${date.getDate()}`.padStart(2, 0);
+  const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
+  const year = date.getFullYear();
+
+  return `${day}/${month}/${year}`;
+};
+
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
 
@@ -99,15 +108,10 @@ const displayMovements = function (acc, sort = false) {
     const { movement, movementDate } = obj;
     const type = movement > 0 ? 'deposit' : 'withdrawal';
 
-    // Create date and time for the transations
     const date = new Date(movementDate);
-    const day = `${date.getDate()}`.padStart(2, 0);
-    const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
-    const year = date.getFullYear();
-    const hour = date.getHours();
-    const min = date.getMinutes();
 
-    const displayDate = `${day}/${month}/${year}, ${hour}:${min}`;
+    const displayDate = formateMovementDate(date);
+
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
@@ -177,21 +181,21 @@ const updateUI = function (acc) {
 let currentAccount;
 
 // FAKE ALWAYS LOGGED IN
-// currentAccount = account1;
-// updateUI(currentAccount);
-// containerApp.style.opacity = 100;
-// labelWelcome.textContent = `Welcome back, ${
-//   currentAccount.owner.split(' ')[0]
-// }`;
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+labelWelcome.textContent = `Welcome back, ${
+  currentAccount.owner.split(' ')[0]
+}`;
 
-// const now = new Date();
-// const day = `${now.getDate()}`.padStart(2, 0);
-// const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
-// const year = now.getFullYear();
-// const hour = now.getHours();
-// const min = now.getMinutes();
+const now = new Date();
+const day = `${now.getDate()}`.padStart(2, 0);
+const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
+const year = now.getFullYear();
+const hour = now.getHours();
+const min = now.getMinutes();
 
-// labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
 // day/month/year
 
