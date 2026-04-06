@@ -81,23 +81,25 @@ const inputClosePin = document.querySelector('.form__input--pin');
 ///////////////////////////////////////////////
 // Functions
 
-const formateMovementDate = function (date) {
+const formateMovementDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) =>
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
   const daysPassed = calcDaysPassed(new Date(), date);
-  console.log(daysPassed);
 
   if (daysPassed === 0) return 'Today';
   if (daysPassed === 1) return 'Yesterday';
   if (daysPassed <= 7) return `${daysPassed} days ago`;
 
   // Create date and time for the transations
-  const day = `${date.getDate()}`.padStart(2, 0);
-  const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
-  const year = date.getFullYear();
+  // const day = `${date.getDate()}`.padStart(2, 0);
+  // const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
+  // const year = date.getFullYear();
 
-  return `${day}/${month}/${year}`;
+  // return `${day}/${month}/${year}`;
+
+  // use for localisation of date
+  return new Intl.DateTimeFormat(locale).format(date);
 };
 
 const displayMovements = function (acc, sort = false) {
@@ -120,7 +122,7 @@ const displayMovements = function (acc, sort = false) {
 
     const date = new Date(movementDate);
 
-    const displayDate = formateMovementDate(date);
+    const displayDate = formateMovementDate(date, acc.locale);
 
     const html = `
       <div class="movements__row">
@@ -223,16 +225,17 @@ btnLogin.addEventListener('click', function (e) {
       hour: 'numeric',
       minute: 'numeric',
       day: 'numeric',
-      month: 'long',
+      month: 'numeric',
       year: 'numeric',
-      weekday: 'long',
+      // weekday: 'long',
     };
-    const locale = navigator.language;
-    console.log(locale);
+    // const locale = navigator.language;
+    // console.log(locale);
 
-    labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(
-      now,
-    );
+    labelDate.textContent = new Intl.DateTimeFormat(
+      currentAccount.locale,
+      options,
+    ).format(now);
     // const now = new Date();
     // const day = `${now.getDate()}`.padStart(2, 0);
     // const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
@@ -544,7 +547,7 @@ console.log(Date.now()); // give the timestamp
 
 future.setFullYear(2040);
 console.log(future);
-*/
+
 
 // Lecture :- Operations with dates
 
@@ -556,3 +559,4 @@ const calcDaysPassed = (date1, date2) =>
 
 const days1 = calcDaysPassed(new Date(2037, 3, 4), new Date(2037, 3, 14));
 console.log(days1);
+*/
