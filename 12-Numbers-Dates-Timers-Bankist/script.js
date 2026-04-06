@@ -92,9 +92,11 @@ const displayMovements = function (acc, sort = false) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const date = new Date(acc.movementsDates[i]);
-    const day = `${now.getDate()}`.padStart(2, 0);
-    const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
-    const year = now.getFullYear();
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
+    const year = date.getFullYear();
+    const hour = date.getHours();
+    const min = date.getMinutes();
 
     const displayDate = `${day}/${month}/${year}, ${hour}:${min}`;
     const html = `
