@@ -91,14 +91,13 @@ const formateMovementDate = function (date) {
   if (daysPassed === 0) return 'Today';
   if (daysPassed === 1) return 'Yesterday';
   if (daysPassed <= 7) return `${daysPassed} days ago`;
-  else {
-    // Create date and time for the transations
-    const day = `${date.getDate()}`.padStart(2, 0);
-    const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
-    const year = date.getFullYear();
 
-    return `${day}/${month}/${year}`;
-  }
+  // Create date and time for the transations
+  const day = `${date.getDate()}`.padStart(2, 0);
+  const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
+  const year = date.getFullYear();
+
+  return `${day}/${month}/${year}`;
 };
 
 const displayMovements = function (acc, sort = false) {
