@@ -120,16 +120,7 @@ const calcDisplayBalance = function (acc) {
   labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
 };
 
-const calcDisplaySummary = function (acc) {
-  const incomes = acc.movements
-    .filter((mov) => mov > 0)
-    .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
 
-  const out = acc.movements
-    .filter((mov) => mov < 0)
-    .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
 
   const interest = acc.movements
     .filter((mov) => mov > 0)
