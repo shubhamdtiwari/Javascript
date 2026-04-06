@@ -85,19 +85,22 @@ const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
 
   const combinedMovementDates = acc.movements.map((mov, i) => ({
-    mov,
-    date: acc.movementsDates.at(i),
+    movement: mov,
+    movementDate: acc.movementsDates.at(i),
   }));
 
-  const movs = sort
-    ? acc.movements.slice().sort((a, b) => a - b)
-    : acc.movements;
+  if (sort) combinedMovementDates.sort((a, b) => a.movement - b.movement);
 
-  movs.forEach(function (mov, i) {
-    const type = mov > 0 ? 'deposit' : 'withdrawal';
+  // const movs = sort
+  //   ? acc.movements.slice().sort((a, b) => a - b)
+  //   : acc.movements;
+
+  combinedMovementDates.forEach(function (obj, i) {
+    const { movement, movementDate } = obj;
+    const type = movement > 0 ? 'deposit' : 'withdrawal';
 
     // Create date and time for the transations
-    const date = new Date(acc.movementsDates[i]);
+    const date = new Date(movementDate);
     const day = `${date.getDate()}`.padStart(2, 0);
     const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
     const year = date.getFullYear();
@@ -112,7 +115,7 @@ const displayMovements = function (acc, sort = false) {
         } ${type}  </div>
     <div class="movements__date">${displayDate}</div>
   
-        <div class="movements__value">${mov.toFixed(2)}€</div>
+        <div class="movements__value">${movement.toFixed(2)}€</div>
       </div>
     `;
 
