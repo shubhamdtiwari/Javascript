@@ -142,15 +142,6 @@ const calcDisplaySummary = function (acc) {
   labelSumInterest.textContent = `${interest.toFixed(2)}€`;
 };
 
-const createUsernames = function (accs) {
-  accs.forEach(function (acc) {
-    acc.username = acc.owner
-      .toLowerCase()
-      .split(' ')
-      .map((name) => name[0])
-      .join('');
-  });
-};
 createUsernames(accounts);
 
 const updateUI = function (acc) {
