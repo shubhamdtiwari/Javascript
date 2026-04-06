@@ -91,6 +91,7 @@ const displayMovements = function (acc, sort = false) {
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
+    // Create date and time for the transations
     const date = new Date(acc.movementsDates[i]);
     const day = `${date.getDate()}`.padStart(2, 0);
     const month = `${date.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
@@ -102,8 +103,8 @@ const displayMovements = function (acc, sort = false) {
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
-      i + 1
-    } ${type}  </div>
+          i + 1
+        } ${type}  </div>
     <div class="movements__date">${displayDate}</div>
   
         <div class="movements__value">${mov.toFixed(2)}€</div>
@@ -191,7 +192,7 @@ btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
 
   currentAccount = accounts.find(
-    (acc) => acc.username === inputLoginUsername.value
+    (acc) => acc.username === inputLoginUsername.value,
   );
   console.log(currentAccount);
 
@@ -201,6 +202,15 @@ btnLogin.addEventListener('click', function (e) {
       currentAccount.owner.split(' ')[0]
     }`;
     containerApp.style.opacity = 100;
+
+    // Create current date and time
+
+    const now = new Date();
+    const day = `${now.getDate()}`.padStart(2, 0);
+    const month = `${now.getMonth() + 1}`.padStart(2, 0); // b/c it is zero based
+    const year = now.getFullYear();
+    const hour = now.getHours();
+    const min = now.getMinutes();
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
@@ -215,7 +225,7 @@ btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = +inputTransferAmount.value;
   const receiverAcc = accounts.find(
-    (acc) => acc.username === inputTransferTo.value
+    (acc) => acc.username === inputTransferTo.value,
   );
   inputTransferAmount.value = inputTransferTo.value = '';
 
@@ -260,7 +270,7 @@ btnClose.addEventListener('click', function (e) {
     +inputClosePin.value === currentAccount.pin
   ) {
     const index = accounts.findIndex(
-      (acc) => acc.username === currentAccount.username
+      (acc) => acc.username === currentAccount.username,
     );
     console.log(index);
     // .indexOf(23)
