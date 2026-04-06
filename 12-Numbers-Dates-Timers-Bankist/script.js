@@ -187,7 +187,14 @@ labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
 // day/month/year
 
+btnLogin.addEventListener('click', function (e) {
+  // Prevent form from submitting
+  e.preventDefault();
 
+  currentAccount = accounts.find(
+    (acc) => acc.username === inputLoginUsername.value,
+  );
+  console.log(currentAccount);
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and message
