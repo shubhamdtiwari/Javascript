@@ -211,7 +211,6 @@ btnLogin.addEventListener('click', function (e) {
     const year = now.getFullYear();
     const hour = now.getHours();
     const min = now.getMinutes();
-    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
@@ -242,7 +241,7 @@ btnTransfer.addEventListener('click', function (e) {
 
     // Add transfer date
     currentAccount.movementsDates.push(new Date().toISOString);
-    receiverAcc.movementsDates.push(new Date().toISOString());
+    receiverAcc.movementsDates.push(new Date().toISOString);
 
     // Update UI
     updateUI(currentAccount);
