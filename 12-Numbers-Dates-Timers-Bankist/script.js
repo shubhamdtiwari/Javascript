@@ -565,8 +565,19 @@ console.log(days1);
 
 const num = 3884764.23;
 
+const options = {
+  style: 'unit',
+  unit: 'mile-per-hour',
+};
+
 console.log('US:', new Intl.NumberFormat('en-us').format(num));
 console.log('Germany:', new Intl.NumberFormat('de-DE').format(num));
 console.log('India:', new Intl.NumberFormat('hi-IN').format(num));
 console.log('Syria:', new Intl.NumberFormat('ar-SY').format(num));
 console.log('Russia:', new Intl.NumberFormat('ru-RU').format(num));
+
+// getting fro browser
+console.log(
+  navigator.language,
+  new Intl.NumberFormat(navigator.language, options).format(num),
+);
