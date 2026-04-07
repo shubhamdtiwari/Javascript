@@ -199,18 +199,29 @@ const updateUI = function (acc) {
 };
 
 const startLogOutTimer = function () {
-  //set time to 5 min
-  let time = 100;
+  const tick = function () {
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const sec = String(time % 60).padStart(2, 0);
 
-  // call the timer every sec
-  setInterval(() => {
     // in each call , print the remaining time to UI
-    labelTimer.textContent = time;
+    labelTimer.textContent = `${min}:${sec}`;
 
     // decrese 1s
     time--;
     // When 0 sec , stop timer and log out user
-  }, 1000);
+    if (time === 0) {
+      clearInterval(timer);
+
+      labelWelcome.textContent = `Log in to get started`;
+      containerApp.style.opacity = 0;
+    }
+  };
+  //set time to 5 min
+  let time = 10;
+
+  // call the timer every sec
+  tick();
+  const timer = setInterval(tick, 1000);
 };
 
 ///////////////////////////////////////
@@ -218,12 +229,12 @@ const startLogOutTimer = function () {
 let currentAccount;
 
 // FAKE ALWAYS LOGGED IN
-currentAccount = account1;
-updateUI(currentAccount);
-containerApp.style.opacity = 100;
-labelWelcome.textContent = `Welcome back, ${
-  currentAccount.owner.split(' ')[0]
-}`;
+// currentAccount = account1;
+// updateUI(currentAccount);
+// containerApp.style.opacity = 100;
+// labelWelcome.textContent = `Welcome back, ${
+//   currentAccount.owner.split(' ')[0]
+// }`;
 
 // Experimenting API
 
@@ -272,6 +283,8 @@ btnLogin.addEventListener('click', function (e) {
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
+
+    startLogOutTimer();
 
     // Update UI
     updateUI(currentAccount);
