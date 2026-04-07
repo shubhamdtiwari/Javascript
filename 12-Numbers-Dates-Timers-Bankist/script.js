@@ -206,8 +206,6 @@ const startLogOutTimer = function () {
     // in each call , print the remaining time to UI
     labelTimer.textContent = `${min}:${sec}`;
 
-    // decrese 1s
-    time--;
     // When 0 sec , stop timer and log out user
     if (time === 0) {
       clearInterval(timer);
@@ -215,18 +213,24 @@ const startLogOutTimer = function () {
       labelWelcome.textContent = `Log in to get started`;
       containerApp.style.opacity = 0;
     }
+
+    // decrese 1s
+    time--;
   };
   //set time to 5 min
-  let time = 10;
+  let time = 120;
 
   // call the timer every sec
   tick();
   const timer = setInterval(tick, 1000);
+
+  return timer;
 };
 
 ///////////////////////////////////////
 // Event handlers
-let currentAccount;
+let currentAccount, timer;
+// timer is here to make it global function to use many place
 
 // FAKE ALWAYS LOGGED IN
 // currentAccount = account1;
@@ -284,7 +288,9 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
 
-    startLogOutTimer();
+    // Timer
+    if (timer) clearInterval(timer);
+    timer = startLogOutTimer();
 
     // Update UI
     updateUI(currentAccount);
