@@ -102,6 +102,14 @@ const formateMovementDate = function (date, locale) {
   return new Intl.DateTimeFormat(locale).format(date);
 };
 
+// formating the movement a/c to given currency
+const formatCurr = function (value, locale, currency) {
+  return new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: currency,
+  }).format(value);
+};
+
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
 
@@ -124,6 +132,7 @@ const displayMovements = function (acc, sort = false) {
 
     const displayDate = formateMovementDate(date, acc.locale);
 
+    const formattedMov = formatCurr(movement, acc.locale, acc.currency);
     const html = `
       <div class="movements__row">
         <div class="movements__type movements__type--${type}">${
@@ -131,7 +140,7 @@ const displayMovements = function (acc, sort = false) {
         } ${type}  </div>
     <div class="movements__date">${displayDate}</div>
   
-        <div class="movements__value">${movement.toFixed(2)}€</div>
+        <div class="movements__value">${formattedMov}</div>
       </div>
     `;
 
@@ -141,7 +150,8 @@ const displayMovements = function (acc, sort = false) {
 
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
+
+  labelBalance.textContent = formatCurr(acc.balance, acc.locale, acc.currency);
 };
 
 const calcDisplaySummary = function (acc) {
@@ -569,7 +579,7 @@ const options = {
   style: 'currency',
   unit: 'celsius',
   currency: 'INR',
-  useGrouping,
+  // useGrouping: false
 };
 
 console.log('US:     ', new Intl.NumberFormat('en-us', options).format(num));
