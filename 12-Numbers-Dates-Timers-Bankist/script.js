@@ -198,6 +198,16 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
+const startLogOutTimer = function () {
+  //set time to 5 min
+
+  // call the timer every sec
+  setInterval(() => {
+    // in each call , print the remaining time to UI
+    // When 0 sec , stop timer and log out user
+  }, 1000);
+};
+
 ///////////////////////////////////////
 // Event handlers
 let currentAccount;
