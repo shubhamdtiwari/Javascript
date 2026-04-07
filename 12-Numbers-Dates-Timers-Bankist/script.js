@@ -185,7 +185,17 @@ const createUsernames = function (accs) {
       .join('');
   });
 };
+createUsernames(accounts);
 
+const updateUI = function (acc) {
+  // Display movements
+  displayMovements(acc);
+
+  // Display balance
+  calcDisplayBalance(acc);
+
+  // Display summary
+  calcDisplaySummary(acc);
 };
 
 const startLogOutTimer = function () {
