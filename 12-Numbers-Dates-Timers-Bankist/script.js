@@ -569,7 +569,7 @@ const calcDaysPassed = (date1, date2) =>
 
 const days1 = calcDaysPassed(new Date(2037, 3, 4), new Date(2037, 3, 14));
 console.log(days1);
-*/
+
 
 // Lecture :- Internationalizing Numbers (Intl)
 
@@ -593,3 +593,15 @@ console.log(
   navigator.language,
   new Intl.NumberFormat(navigator.language, options).format(num),
 );
+*/
+
+// Lecture :- Timers: settimeout and setinterval
+
+setTimeout(
+  (ing1, ing2) => console.log(`Here is your Pizza🍕 with ${ing1} and ${ing2}`),
+  3000,
+  'olives',
+  'spinach',
+);
+
+console.log('Waiting...');
