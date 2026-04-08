@@ -29,3 +29,11 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+/////////////////////////////
+// Lecture :- Selecting , Creating and Deleting an Element
+
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.body);
+
+document.querySelector('.header');
