@@ -36,7 +36,7 @@ console.log(document.documentElement);
 console.log(document.head);
 console.log(document.body);
 
-document.querySelector('.header');
+const header = document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
 console.log(allSections);
 
@@ -56,3 +56,5 @@ message.textContent = 'We use cookied for improved functionality and analytics';
 
 message.innerHTML =
   'We use cookied for improved functionality and analytics. <buton class ="btn btn--close-cookie">Got it!</button>';
+
+header.prepend(message);
