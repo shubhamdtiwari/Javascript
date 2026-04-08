@@ -61,7 +61,10 @@ message.innerHTML =
 header.prepend(message);
 
 /// for ow side of the web page
-// header.append(message);
+header.append(message);
 
 //it insert it both place
 // header.append(message.cloneNode(true));
+
+// header.before(message);
+// header.after(message)
