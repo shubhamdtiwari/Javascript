@@ -57,4 +57,8 @@ message.textContent = 'We use cookied for improved functionality and analytics';
 message.innerHTML =
   'We use cookied for improved functionality and analytics. <buton class ="btn btn--close-cookie">Got it!</button>';
 
+// for the upside of the web page
 header.prepend(message);
+
+/// for ow side of the web page
+header.append(message);
