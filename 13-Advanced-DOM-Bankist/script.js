@@ -51,4 +51,4 @@ console.log(document.getElementsByClassName('btn'));
 
 const message = document.createElement('div');
 
-message.
+message.classList.add('cookie-message');
