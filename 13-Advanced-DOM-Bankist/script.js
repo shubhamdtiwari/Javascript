@@ -48,17 +48,3 @@ console.log(document.getElementsByClassName('btn'));
 
 // creating and inserting elements
 // .insertAdjacentHTML
-
-const message = document.createElement('div');
-
-message.classList.add('cookie-message');
-message.textContent = 'We use cookied for improved functionality and analytics';
-
-message.innerHTML =
-  'We use cookied for improved functionality and analytics. <buton class ="btn btn--close-cookie">Got it!</button>';
-
-// for the upside of the web page
-header.prepend(message);
-
-/// for ow side of the web page
-header.append(message);
