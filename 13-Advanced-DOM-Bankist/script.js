@@ -30,6 +30,8 @@ document.addEventListener('keydown', function (e) {
   }
 });
 /////////////////////////////
+
+/*
 // Lecture :- Selecting , Creating and Deleting an Element
 
 console.log(document.documentElement);
@@ -124,8 +126,9 @@ console.log(logo.dataset.versionNumber);
 logo.classList.add('c', 'j');
 logo.classList.remove('c', 'j');
 logo.classList.toggle('c');
-logo.classList.contains('c');
+logo.classList.contains('c'); // not include
 
 //Don't use
 // b/c this will override all the classes
 logo.className = 'jonas';
+*/
