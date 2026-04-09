@@ -106,3 +106,15 @@ logo.alt = 'Beatiful minimalist logo';
 // Non-Standard
 console.log(logo.designer); // it gives undefined as it is not a property of images
 console.log(logo.getAttribute('designer'));
+
+logo.setAttribute('company', 'Bankist');
+
+console.log(logo.src);
+console.log(logo.getAttribute('src'));
+
+const link = document.querySelector('.nav__link--btn');
+console.log(link.href);
+console.log(link.getAttribute('href'));
+
+// Data Attributes
+console.log(logo.dataset.versionNumber);
