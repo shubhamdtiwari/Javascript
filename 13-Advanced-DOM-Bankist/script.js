@@ -120,7 +120,12 @@ console.log(link.getAttribute('href'));
 console.log(logo.dataset.versionNumber);
 
 // Classes
-logo.classList.add('');
-logo.classList.remove('');
-logo.classList.toggle('');
-logo.classList.contains('');
+
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
+logo.classList.toggle('c');
+logo.classList.contains('c');
+
+//Don't use
+// b/c this will override all the classes
+logo.className = 'jonas';
