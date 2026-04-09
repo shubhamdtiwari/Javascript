@@ -77,3 +77,28 @@ document
     // message.remove();
     message.parentElement.removeChild(message);
   });
+
+// Lecture :- Styles, Attributes and Classes
+
+message.style.background = '#37383d';
+message.style.width = '120%';
+
+console.log(message.style.color);
+console.log(message.style.backgroundColor);
+
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+
+//use to change the color of selected document
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// attributes
+
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.className);
+
+logo.alt = 'Beatiful minimalist logo';
