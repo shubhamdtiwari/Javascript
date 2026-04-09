@@ -77,3 +77,11 @@ document
     // message.remove();
     message.parentElement.removeChild(message);
   });
+
+// Lecture :- Styles, Attributes and Classes
+
+message.style.background = '#37383d';
+message.style.width = '120%';
+
+console.log(message.style.height);
+console.log(message.style.backgroundColor);
