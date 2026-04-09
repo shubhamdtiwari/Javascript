@@ -115,3 +115,6 @@ console.log(logo.getAttribute('src'));
 const link = document.querySelector('.nav__link--btn');
 console.log(link.href);
 console.log(link.getAttribute('href'));
+
+// Data Attributes
+console.log(logo.dataset.versionNumber);
