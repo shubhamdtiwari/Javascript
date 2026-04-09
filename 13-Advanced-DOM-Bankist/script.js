@@ -104,7 +104,7 @@ console.log(logo.className);
 logo.alt = 'Beatiful minimalist logo';
 
 // Non-Standard
-console.log(logo.designer); // it gies undefined as it is not a property of images
+console.log(logo.designer); // it gives undefined as it is not a property of images
 console.log(logo.getAttribute('designer'));
 
 logo.setAttribute('company', 'Bankist');
