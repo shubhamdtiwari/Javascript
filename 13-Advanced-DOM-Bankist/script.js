@@ -121,18 +121,7 @@ console.log(link.getAttribute('href'));
 // Data Attributes
 console.log(logo.dataset.versionNumber);
 
-// Classes
-
-logo.classList.add('c', 'j');
-logo.classList.remove('c', 'j');
-logo.classList.toggle('c');
-logo.classList.contains('c'); // not include
-
-//Don't use
-// b/c this will override all the classes
-logo.className = 'jonas';
-*/
-
+/
 // Lecture :- Implementing Smooth Scrolling
 
 const btnScrollTo = document.querySelector('.btn--scroll-to');
