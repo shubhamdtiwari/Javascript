@@ -146,3 +146,13 @@ btnScrollTo.addEventListener('click', function (e) {
   console.log(e.target.getBoundingClientRect());
 
   console.log('Current scroll(X/Y', window.pageXOffset, pageYOffset);
+
+  console.log(
+    'height/wigth viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth,
+  );
+
+  // Scrolling
+  window.scrollTo(s1coords.left, s1coords.top);
+});
