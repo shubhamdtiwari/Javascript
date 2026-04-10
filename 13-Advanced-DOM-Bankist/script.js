@@ -132,3 +132,9 @@ logo.classList.contains('c'); // not include
 // b/c this will override all the classes
 logo.className = 'jonas';
 */
+
+// Lecture :- Implementing Smooth Scrolling
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+
+const section! = document.querySelector('#section--1')
