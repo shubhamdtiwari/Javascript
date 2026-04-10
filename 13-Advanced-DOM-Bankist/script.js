@@ -147,5 +147,9 @@ btnScrollTo.addEventListener('click', function (e) {
 
   console.log('Current scroll(X/Y', window.pageXOffset, pageYOffset);
 
-  console.log();
+  console.log(
+    'height/wigth viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth,
+  );
 });
