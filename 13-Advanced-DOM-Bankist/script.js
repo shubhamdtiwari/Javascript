@@ -121,7 +121,15 @@ console.log(link.getAttribute('href'));
 // Data Attributes
 console.log(logo.dataset.versionNumber);
 
-/
+// Classes
+
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
+logo.classList.toggle('c');
+logo.classList.contains('c'); // not include
+z
+*/
+
 // Lecture :- Implementing Smooth Scrolling
 
 const btnScrollTo = document.querySelector('.btn--scroll-to');
