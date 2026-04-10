@@ -127,7 +127,10 @@ logo.classList.add('c', 'j');
 logo.classList.remove('c', 'j');
 logo.classList.toggle('c');
 logo.classList.contains('c'); // not include
-z
+
+//Don't use
+// b/c this will override all the classes
+logo.className = 'jonas';
 */
 
 // Lecture :- Implementing Smooth Scrolling
@@ -151,5 +154,5 @@ btnScrollTo.addEventListener('click', function (e) {
   );
 
   // Scrolling
-  window.scrollTo(s1coords.left, s1coords.top);
+  window.scrollTo(s1coords.left, s1coords);
 });
