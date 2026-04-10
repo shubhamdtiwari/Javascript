@@ -144,4 +144,8 @@ btnScrollTo.addEventListener('click', function (e) {
   console.log(s1coords);
 
   console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scroll(X/Y', window.pageXOffset, pageYOffset);
+
+  console.log();
 });
