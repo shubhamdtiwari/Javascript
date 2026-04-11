@@ -135,11 +135,14 @@ logo.className = 'jonas';
 
 // Lecture :- Implementing Smooth Scrolling
 
+// to select the button
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 
+// to select the section to which we have to go
 const section1 = document.querySelector('#section--1');
 
 btnScrollTo.addEventListener('click', function (e) {
+  // to get the coordinate to which we have to go
   const s1coords = section1.getBoundingClientRect();
   console.log(s1coords);
 
