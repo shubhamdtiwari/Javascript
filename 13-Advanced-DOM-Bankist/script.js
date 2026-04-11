@@ -131,7 +131,7 @@ logo.classList.contains('c'); // not include
 //Don't use
 // b/c this will override all the classes
 logo.className = 'jonas';
-*/
+
 
 // Lecture :- Implementing Smooth Scrolling
 
@@ -174,3 +174,11 @@ btnScrollTo.addEventListener('click', function (e) {
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+*/
+
+// Lecture :- Types of Events and Event Handlers
+
+const h1 = document.querySelector('h1');
+
+h1.event;
