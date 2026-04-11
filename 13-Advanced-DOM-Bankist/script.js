@@ -157,6 +157,7 @@ btnScrollTo.addEventListener('click', function (e) {
     document.documentElement.clientWidth,
   );
 
-  // // Scrolling
-  // window.scrollTo(s1coords.left, s1coords.right);
+  // Scrolling //
+
+  window.scrollTo(s1coords.left, s1coords.top);
 });
