@@ -181,4 +181,6 @@ btnScrollTo.addEventListener('click', function (e) {
 
 const h1 = document.querySelector('h1');
 
-h1.addEventListener('mouseenter', function (e) {});
+h1.addEventListener('mouseenter', function (e) {
+  alert('addEventListener: Great! You are reading the heading :D ');
+});
