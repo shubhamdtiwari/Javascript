@@ -149,7 +149,7 @@ btnScrollTo.addEventListener('click', function (e) {
   console.log(e.target.getBoundingClientRect());
 
   // it is use to show the coordinates b/w the top of web browser
-  console.log('Current scroll(X/Y', window.scrollX, scrollY);
+  console.log('Current scroll(X/Y', window.scrollX, window.scrollY);
 
   console.log(
     'height/wigth viewport',
@@ -159,5 +159,8 @@ btnScrollTo.addEventListener('click', function (e) {
 
   // Scrolling //
 
-  window.scrollTo(s1coords.left, s1coords.top);
+  window.scrollTo(
+    s1coords.left + window.scrollX,
+    s1coords.top + window.scrollY,
+  );
 });
