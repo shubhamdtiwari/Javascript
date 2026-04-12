@@ -206,3 +206,5 @@ const randomInt = (min, max) =>
 
 const randomColor = () =>
   `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)},${randomInt(0, 255)})`;
+
+console.log(randomColor(0, 255));
