@@ -161,7 +161,12 @@ btnScrollTo.addEventListener('click', function (e) {
 
   // old ways
 
- 
+  // window.scrollTo(
+  //   s1coords.left + window.scrollX,
+  //   s1coords.top + window.scrollY,
+  // );
+
+  
 
 */
 
