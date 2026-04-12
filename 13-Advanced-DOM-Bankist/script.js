@@ -151,29 +151,7 @@ btnScrollTo.addEventListener('click', function (e) {
   // it is use to show the coordinates b/w the top of web browser
   console.log('Current scroll(X/Y', window.scrollX, window.scrollY);
 
-  console.log(
-    'height/wigth viewport',
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth,
-  );
 
-  // Scrolling //
-
-  // old ways
-
-  // window.scrollTo(
-  //   s1coords.left + window.scrollX,
-  //   s1coords.top + window.scrollY,
-  // );
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.scrollX,
-  //   top: s1coords.top + window.scrollY,
-  //   behavior: 'smooth',
-  // });
-
-  section1.scrollIntoView({ behavior: 'smooth' });
-});
 
 */
 
