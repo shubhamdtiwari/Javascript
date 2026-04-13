@@ -54,12 +54,22 @@ btnScrollTo.addEventListener('click', function (e) {
 ////////////////////////////
 // Page nagivation
 
-document.querySelectorAll('.nav__link').forEach(function (el) {
-  el.addEventListener('click', function (e) {
-    e.preventDefault();
-    const id = this.getAttribute('href');
-  });
-});
+// Lecture :- Event Delegation
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+////////////////////////
+////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
 /*
 // Lecture :- Selecting , Creating and Deleting an Element
