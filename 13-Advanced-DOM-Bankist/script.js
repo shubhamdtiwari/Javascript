@@ -224,7 +224,11 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   console.log('CONTAINER', e.target, e.currentTarget);
 });
 
-document.querySelector('.nav').addEventListener('click', function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log('NAV', e.target, e.currentTarget);
-});
+document.querySelector('.nav').addEventListener(
+  'click',
+  function (e) {
+    this.style.backgroundColor = randomColor();
+    console.log('NAV', e.target, e.currentTarget);
+  },
+  true,
+);
