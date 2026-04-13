@@ -51,7 +51,7 @@ btnScrollTo.addEventListener('click', function (e) {
   console.log(
     'height/wigth viewport',
     document.documentElement.clientHeight,
-    document.documentElement.clientWidth,
+    document.documentElement.clientWidth
   );
 
   section1.scrollIntoView({ behavior: 'smooth' });
@@ -150,7 +150,7 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 //   entries.forEach((entry) => {
 //     console.log(entry);
 //   });
-};
+// };
 
 // const obsOptions = {
 //   root: null,
@@ -159,8 +159,6 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 // const observer = new IntersectionObserver(obsCallback, obsOptions);
 // observer.observe(section1);
-
-
 
 const stickyNav = function (entries) {
   const [entry] = entries;
