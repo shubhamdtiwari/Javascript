@@ -47,23 +47,12 @@ btnScrollTo.addEventListener('click', function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth,
   );
-  // Scrolling //
-
-  // old ways
-
-  // window.scrollTo(
-  //   s1coords.left + window.scrollX,
-  //   s1coords.top + window.scrollY,
-  // );
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.scrollX,
-  //   top: s1coords.top + window.scrollY,
-  //   behavior: 'smooth',
-  // });
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+////////////////////////////
+// Page
 
 /*
 // Lecture :- Selecting , Creating and Deleting an Element
