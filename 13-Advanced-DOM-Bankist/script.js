@@ -217,6 +217,6 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   this.style.backgroundColor = randomColor();
 });
 
-// document.querySelector('.nav').addEventListener('click', function(e){
-//   this.
-// })
+document.querySelector('.nav').addEventListener('click', function (e) {
+  this.style.backgroundColor = randomColor();
+});
