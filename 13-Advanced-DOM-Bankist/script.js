@@ -216,7 +216,7 @@ document.querySelector('.nav__link').addEventListener('click', function (e) {
 
   /// stop propagation
 
-  e.stopPropagation();
+  // e.stopPropagation();
 });
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
