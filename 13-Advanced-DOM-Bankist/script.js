@@ -52,7 +52,13 @@ btnScrollTo.addEventListener('click', function (e) {
 });
 
 ////////////////////////////
-// Page
+// Page nagivation
+
+document.querySelectorAll('.nav__link').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    console.log('LINK');
+  });
+});
 
 /*
 // Lecture :- Selecting , Creating and Deleting an Element
