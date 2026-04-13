@@ -31,6 +31,28 @@ document.addEventListener('keydown', function (e) {
 });
 /////////////////////////////
 
+// to select the button
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+
+// to select the section to which we have to go
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  // to get the coordinate to which we have to go
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  // it is use to show the coordinates b/w the top of web browser
+  console.log('Current scroll(X/Y', window.scrollX, window.scrollY);
+
+  console.log(
+    'height/wigth viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth,
+  );
+
 /*
 // Lecture :- Selecting , Creating and Deleting an Element
 
@@ -196,7 +218,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // h1.onmouseenter = function (e) {
 //   alert('onmouseenter: Great! You are reading the heading :D');
 // };
-*/
+
 // Lecture :- Event propagation
 
 // rgb(255,255,255)
@@ -232,3 +254,5 @@ document.querySelector('.nav').addEventListener(
   },
   // true,
 );
+*/
+// Lecture :- Event Delegation
