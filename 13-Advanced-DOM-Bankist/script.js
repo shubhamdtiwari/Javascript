@@ -1,5 +1,10 @@
 'use strict';
 
+// to select the button
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+
+// to select the section to which we have to go
+const section1 = document.querySelector('#section--1');
 ///////////////////////////////////////
 // Modal window
 
@@ -31,11 +36,7 @@ document.addEventListener('keydown', function (e) {
 });
 /////////////////////////////
 
-// to select the button
-const btnScrollTo = document.querySelector('.btn--scroll-to');
 
-// to select the section to which we have to go
-const section1 = document.querySelector('#section--1');
 
 btnScrollTo.addEventListener('click', function (e) {
   // to get the coordinate to which we have to go
