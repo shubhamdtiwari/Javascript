@@ -1,17 +1,16 @@
 'use strict';
 
-// to select the button
+
 const btnScrollTo = document.querySelector('.btn--scroll-to');
-
-// to select the section to which we have to go
 const section1 = document.querySelector('#section--1');
-///////////////////////////////////////
-// Modal window
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+///////////////////////////////////////
+// Modal window
+
+
 
 const openModal = function (e) {
   e.preventDefault();
