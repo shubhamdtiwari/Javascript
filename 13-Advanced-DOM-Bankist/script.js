@@ -1,6 +1,5 @@
 'use strict';
 
-
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 const modal = document.querySelector('.modal');
@@ -33,8 +32,6 @@ document.addEventListener('keydown', function (e) {
 });
 /////////////////////////////
 
-
-
 btnScrollTo.addEventListener('click', function (e) {
   // to get the coordinate to which we have to go
   const s1coords = section1.getBoundingClientRect();
@@ -50,6 +47,23 @@ btnScrollTo.addEventListener('click', function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth,
   );
+  // Scrolling //
+
+  // old ways
+
+  // window.scrollTo(
+  //   s1coords.left + window.scrollX,
+  //   s1coords.top + window.scrollY,
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.scrollX,
+  //   top: s1coords.top + window.scrollY,
+  //   behavior: 'smooth',
+  // });
+
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
 
 /*
 // Lecture :- Selecting , Creating and Deleting an Element
