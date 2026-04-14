@@ -256,6 +256,8 @@ const randomColor = () =>
 
 console.log(randomColor(0, 255));
 
+// here we can see the the bubbling phase
+
 document.querySelector('.nav__link').addEventListener('click', function (e) {
   this.style.backgroundColor = randomColor();
   console.log('LINK', e.target, e.currentTarget);
@@ -265,6 +267,8 @@ document.querySelector('.nav__link').addEventListener('click', function (e) {
 
   // e.stopPropagation();
 });
+
+// as we click on features option in nav bar the event created has to follow it to target phase in which it travels to the all the parent elements of it as the event happens in document root and it has to travel down to the target element that is nav__link
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   this.style.backgroundColor = randomColor();
