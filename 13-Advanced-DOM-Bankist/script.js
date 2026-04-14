@@ -31,7 +31,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 /////////////////////////////
-
+// Button Scrolling
 btnScrollTo.addEventListener('click', function (e) {
   // to get the coordinate to which we have to go
   const s1coords = section1.getBoundingClientRect();
@@ -54,8 +54,6 @@ btnScrollTo.addEventListener('click', function (e) {
 ////////////////////////////
 // Page nagivation
 
-// Lecture :- Event Delegation
-
 // document.querySelectorAll('.nav__link').forEach(function (el) {
 //   el.addEventListener('click', function (e) {
 //     e.preventDefault();
@@ -70,6 +68,15 @@ btnScrollTo.addEventListener('click', function (e) {
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   console.log(e.target);
+
+  // Matching strategy
+
+  if (e.target.classList.contains('nav__link')) {
+    e.preventDefault();
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
 
 ////////////////////////
