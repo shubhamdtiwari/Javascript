@@ -286,6 +286,9 @@ document.querySelector('.nav').addEventListener(
     console.log('NAV', e.target, e.currentTarget);
   },
   // true,
+  // here by writting true it listen the event in capture phase so firstly nav event will occur and in default events capture in bubbling phase
 );
+
+// as we click on the feature element the target element for all three event is nav__link
 */
 // Lecture :- Event Delegation
