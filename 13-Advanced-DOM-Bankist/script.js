@@ -298,4 +298,4 @@ document.querySelector('.nav').addEventListener(
 
 // as we click on the feature element the target element for all three event is nav__link
 */
-// Lecture :- Event Delegation
+// Lecture :- DOM Traversing
