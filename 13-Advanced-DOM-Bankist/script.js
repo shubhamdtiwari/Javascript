@@ -305,3 +305,9 @@ const h1 = document.querySelector('h1');
 
 // Going downwards: child
 console.log(h1.querySelectorAll('.highlight'));
+
+// it gives every single node of every type
+console.log(h1.childNodes);
+
+// it gives the elements present inside the h1
+console.log(h1.children);
