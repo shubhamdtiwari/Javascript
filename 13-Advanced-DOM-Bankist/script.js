@@ -247,42 +247,6 @@ h1.addEventListener('mouseenter', alertH1);
 
 setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
-// h1.onmouseenter = function (e) {
-//   alert('onmouseenter: Great! You are reading the heading :D');
-// };
-
-// Lecture :- Event propagation
-
-// rgb(255,255,255)
-
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
-
-const randomColor = () =>
-  `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)},${randomInt(0, 255)})`;
-
-console.log(randomColor(0, 255));
-
-// here we can see the the bubbling phase
-
-document.querySelector('.nav__link').addEventListener('click', function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log('LINK', e.target, e.currentTarget);
-  console.log(e.currentTarget === this);
-
-  /// stop propagation
-
-  // e.stopPropagation();
-});
-
-// as we click on features option in nav bar the event created has to follow it to target phase in which it travels to the all the parent elements of it as the event happens in document root and it has to travel down to the target element that is nav__link
-
-// from there it bubles up as if this event happens in all its parent elements
-
-document.querySelector('.nav__links').addEventListener('click', function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log('CONTAINER', e.target, e.currentTarget);
-});
 
 // if we only click on nav__links it only changes the colour of its parent elements not to its child element
 
@@ -298,4 +262,5 @@ document.querySelector('.nav').addEventListener(
 
 // as we click on the feature element the target element for all three event is nav__link
 */
+
 // Lecture :- DOM Traversing
