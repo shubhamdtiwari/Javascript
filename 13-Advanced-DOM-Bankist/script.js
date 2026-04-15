@@ -308,3 +308,7 @@ console.log(h1.querySelectorAll('.highlight'));
 
 // it gives every single node of every type
 console.log(h1.childNodes);
+
+// it gives the elements present inside the h1
+console.log(h1.children);
+// it only work for direct children
