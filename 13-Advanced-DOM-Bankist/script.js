@@ -79,6 +79,14 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   }
 });
 
+// Tabbed components
+
+const tabs = document.querySelectorAll('.operations__tab');
+const tabContainer = document.querySelector('.operation__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+tabs.forEach((t) => t.addEventListener('click', () => console.log('TAB')));
+
 ////////////////////////
 ////////////////////////////////
 /////////////////////////////////////////
@@ -297,7 +305,7 @@ document.querySelector('.nav').addEventListener(
 );
 
 // as we click on the feature element the target element for all three event is nav__link
-*/
+
 
 // Lecture :- DOM Traversing
 
@@ -339,3 +347,6 @@ console.log(h1.parentElement.children);
 [...h1.parentElement.children].forEach(function (el) {
   if (el !== h1) el.style.transform = 'scale(0.5)';
 });
+
+// Lecture :- Building a tabbed component
+*/
