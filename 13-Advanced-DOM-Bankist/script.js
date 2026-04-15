@@ -312,3 +312,15 @@ console.log(h1.childNodes);
 // it gives the elements present inside the h1
 console.log(h1.children);
 // it only work for direct children
+
+// banking
+h1.firstElementChild.style.color = 'white';
+
+// minimalist
+h1.lastElementChild.style.color = 'orangered';
+
+// Going upward: parents
+console.log(h1.parentNode);
+console.log(h1.parentElement);
+
+h1.closest('.header').style.background = 'var(--gradient-secondary)';
