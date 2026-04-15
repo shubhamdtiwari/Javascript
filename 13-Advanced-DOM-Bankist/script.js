@@ -32,6 +32,14 @@ document.addEventListener('keydown', function (e) {
 });
 /////////////////////////////
 // Button Scrolling
+btnScrollTo.addEventListener('click', function (e) {
+  // to get the coordinate to which we have to go
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+ 
 
 ////////////////////////////
 // Page nagivation
