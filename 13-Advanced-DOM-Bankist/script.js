@@ -286,6 +286,12 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 
 // if we only click on nav__links it only changes the colour of its parent elements not to its child element
 
+document.querySelector('.nav').addEventListener(
+  'click',
+  function (e) {
+    this.style.backgroundColor = randomColor();
+    console.log('NAV', e.target, e.currentTarget);
+  },
   // true,
   // here by writting true it listen the event in capture phase so firstly nav event will occur and in default events capture in bubbling phase
 );
