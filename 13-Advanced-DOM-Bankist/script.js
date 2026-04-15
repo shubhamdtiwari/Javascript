@@ -82,10 +82,15 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 // Tabbed components
 
 const tabs = document.querySelectorAll('.operations__tab');
-const tabContainer = document.querySelector('.operation__tab-container');
+const tabsContainer = document.querySelector('.operation__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 
-tabs.forEach((t) => t.addEventListener('click', () => console.log('TAB')));
+// tabs.forEach((t) => t.addEventListener('click', () => console.log('TAB')));
+// it is not going to be used in large data system as it store as many tabs present in the containers
+
+// so we use event delegation
+
+tabsContainer.addEventListener;
 
 ////////////////////////
 ////////////////////////////////
