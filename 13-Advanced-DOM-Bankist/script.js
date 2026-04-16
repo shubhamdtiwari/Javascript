@@ -21,8 +21,6 @@ console.log(navHeight);
 ///////////////////////////////////////
 // Modal window
 
-
-
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
