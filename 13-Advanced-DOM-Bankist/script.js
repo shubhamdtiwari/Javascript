@@ -13,6 +13,11 @@ const tabsContent = document.querySelectorAll('.operations__content');
 
 const nav = document.querySelector('.nav');
 
+// sticky nV
+const header = document.querySelector('.header');
+const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
+
 ///////////////////////////////////////
 // Modal window
 
@@ -161,9 +166,7 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 // const observer = new IntersectionObserver(obsCallback, obsOptions);
 // observer.observe(section1);
 
-const header = document.querySelector('.header');
-const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
+
 
 const stickyNav = function (entries) {
   const [entry] = entries;
