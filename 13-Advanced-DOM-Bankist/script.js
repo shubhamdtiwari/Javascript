@@ -161,6 +161,12 @@ const obsOptions = {
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(section1);
 
+const header = document.querySelector('.header');
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+});
+
 ////////////////////////
 ////////////////////////////////
 /////////////////////////////////////////
