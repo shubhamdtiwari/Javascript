@@ -128,9 +128,13 @@ const HandleHover = function (e, opacity) {
   }
 };
 
-nav.addEventListener('mouseover', HandleHover);
+nav.addEventListener('mouseover', function (e) {
+  HandleHover(e, 0.5);
+});
 
-nav.addEventListener('mouseout', HandleHover);
+nav.addEventListener('mouseout', function (e) {
+  HandleHover(e, 1);
+});
 
 ////////////////////////
 ////////////////////////////////
