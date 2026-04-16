@@ -151,6 +151,7 @@ const obsCallback = function () {};
 
 const obsOptions = {
   root: null,
+  threshold: 0.1,
 };
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
