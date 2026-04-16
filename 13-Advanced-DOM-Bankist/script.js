@@ -147,24 +147,25 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 // Sticky navigation: Intersection Observer API
 
-const obsCallback = function (entries, observer) {
-  entries.forEach((entry) => {
-    console.log(entry);
-  });
-};
+// const obsCallback = function (entries, observer) {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//   });
+// };
 
-const obsOptions = {
-  root: null,
-  threshold: [0, 0.2],
-};
+// const obsOptions = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
 
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-observer.observe(section1);
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(section1);
 
 const header = document.querySelector('.header');
 
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
+  threshold: 0,
 });
 
 ////////////////////////
