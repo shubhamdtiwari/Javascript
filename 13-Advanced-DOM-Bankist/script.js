@@ -153,13 +153,13 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 //   });
 // };
 
-const obsOptions = {
-  root: null,
-  threshold: [0, 0.2],
-};
+// const obsOptions = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
 
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-observer.observe(section1);
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(section1);
 
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
