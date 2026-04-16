@@ -141,17 +141,17 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 // window.addEventListener('scroll', function (e) {
 //   console.log(window.scrollY);
 
-//   if (this.window.scrollY > initialCoords.top) nav.classList.add('sticky');
-//   else nav.classList.remove('sticky');
-// });
+  if (this.window.scrollY > initialCoords.top) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+});
 
-// Sticky navigation: Intersection Observer API
+Sticky navigation: Intersection Observer API
 
-// const obsCallback = function (entries, observer) {
-//   entries.forEach((entry) => {
-//     console.log(entry);
-//   });
-// };
+const obsCallback = function (entries, observer) {
+  entries.forEach((entry) => {
+    console.log(entry);
+  });
+};
 
 // const obsOptions = {
 //   root: null,
