@@ -1,5 +1,8 @@
 'use strict';
 
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+const modal = document.querySelector('.modal');
 
 
 const tabs = document.querySelectorAll('.operations__tab');
