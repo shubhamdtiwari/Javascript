@@ -436,6 +436,4 @@ console.log(h1.parentElement.children);
 [...h1.parentElement.children].forEach(function (el) {
   if (el !== h1) el.style.transform = 'scale(0.5)';
 });
-
-// Lecture :- Building a tabbed component
 */
