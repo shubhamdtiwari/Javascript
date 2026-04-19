@@ -179,7 +179,10 @@ headerObserver.observe(header);
 // Revel sections
 const allSections = document.querySelectorAll('.section');
 
-const revelSection = function (entries, observer) {};
+const revelSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+};
 
 const sectionObserver = new IntersectionObserver(revelSection, {
   root: null,
