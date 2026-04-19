@@ -176,6 +176,12 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(header);
 
+// Revel sections
+
+const revelSection = function (entries, observer) {};
+
+const sectionObserver = new IntersectionObserver(revelSection, {});
+
 ////////////////////////
 ////////////////////////////////
 /////////////////////////////////////////
