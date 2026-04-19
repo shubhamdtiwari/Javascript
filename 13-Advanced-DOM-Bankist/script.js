@@ -177,10 +177,14 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(header);
 
 // Revel sections
+const allSections = document.querySelectorAll('.section');
 
 const revelSection = function (entries, observer) {};
 
 const sectionObserver = new IntersectionObserver(revelSection, {});
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+});
 
 ////////////////////////
 ////////////////////////////////
