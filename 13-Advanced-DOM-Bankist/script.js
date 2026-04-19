@@ -181,9 +181,13 @@ const allSections = document.querySelectorAll('.section');
 
 const revelSection = function (entries, observer) {};
 
-const sectionObserver = new IntersectionObserver(revelSection, {});
+const sectionObserver = new IntersectionObserver(revelSection, {
+  root: null,
+  threshold: 0.15,
+});
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
+  section.classList.add('section--hidden');
 });
 
 ////////////////////////
