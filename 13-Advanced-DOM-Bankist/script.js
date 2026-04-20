@@ -21,6 +21,12 @@ console.log(navHeight);
 
 ///////////////////////////////////////
 // Modal window
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+btnsOpenModal.forEach((btn) => btn.addEventListener('click', openModal));
 
 
 btnCloseModal.addEventListener('click', closeModal);
