@@ -204,6 +204,11 @@ const loadImg = function (entries, observer) {
   console.log(entry);
 };
 
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+});
+
 ////////////////////////
 ////////////////////////////////
 /////////////////////////////////////////
