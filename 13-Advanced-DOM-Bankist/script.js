@@ -199,6 +199,11 @@ allSections.forEach(function (section) {
 
 const imgTarget = document.querySelectorAll('img [data-src]');
 
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+};
+
 ////////////////////////
 ////////////////////////////////
 /////////////////////////////////////////
