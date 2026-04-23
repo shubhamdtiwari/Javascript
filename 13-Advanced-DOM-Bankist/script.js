@@ -14,9 +14,9 @@ const tabsContent = document.querySelectorAll('.operations__content');
 const nav = document.querySelector('.nav');
 
 // sticky nV
-const header = document.querySelector('.header');
-const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
+// const header = document.querySelector('.header');
+// const navHeight = nav.getBoundingClientRect().height;
+// console.log(navHeight);
 
 ///////////////////////////////////////
 // Modal window
@@ -80,12 +80,12 @@ btnScrollTo.addEventListener('click', function (e) {
 // 2. Determine what element originated the  event
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
-  console.log(e.target);
+  e.preventDefault();
+  // console.log(e.target);
 
   // Matching strategy
 
   if (e.target.classList.contains('nav__link')) {
-    e.preventDefault();
     const id = e.target.getAttribute('href');
     // console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
@@ -166,10 +166,12 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 // const observer = new IntersectionObserver(obsCallback, obsOptions);
 // observer.observe(section1);
+const header = document.querySelector('.header');
+const navHeight = nav.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
 
   if (!entry.isIntersecting) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
