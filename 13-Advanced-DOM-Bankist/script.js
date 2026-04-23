@@ -225,11 +225,6 @@ const loadImg = function (entries, observer) {
   observer.unobserve(entry.target);
 };
 
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-});
-
 imgTarget.forEach((img) => imgObserver.observe(img));
 
 ////////////////////////
