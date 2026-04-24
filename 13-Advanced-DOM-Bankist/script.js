@@ -248,6 +248,8 @@ slider.style.overflow = 'scale(0.5)';
 
 slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 
+btnRight.addEventListener('click', function () {});
+
 ////////////////////////
 ////////////////////////////////
 /////////////////////////////////////////
