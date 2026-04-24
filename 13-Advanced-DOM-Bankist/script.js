@@ -241,8 +241,9 @@ const slides = document.querySelectorAll('.slide');
 
 const slider = document.querySelector('.slider');
 slider.style.transform = 'scale(0.5)';
+slider.style.overflow = 'scale(0.5)';
 
-slides.forEach((s, i) => s, (style.transform = `translateX(${100 * i}%)`));
+slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 
 ////////////////////////
 ////////////////////////////////
