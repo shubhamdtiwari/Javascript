@@ -237,6 +237,8 @@ imgTarget.forEach((img) => imgObserver.observe(img));
 
 // Slider component
 
+const slides = document.querySelectorAll('.slide');
+
 ////////////////////////
 ////////////////////////////////
 /////////////////////////////////////////
