@@ -239,7 +239,10 @@ imgTarget.forEach((img) => imgObserver.observe(img));
 
 const slides = document.querySelectorAll('.slide');
 
-slides.forEach((s, i) => s, (style.transform = `translateX(${100 * i})`));
+const slider = document.querySelector('.slider');
+slider.style.transform = 'scale(0.5)';
+
+slides.forEach((s, i) => s, (style.transform = `translateX(${100 * i}%)`));
 
 ////////////////////////
 ////////////////////////////////
