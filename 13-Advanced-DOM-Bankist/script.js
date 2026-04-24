@@ -240,6 +240,7 @@ imgTarget.forEach((img) => imgObserver.observe(img));
 const slides = document.querySelectorAll('.slide');
 
 const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
 
 const slider = document.querySelector('.slider');
 slider.style.transform = 'scale(0.5)';
