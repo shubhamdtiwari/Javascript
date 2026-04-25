@@ -257,8 +257,17 @@ goToSlide(0);
 
 // Next slide
 
-const nextSlide = function () {};
-btnRight.addEventListener('click', function () {});
+const nextSlide = function () {
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  goToSlide(curSlide);
+};
+
+btnRight.addEventListener('click', nextSlide);
 
 ////////////////////////
 ////////////////////////////////
