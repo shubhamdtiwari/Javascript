@@ -253,7 +253,10 @@ slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 
 // Next slide
 btnRight.addEventListener('click', function () {
-  if (curSlide === maxSlide) curSlide++;
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+  }
 
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
