@@ -251,17 +251,21 @@ slider.style.overflow = 'scale(0.5)';
 slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 //0% , 100%, 200%, 300%
 
-// Next slide
-// btnRight.addEventListener('click', function () {
-//   if (curSlide === maxSlide) {
-//     curSlide = 0;
-//   } else {
-//     curSlide++;
-//   }
-
+const goToSlide = function (slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
   );
+};
+
+// Next slide
+btnRight.addEventListener('click', function () {
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  slides.forEach();
 });
 
 ////////////////////////
