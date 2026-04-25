@@ -249,6 +249,7 @@ slider.style.transform = 'scale(0.5)';
 slider.style.overflow = 'scale(0.5)';
 
 slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
+//0% , 100%, 200%, 300%
 
 btnRight.addEventListener('click', function () {
   curSlide++;
