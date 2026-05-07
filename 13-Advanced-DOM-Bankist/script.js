@@ -61,7 +61,13 @@ btnScrollTo.addEventListener('click', function (e) {
     document.documentElement.clientWidth
   );
 
-  section1.scrollIntoView({ behavior: 'smooth' });
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+  
+  section1.scrollIntoView({ behavior: 'smooth' });/
 });
 
 ////////////////////////////
@@ -209,7 +215,7 @@ allSections.forEach(function (section) {
 
 // Lazy loading images
 
-const imgTarget = document.querySelectorAll('img [data-src]');
+const imgTarget = document.querySelectorAll('img[data-src]');
 
 const loadImg = function (entries, observer) {
   const [entry] = entries;
