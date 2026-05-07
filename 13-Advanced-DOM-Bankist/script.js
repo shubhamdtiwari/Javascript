@@ -250,6 +250,17 @@ const maxSlide = slides.length;
 // slider.style.transform = 'scale(0.4) translateX (-800px)';
 // slider.style.overflow = 'visible';
 
+const createDots = function () {
+  slides.forEach(function (_, i) {
+    dotContainer.insertAdjacentHTML(
+      'beforeend',
+      `<button class = "dots__dot" data-slide="${i}"></button>`
+    );
+  });
+};
+
+createDots();
+
 const goToSlide = function (slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
