@@ -243,10 +243,11 @@ const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 
 let curSlide = 0;
+const maxSlide = slides.length;
 
-const slider = document.querySelector('.slider');
-slider.style.transform = 'scale(0.4) translateX (-800px)';
-slider.style.overflow = 'visible';
+// const slider = document.querySelector('.slider');
+// slider.style.transform = 'scale(0.4) translateX (-800px)';
+// slider.style.overflow = 'visible';
 
 const goToSlide = function (slide) {
   slides.forEach(
