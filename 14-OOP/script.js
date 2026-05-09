@@ -28,3 +28,15 @@ const jack = new Person('jack', 1990);
 console.log(matilda, jack);
 
 console.log(jonas instanceof Person); // true as we create object
+
+// Lecture :- Prototypes
+
+console.log(Person.prototype);
+
+// we created a prototype as we should not create a method inside a constructor as when we create new person it store the calc method in all new person
+
+Person.prototype.clacAge = function () {
+  console.log(2037 - this.birthYear);
+};
+
+jonas.clacAge();
