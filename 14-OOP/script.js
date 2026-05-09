@@ -33,10 +33,17 @@ console.log(jonas instanceof Person); // true as we create object
 
 console.log(Person.prototype);
 
-// we created a prototype as we should not create a method inside a constructor as when we create new person it store the calc method in all new person
+// we created a prototype as we should not create a method inside a constructor as when we create new objects, it store the calcAge method in all new object
 
 Person.prototype.clacAge = function () {
   console.log(2037 - this.birthYear);
 };
+// here this keyword is to set to that keyword which called the method
 
 jonas.clacAge();
+matilda.clacAge();
+
+// it worked b/c all the objects have access to methods and properties of its prototype
+
+console.log(jonas.__proto__);
+console.log(jonas.__proto__ === Person.prototype);
