@@ -47,3 +47,9 @@ matilda.clacAge();
 
 console.log(jonas.__proto__);
 console.log(jonas.__proto__ === Person.prototype);
+// person.prototype is not a prototype of person instead of this it is prototype of all objects that are created using person constructor function
+
+console.log(Person.prototype.isPrototypeOf(jonas));
+console.log(Person.prototype.isPrototypeOf(matilda));
+console.log(Person.prototype.isPrototypeOf(Person));
+// .prototypeOfLinkedObjects
