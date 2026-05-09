@@ -61,3 +61,15 @@ console.log(jonas.hasOwnProperty('firstName'));
 
 console.log(jonas.hasOwnProperty('species'));
 // false as it this not a property inside the jonas object. It simply has access due to its prototype property in person
+
+// Lecture :- Prototypal inheritence on builtin objects
+
+console.log(jonas.__proto__);
+
+// Object.prototype (top of prototype chain)
+console.log(jonas.__proto__.__proto__);
+console.log(jonas.__proto__.__proto__.__proto__);
+
+console.dir(Person.prototype.constructor);
+
+const arr = [3, 6, 4, 5, 6, 8];
