@@ -117,3 +117,10 @@ Car.prototype.accelerate = function () {
 Car.prototype.break = function () {
   console.log(this.speed - 5);
 };
+
+//Test Data
+const car1 = new Car('BMW', 120);
+const car2 = new Car('Mercedes', 95);
+
+console.log(car1, car2);
+car1.accelerate();
