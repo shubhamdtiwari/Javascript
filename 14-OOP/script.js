@@ -112,3 +112,8 @@ const Car = function (make, speed) {
 Car.prototype.accelerate = function () {
   console.log(this.speed + 10);
 };
+
+//3.
+Car.prototype.break = function () {
+  console.log(this.speed - 5);
+};
