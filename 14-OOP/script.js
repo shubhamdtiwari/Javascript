@@ -110,12 +110,14 @@ const Car = function (make, speed) {
 //2.
 
 Car.prototype.accelerate = function () {
-  console.log(this.speed + 10);
+  this.speed += 10;
+  console.log(`${this.make} is going at ${this.speed}`);
 };
 
 //3.
 Car.prototype.break = function () {
-  console.log(this.speed - 5);
+  this.speed -= 5;
+  console.log(`${this.make} is going at ${this.speed}`);
 };
 
 //Test Data
@@ -127,3 +129,4 @@ car1.accelerate();
 car1.break();
 car2.accelerate();
 car2.break();
+console.log(car1, car2);
