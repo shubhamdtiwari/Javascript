@@ -124,3 +124,6 @@ const car2 = new Car('Mercedes', 95);
 
 console.log(car1, car2);
 car1.accelerate();
+car1.break();
+car2.accelerate();
+car2.break();
