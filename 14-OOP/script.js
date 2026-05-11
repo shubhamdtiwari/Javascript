@@ -98,7 +98,7 @@ the new speed to the console
 'brake' multiple times on each of them 
 Test data: 
 § Data car 1: 'BMW' going at 120 km/h 
-§ Data car 2: 'Mercedes' going at 95 km/h */
+§ Data car 2: 'Mercedes' going at 95 km/h 
 
 // 1.
 
@@ -130,3 +130,19 @@ car1.break();
 car2.accelerate();
 car2.break();
 console.log(car1, car2);
+*/
+
+// Lecture :- ES6 Class
+// class expression
+// const PersonCl = class {}
+
+// class declaration
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+}
+
+const jessica = new PersonCl('Jessica', 1996);
+console.log(jessica);
