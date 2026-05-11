@@ -165,6 +165,7 @@ class PersonCl {
     this.birthYear = birthYear;
   }
 
+  //Instance method
   // Methods will be added to .prototype property
   clacAge() {
     console.log(2037 - this.birthYear);
@@ -186,6 +187,12 @@ class PersonCl {
 
   get fullName() {
     return this._fullName;
+  }
+
+  // Static method
+  static hey() {
+    console.log('Hey there 👋');
+    console.log(this);
   }
 }
 
@@ -209,6 +216,8 @@ jessica.greet();
 
 const walter = new PersonCl('Walter White', 1965);
 
+PersonCl.hey();
+
 // Lecture :- Getter and setter
 
 const account = {
@@ -230,4 +239,4 @@ account.latest = 50;
 
 console.log(account.movements);
 
-// Lecture :- Static Method
+// Lecture :- Object.create
