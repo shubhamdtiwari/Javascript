@@ -167,6 +167,9 @@ class PersonCl {
   greet() {
     console.log(`Hey ${this.firstName}`);
   }
+  get age() {
+    return 2037 - this.birthYear;
+  }
 }
 
 const jessica = new PersonCl('Jessica', 1996);
@@ -185,3 +188,23 @@ jessica.greet();
 //2. Class are first-class citizens
 // means we can pass them into function and return from function
 //3. Classes are excuted in strict mode
+
+// Lecture :- Getter and setter
+
+const account = {
+  owner: 'Jonas',
+  movements: [200, 300, 230, 445],
+
+  get latest() {
+    return this.movements.slice(-1).pop();
+  },
+
+  set latest(mov) {
+    this.movements.push(mov);
+  },
+};
+
+console.log(account.latest);
+
+account.latest = 50;
+console.log(account.movements);
