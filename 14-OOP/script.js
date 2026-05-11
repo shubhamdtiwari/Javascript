@@ -154,8 +154,8 @@ car1.accelerate();
 
 // class declaration
 class PersonCl {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
     this.birthYear = birthYear;
   }
 
@@ -214,4 +214,5 @@ const account = {
 console.log(account.latest);
 
 account.latest = 50;
+
 console.log(account.movements);
