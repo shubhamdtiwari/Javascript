@@ -1,7 +1,7 @@
 'use strict';
 
 // Lecture :- Constructor Function and the new Operator
-
+/*
 const Person = function (firstName, birthYear) {
   //   console.log(this);
   // Instance properties
@@ -152,7 +152,7 @@ class Car {
 }
 const car1 = new Car('BMW', 120);
 car1.accelerate();
-*/
+
 // Lecture :- ES6 Class
 
 // class expression
@@ -238,5 +238,18 @@ console.log(account.latest);
 account.latest = 50;
 
 console.log(account.movements);
+*/
 
 // Lecture :- Object.create
+
+const PersonProto = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+};
+
+const steven = Object.create(PersonProto);
+console.log(steven);
+steven.name = 'Steven';
+steven.birthYear = 2002;
+steven.calcAge();
