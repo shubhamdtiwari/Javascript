@@ -1,7 +1,7 @@
 'use strict';
 
 // Lecture :- Constructor Function and the new Operator
-/*
+
 const Person = function (firstName, birthYear) {
   //   console.log(this);
   // Instance properties
@@ -28,6 +28,12 @@ const jack = new Person('jack', 1990);
 console.log(matilda, jack);
 
 console.log(jonas instanceof Person); // true as we create object
+
+Person.hey = function () {
+  console.log('Hey there 👋');
+  console.log(this);
+};
+Person.hey();
 
 // Lecture :- Prototypes
 
@@ -223,3 +229,5 @@ console.log(account.latest);
 account.latest = 50;
 
 console.log(account.movements);
+
+// Lecture :- Static Method
