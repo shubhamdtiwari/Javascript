@@ -179,3 +179,9 @@ console.log(jessica.__proto__ === PersonCl.prototype);
 //   console.log(`Hey ${this.firstName}`);
 // };
 jessica.greet();
+
+// 1. Classes are NOT hoisted
+// means we cannot use classes before decleration
+//2. Class are first-class citizens
+// means we can pass them into function and return from function
+//3. Classes are excuted in strict mode
