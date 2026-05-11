@@ -170,11 +170,18 @@ class PersonCl {
   get age() {
     return 2037 - this.birthYear;
   }
+
+  set fullName(name) {
+    console.log(name);
+    if (name.include(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
 }
 
-const jessica = new PersonCl('Jessica', 1996);
+const jessica = new PersonCl('Jessica Davis', 1996);
 console.log(jessica);
 jessica.clacAge();
+console.log(jessica.age);
 
 console.log(jessica.__proto__ === PersonCl.prototype);
 
