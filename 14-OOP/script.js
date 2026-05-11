@@ -173,7 +173,7 @@ class PersonCl {
 
   set fullName(name) {
     console.log(name);
-    if (name.include(' ')) this._fullName = name;
+    if (name.includes(' ')) this._fullName = name;
     else alert(`${name} is not a full name!`);
   }
 }
