@@ -132,6 +132,19 @@ car2.break();
 console.log(car1, car2);
 */
 
+// by using the ES6 class
+class car {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+
+  accelerate() {
+    this.speed += 10;
+    console.log(`${this.make} is going at ${this.speed}`);
+  }
+}
+
 // Lecture :- ES6 Class
 // class expression
 // const PersonCl = class {}
@@ -142,7 +155,15 @@ class PersonCl {
     this.firstName = firstName;
     this.birthYear = birthYear;
   }
+
+  // Methods will be added to .prototype property
+  clacAge() {
+    console.log(2037 - this.birthYear);
+  }
 }
 
 const jessica = new PersonCl('Jessica', 1996);
 console.log(jessica);
+jessica.clacAge();
+
+console.log(jessica.__proto__ === PersonCl.prototype);
