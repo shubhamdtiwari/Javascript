@@ -171,10 +171,15 @@ class PersonCl {
     return 2037 - this.birthYear;
   }
 
+  // set va property that already exist
   set fullName(name) {
     console.log(name);
     if (name.includes(' ')) this._fullName = name;
     else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
   }
 }
 
@@ -195,6 +200,8 @@ jessica.greet();
 //2. Class are first-class citizens
 // means we can pass them into function and return from function
 //3. Classes are excuted in strict mode
+
+const walter = new PersonCl('Walter White', 1965);
 
 // Lecture :- Getter and setter
 
