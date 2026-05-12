@@ -262,3 +262,5 @@ steven.calcAge();
 console.log(steven.__proto__ === PersonProto);
 
 const sarah = Object.create(PersonProto);
+
+sarah.init('Sarah');
