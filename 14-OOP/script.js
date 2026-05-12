@@ -247,7 +247,10 @@ const PersonProto = {
     console.log(2037 - this.birthYear);
   },
 
-  init(firstname, birthYear)
+  init(firstname, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  },
 };
 
 const steven = Object.create(PersonProto);
