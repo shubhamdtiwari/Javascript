@@ -282,3 +282,14 @@ Your tasks:
 Test data: 
 § Data car 1: 'Ford' going at 120 km/h
 */
+
+class Carcl {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+
+  get speedUS() {
+    return;
+  }
+}
