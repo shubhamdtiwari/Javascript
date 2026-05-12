@@ -247,8 +247,8 @@ const PersonProto = {
     console.log(2037 - this.birthYear);
   },
 
-  init(firstname, birthYear) {
-    this.fullName = fullName;
+  init(firstName, birthYear) {
+    this.firstName = firstName;
     this.birthYear = birthYear;
   },
 };
