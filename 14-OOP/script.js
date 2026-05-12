@@ -238,7 +238,7 @@ console.log(account.latest);
 account.latest = 50;
 
 console.log(account.movements);
-*/
+
 
 // Lecture :- Object.create
 
@@ -266,3 +266,14 @@ const sarah = Object.create(PersonProto);
 sarah.init('Sarah', 1979);
 
 sarah.calcAge();
+
+// Coding Challenge #2 
+
+Your tasks:
+
+1. Re-create Challenge #1, but this time using an ES6 class (call it 'CarCl') 
+
+2. Add a getter called 'speedUS' which returns the current speed in mi/h (divide by 1.6)
+
+
+*/
