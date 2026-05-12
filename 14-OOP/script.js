@@ -289,7 +289,21 @@ class Carcl {
     this.speed = speed;
   }
 
+  accelerate() {
+    this.speed += 10;
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+  }
+
+  break() {
+    this.speed -= 5;
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+  }
+
   get speedUS() {
-    return;
+    return this.speed / 1.6;
   }
 }
+
+const ford = new Carcl('Ford', 120);
+console.log(ford.speedUS);
+ford.accelerate();
