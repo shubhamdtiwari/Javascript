@@ -438,7 +438,7 @@ class PersonCl {
 
   //Instance method
   // Methods will be added to .prototype property
-  clacAge() {
+  calcAge() {
     console.log(2037 - this.birthYear);
   }
 
@@ -483,7 +483,7 @@ class StudentCl extends PersonCl {
       `I'm ${
         2037 - this.birthYear
       } years old, but as astudent I feel more like ${
-        2037 - This.birthYear + 10
+        2037 - this.birthYear + 10
       }`
     );
   }
@@ -491,4 +491,20 @@ class StudentCl extends PersonCl {
 
 const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
 martha.intoduce();
-martha.clacAge();
+martha.calcAge();
+
+//////////////////////////////
+// Lecture :- Inheritance b/w "Classes": Object.create
+
+const PersonProto = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const steven = Object.create(PersonProto);
