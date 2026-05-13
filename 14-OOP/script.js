@@ -492,7 +492,6 @@ const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
 martha.intoduce();
 martha.calcAge();
 
-*/
 //////////////////////////////
 // Lecture :- Inheritance b/w "Classes": Object.create
 
@@ -524,3 +523,18 @@ const jay = Object.create(StudentProto);
 jay.init('Jay', 2010, 'Computer Science');
 jay.introduce();
 jay.calcAge();
+
+*/
+
+// Another Class Example
+
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+  }
+}
+
+const acc1 = new Account('Jonas', 'EUR', 1111);
+console.log(acc1);
