@@ -359,6 +359,10 @@ console.log(mike instanceof Object); // true
 
 Student.prototype.constructor = Student;
 
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////
+////////////////////
+
 // Coding Challenge #3
 
 
@@ -376,21 +380,18 @@ Notice what happens when you 'accelerate'! Hint: Review the definiton of polymor
 
 Test data: 
 § Data car 1: 'Tesla' going at 120 km/h, with a charge of 23% 
-*/
+
 
 const Car = function (make, speed) {
   this.make = make;
   this.speed = speed;
 };
 
-//2.
-
 Car.prototype.accelerate = function () {
   this.speed += 10;
   console.log(`${this.make} is going at ${this.speed} km/h`);
 };
 
-//3.
 Car.prototype.break = function () {
   this.speed -= 5;
   console.log(`${this.make} is going at ${this.speed} km/h`);
@@ -422,3 +423,46 @@ tesla.chargeBattery(90);
 console.log(tesla);
 tesla.break();
 tesla.accelerate();
+
+*/
+/////////////////////////////////////////////////////
+/////////////////////////////////////
+
+// Lecture :- Inheritance b/w "Classes": ES6 Classes
+
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  //Instance method
+  // Methods will be added to .prototype property
+  clacAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.firstName}`);
+  }
+  get age() {
+    return 2037 - this.birthYear;
+  }
+
+  // set va property that already exist
+  set fullName(name) {
+    console.log(name);
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  // Static method
+  static hey() {
+    console.log('Hey there 👋');
+    console.log(this);
+  }
+}
