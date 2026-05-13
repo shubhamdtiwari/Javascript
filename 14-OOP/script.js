@@ -349,4 +349,12 @@ const mike = new Student('Mike', 2020, 'Computer Science');
 
 console.log(mike);
 mike.introducec();
+
+// the calcAge method is not find on mike object nor in  Student.prototype so we use Object.create to link the prototype of Person to the student.prototype
 mike.calcAge();
+
+console.log(mike instanceof Student); // true
+console.log(mike instanceof Person); // true
+console.log(mike instanceof Object); // true
+
+Student.prototype.constructor = Student;
