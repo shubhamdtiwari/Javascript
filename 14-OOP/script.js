@@ -329,8 +329,11 @@ Person.prototype.calcAge = function () {
 };
 
 const Student = function (firstName, birthYear, course) {
-  this.firstName = firstName;
-  this.birthYear = birthYear;
+  // this.firstName = firstName;
+  // this.birthYear = birthYear;
+
+  // we cannot simply call the person function as this keyword become undifined so use use call method
+  Person.call(this, firstName, birthYear);
   this.course = course;
 };
 
