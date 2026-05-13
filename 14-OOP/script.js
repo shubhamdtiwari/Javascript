@@ -378,27 +378,44 @@ Test data:
 § Data car 1: 'Tesla' going at 120 km/h, with a charge of 23% 
 */
 
-class Car {
-  constructor(make, speed) {
-    this.make = make;
-    this.speed = speed;
-  }
-
-  accelerate() {
-    this.speed += 10;
-    console.log(`${this.make} is going at ${this.speed}`);
-  }
-
-  break() {
-    this.speed -= 5;
-    console.log(`${this.make} is going at ${this.speed} km/h`);
-  }
-}
-
-const EV = function (make, speed, chargeBattery) {
-  Car.call(this, make, speed);
+const Car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
 };
+
+//2.
+
+Car.prototype.accelerate = function () {
+  this.speed += 10;
+  console.log(`${this.make} is going at ${this.speed} km/h`);
+};
+
+//3.
+Car.prototype.break = function () {
+  this.speed -= 5;
+  console.log(`${this.make} is going at ${this.speed} km/h`);
+};
+
+const EV = function (make, speed, charge) {
+  Car.call(this, make, speed);
+
+  this.charge = this.charge;
+
+};
+
+EV.prototype = Object.create(Car.prototype);
 
 EV.prototype.chargeBattery = function (chargeTo) {
-  this.chargeBattery = chargeTo;
+  this.charge = chargeTo;
 };
+
+EV.prototype.accelerate = function() {
+  this.speed += 20;
+  this.charge--;
+
+  console.log(`${this.}`);
+}
+
+const tesla = new EV('Tesla', 120, 23);
+tesla.chargeBattery(90);
+console.log(tesla);
