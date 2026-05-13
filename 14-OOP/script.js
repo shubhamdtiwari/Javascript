@@ -337,6 +337,10 @@ const Student = function (firstName, birthYear, course) {
   this.course = course;
 };
 
+// here object.create used to set the prototype of student to person
+// Linking prototype
+Student.prototype = Object.create(Person.prototype);
+
 Student.prototype.introducec = function () {
   console.log(`My name is ${this.firstName} and I and study ${this.course}`);
 };
@@ -345,3 +349,4 @@ const mike = new Student('Mike', 2020, 'Computer Science');
 
 console.log(mike);
 mike.introducec();
+mike.calcAge();
