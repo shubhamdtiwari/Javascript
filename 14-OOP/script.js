@@ -378,7 +378,6 @@ Test data:
 § Data car 1: 'Tesla' going at 120 km/h, with a charge of 23% 
 */
 
-
 class Car {
   constructor(make, speed) {
     this.make = make;
@@ -389,12 +388,11 @@ class Car {
     this.speed += 10;
     console.log(`${this.make} is going at ${this.speed}`);
   }
-  
+
   break() {
-    this.speed -= 
+    this.speed -= 5;
+    console.log(`${this.make} is going at ${this.speed} km/h`);
   }
 }
 
-const EV = function(make, speed, chargeBattery){
-
-}
+const EV = function (make, speed, chargeBattery) {};
