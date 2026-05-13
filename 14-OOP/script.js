@@ -529,12 +529,14 @@ jay.calcAge();
 // Another Class Example
 
 class Account {
-  constructor(owner, currency, pin) {
+  constructor(owner, currency, pin, movements) {
     this.owner = owner;
     this.currency = currency;
     this.pin = pin;
+    this.movements = movements;
+    this.locale = navigator.language;
   }
 }
 
-const acc1 = new Account('Jonas', 'EUR', 1111);
+const acc1 = new Account('Jonas', 'EUR', 1111, []);
 console.log(acc1);
