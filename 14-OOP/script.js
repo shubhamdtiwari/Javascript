@@ -281,7 +281,7 @@ Your tasks:
 
 Test data: 
 § Data car 1: 'Ford' going at 120 km/h
-*/
+
 
 class Carcl {
   constructor(make, speed) {
@@ -315,3 +315,11 @@ ford.accelerate();
 ford.break();
 ford.speedUS = 50;
 console.log(ford);
+*/
+
+// Lecture :- Inheritance b/n Classes: Contructor Function
+
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
