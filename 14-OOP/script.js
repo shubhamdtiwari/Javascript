@@ -324,16 +324,21 @@ const Person = function (firstName, birthYear) {
   this.birthYear = birthYear;
 };
 
-Person.prototype.calcAge(){
+Person.prototype.calcAge = function () {
   console.log(2037 - this.birthYear);
-}
+};
 
-const Student = function(firstName, birthYear, course) {
+const Student = function (firstName, birthYear, course) {
   this.firstName = firstName;
   this.birthYear = birthYear;
-  this.course = course
-}
+  this.course = course;
+};
 
-const mike= new Student('Mike' , 2020, 'Computer Science')
+Student.prototype.introducec = function () {
+  console.log(`My name is ${this.firstName} and I and study ${this.course}`);
+};
+
+const mike = new Student('Mike', 2020, 'Computer Science');
 
 console.log(mike);
+mike.introducec();
