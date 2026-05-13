@@ -377,3 +377,24 @@ Notice what happens when you 'accelerate'! Hint: Review the definiton of polymor
 Test data: 
 § Data car 1: 'Tesla' going at 120 km/h, with a charge of 23% 
 */
+
+
+class Car {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+
+  accelerate() {
+    this.speed += 10;
+    console.log(`${this.make} is going at ${this.speed}`);
+  }
+  
+  break() {
+    this.speed -= 
+  }
+}
+
+const EV = function(make, speed, chargeBattery){
+
+}
