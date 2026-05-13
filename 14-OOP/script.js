@@ -473,4 +473,22 @@ class StudentCl extends PersonCl {
     super(fullName, birthYear);
     this.course = course;
   }
+
+  intoduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+
+  calcAge() {
+    console.log(
+      `I'm ${
+        2037 - this.birthYear
+      } years old, but as astudent I feel more like ${
+        2037 - This.birthYear + 10
+      }`
+    );
+  }
 }
+
+const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
+martha.intoduce();
+martha.clacAge();
