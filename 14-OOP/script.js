@@ -399,4 +399,6 @@ const EV = function (make, speed, chargeBattery) {
   Car.call(this, make, speed);
 };
 
-EV.prototype.chargeBattery;
+EV.prototype.chargeBattery = function (chargeTo) {
+  this.chargeBattery = chargeTo;
+};
