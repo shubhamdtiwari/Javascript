@@ -579,9 +579,13 @@ console.log(acc1.pin);
 // 2) Private fields
 // 3) Public methods
 // 4) Private methods
+// STATIC version of these 4
 
 class Account {
+  // 1) Public fields (instance)
   locale = navigator.language;
+
+  // 2) Private fields(instance)
   bank = 'Bankist';
   #movements = [];
   #pin;
@@ -589,12 +593,15 @@ class Account {
   constructor(owner, currency, pin, movements) {
     this.owner = owner;
     this.currency = currency;
+    // Protected property
     this.#pin = pin;
     // this.movements = [];
     // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account, ${owner}`);
   }
+
+  // 3) Public methods
 
   // Public interface
   deposit(val) {
@@ -605,7 +612,7 @@ class Account {
     this.deposit(-val);
   }
 
-  approveLoan(val) {
+  #approveLoan(val) {
     return true;
   }
 
@@ -615,6 +622,10 @@ class Account {
       console.log(`Loan approved`);
     }
   }
+
+  // 4) Private methods
+
+  static;
 }
 
 const acc1 = new Account('Jonas', 'EUR', 1111);
