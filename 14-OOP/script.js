@@ -583,12 +583,14 @@ console.log(acc1.pin);
 class Account {
   locale = navigator.language;
   bank = 'Bankist';
+  #movements = [];
+  #pin;
 
   constructor(owner, currency, pin, movements) {
     this.owner = owner;
     this.currency = currency;
-    this.pin = pin;
-    this.movements = [];
+    this.#pin = pin;
+    // this.movements = [];
     // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account, ${owner}`);
@@ -596,7 +598,7 @@ class Account {
 
   // Public interface
   deposit(val) {
-    this.movements.push(val);
+    this.#movements.push(val);
   }
 
   withdraw(val) {
@@ -619,6 +621,9 @@ const acc1 = new Account('Jonas', 'EUR', 1111);
 acc1.deposit(300);
 acc1.withdraw(100);
 
-// acc1.movements = [] this will earse all the movements which is not good
+// acc1.movements = [];
+// this will earse all the movements which is not good
 
 console.log(acc1);
+// console.log(acc1.#movements);
+// we can only see tis is class
