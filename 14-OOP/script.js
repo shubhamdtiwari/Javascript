@@ -581,12 +581,15 @@ console.log(acc1.pin);
 // 4) Private methods
 
 class Account {
+  locale = navigator.language;
+  bank = 'Bankist';
+
   constructor(owner, currency, pin, movements) {
     this.owner = owner;
     this.currency = currency;
     this.pin = pin;
-    this.movements = movements;
-    this.locale = navigator.language;
+    this.movements = [];
+    // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account, ${owner}`);
   }
@@ -611,3 +614,11 @@ class Account {
     }
   }
 }
+
+const acc1 = new Account('Jonas', 'EUR', 1111);
+acc1.deposit(300);
+acc1.withdraw(100);
+
+// acc1.movements = [] this will earse all the movements which is not good
+
+console.log(acc1);
