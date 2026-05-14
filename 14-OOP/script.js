@@ -535,8 +535,22 @@ class Account {
     this.pin = pin;
     this.movements = movements;
     this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  deposit(val) {
+    this.movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
   }
 }
 
 const acc1 = new Account('Jonas', 'EUR', 1111, []);
+
+// acc1.movements.push(250);
+// acc1.movements.push(-140);
+
 console.log(acc1);
