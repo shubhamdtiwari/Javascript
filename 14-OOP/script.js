@@ -524,8 +524,6 @@ jay.init('Jay', 2010, 'Computer Science');
 jay.introduce();
 jay.calcAge();
 
-*/
-
 // Another Class Example
 
 class Account {
@@ -567,6 +565,49 @@ const acc1 = new Account('Jonas', 'EUR', 1111, []);
 
 acc1.deposit(250);
 acc1.withdraw(140);
+acc1.requestLoan(1000);
 
 console.log(acc1);
 console.log(acc1.pin);
+
+*/
+
+///////////////////////////////////////
+// Lecture :- Encapsulation: Private Class Fields and Methods
+
+// 1) Public fields
+// 2) Private fields
+// 3) Public methods
+// 4) Private methods
+
+class Account {
+  constructor(owner, currency, pin, movements) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    this.movements = movements;
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  // Public interface
+  deposit(val) {
+    this.movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log(`Loan approved`);
+    }
+  }
+}
