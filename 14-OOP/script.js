@@ -603,7 +603,12 @@ class Account {
 
   // 3) Public methods
 
-  // Public interface
+  // Public interface (API)
+  getMovements() {
+    return this.#movements;
+    // Not chainable
+  }
+
   deposit(val) {
     this.#movements.push(val);
     return this;
@@ -641,12 +646,15 @@ const acc1 = new Account('Jonas', 'EUR', 1111);
 
 // Lecture :- Chaining
 
-acc1
+const movements = acc1
   .deposit(300)
   .deposit(500)
   .withdraw(35)
-  // .getMovements()
+  // .getMovements() here  it not work
   .requestLoan(25000)
-  .withdraw(4000);
+  .withdraw(4000)
+  .getMovements();
 
 console.log(acc1);
+
+console.log(movements);
