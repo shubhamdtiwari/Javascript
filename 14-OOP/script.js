@@ -570,7 +570,6 @@ acc1.requestLoan(1000);
 console.log(acc1);
 console.log(acc1.pin);
 
-*/
 
 ///////////////////////////////////////
 // Lecture :- Encapsulation: Private Class Fields and Methods
@@ -632,17 +631,7 @@ class Account {
   }
 }
 
-const acc1 = new Account('Jonas', 'EUR', 1111);
-// acc1.deposit(300);
-// acc1.withdraw(100);
 
-// acc1.movements = [];
-// this will earse all the movements which is not good
-
-// console.log(acc1.#movements);
-// we can only see tis is class
-
-// Account.#test();
 
 // Lecture :- Chaining
 
@@ -662,6 +651,7 @@ console.log(movements);
 // Coding Challenge :- 4
 
 // Your tasks:
+
 // 1. Re-create Challenge #3, but this time using ES6 classes: create an 'EVCl' child class of the 'CarCl' class
 
 // 2. Make the 'charge' property private
@@ -669,4 +659,9 @@ console.log(movements);
 // 3. Implement the ability to chain the 'accelerate' and 'chargeBattery' methods of this class, and also update the 'brake' method in the 'CarCl' class. Then experiment with chaining!
 
 // Test data:
+
+
 // § Data car 1: 'Rivian' going at 120 km/h, with a charge of 23%
+
+
+*/
