@@ -677,6 +677,8 @@ console.log(movements);
 */
 
 class Carcl {
+  #charge;
+
   constructor(make, speed) {
     this.make = make;
     this.speed = speed;
@@ -705,21 +707,21 @@ class EVCL extends Carcl {
   constructor(make, speed, charge) {
     super(make, speed);
 
-    this.charge = this.charge;
+    this.#charge = charge;
   }
 
   chargeBattery(chargeTo) {
-    this.charge = chargeTo;
+    this.#charge = chargeTo;
   }
 
   accelerate() {
     this.speed += 20;
-    this.charge--;
+    this.#charge--;
 
     console.log(
-      `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`,
+      `${this.make} is going at ${this.speed} km/h, with a charge of ${this.#charge}`,
     );
   }
 }
 
-const car1 = new EVCL();
+const car1 = new EVCL('Rivian', 120, 23);
