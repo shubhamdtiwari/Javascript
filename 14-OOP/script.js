@@ -692,6 +692,7 @@ class Carcl {
   break() {
     this.speed -= 5;
     console.log(`${this.make} is going at ${this.speed} km/h`);
+    return this;
   }
 
   get speedUS() {
@@ -712,6 +713,7 @@ class EVCL extends Carcl {
 
   chargeBattery(chargeTo) {
     this.#charge = chargeTo;
+    return this;
   }
 
   accelerate() {
@@ -721,6 +723,7 @@ class EVCL extends Carcl {
     console.log(
       `${this.make} is going at ${this.speed} km/h, with a charge of ${this.#charge}`,
     );
+    return this;
   }
 }
 
