@@ -673,6 +673,7 @@ console.log(movements);
 
 // § Data car 1: 'Rivian' going at 120 km/h, with a charge of 23%
 
+
 */
 
 class Carcl {
@@ -697,5 +698,13 @@ class Carcl {
 
   set speedUS(speed) {
     this.speed = speed * 1.6;
+  }
+}
+
+class EVCL extends Carcl {
+  constructor(make, speed) {
+    super(make, speed);
+    this.make = make;
+    this.speed = speed;
   }
 }
