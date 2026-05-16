@@ -704,26 +704,22 @@ class Carcl {
 class EVCL extends Carcl {
   constructor(make, speed, charge) {
     super(make, speed);
-    
+
     this.charge = this.charge;
   }
-    
 
-EV.prototype = Object.create(Car.prototype);
+  chargeBattery(chargeTo) {
+    this.charge = chargeTo;
+  }
 
-EV.prototype.chargeBattery = function (chargeTo) {
-  this.charge = chargeTo;
-};
+  accelerate() {
+    this.speed += 20;
+    this.charge--;
 
-EV.prototype.accelerate = function () {
-  this.speed += 20;
-  this.charge--;
-
-  console.log(
-    `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`,
-  );
-};
-
+    console.log(
+      `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`,
+    );
+  }
 }
 
 const car1 = new EVCL();
