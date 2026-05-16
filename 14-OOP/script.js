@@ -701,11 +701,13 @@ class Carcl {
   }
 }
 
-const EV = function (make, speed, charge) {
-  Car.call(this, make, speed);
-
-  this.charge = this.charge;
-};
+class EVCL extends Carcl {
+  constructor(make, speed, charge) {
+    super(make, speed);
+    
+    this.charge = this.charge;
+  }
+    
 
 EV.prototype = Object.create(Car.prototype);
 
@@ -722,10 +724,6 @@ EV.prototype.accelerate = function () {
   );
 };
 
-class EVCL extends Carcl {
-  constructor(make, speed) {
-    super(make, speed);
-  }
 }
 
 const car1 = new EVCL();
