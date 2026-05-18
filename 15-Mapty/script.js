@@ -24,7 +24,7 @@ if (navigator.geolocation)
 
       const coords = [latitude, longitude];
 
-      const map = L.map('map').setView(coords, 13);
+      map = L.map('map').setView(coords, 13);
 
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution:
@@ -74,4 +74,6 @@ form.addEventListener('submit', function (e) {
     .openPopup();
 });
 
-inputType.addEventListener('change', function () {});
+inputType.addEventListener('change', function () {
+  inputElevation.closest('.form__row').classList.toggle('form__row--');
+});
