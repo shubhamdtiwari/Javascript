@@ -11,7 +11,7 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
-let map;
+let map, mapEvent;
 
 if (navigator.geolocation)
   navigator.geolocation.getCurrentPosition(
@@ -32,7 +32,8 @@ if (navigator.geolocation)
       }).addTo(map);
 
       // Handling clicks on map
-      map.on('click', function (mapEvent) {
+      map.on('click', function (mapE) {
+        mapEvent = mapE;
         form.classList.remove('hidden');
         inputDistance.focus();
       });
@@ -42,7 +43,16 @@ if (navigator.geolocation)
     },
   );
 
-form.addEventListener('submit', function () {
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Clear input fields
+  inputDistance.value =
+    inputDuration.value =
+    inputCadence.value =
+    inputElevation.value =
+      '';
+
   // Display marker
 
   console.log(mapEvent);
@@ -63,3 +73,5 @@ form.addEventListener('submit', function () {
     .setPopupContent('Workout')
     .openPopup();
 });
+
+inputType.addEventListener('change', function () {});
