@@ -19,7 +19,7 @@ class Workout {
   id = (new Date() + '').slice(-10);
 
   constructor(coords, distance, duration) {
-    this.coords = coords;
+    this.coords = coords; // [lay, lng]
     this.distance = distance; //in km
     this.duration = duration; // in min
   }
@@ -29,11 +29,35 @@ class Running extends Workout {
   constructor(coords, distance, duration, cadence) {
     super(coords, distance, duration);
     this.cadence = cadence;
+    this.clacPace();
+  }
+
+  clacPace() {
+    // min/km
+    this.pace = this.duration / this.distance;
+    return this.pace;
   }
 }
 
-class Cycling extends Workout {}
+class Cycling extends Workout {
+  constructor(coords, distance, duration, elevationGain) {
+    super(coords, distance, duration);
+    this.elevationGain = elevationGain;
+    this.clacSpeed();
+  }
 
+  clacSpeed() {
+    // km/h
+    this.speed = this.distance / (this.duration / 60);
+    return this.speed;
+  }
+}
+
+const run1 = new Running([39, -12], 5.2, 24, 178);
+const cycling1 = new Cycling([39, -12]);
+
+///////////////////////////////////////////////////////
+// APPLICATION ARCHITECTURE
 class App {
   //private instance properties
   #map;
