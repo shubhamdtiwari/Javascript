@@ -50,7 +50,6 @@ class Cycling extends Workout {
 
 ///////////////////////////////////////////////////////
 // APPLICATION ARCHITECTURE
-
 const form = document.querySelector('.form');
 const containerWorkouts = document.querySelector('.workouts');
 const inputType = document.querySelector('.form__input--type');
@@ -63,6 +62,7 @@ class App {
   //private instance properties
   #map;
   #mapEvent;
+
   constructor() {
     this._getPosition();
 
@@ -116,13 +116,21 @@ class App {
     e.preventDefault();
 
     // Get data from form
-    const type;
-
-    // Cheak if data is valid
+    const type = inputType.value;
+    const distance = +inputDistance.value;
+    const duration = +inputDuration.value;
 
     // If workout running, create running object
+    if (type === 'running') {
+      const cadence = +inputCadence.value;
+    // Cheak if data is valid
+      if()
+    }
 
     // If workout cycling, create cycling object
+    if (type === 'cycling') {
+      const elevation = +inputElevation.value;
+    }
 
     // Add new object to workout array
 
