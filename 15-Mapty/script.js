@@ -113,6 +113,9 @@ class App {
   }
 
   _newWorkout() {
+    const validInputs = (...inputs) =>
+      inputs.every((inp) => Number.isFinite(inp));
+
     e.preventDefault();
 
     // Get data from form
@@ -125,9 +128,10 @@ class App {
       const cadence = +inputCadence.value;
       // Cheak if data is valid
       if (
-        !Number.isFinite(distance) ||
-        !Number.isFinite(duration) ||
-        !Number.isFinite(cadence)
+        // !Number.isFinite(distance) ||
+        // !Number.isFinite(duration) ||
+        // !Number.isFinite(cadence)
+        !validInputs(distance, duration, cadence)
       )
         return alert('Inputs have to positive numbers!');
     }
