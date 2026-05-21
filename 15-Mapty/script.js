@@ -125,6 +125,16 @@ class App {
     inputDistance.focus();
   }
 
+  _hideForm() {
+    inputDistance.value =
+      inputDuration.value =
+      inputCadence.value =
+      inputElevation.value =
+        '';
+
+    form.classList.add('hidden');
+  }
+
   _toggleElevationField() {
     inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
     inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
@@ -185,12 +195,7 @@ class App {
     this._renderWorkout(workout);
 
     //Hide form  + clear input fields
-    inputDistance.value =
-      inputDuration.value =
-      inputCadence.value =
-      inputElevation.value =
-        '';
-
+    this._hideMap();
     // console.log(mapEvent);
   }
 
