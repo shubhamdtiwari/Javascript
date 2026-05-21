@@ -132,7 +132,9 @@ class App {
       inputElevation.value =
         '';
 
+    form.style.display = 'none';
     form.classList.add('hidden');
+    setTimeout(() => (form.style.display = 'grid'), 1000);
   }
 
   _toggleElevationField() {
@@ -195,7 +197,7 @@ class App {
     this._renderWorkout(workout);
 
     //Hide form  + clear input fields
-    this._hideMap();
+    this._hideForm();
     // console.log(mapEvent);
   }
 
@@ -211,7 +213,9 @@ class App {
           className: `${workout.type}-popup`,
         }),
       )
-      .setPopupContent('workout')
+      .setPopupContent(
+        `${workout.type === 'running' ? '🏃‍♂️' : '🚴‍♀️'} ${workout.description}`,
+      )
       .openPopup();
   }
 
