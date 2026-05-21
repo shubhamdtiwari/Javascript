@@ -167,7 +167,7 @@ class App {
       const elevation = +inputElevation.value;
 
       if (
-        !validInputs(distance, duration, cadence) ||
+        !validInputs(distance, duration, elevation) ||
         !allPositive(distance, duration)
       )
         return alert('Inputs have to positive numbers!');
@@ -254,7 +254,7 @@ class App {
         </li> 
     `;
 
-    form.insertAdjacentElement('afterend', html);
+    form.insertAdjacentHTML('afterend', html);
   }
 }
 
