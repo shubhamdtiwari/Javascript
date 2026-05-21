@@ -11,20 +11,25 @@ class Workout {
     this.coords = coords; // [lay, lng]
     this.distance = distance; //in km
     this.duration = duration; // in min
+    this._setDescription();
   }
 
   _setDescription() {
     // prettier-ignore
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    this.description = `${this.type[0].toUppercase()}${this.slice(1)} on ${months[this.date.getMonth()]} ${this.date.getDate()}`;
   }
 }
 
 class Running extends Workout {
   type = 'running';
+
   constructor(coords, distance, duration, cadence) {
     super(coords, distance, duration);
     this.cadence = cadence;
     this.clacPace();
+    this._setDescription();
   }
 
   clacPace() {
@@ -41,6 +46,7 @@ class Cycling extends Workout {
     super(coords, distance, duration);
     this.elevationGain = elevationGain;
     this.clacSpeed();
+    this._setDescription();
   }
 
   clacSpeed() {
@@ -198,10 +204,10 @@ class App {
 
   _renderWorkout(workout) {
     const html = `
-    <li class="workout workout--${workout.name}" data-id="${workout.id}">
-          <h2 class="workout__title">Running on April 14</h2>
+    <li class="workout workout--${workout.type}" data-id="${workout.id}">
+          <h2 class="workout__title">${workout.description}</h2>
           <div class="workout__details">
-            <span class="workout__icon">${workout.name === 'running' ? '🏃‍♂️' : '🚴‍♀️'}</span>
+            <span class="workout__icon">${workout.type === 'running' ? '🏃‍♂️' : '🚴‍♀️'}</span>
             <span class="workout__value">${workout.distance}</span>
             <span class="workout__unit">km</span>
           </div>
@@ -210,6 +216,20 @@ class App {
             <span class="workout__value">${workout.duration}</span>
             <span class="workout__unit">min</span>
           </div>`;
+
+    if (workout.type === 'running')
+      html += `
+     <div class="workout__details">
+            <span class="workout__icon">⚡️</span>
+            <span class="workout__value">4.6</span>
+            <span class="workout__unit">min/km</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">🦶🏼</span>
+            <span class="workout__value">178</span>
+            <span class="workout__unit">spm</span>
+          </div>
+        </li>`;
   }
 }
 
