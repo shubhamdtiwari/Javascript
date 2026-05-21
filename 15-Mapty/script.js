@@ -11,14 +11,14 @@ class Workout {
     this.coords = coords; // [lay, lng]
     this.distance = distance; //in km
     this.duration = duration; // in min
-    this._setDescription();
+    // this._setDescription();
   }
 
   _setDescription() {
     // prettier-ignore
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    this.description = `${this.type[0].toUppercase()}${this.slice(1)} on ${months[this.date.getMonth()]} ${this.date.getDate()}`;
+    this.description = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${months[this.date.getMonth()]} ${this.date.getDate()}`;
   }
 }
 
@@ -28,11 +28,11 @@ class Running extends Workout {
   constructor(coords, distance, duration, cadence) {
     super(coords, distance, duration);
     this.cadence = cadence;
-    this.clacPace();
+    this.calcPace();
     this._setDescription();
   }
 
-  clacPace() {
+  calcPace() {
     // min/km
     this.pace = this.duration / this.distance;
     return this.pace;
@@ -45,11 +45,11 @@ class Cycling extends Workout {
   constructor(coords, distance, duration, elevationGain) {
     super(coords, distance, duration);
     this.elevationGain = elevationGain;
-    this.clacSpeed();
+    this.calcSpeed();
     this._setDescription();
   }
 
-  clacSpeed() {
+  calcSpeed() {
     // km/h
     this.speed = this.distance / (this.duration / 60);
     return this.speed;
@@ -81,6 +81,8 @@ class App {
     form.addEventListener('submit', this._newWorkout.bind(this));
 
     inputType.addEventListener('change', this._toggleElevationField);
+
+    // containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
   }
 
   _getPosition() {
@@ -98,19 +100,23 @@ class App {
     const { longitude } = position.coords;
     console.log(latitude, longitude);
 
-    console.log(`https://www.google.pt/maps/@${latitude},${longitude}`);
+    // console.log(`https://www.google.pt/maps/@${latitude},${longitude}`);
 
     const coords = [latitude, longitude];
 
     this.#map = L.map('map').setView(coords, 13);
 
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(this.#map);
 
     // Handling clicks on map
     this.#map.on('click', this._showForm.bind(this));
+
+    this.#workouts.forEach((work) => {
+      this._renderWorkoutMarker(work);
+    });
   }
 
   _showForm(mapE) {
@@ -124,7 +130,7 @@ class App {
     inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
   }
 
-  _newWorkout() {
+  _newWorkout(e) {
     const validInputs = (...inputs) =>
       inputs.every((inp) => Number.isFinite(inp));
 
@@ -138,9 +144,11 @@ class App {
     const duration = +inputDuration.value;
     const { lat, lng } = this.#mapEvent.latlng;
     let workout;
+
     // If workout running, create running object
     if (type === 'running') {
       const cadence = +inputCadence.value;
+
       // Cheak if data is valid
       if (
         // !Number.isFinite(distance) ||
@@ -151,7 +159,7 @@ class App {
       )
         return alert('Inputs have to positive numbers!');
 
-      const workout = new Running([lat, lng], distance, duration, cadence);
+      workout = new Running([lat, lng], distance, duration, cadence);
     }
 
     // If workout cycling, create cycling object
@@ -164,13 +172,13 @@ class App {
       )
         return alert('Inputs have to positive numbers!');
 
-      const workout = new Cycling([lat, lng], distance, duration, elevation);
+      workout = new Cycling([lat, lng], distance, duration, elevation);
     }
 
     // Add new object to workout array
     this.#workouts.push(workout);
 
-    // Render worlout on map as marker
+    // Render workout on map as marker
     this._renderWorkoutMarker(workout);
 
     // Render workout on list
@@ -245,6 +253,8 @@ class App {
           </div>
         </li> 
     `;
+
+    form.insertAdjacentElement('afterend', html);
   }
 }
 
