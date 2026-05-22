@@ -67,6 +67,7 @@ const renderCountry = function (data) {
 };
 
 const getCountrAndNeighbour = function (country) {
+  // AJAX call country
   const request = new XMLHttpRequest();
   request.open('GET', `https://restcountries.com/v2/name/${country}`);
   request.send();
@@ -77,5 +78,23 @@ const getCountrAndNeighbour = function (country) {
 
     const [data] = JSON.parse(this.responseText);
     console.log(data);
+
+    // render country 1
+    renderCountry(data);
+
+    const [neighbour] = data.borders;
+
+    if (!neighbour) return;
+
+    // AJAX call country
+    const request2 = new XMLHttpRequest();
+    request2.open('GET', `https://restcountries.com/v2/alpha/${neighbour}`);
+    request2.send();
+
+    request2.addEventListener('load', function () {
+      console.log(this.responseText);
+    });
   });
 };
+
+getCountrAndNeighbour('bharat');
