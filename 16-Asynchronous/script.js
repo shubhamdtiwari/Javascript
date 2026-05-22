@@ -9,6 +9,7 @@ const countriesContainer = document.querySelector('.countries');
 // NEW REVERSE GEOCODING API URL (use instead of the URL shown in videos):
 // https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}
 
+/*
 ///////////////////////////////////////
 const getCountryData = function (country) {
   const request = new XMLHttpRequest();
@@ -42,3 +43,24 @@ const getCountryData = function (country) {
 
 getCountryData('bharat');
 getCountryData('usa');
+getCountryData('nepal');
+getCountryData('china');
+*/
+
+// Lecture :- callback
+const
+
+const getCountrAndNeighbour = function (country) {
+  const request = new XMLHttpRequest();
+  request.open('GET', `https://restcountries.com/v2/name/${country}`);
+  request.send();
+  //   console.log(this.responseText);
+
+  request.addEventListener('load', function () {
+    console.log(this.responseText);
+
+    const [data] = JSON.parse(this.responseText);
+    console.log(data);
+
+
+};
