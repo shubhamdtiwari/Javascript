@@ -130,6 +130,13 @@ getCountrAndNeighbour('bharat');
 //       renderCountry(data[0]);
 //     });
 // };
+const getJSON = function (url) {
+  fetch(url).then((response) => {
+    if (!response.ok) throw new Error(`Country not found (${response.status})`);
+
+    return response.json();
+  });
+};
 
 const getCountryData = function (country) {
   fetch(`https://restcountries.com/v2/name/${country}`)
@@ -143,11 +150,7 @@ const getCountryData = function (country) {
       // Country 2
       return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
     })
-    .then((response) => {
-      if (!response.ok)
-        throw new Error(`Country not found (${response.status})`);
-      return response.json();
-    })
+
     .then((data) => renderCountry(data, 'neighbour'))
     .catch((err) => {
       console.error(`${err} 💥💥💥`);
