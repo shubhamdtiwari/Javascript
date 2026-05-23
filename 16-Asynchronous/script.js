@@ -306,7 +306,7 @@ const lotteryPromise = new Promise(function (resolve, reject) {
     if (Math.random() >= 0.5) {
       resolve('You WIN 💰');
     } else {
-      reject('You lost your money😒');
+      reject(new Error('You lost your money😒'));
     }
   }, 2000);
 });
@@ -314,3 +314,10 @@ const lotteryPromise = new Promise(function (resolve, reject) {
 lotteryPromise
   .then((res) => console.log(res))
   .catch((err) => console.error(err));
+
+// promisifying setTimeout
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
