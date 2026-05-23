@@ -297,7 +297,7 @@ Promise.resolve('Resolved promise 2').then((res) => {
 });
 
 console.log('Test end');
-*/
+
 // Lecture :- Building a simple promise
 
 const lotteryPromise = new Promise(function (resolve, reject) {
@@ -365,3 +365,11 @@ wait(1)
 
 Promise.resolve('abc').then((x) => console.log(x));
 Promise.reject(new Error('Problem!')).catch((x) => console.log(x));
+*/
+navigator.geolocation.getCurrentPosition(
+  (position) => console.log(position),
+  (err) => console.err(err),
+);
+
+console.log('Getting position');
+// it happens as navigator goes in background in web api enviorment in the browser
