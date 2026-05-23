@@ -283,7 +283,7 @@ const whereAmI = function (lat, lng) {
 whereAmI(52.508, 13.381);
 whereAmI(19, 72);
 whereAmI(-33.933, 18.474);
-*/
+
 
 // Lecture :- The event loop in practice
 
@@ -292,8 +292,18 @@ setTimeout(() => console.log('0 sec Timer'), 0);
 Promise.resolve('Resolved promise 1').then((res) => console.log(res));
 
 Promise.resolve('Resolved promise 2').then((res) => {
-  for (let i = 0; i < 10000000; i++) {}
+  for (let i = 0; i < 10000000000; i++) {}
   console.log(res);
 });
 
 console.log('Test end');
+*/
+// Lecture :- Building a simple promise
+
+const lotteryPromise = new Promise(function (resolve, reject) {
+  if (Math.random() >= 0.5) {
+    resolve('You WIN 💰');
+  } else {
+    reject('You lost your money😒');
+  }
+});
