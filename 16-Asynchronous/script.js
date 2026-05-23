@@ -246,3 +246,21 @@ Test data:
 § Coordinates 3: -33.933, 18.474 
 
 */
+
+// Part 1
+// 1.
+
+const whereAmI = function (lat, lng) {
+  fetch(
+    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`,
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      console.log(`You are in ${data.city}, ${data.countryName}`);
+    });
+};
+
+whereAmI(52.508, 13.381);
+whereAmI(19.037, 72.873);
+whereAmI(-33.933, 18.474);
