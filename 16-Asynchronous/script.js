@@ -366,10 +366,22 @@ wait(1)
 Promise.resolve('abc').then((x) => console.log(x));
 Promise.reject(new Error('Problem!')).catch((x) => console.log(x));
 */
-navigator.geolocation.getCurrentPosition(
-  (position) => console.log(position),
-  (err) => console.err(err),
-);
+// navigator.geolocation.getCurrentPosition(
+//   (position) => console.log(position),
+//   (err) => console.err(err),
+// );
 
-console.log('Getting position');
+// console.log('Getting position');
 // it happens as navigator goes in background in web api enviorment in the browser
+
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(
+    //   (position) => console.log(position),
+    //   (err) => reject(err),
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+getPosition().then((pos) => console.log(pos));
