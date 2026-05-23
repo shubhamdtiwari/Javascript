@@ -245,7 +245,7 @@ Test data:
 § Coordinates 2: 19.037, 72.873 
 § Coordinates 3: -33.933, 18.474 
 
-*/
+
 
 // Part 1
 // 1.
@@ -283,3 +283,11 @@ const whereAmI = function (lat, lng) {
 whereAmI(52.508, 13.381);
 whereAmI(19, 72);
 whereAmI(-33.933, 18.474);
+*/
+
+// Lecture :- The event loop in practice
+
+console.log('Test start');
+setTimeout(() => console.log('0 sec Timer'), 0);
+Promise.resolve('Resolved promise 1').then((res) => console.log(res));
+console.log('Test end');
