@@ -130,17 +130,44 @@ getCountrAndNeighbour('bharat');
 //       renderCountry(data[0]);
 //     });
 // };
-const getJSON = function (url) {
-  fetch(url).then((response) => {
-    if (!response.ok) throw new Error(`Country not found (${response.status})`);
+const getJSON = function (url, errorMsg = 'Something went worng') {
+  return fetch(url).then((response) => {
+    if (!response.ok) throw new Error(`${errorMsg} (${response.status})`);
 
     return response.json();
   });
 };
 
+// const getCountryData = function (country) {
+//   fetch(`https://restcountries.com/v2/name/${country}`)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       renderCountry(data[0]);
+//       const neighbour = data[0].borders[0];
+
+//       if (!neighbour) return;
+
+//       // Country 2
+//       return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
+//     })
+
+//     .then((data) => renderCountry(data, 'neighbour'))
+//     .catch((err) => {
+//       console.error(`${err} 💥💥💥`);
+//       renderError(`Something went worng 💥💥 ${err.message}. Try again!`);
+//     })
+//     .finally(() => {
+//       countriesContainer.style.opacity = 1;
+//     });
+// };
+
+// btn.addEventListener('click', function () {
+//   getCountryData('bharat');
+// });
+
 const getCountryData = function (country) {
-  fetch(`https://restcountries.com/v2/name/${country}`)
-    .then((response) => response.json())
+  // country 1
+  getJSON(`https://restcountries.com/v2/name/${country}`, 'Country not found')
     .then((data) => {
       renderCountry(data[0]);
       const neighbour = data[0].borders[0];
@@ -148,7 +175,10 @@ const getCountryData = function (country) {
       if (!neighbour) return;
 
       // Country 2
-      return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
+      return getJSON(
+        `https://restcountries.com/v2/alpha/${neighbour}`,
+        'Country not found',
+      );
     })
 
     .then((data) => renderCountry(data, 'neighbour'))
@@ -165,4 +195,4 @@ btn.addEventListener('click', function () {
   getCountryData('bharat');
 });
 
-getCountryData('dsfddsfsdf');
+// getCountryData('dsfddsfsdf');
