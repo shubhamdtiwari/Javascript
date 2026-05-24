@@ -450,7 +450,7 @@ PART 2
 Test data: Images in the img folder. Test the error handler by passing a wrong image path. Set the network speed to “Fast 3G” in the dev tools Network tab, otherwise images load too fast 
 
 
-*/
+
 
 //1.
 const wait = function (seconds) {
@@ -505,3 +505,13 @@ createImage('img/img-1.jpg')
     currentImg.style.display = 'none';
   })
   .catch((err) => console.error(err));
+*/
+
+// Lecture :- Consuming promises with ASYNC/AWAIT
+
+const whereAmI = async function (country) {
+  const res = await fetch(`https://restcountries.com/v2/name/${country}`);
+  console.log(res);
+};
+whereAmI('portugal');
+console.log('First');
