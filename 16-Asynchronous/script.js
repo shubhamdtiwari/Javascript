@@ -18,7 +18,7 @@ const renderCountry = function (data, className = '') {
         `;
 
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  //   countriesContainer.style.opacity = 1;
+  countriesContainer.style.opacity = 1;
 };
 
 const renderError = function (msg) {
@@ -509,15 +509,31 @@ createImage('img/img-1.jpg')
 
 // Lecture :- Consuming promises with ASYNC/AWAIT
 
-const whereAmI = async function (country) {
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+const whereAmI = async function () {
+  const pos = await getPosition();
+  const { latitude: lat, longitude: lng } = pos.coords;
+  const resGeo = await fetch(
+    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`,
+  );
+  const dataGeo = await resGeo.json();
+  console.log(dataGeo);
+
   // fetch(`https://restcountries.com/v2/name/${country}`).then((res) =>
   //   console.log(res),
   // );
 
-  const res = await fetch(`https://restcountries.com/v2/name/${country}`);
+  const res = await fetch(
+    `https://restcountries.com/v2/name/${dataGeo.countryName}`,
+  );
   const data = await res.json();
   console.log(data);
-  renderCountry(data[0]);
+  renderCountry(data[1]);
 };
-whereAmI('portugal');
+whereAmI();
 console.log('First');
