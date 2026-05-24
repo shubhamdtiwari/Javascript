@@ -411,7 +411,7 @@ const whereAmI = function () {
 
       return response.json();
     })
-    .then((data) => renderCountry(data[0]))
+    .then((data) => renderCountry(data[1]))
     .catch((err) => {
       console.error(`${err.message}💥`);
     })
