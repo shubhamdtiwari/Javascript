@@ -549,13 +549,20 @@ const whereAmI = async function () {
   } catch (err) {
     console.err(`${err}`);
     renderError(`Something went worng 💥 ${err.message}`);
+
+    // Reject promise returned from async function
+    throw err;
   }
 };
 
 console.log('1: Will get location');
-const city = whereAmI();
-console.log(city);
-console.log('2: Finished getting location');
+// const city = whereAmI();
+// console.log(city);
+
+whereAmI()
+  .then((city) => console.log(`2: ${city}`))
+  .catch((city) => console.error(`2: ${err.message} 💥`))
+  .finally(() => console.log('2: Finished getting location'));
 
 // Lecture :- try.. catch
 
