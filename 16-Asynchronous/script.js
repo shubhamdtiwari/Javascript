@@ -510,8 +510,14 @@ createImage('img/img-1.jpg')
 // Lecture :- Consuming promises with ASYNC/AWAIT
 
 const whereAmI = async function (country) {
+  // fetch(`https://restcountries.com/v2/name/${country}`).then((res) =>
+  //   console.log(res),
+  // );
+
   const res = await fetch(`https://restcountries.com/v2/name/${country}`);
-  console.log(res);
+  const data = await res.json();
+  console.log(data);
+  renderCountry(data[0]);
 };
 whereAmI('portugal');
 console.log('First');
