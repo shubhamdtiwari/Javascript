@@ -384,4 +384,40 @@ const getPosition = function () {
   });
 };
 
-getPosition().then((pos) => console.log(pos));
+// getPosition().then((pos) => console.log(pos));
+
+const whereAmI = function () {
+  getPosition()
+    .then((pos) => {
+      const { latitude: lat, longitude: lng } = pos.coords;
+      return fetch(
+        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`,
+      );
+    })
+    .then((res) => {
+      if (!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
+
+      return res.json();
+    })
+    .then((data) => {
+      // console.log(data);
+      console.log(`You are in ${data.city}, ${data.countryName}`);
+
+      return fetch(`https://restcountries.com/v2/name/${data.countryName}`);
+    })
+    .then((response) => {
+      if (!response.ok)
+        throw new Error(`Country not found (${response.status})`);
+
+      return response.json();
+    })
+    .then((data) => renderCountry(data[0]))
+    .catch((err) => {
+      console.error(`${err.message}💥`);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
+    });
+};
+
+btn.addEventListener('click', whereAmI);
