@@ -516,24 +516,42 @@ const getPosition = function () {
 };
 
 const whereAmI = async function () {
-  const pos = await getPosition();
-  const { latitude: lat, longitude: lng } = pos.coords;
-  const resGeo = await fetch(
-    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`,
-  );
-  const dataGeo = await resGeo.json();
-  console.log(dataGeo);
+  try {
+    const pos = await getPosition();
+    // Geolocation
+    const { latitude: lat, longitude: lng } = pos.coords;
 
-  // fetch(`https://restcountries.com/v2/name/${country}`).then((res) =>
-  //   console.log(res),
-  // );
+    // Reverse geocoding
+    const resGeo = await fetch(
+      `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`,
+    );
+    const dataGeo = await resGeo.json();
+    console.log(dataGeo);
 
-  const res = await fetch(
-    `https://restcountries.com/v2/name/${dataGeo.countryName}`,
-  );
-  const data = await res.json();
-  console.log(data);
-  renderCountry(data[1]);
+    // Country data
+    // fetch(`https://restcountries.com/v2/name/${country}`).then((res) =>
+    //   console.log(res),
+    // );
+
+    const res = await fetch(
+      `https://restcountries.com/v2/name/${dataGeo.countryName}`,
+    );
+    const data = await res.json();
+    console.log(data);
+    renderCountry(data[1]);
+  } catch (err) {
+    console.err(`${err}`);
+    renderError(`Something went worng 💥 ${err.message}`);
+  }
 };
 whereAmI();
 console.log('First');
+// Lecture :- try.. catch
+
+// try {
+//   let y = 1;
+//   const x = 2;
+//   x = 3;
+// } catch (err) {
+//   alert(err.message);
+// }
