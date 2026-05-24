@@ -525,6 +525,9 @@ const whereAmI = async function () {
     const resGeo = await fetch(
       `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`,
     );
+
+    if (!resGeo.ok) throw new Error('Problem getting location data');
+
     const dataGeo = await resGeo.json();
     console.log(dataGeo);
 
@@ -536,6 +539,8 @@ const whereAmI = async function () {
     const res = await fetch(
       `https://restcountries.com/v2/name/${dataGeo.countryName}`,
     );
+    if (!resGeo.ok) throw new Error('Problem getting country');
+
     const data = await res.json();
     console.log(data);
     renderCountry(data[1]);
