@@ -1,4 +1,4 @@
-'use strict'; /*
+"use strict"; /*
 
 let hasDriversLicense = false;
 const passTest = true;
@@ -548,7 +548,7 @@ while (dice !== 6) {
     console.log(`you rolled ${dice}`);
     dice = Math.trunc(Math.random() * 6) + 1;
     if (dice === 6) console.log('Loop is about to end;');
-} */
+} 
 // Challenge :-  4
 const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
@@ -574,3 +574,16 @@ const calcAvgrage = function (arr) {
 }
 console.log(calcAvgrage(totals));
 console.log(calcAvgrage(tips));
+*/
+var createCounter = function (n) {
+  let x = -1;
+  return function () {
+    x++;
+    return n + x;
+  };
+};
+
+const counter = createCounter(10);
+counter(); // 10
+counter(); // 11
+counter(); // 12
