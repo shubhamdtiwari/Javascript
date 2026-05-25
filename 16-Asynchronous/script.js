@@ -583,7 +583,7 @@ console.log('1: Will get location');
 // } catch (err) {
 //   alert(err.message);
 // }
-*/
+
 // Lecture :- Running Promises in parallel
 
 const get3Countries = async function (c1, c2, c3) {
@@ -606,3 +606,15 @@ const get3Countries = async function (c1, c2, c3) {
 };
 
 get3Countries('portugal', 'canada', 'bharat');
+*/
+
+// Lecture :- Other Promise Combinators: race, allSettled and any
+
+(async function () {
+  const res = await Promise.race([
+    getJSON(`https://restcountries.com/v2/name/italy`),
+    getJSON(`https://restcountries.com/v2/name/egypt`),
+    getJSON(`https://restcountries.com/v2/name/mexico`),
+  ]);
+  console.log(res[0]);
+})();
