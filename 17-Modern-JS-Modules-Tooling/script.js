@@ -1,4 +1,7 @@
 // Imorting module
-import './shoppingCart.js';
+import { addToCart } from './shoppingCart.js';
+('./shoppingCart.js');
 
 console.log('Importing module');
+
+addToCart('bread', 5);
