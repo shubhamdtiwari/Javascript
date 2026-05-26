@@ -634,6 +634,10 @@ Promise.race([
   .then((res) => console.log(res[0]))
   .catch((err) => console.error(err));
 
+// promise.race shortcircuit whenever one promise is settled
+// it also help to prevent against very long running processes
+//////////////////////////
+
 // Promise.allSettled
 Promise.allSettled([
   Promise.resolve('Success'),
@@ -648,3 +652,18 @@ Promise.all([
 ])
   .then((res) => console.log(res))
   .catch((err) => console.error(err));
+
+// it helps to settle all the promises created
+//////////////////////////////////
+
+// Promise.any
+
+Promise.any([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another Success'),
+])
+  .then((res) => console.log(res))
+  .catch((err) => console.error(err));
+
+// it takes an array of multiple promises and return first one fullfiled promise only
