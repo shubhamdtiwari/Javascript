@@ -619,7 +619,7 @@ get3Countries('portugal', 'canada', 'bharat');
   console.log(res[0]);
 })();
 
-const timeout = function (s) {
+const timeout = function (sec) {
   return new Promise(function (_, reject) {
     setTimeout(function () {
       reject(new Error('Reqest took too long!'));
@@ -632,4 +632,19 @@ Promise.race([
   timeout(0.2),
 ])
   .then((res) => console.log(res[0]))
+  .catch((err) => console.error(err));
+
+// Promise.allSettled
+Promise.allSettled([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another Success'),
+]).then((res) => console.log(res));
+
+Promise.all([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another Success'),
+])
+  .then((res) => console.log(res))
   .catch((err) => console.error(err));
