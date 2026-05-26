@@ -618,3 +618,18 @@ get3Countries('portugal', 'canada', 'bharat');
   ]);
   console.log(res[0]);
 })();
+
+const timeout = function (s) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error('Reqest took too long!'));
+    }, sec * 1000);
+  });
+};
+
+Promise.race([
+  getJSON(`https://restcountries.com/v2/name/tanzania`),
+  timeout(0.2),
+])
+  .then((res) => console.log(res[0]))
+  .catch((err) => console.error(err));
