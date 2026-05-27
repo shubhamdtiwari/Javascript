@@ -51,7 +51,7 @@ console.log(lastPost2);
 
 // so we know that when we use async it returns promise so we have to use await outside to get data
 
-*/
+
 
 const shoppingCart2 = (function () {
     const cart = [];
@@ -82,3 +82,21 @@ console.log(shoppingCart2);
 console.log(shoppingCart2.shippingCost);
 
 // so we can acces the addtocart as it 
+*/
+
+import cloneDeep from "./node_modules/lodash-es/cloneDeep.js";
+
+const state = {
+    cart: [
+        { product: 'bread', quantity: 5 },
+        { product: 'pizza', quantity: 5 },
+    ],
+    user: { loggedIn: true },
+};
+const stateClone = Object.assign({}, state);
+const stateDeepclone = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+
+console.log(stateDeepclone);
