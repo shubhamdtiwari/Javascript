@@ -5,7 +5,7 @@
 // addToCart('bread', 5);
 // console.log(price, tq);
 
-console.log('Importing module');
+// console.log('Importing module');
 
 // import * as ShoppingCart from './shoppingCart.js';
 // ShoppingCart.addToCart('bread', 5);
@@ -15,8 +15,13 @@ console.log('Importing module');
 // ('./shoppingCart.js');
 // console.log(price);
 
-import add, { cart } from './shoppingCart.js';
-add('pizza', 2);
-add('bread', 5);
-add('apples', 4);
-console.log(cart);
+// import add, { cart } from './shoppingCart.js';
+// add('pizza', 2);
+// add('bread', 5);
+// add('apples', 4);
+// console.log(cart);
+
+const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+const data = await res.json();
+console.log(data)
+
