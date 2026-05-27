@@ -1,3 +1,4 @@
+/*
 // Imorting module
 // import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // ('./shoppingCart.js');
@@ -49,3 +50,35 @@ const lastPost2 = await getLastPost();
 console.log(lastPost2);
 
 // so we know that when we use async it returns promise so we have to use await outside to get data
+
+*/
+
+const shoppingCart2 = (function () {
+    const cart = [];
+    const shippingCost = 10;
+    const totalPrice = 237;
+    const totalQuantity = 23;
+
+    const addToCart = function (product, quantity) {
+        cart.push({ product, quantity });
+        console.log(`${quantity} ${product} added to cart`);
+    };
+
+    const orderStock = function (product, quantity) {
+        console.log(`${quantity} ${product} ordered from supplier`)
+    };
+
+    return {
+        addToCart,
+        cart,
+        totalPrice,
+        totalQuantity,
+    };
+})();
+
+shoppingCart2.addToCart('apple', 4);
+shoppingCart2.addToCart('pizza', 2);
+console.log(shoppingCart2);
+console.log(shoppingCart2.shippingCost);
+
+// so we can acces the addtocart as it 
