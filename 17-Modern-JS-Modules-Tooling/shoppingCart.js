@@ -1,8 +1,16 @@
 // Expoting module
 console.log('Exporting module');
 
+//Blocking code
+
+console.log('Start fecting users');
+const res = await fetch('https://jsonplaceholder.typicode.com/users');
+console.log('Finish fetching')
+// this await not only blocking this code but also script.js code also
+
+
 const shippingCost = 10;
-const cart = [];
+export const cart = [];
 
 export const addToCart = function (product, quantity) {
   cart.push({ product, quantity });
