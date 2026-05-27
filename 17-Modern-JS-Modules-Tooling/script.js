@@ -51,7 +51,7 @@ console.log(lastPost2);
 
 // so we know that when we use async it returns promise so we have to use await outside to get data
 
-*/
+
 
 const shoppingCart2 = (function () {
     const cart = [];
@@ -82,3 +82,6 @@ console.log(shoppingCart2);
 console.log(shoppingCart2.shippingCost);
 
 // so we can acces the addtocart as it 
+
+*/
+//
