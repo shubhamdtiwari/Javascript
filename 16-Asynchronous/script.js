@@ -692,3 +692,5 @@ Test data Part 2: ['img/img-1.jpg', 'img/img-2.jpg', 'img/img
 
 
 */
+
+const loadNPause = async function () {};
