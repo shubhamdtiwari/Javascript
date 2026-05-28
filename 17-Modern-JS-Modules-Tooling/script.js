@@ -1,4 +1,3 @@
-/*
 // Imorting module
 // import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // ('./shoppingCart.js');
@@ -6,7 +5,7 @@
 // addToCart('bread', 5);
 // console.log(price, tq);
 
-// console.log('Importing module');
+console.log('Importing module');
 
 // import * as ShoppingCart from './shoppingCart.js';
 // ShoppingCart.addToCart('bread', 5);
@@ -30,7 +29,7 @@ console.log(cart);
 
 // // the upper await will make the bottom to wait and also use out side the async
 // console.log('Something');
-
+/*
 const getLastPost = async function () {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await res.json();
@@ -85,3 +84,21 @@ console.log(shoppingCart2.shippingCost);
 
 */
 //
+
+// Introduction to npm
+import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+
+const state = {
+  cart: [
+    { product: 'bread', quantity: 5 },
+    { product: 'pizza', quantity: 2 },
+    { product: 'apples', quantity: 4 },
+  ],
+  user: { loggedIn: true },
+};
+
+const stateClone = Object.assign({}, state);
+const stateDeepClone = cloneDeep(state);
+state.user.loggedIn = false;
+console.log(stateClone);
+console.log(stateDeepClone);
