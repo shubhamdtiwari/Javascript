@@ -102,3 +102,25 @@ const stateDeepClone = cloneDeep(state);
 state.user.loggedIn = false;
 console.log(stateClone);
 console.log(stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
+
+class Person {
+  greeting = 'Hey';
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.greeting}, ${this.name}`);
+  }
+}
+
+const jonas = new Person('Jonas');
+
+console.log('Jonas' ?? null);
+
+console.log(cart.find((el) => el.quantity >= 2));
+Promise.resolve('TEST').then((x) => console.log(x));
+
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
