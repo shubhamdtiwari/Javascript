@@ -25,12 +25,15 @@ const addExpenses = function (value, description, user = 'jonas') {
   //   lim = 0;
   // }
 
-  const limit = spendingLimits[user] ? spendingLimits[user] : 0;
+  // const limit = spendingLimits[user] ? spendingLimits[user] : 0;
+
+  const lim = spendingLimits?.[user] ?? 0;
 
   if (value <= lim) {
     budget.push({ value: -value, description: description, user: user });
   }
 };
+
 addExpenses(10, 'Pizza 🍕');
 addExpenses(100, 'Going to movies 🍿', 'Matilda');
 addExpenses(200, 'Stuff', 'Jay');
