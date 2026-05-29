@@ -14,8 +14,8 @@ const spendingLimits = {
   matilda: 100,
 };
 
-const addExpenses = function (value, description, user) {
-  if (!user) user = 'jonas';
+const addExpenses = function (value, description, user = 'jonas') {
+  // if (!user) user = 'jonas';
   user = user.toLowerCase();
 
   let lim;
@@ -36,7 +36,7 @@ console.log(budget);
 
 const check = function () {
   for (const el of budget) {
-    const lim;
+    let lim;
     if (limits[el.user]) {
       lim = limits[el.user];
     } else {
@@ -53,7 +53,7 @@ check();
 console.log(budget);
 
 const bigExpenses = function (limit) {
-  const output = '';
+  let output = '';
   for (const el of budget) {
     if (el.value <= -limit) {
       output += el.description.slice(-2) + ' / '; // Emojis are 2 chars
