@@ -29,8 +29,8 @@ const addExpenses = function (value, description, user = 'jonas') {
 
   const lim = spendingLimits?.[user] ?? 0;
 
-  if (value <= lim) {
-    budget.push({ value: -value, description: description, user: user });
+  if (value <= limit) {
+    budget.push({ value: -value, description, user });
   }
 };
 
@@ -39,21 +39,21 @@ addExpenses(100, 'Going to movies 🍿', 'Matilda');
 addExpenses(200, 'Stuff', 'Jay');
 console.log(budget);
 
-const check = function () {
-  for (const el of budget) {
+const checkExpenses = function () {
+  for (const entry of budget) {
     let lim;
-    if (spendingLimits[el.user]) {
-      lim = spendingLimits[el.user];
+    if (spendingLimits[entry.user]) {
+      lim = spendingLimits[entry.user];
     } else {
       lim = 0;
     }
 
-    if (el.value < -lim) {
-      el.flag = 'limit';
+    if (entry.value < -lim) {
+      entry.flag = 'limit';
     }
   }
 };
-check();
+checkExpenses();
 
 console.log(budget);
 
