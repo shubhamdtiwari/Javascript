@@ -16,12 +16,13 @@ const spendingLimits = Object.freeze({
 });
 
 spendingLimits.jay = 200; // Does not work
+// it does not work because the object is frozen, so we cannot add new properties to it
 
 const getLimit = (user) => spendingLimits?.[user] ?? 0;
 
-const addExpenses = function (value, description, user = 'jonas') {
+const addExpenses = function (state, value, description, user = 'jonas') {
   // if (!user) user = 'jonas';
-  user = user.toLowerCase();
+  const cleanUser = user.toLowerCase();
 
   // let lim;
   // if (spendingLimits[user]) {
@@ -34,16 +35,18 @@ const addExpenses = function (value, description, user = 'jonas') {
 
   // const lim = spendingLimits?.[user] ?? 0;
 
-  const limit = getLimit(user);
+  // const limit = getLimit(user);
 
-  if (value <= limit) {
-    budget.push({ value: -value, description, user });
+  if (value <= getLimit(cleanUser)) {
+    return [...state, { value: -value, description, user: cleanUser }];
+
+    // budget.push({ value: -value, description, user });
   }
 };
 
-addExpenses(10, 'Pizza 🍕');
-addExpenses(100, 'Going to movies 🍿', 'Matilda');
-addExpenses(200, 'Stuff', 'Jay');
+addExpenses(budget, spendingLimits, 10, 'Pizza 🍕');
+addExpenses(budget, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
+addExpenses(budget, spendingLimits, 200, 'Stuff', 'Jay');
 console.log(budget);
 
 const checkExpenses = function () {
