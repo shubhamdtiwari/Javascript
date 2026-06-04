@@ -20,6 +20,7 @@ spendingLimits.jay = 200; // Does not work
 
 const getLimit = (user) => spendingLimits?.[user] ?? 0;
 
+// Pure function
 const addExpenses = function (state, value, description, user = 'jonas') {
   // if (!user) user = 'jonas';
   const cleanUser = user.toLowerCase();
@@ -37,17 +38,29 @@ const addExpenses = function (state, value, description, user = 'jonas') {
 
   // const limit = getLimit(user);
 
-  if (value <= getLimit(cleanUser)) {
-    return [...state, { value: -value, description, user: cleanUser }];
+  // if (value <= getLimit(cleanUser)) {
+  //   return [...state, { value: -value, description, user: cleanUser }];
 
-    // budget.push({ value: -value, description, user });
-  }
+  //   // budget.push({ value: -value, description, user });
+  // }
+
+  value <= getLimit(cleanUser)
+    ? [...state, { value: -value, description, user: cleanUser }]
+    : state;
 };
 
-addExpenses(budget, spendingLimits, 10, 'Pizza 🍕');
-addExpenses(budget, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
-addExpenses(budget, spendingLimits, 200, 'Stuff', 'Jay');
-console.log(budget);
+const newBudget1 = addExpenses(budget, spendingLimits, 10, 'Pizza 🍕');
+const newBudget2 = addExpenses(
+  newBudget1,
+  spendingLimits,
+  100,
+  'Going to movies 🍿',
+  'Matilda',
+);
+const newBudget3 = addExpenses(newBudget2, spendingLimits, 200, 'Stuff', 'Jay'); // it will not add anything
+console.log(newBudget1);
+console.log(newBudget2);
+console.log(newBudget3);
 
 const checkExpenses = function () {
   for (const entry of budget) {
