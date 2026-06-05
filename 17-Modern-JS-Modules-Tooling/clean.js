@@ -18,7 +18,7 @@ const spendingLimits = Object.freeze({
 spendingLimits.jay = 200; // Does not work
 // it does not work because the object is frozen, so we cannot add new properties to it
 
-const getLimit = (user) => spendingLimits?.[user] ?? 0;
+const getLimit = (limits, user) => limits?.[user] ?? 0;
 
 // Pure function
 const addExpenses = function (state, value, description, user = 'jonas') {
@@ -44,7 +44,7 @@ const addExpenses = function (state, value, description, user = 'jonas') {
   //   // budget.push({ value: -value, description, user });
   // }
 
-  value <= getLimit(cleanUser)
+  value <= getLimit(limits, cleanUser)
     ? [...state, { value: -value, description, user: cleanUser }]
     : state;
 };
@@ -64,10 +64,10 @@ console.log(newBudget3);
 
 const checkExpenses = function (state, limits) {
   return state.map((entry) => {
-    return entry.value < -getLimit(entry.user)
+    return entry.value < -getLimit(limits, entry.user)
       ? { ...entry, flag: 'limit' }
       : entry;
-  }
+  });
   // for (const entry of newBudget3) {
   // let lim;
   // if (spendingLimits[entry.user]) {
