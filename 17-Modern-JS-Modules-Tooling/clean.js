@@ -62,7 +62,7 @@ console.log(newBudget1);
 console.log(newBudget2);
 console.log(newBudget3);
 
-const checkExpenses = function (state, limits) {
+const checkExpenses1 = function (state, limits) {
   return state.map((entry) => {
     return entry.value < -getLimit(limits, entry.user)
       ? { ...entry, flag: 'limit' }
@@ -81,6 +81,16 @@ const checkExpenses = function (state, limits) {
   // }
   // }
 };
+
+// conveting the above function to an arrow function and using implicit return
+
+const checkExpenses = (state, limits) =>
+  state.map((entry) =>
+    entry.value < -getLimit(limits, entry.user)
+      ? { ...entry, flag: 'limit' }
+      : entry,
+  );
+
 checkExpenses(newBudget3, spendingLimits);
 console.log(newBudget3);
 
