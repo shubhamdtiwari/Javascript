@@ -1,3 +1,4 @@
+'use strict';
 // Assignment 
 // JavaScript Fundamentals - part 1
 // var, let, const
@@ -125,6 +126,8 @@ console.log(descPortugal, descGermany, descFinland);
 
 // Function Declarations vs. Expressions
 
+
+// function declarartion
 function percentageOfWorld1(population) {
     return (population / 7900) * 100;
 }
@@ -132,3 +135,24 @@ function percentageOfWorld1(population) {
 console.log(percentageOfWorld1(1600));
 console.log(percentageOfWorld1(1441));
 console.log(percentageOfWorld1(13));
+
+// function expression
+const percentageOfWorld2 = function (population) {
+    return (population / 7900) * 100;
+}
+
+console.log(percentageOfWorld2(1600));
+console.log(percentageOfWorld2(1441));
+console.log(percentageOfWorld2(13));
+
+// Arrow function
+
+const percentageOfWorld3 = population => (population / 7900) * 100;
+
+console.log(percentageOfWorld3(1700));
+
+function describePopulation(country, population) {
+    return `${country} has ${population} millions people, which is about ${Math.trunc(percentageOfWorld3(population))} % of the world`;
+}
+
+console.log(describePopulation('India', 1650));
