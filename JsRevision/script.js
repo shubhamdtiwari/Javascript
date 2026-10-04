@@ -1,6 +1,6 @@
 // Assignment 
 // var, let, const
-
+/*
 const country = 'India';
 const continent = 'Asia';
 let population = 13;
@@ -76,3 +76,26 @@ if (language == 'English' && population < 50 && !isIsland) {
 }
 
 // the Switch Statement
+*/
+const language = 'English'
+
+switch (language) {
+    case 'Mandarin':
+        console.log('MOST number of native speakers!');
+        break;
+    case 'Spanish':
+        console.log('2nd place in number of native speakers');
+        break;
+    case 'English':
+        console.log('3rd place');
+        break;
+    case 'Hindi':
+        console.log('Number 4');
+        break;
+    case 'Arabic':
+        console.log('5th most spoken language');
+        break;
+    default:
+        console.log('Great language too :D');
+        break;
+}
