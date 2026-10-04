@@ -3,7 +3,7 @@
 /*
 const country = 'India';
 const continent = 'Asia';
-let population = 13;
+let population = 160;
 
 console.log(country);
 console.log(continent);
@@ -76,8 +76,8 @@ if (language == 'English' && population < 50 && !isIsland) {
 }
 
 // the Switch Statement
-*/
-const language = 'English'
+
+// const language = 'English'
 
 switch (language) {
     case 'Mandarin':
@@ -99,3 +99,9 @@ switch (language) {
         console.log('Great language too :D');
         break;
 }
+
+// The onditional (Ternary) Operator
+
+console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`);
+
+*/
