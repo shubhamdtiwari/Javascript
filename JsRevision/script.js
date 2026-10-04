@@ -1,4 +1,5 @@
 // Assignment 
+// JavaScript Fundamentals - part 1
 // var, let, const
 /*
 const country = 'India';
@@ -105,3 +106,29 @@ switch (language) {
 console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`);
 
 */
+
+// JavaScript Fundamental part - 2
+// Functions
+
+function describeCountry(country, populatiion, capaitalCity) {
+    return `${country} has ${populatiion} million people and its capital city is ${capaitalCity}`
+}
+
+console.log(describeCountry('India', 160, 'New Delhi'));
+
+const descPortugal = describeCountry('Portugal', 10, 'Lisbon');
+
+const descGermany = describeCountry('Germany', 83, 'Berlin');
+const descFinland = describeCountry('Finland', 6, 'Helsinki');
+
+console.log(descPortugal, descGermany, descFinland);
+
+// Function Declarations vs. Expressions
+
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100;
+}
+
+console.log(percentageOfWorld1(1600));
+console.log(percentageOfWorld1(1441));
+console.log(percentageOfWorld1(13));
