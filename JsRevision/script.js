@@ -156,3 +156,39 @@ function describePopulation(country, population) {
 }
 
 console.log(describePopulation('India', 1650));
+
+// Introduction to Arrays
+
+const populations = [1600, 1380, 14, 56]
+
+console.log(populations.length === 4);
+
+const percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3])
+];
+
+// for (let index = 0; index < populations.length; index++) {
+//     percentages.push(percentageOfWorld1(populations[index]));
+// }
+
+console.log(percentages);
+
+// .. basic arrays oprations
+
+const neighbours = ['Pakistan', 'China', 'Nepal', 'Afganistan'];
+
+neighbours.push('Utopia');
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('Germany')) {
+    console.log('Probably not a central european country :D');
+}
+
+neighbours[neighbours.indexOf('Pakistan')] = 'Balochistan';
+console.log(neighbours);
