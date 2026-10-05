@@ -192,3 +192,34 @@ if (!neighbours.includes('Germany')) {
 
 neighbours[neighbours.indexOf('Pakistan')] = 'Balochistan';
 console.log(neighbours);
+
+// Introduction to Objects
+
+const myCountry = {
+    country: 'India',
+    capital: 'New Delhi',
+    language: 'Hindi',
+    populations: 1700,
+    neighbours: ['Pakistan', 'China', 'Nepal', 'Afganistan']
+}
+
+// console.log(`${myCountry.country} has ${myCountry.populations} million ${myCountry['language']}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
+
+myCountry.populations += 2;
+console.log(myCountry);
+
+myCountry['populations'] -= 2;
+console.log(myCountry);
+
+myCountry.describe = function () {
+    console.log(`${this.country} has ${this.populations} million ${this['language']}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`);
+}
+
+myCountry.describe();
+
+myCountry.cheakIsland = function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+}
+
+myCountry.cheakIsland();
+console.log(myCountry);
