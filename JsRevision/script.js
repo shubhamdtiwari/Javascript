@@ -223,3 +223,39 @@ myCountry.cheakIsland = function () {
 
 myCountry.cheakIsland();
 console.log(myCountry);
+
+//  Iteration: The for Loop
+
+for (let i = 1; i <= 50; i++) {
+    console.log(`Voter number ${i} is currently voting`);
+}
+
+//  Looping Arrays, Breaking and Continuing
+const percentages2 = [];
+
+for (let i = 0; i < populations.length; i++) {
+    percentages2.push(percentageOfWorld1(populations[i]));
+}
+console.log(percentages2);
+
+// Looping Backwards and Loops in Loops
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    for (let j = 0; j < listOfNeighbours[i].length; j++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+    }
+}
+
+//  The while Loop
+
+const percentages3 = [];
+
+let i = 0;
+while (i < populations.length) {
+    percentages3.push(percentageOfWorld1(populations[i]));
+    i++;
+}
+
+console.log(percentages3);
