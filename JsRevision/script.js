@@ -106,7 +106,7 @@ switch (language) {
 
 console.log(`${country}'s population is ${population > 33 ? 'above' : 'below'} average`);
 
-*/
+
 
 // JavaScript Fundamental part - 2
 // Functions
@@ -258,4 +258,26 @@ while (i < populations.length) {
     i++;
 }
 
+
 console.log(percentages3);
+*/
+// coding challenge #1
+
+function BMI(mass, height) {
+    return mass / height ** 2;
+}
+
+const BMIMark = BMI(78, 1.69);
+const BMIJohn = BMI(92, 1.95);
+
+const markHigherBMI = BMIMark > BMIJohn;
+
+console.log(markHigherBMI);
+
+// coding challenge #2
+if (markHigherBMI) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})`);
+} else {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})`);
+}
+
