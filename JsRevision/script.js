@@ -281,3 +281,18 @@ if (markHigherBMI) {
     console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})`);
 }
 
+// Coding challenge #3
+const avgDolphine = (96 + 108 + 89) / 3;
+const avgKoalas = (88 + 91 + 110) / 3;
+console.log(avgDolphine, avgKoalas);
+
+if (avgDolphine > 100 && avgKoalas > 100 && avgDolphine > avgKoalas) {
+    console.log('Dolphines win');
+} else if (avgDolphine > 100 && avgKoalas > 100 && avgDolphine < avgKoalas) {
+    console.log('koalas win');
+} else if (avgDolphine > 100 && avgKoalas > 100 && avgDolphine === avgKoalas) {
+    console.log('Its a draw');
+} else {
+    console.log('No one wins :(');
+}
+
