@@ -282,8 +282,8 @@ if (markHigherBMI) {
 }
 
 // Coding challenge #3
-const avgDolphine = (96 + 108 + 89) / 3;
-const avgKoalas = (88 + 91 + 110) / 3;
+const avgDolphine = (97 + 112 + 101) / 3;
+const avgKoalas = (109 + 95 + 123) / 3;
 console.log(avgDolphine, avgKoalas);
 
 if (avgDolphine > 100 && avgKoalas > 100 && avgDolphine > avgKoalas) {
@@ -296,3 +296,9 @@ if (avgDolphine > 100 && avgKoalas > 100 && avgDolphine > avgKoalas) {
     console.log('No one wins :(');
 }
 
+// Coding challenge #4
+
+const bill = 275;
+
+const tip = 50 < bill < 300 ? bill * 0.15 : bill * 0.20;
+console.log(tip);
