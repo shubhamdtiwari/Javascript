@@ -1,5 +1,5 @@
-'use strict';
-// Assignment 
+"use strict";
+// Assignment
 // JavaScript Fundamentals - part 1
 // var, let, const
 /*
@@ -264,7 +264,7 @@ console.log(percentages3);
 // coding challenge #1
 
 function BMI(mass, height) {
-    return mass / height ** 2;
+  return mass / height ** 2;
 }
 
 const BMIMark = BMI(78, 1.69);
@@ -276,9 +276,9 @@ console.log(markHigherBMI);
 
 // coding challenge #2
 if (markHigherBMI) {
-    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})`);
+  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})`);
 } else {
-    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})`);
+  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})`);
 }
 
 // Coding challenge #3
@@ -287,18 +287,43 @@ const avgKoalas = (109 + 95 + 123) / 3;
 console.log(avgDolphine, avgKoalas);
 
 if (avgDolphine > 100 && avgKoalas > 100 && avgDolphine > avgKoalas) {
-    console.log('Dolphines win');
+  console.log("Dolphines win");
 } else if (avgDolphine > 100 && avgKoalas > 100 && avgDolphine < avgKoalas) {
-    console.log('koalas win');
+  console.log("koalas win");
 } else if (avgDolphine > 100 && avgKoalas > 100 && avgDolphine === avgKoalas) {
-    console.log('Its a draw');
+  console.log("Its a draw");
 } else {
-    console.log('No one wins :(');
+  console.log("No one wins :(");
 }
 
 // Coding challenge #4
 
-const bill = 275;
+// const bill = prompt("Enter the bill amount");
+const bill = 246;
 
-const tip = 50 < bill < 300 ? bill * 0.15 : bill * 0.20;
+const tip = 50 <= bill <= 300 ? bill * 0.15 : bill * 0.2;
 console.log(tip);
+
+const totalBill = bill + tip;
+console.log();
+
+// Coding Challenge #1
+
+const calcAvg = (s1, s2, s3) => {
+  return (s1 + s2 + s3) / 3;
+};
+
+const avgDol = calcAvg(85, 54, 41);
+const avgKoals = calcAvg(23, 34, 27);
+
+const cheakWinner = (avgDol, avgKoals) => {
+  if (avgDol >= 2 * avgKoals) {
+    console.log(`Dolphins win (${avgDol} vs. ${avgKoals})`);
+  } else if (avgKoals >= 2 * avgDol) {
+    console.log(`Koalas win (${avgKoals} vs. ${avgDol})`);
+  } else {
+    console.log("no one wins :)");
+  }
+};
+
+cheakWinner(avgDol, avgKoals);
