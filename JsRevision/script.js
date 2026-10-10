@@ -260,7 +260,7 @@ while (i < populations.length) {
 
 
 console.log(percentages3);
-*/
+
 // coding challenge #1
 
 function BMI(mass, height) {
@@ -377,3 +377,30 @@ console.log(john);
 console.log(
   `${Mark.fullName}'s BMI(${Mark.BMI}) is ${Mark.BMI > john.BMI ? "higher" : "lower"} than the ${john.fullName}'s (${john.BMI})`,
 );
+*/
+// Challenge #4
+const clacTip = (bill) => {
+  return 50 <= bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 53];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(clacTip(bills[i]));
+  totals.push(bills[i] + clacTip(bills[i]));
+}
+console.log(tips, totals);
+
+const calcAvgerage = function (arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+
+  return sum / arr.length;
+};
+
+console.log(calcAvgerage(totals));
