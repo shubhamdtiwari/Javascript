@@ -327,3 +327,23 @@ const cheakWinner = (avgDol, avgKoals) => {
 };
 
 cheakWinner(avgDol, avgKoals);
+
+// Coding Challenge #2
+
+const clacTip = (bill) => {
+  return 50 <= bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [125, 555, 44];
+const tips = [];
+// const tips = [clacTip(125), clacTip(555), clacTip(44)];
+
+for (let index = 0; index < bills.length; index++) {
+  tips.push(clacTip(bills[index]));
+}
+console.log(tips);
+
+const total = [];
+for (let index = 0; index < bills.length; index++) {
+  total.push(bills[index] + tips[index]);
+}
