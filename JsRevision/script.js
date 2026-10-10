@@ -347,3 +347,33 @@ const total = [];
 for (let index = 0; index < bills.length; index++) {
   total.push(bills[index] + tips[index]);
 }
+
+// Challenge #3
+
+const Mark = {
+  fullName: "Mark Miller",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+Mark.calcBMI();
+console.log(Mark);
+
+const john = {
+  fullName: "John Smith",
+  mass: 70,
+  height: 1.65,
+  calcBMI: function () {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+john.calcBMI();
+console.log(john);
+
+console.log(
+  `${Mark.fullName}'s BMI(${Mark.BMI}) is ${Mark.BMI > john.BMI ? "higher" : "lower"} than the ${john.fullName}'s (${john.BMI})`,
+);
