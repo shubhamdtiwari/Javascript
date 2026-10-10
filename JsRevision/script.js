@@ -404,3 +404,15 @@ const calcAvgerage = function (arr) {
 };
 
 console.log(calcAvgerage(totals));
+
+// Developer Skills & Editor Setup
+//  Coding Challenge #1
+
+const printForecast = (arr) => {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += `... ${arr[i]}ºC in ${i + 1} days`;
+  }
+  return str;
+};
+console.log(printForecast([17, 21, 23, -5, 34, 13]));
