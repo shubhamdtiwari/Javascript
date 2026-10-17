@@ -377,7 +377,7 @@ console.log(john);
 console.log(
   `${Mark.fullName}'s BMI(${Mark.BMI}) is ${Mark.BMI > john.BMI ? "higher" : "lower"} than the ${john.fullName}'s (${john.BMI})`,
 );
-*/
+
 // Challenge #4
 const clacTip = (bill) => {
   return 50 <= bill <= 300 ? bill * 0.15 : bill * 0.2;
@@ -416,3 +416,30 @@ const printForecast = (arr) => {
   return str;
 };
 console.log(printForecast([17, 21, 23, -5, 34, 13]));
+*/
+
+// scoping concepts
+
+function clacAge(birthYear){
+  const age = 2037 - birthYear;
+
+  function printAge() {
+    const output = `${firstName}, you are ${age}, born in ${birthYear}`;
+    console.log(output);
+
+    if(birthYear >= 1981 && birthYear <= 1996){
+      var millenial = true;
+      const str = `Oh, and you're a millenial ${firstName}`;
+      console.log(str);
+
+      function add(a, b){
+        return a + b;
+      }
+    }
+    console.log(str);
+  }
+  printAge();
+  return age;
+}
+
+const firstName = 'Shubham';
