@@ -452,7 +452,7 @@ function clacAge(birthYear){
 }
 
 const firstName = 'Shubham';
-*/
+
 // hoisting
 // variables
 // console.log(me); undefined
@@ -487,3 +487,36 @@ var numProducts = 10;
 function deleteShoppingCart() {
   console.log('All Product deleted');
 }
+*/
+// this keyword
+console.log(this); // this will point to window object
+
+const calcAvg = function (birthyear) {
+  console.log(2037 - birthyear);
+  console.log(this); // undefined
+};
+calcAvg(2006);
+
+const calcAvgArr = birthyear => {
+  console.log(2037 - birthyear);
+  console.log(this); // window object
+};
+calcAvg(2004);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this); // point to jonas object
+    // here this keyword point to jonas b/c calcAge is calling by jonas object
+    console.log(2037 - this.year);
+  },
+};
+
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
