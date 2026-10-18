@@ -416,7 +416,7 @@ const printForecast = (arr) => {
   return str;
 };
 console.log(printForecast([17, 21, 23, -5, 34, 13]));
-*/
+
 
 // scoping concepts
 
@@ -452,3 +452,31 @@ function clacAge(birthYear){
 }
 
 const firstName = 'Shubham';
+*/
+// hoisting
+// variables
+// console.log(me); undefined
+// console.log(job); error
+// console.log(year); error
+
+var me = 'Jonas';
+let job = 'Teacher';
+const year = 1991;
+
+//functions
+console.log(addDecl(3, 4)); // we get 5 as it has hoisting 
+// console.log(addExpr(2,3)); show error
+// console.log(addArrow(2,4)); show error
+
+
+function addDecl(a, b){
+  return a + b;
+}
+
+const addExpr = function(a,b){
+  return a + b;
+}
+
+const addArrow = (a ,b) => {
+  return a + b;
+}
