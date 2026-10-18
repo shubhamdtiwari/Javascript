@@ -469,14 +469,21 @@ console.log(addDecl(3, 4)); // we get 5 as it has hoisting
 // console.log(addArrow(2,4)); show error
 
 
-function addDecl(a, b){
+function addDecl(a, b) {
   return a + b;
 }
 
-const addExpr = function(a,b){
+const addExpr = function (a, b) {
   return a + b;
 }
 
-const addArrow = (a ,b) => {
-  return a + b;
+const addArrow = (a, b) => a + b;
+
+// example
+if (!numProducts) deleteShoppingCart(); // it will execute the function b/c hoisting sets the value of var to to undefined
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All Product deleted');
 }
