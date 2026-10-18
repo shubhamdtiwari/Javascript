@@ -487,7 +487,7 @@ var numProducts = 10;
 function deleteShoppingCart() {
   console.log('All Product deleted');
 }
-*/
+
 // this keyword
 console.log(this); // this will point to window object
 
@@ -520,3 +520,40 @@ const matilda = {
 
 matilda.calcAge = jonas.calcAge;
 matilda.calcAge();
+
+const f = jonas.calcAge;
+f(); // it is simple function call so this is not defined
+
+// regular function vs arrow function
+
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+  greet: () => console.log(`hey, ${this.firstName}`),
+  // above this is undefined b/c of arrow function this keyword points to its surrounding function or object that is windows
+};
+
+jonas.greet();
+*/
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+
+    const self = this
+    const isMillenial = function () {
+      console.log(self);
+      console.log(self.year >= 1981 && self.year <= 1996);
+      // console.log(this.year >= 1981 && this.year <= 1996);
+
+    }
+    isMillenial();
+  },
+};
+jonas.calcAge();
