@@ -429,6 +429,12 @@ function clacAge(birthYear){
 
     if(birthYear >= 1981 && birthYear <= 1996){
       var millenial = true;
+      // creating new variable with same name as outer scope's variable
+      const firstName ='Steven';
+
+      // reassigning outer scope's variable 
+      output = 'NEW OUTPUT';
+
       const str = `Oh, and you're a millenial ${firstName}`;
       console.log(str);
 
@@ -436,7 +442,10 @@ function clacAge(birthYear){
         return a + b;
       }
     }
-    console.log(str);
+    // console.log(str); it will not execute b/c it is outside the scope of if block
+    console.log(millenial);
+    // console.log(add(2,3)); we cann't call the function outside the block in strict mode
+    console.log(output);
   }
   printAge();
   return age;
