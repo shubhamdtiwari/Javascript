@@ -538,7 +538,7 @@ const jonas = {
 };
 
 jonas.greet();
-*/
+
 const jonas = {
   firstName: 'Jonas',
   year: 1991,
@@ -562,8 +562,50 @@ const jonas = {
       console.log(this.year >= 1981 && this.year <= 1996);
       // console.log(this.year >= 1981 && this.year <= 1996);
 
-    }
+    };
     isMillenial();
   },
 };
 jonas.calcAge();
+*/
+// Object reference
+
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+// const marriedJessica = jessica;
+// marriedJessica.lastName = 'Tiwari';
+
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
+
+const marriedJessica = marryPerson(jessica, 'Devis');
+
+console.log(marriedJessica.lastName);
+console.log(jessica.lastName);
+// both gives tiwari
+
+
+const jessica1 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Bob', 'Alice'],
+};
+
+const jessicaCopy = { ...jessica1 };
+jessicaCopy.lastName = 'Davis';
+
+jessicaCopy.family.push('Alan');
+jessicaCopy.family.push('Alena');
+
+console.log('Before', jessica1);
+console.log('After', jessicaCopy);
+
+
+
