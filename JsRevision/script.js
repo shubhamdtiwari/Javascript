@@ -598,6 +598,7 @@ const jessica1 = {
   family: ['Bob', 'Alice'],
 };
 
+// shallow copy
 const jessicaCopy = { ...jessica1 };
 jessicaCopy.lastName = 'Davis';
 
@@ -607,5 +608,11 @@ jessicaCopy.family.push('Alena');
 console.log('Before', jessica1);
 console.log('After', jessicaCopy);
 
+// Deep copy/clone
 
+const jessicaClone = structuredClone(jessica1);
+jessicaClone.family.push('Alan');
+jessicaClone.family.push('Alena');
 
+console.log('Original:' , jessica1);
+console.log('clone:', jessicaClone);
