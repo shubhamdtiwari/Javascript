@@ -650,3 +650,8 @@ console.log(main, secondary);
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse);
 
+//defult values
+const [p=1,q=1,r=1] = [2,4];
+console.log(p,q,r);
+
+// Assign
