@@ -182,3 +182,16 @@ const books = [
     highlighted: true
   }
 ];
+
+// 1.1
+
+const [firstBook, secondBook] = books;
+console.log(firstBook, secondBook);
+
+// 1.2
+
+const [ , , thirdBook] = books;
+console.log(thirdBook);
+
+// 1.3
+
