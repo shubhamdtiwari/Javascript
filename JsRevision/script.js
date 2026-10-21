@@ -643,12 +643,25 @@ const restaurant = {
   order: function(starterIndex, mainMenuIndex){
     return[this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
   },
+
+  orderDelivery: function({starterIndex = 1, mainIndex = 0, time = '20:00', address,}) {
+    console.log(`Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  },
 };
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Delhi',
+  mainIndex: 2,
+  starterIndex: 2,
+})
 
 //Destructing Objects
 
 const {name, openingHours, categories} = restaurant;
 console.log(name, openingHours, categories);
+
+
 
 /*
 //////////////////////
