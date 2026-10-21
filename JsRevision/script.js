@@ -661,13 +661,32 @@ restaurant.orderDelivery({
 const {name, openingHours, categories} = restaurant;
 console.log(name, openingHours, categories);
 
+// Giving default values
 
+const {menu = [], starterMenu: starter = []} = restaurant;
+
+console.log(menu, starter);
+
+// mutating variables
+
+let a = 234;
+let b =343;
+
+const obj = {a: 3, b: 4, c:6};
+
+({a, b}) = obj;
+
+console.log(a, b);
+
+//nested object
+
+const {fri: {open: o, close: c}} = openingHours;
+console.log(o, c);
 
 /*
 //////////////////////
 // Destructing Arrrays
 const arr = [1, 2, 3];
-
 const a = arr[0];
 const b = arr[1];
 const c = arr[2];
