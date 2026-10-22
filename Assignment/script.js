@@ -213,3 +213,18 @@ console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
 
 const {title, author, ISBN} = books[0];
 console.log(title, author, ISBN);
+
+// 2.2
+
+const {keywords: tags} = books[0];
+console.log(tags);
+
+// 2.3
+
+const {language, programmingLanguage = 'unknown'} = books[6];
+
+// 2.4 
+
+let bookTitle = 'unknown';
+let bookAuthor = 'unknown';
+
