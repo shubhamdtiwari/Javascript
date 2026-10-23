@@ -223,8 +223,21 @@ console.log(tags);
 
 const {language, programmingLanguage = 'unknown'} = books[6];
 
+
 // 2.4 
 
 let bookTitle = 'unknown';
 let bookAuthor = 'unknown';
 
+({title: bookTitle, author: bookAuthor} = books[0]);
+
+// 2.5
+
+const {thirdParty: {goodreads: {rating: bookRating}}} = books[0];
+console.log(bookRating);
+
+// 2.6
+
+const printBookInfo = function(title, author, year){
+  
+}
