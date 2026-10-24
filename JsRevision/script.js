@@ -707,3 +707,13 @@ const [p=1,q=1,r=1] = [2,4];
 console.log(p,q,r);
 
 */
+
+// Spread operator
+
+const arr = [6,7,8];
+
+const badNewArr = [1,2,3,arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);

@@ -258,3 +258,8 @@ function spellWord(str) {
   console.log(...str);
 }
 spellWord('JavaScript')
+
+// rest pattern and parameters
+
+//4.1
+
