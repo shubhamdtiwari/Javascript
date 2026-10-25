@@ -655,7 +655,8 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 })
-
+/*
+//////////////////////////
 //Destructing Objects
 
 const {name, openingHours, categories} = restaurant;
@@ -674,7 +675,7 @@ let b =343;
 
 const obj = {a: 3, b: 4, c:6};
 
-({a, b}) = obj;
+({a, b} = obj);
 
 console.log(a, b);
 
@@ -683,7 +684,7 @@ console.log(a, b);
 const {fri: {open: o, close: c}} = openingHours;
 console.log(o, c);
 
-/*
+
 //////////////////////
 // Destructing Arrrays
 const arr = [1, 2, 3];
@@ -717,3 +718,13 @@ console.log(badNewArr);
 
 const newArr = [1, 2, ...arr];
 console.log(newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// copy arrays
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
