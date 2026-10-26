@@ -711,8 +711,6 @@ console.log(starter, mainCourse);
 const [p=1,q=1,r=1] = [2,4];
 console.log(p,q,r);
 
-*/
-
 // Spread operator
 
 const arr = [6,7,8];
@@ -752,3 +750,30 @@ const restaurantCopy = {...restaurant};
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+
+*/
+
+//SPREAD, b/c on RIGHT side of = 
+const arry = [1, 2, ...[3,4]];
+
+// REST, because on Left side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5,];
+console.log(a, b, others);
+
+const {sat, ...weekdays} = restaurant.openingHours;
+console.log(weekdays);
+
+const add = function(...num){
+  let sum = 0;
+  for(let i = 0; i < num.length; i++){
+    sum += num[i];
+  }
+  console.log(sum);
+}
+
+add(1,23,4);
+add(4,5,6,7,8,9,3);
+add(91,35,6,7,8,9,8,7,564)
+
+const x =[2,4,5,6];
+add(...x);
