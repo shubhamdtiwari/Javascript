@@ -262,4 +262,8 @@ spellWord('JavaScript')
 // rest pattern and parameters
 
 //4.1
+const [mainKeyword, ...rest] = books[0].keywords;
+console.log(mainKeyword, rest);
+
+// 4.2
 
