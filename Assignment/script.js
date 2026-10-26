@@ -266,4 +266,8 @@ const [mainKeyword, ...rest] = books[0].keywords;
 console.log(mainKeyword, rest);
 
 // 4.2
+const {publisher: bookPublisher, ...restOfTheBook} = books[1];
+console.log(bookPublisher);
+console.log(restOfTheBook);
+console.log(typeof restOfTheBook);
 
