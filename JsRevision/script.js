@@ -653,7 +653,9 @@ const restaurant = {
   },
 
   orderPizza: function(mainIngredient, ...otherIngredients){
-    
+    const [main, others] = [mainIngredient, otherIngredients];
+    console.log(main);
+    console.log(others);
   }
 };
 
@@ -800,3 +802,14 @@ const guest2 = restaurant.guests || 10;
 console.log(guest2);
 
 console.log('----AND----');
+
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+console.log('hello' && 23 && null && 0);
+
+// Practise example
+if(restaurant.orderPizza){
+  restaurant.orderPizza('mushroom', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spinach', 'tomato');
