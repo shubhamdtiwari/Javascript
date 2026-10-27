@@ -755,7 +755,7 @@ restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
-*/
+
 
 //SPREAD, b/c on RIGHT side of = 
 const arry = [1, 2, ...[3,4]];
@@ -781,3 +781,22 @@ add(91,35,6,7,8,9,8,7,564)
 
 const x =[2,4,5,6];
 add(...x);
+*/
+console.log('----OR----');
+// Use ANY data type, return ANY data type,short-circuiting
+
+console.log(3 || 'Jonas');
+console.log('' || 'jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.guests = 23;
+const guest1 = restaurant.guests ? restaurant.guests : 10;
+console.log(guest1);
+
+const guest2 = restaurant.guests || 10;
+console.log(guest2);
+
+console.log('----AND----');

@@ -277,3 +277,10 @@ const printBookAuthorsCount = function(title, ...authors){
   console.log(`The book "${title}" has ${authors.length} authors`);
 }
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
+
+//Short Circuiting (&& and ||)
+// 6.1
+
+function hasExamplesInJava({book}) {
+    
+}
