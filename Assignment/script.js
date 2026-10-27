@@ -182,7 +182,7 @@ const books = [
     highlighted: true
   }
 ];
-
+/*
 // 1.1
 
 const [firstBook, secondBook] = books;
@@ -277,10 +277,13 @@ const printBookAuthorsCount = function(title, ...authors){
   console.log(`The book "${title}" has ${authors.length} authors`);
 }
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
-
+*/
 //Short Circuiting (&& and ||)
 // 6.1
 
-function hasExamplesInJava({book}) {
-    
-}
+function hasExamplesInJava(book) {
+  console.log(book.programmingLanguage === 'Java' || 'no data avilable');
+};
+
+hasExamplesInJava(books[0]);
+hasExamplesInJava(books[1]);

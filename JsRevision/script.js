@@ -656,7 +656,7 @@ const restaurant = {
     const [main, others] = [mainIngredient, otherIngredients];
     console.log(main);
     console.log(others);
-  }
+  },
 };
 
 restaurant.orderDelivery({
