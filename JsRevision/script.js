@@ -665,6 +665,16 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 })
+
+////////////////////////
+// for-of loop`
+
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+
+for(let i of menu) console.log(i);
+
+for(const [i, el] of menu.entries()) console.log(`${i + 1}: ${el}`);
+
 /*
 //////////////////////////
 //Destructing Objects
@@ -782,7 +792,7 @@ add(91,35,6,7,8,9,8,7,564)
 
 const x =[2,4,5,6];
 add(...x);
-*/
+
 console.log('----OR----');
 // Use ANY data type, return ANY data type,short-circuiting
 
@@ -857,3 +867,5 @@ rest1.owner &&= '<ANYONMUS>'
 
 console.log(rest1);
 console.log(rest2);
+
+*/
