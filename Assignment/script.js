@@ -277,7 +277,7 @@ const printBookAuthorsCount = function(title, ...authors){
   console.log(`The book "${title}" has ${authors.length} authors`);
 }
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
-*/
+
 //Short Circuiting (&& and ||)
 // 5.1
 
@@ -307,10 +307,11 @@ for (let i = 0; i < books.length; i++) {
   books[i].edition ||= 1;
   
 }
-
+*/
 //7.2
 
 for (let i = 0; i < books.length; i++) {
-  books[i].thirdParty.goodreads.rating 
+    books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
   
 }
+console.log(books);
