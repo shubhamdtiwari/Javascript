@@ -761,7 +761,6 @@ console.log(restaurant.name);
 
 //SPREAD, b/c on RIGHT side of = 
 const arry = [1, 2, ...[3,4]];
-
 // REST, because on Left side of =
 const [a, b, ...others] = [1, 2, 3, 4, 5,];
 console.log(a, b, others);
@@ -827,7 +826,7 @@ console.log(guestCorrect);
 
 const rest1 = {
   name: 'Capri',
-  numGuests: 20,
+  numGuests: 0,
 };
 
 const rest2 = {
@@ -838,9 +837,16 @@ const rest2 = {
 // OR assignment operator
 // rest1.numGuests = rest1.numGuests || 10;
 // rest2.numGuests = rest2.numGuests || 10;
-rest1.numGuests ||= 10;
-rest2.numGuests ||= 10;
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// nullish assignment operator(null or undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
 
 console.log(rest1);
 console.log(rest2);
 
+
+
+// AND assignment operator
