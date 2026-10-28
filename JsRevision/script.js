@@ -844,9 +844,16 @@ const rest2 = {
 rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
 
-console.log(rest1);
-console.log(rest2);
 
 
+
+// rest2.owner = rest2.owner && '<ANYONMUS>'
+// rest1.owner = rest1.owner || '<ANYONMUS>'
 
 // AND assignment operator
+rest2.owner &&= '<ANYONMUS>'
+rest1.owner &&= '<ANYONMUS>'
+
+
+console.log(rest1);
+console.log(rest2);
