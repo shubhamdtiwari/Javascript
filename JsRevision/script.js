@@ -617,15 +617,7 @@ jessicaClone.family.push('Alena');
 console.log('Original:' , jessica1);
 console.log('clone:', jessicaClone);
 */
-
-
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto', 'Mashroom Masala'],
-  openingHours: {
+const openingHours = {
     thu: {
       open: 12,
       close: 22,
@@ -638,8 +630,17 @@ const restaurant = {
       open: 0, // open 24 hours
       close: 24,
     },
-  },
-  
+};
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto', 'Mashroom Masala'],
+  // ES6 enhanc
+  openingHours,
+
   order: function(starterIndex, mainMenuIndex){
     return[this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
   },
@@ -665,7 +666,7 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 })
-
+/*
 ////////////////////////
 // for-of loop`
 
@@ -675,7 +676,7 @@ for(let i of menu) console.log(i);
 
 for(const [i, el] of menu.entries()) console.log(`${i + 1}: ${el}`);
 
-/*
+
 //////////////////////////
 //Destructing Objects
 
