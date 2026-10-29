@@ -617,16 +617,17 @@ jessicaClone.family.push('Alena');
 console.log('Original:' , jessica1);
 console.log('clone:', jessicaClone);
 */
+const weekDays = ['mon', 'tues', 'wed', 'thu', 'fri', 'sat']
 const openingHours = {
-    thu: {
+    [weekDays[2]]: {
       open: 12,
       close: 22,
     },
-    fri: {
+    [weekDays[4]]: {
       open: 11,
       close: 23,
     },
-    sat: {
+    [`day-${2 + 4}`]: {
       open: 0, // open 24 hours
       close: 24,
     },
