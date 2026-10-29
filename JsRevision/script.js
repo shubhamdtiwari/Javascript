@@ -617,7 +617,7 @@ jessicaClone.family.push('Alena');
 console.log('Original:' , jessica1);
 console.log('clone:', jessicaClone);
 */
-const weekDays = ['mon', 'tues', 'wed', 'thu', 'fri', 'sat']
+const weekDays = ['mon', 'tues', 'wed', 'thu', 'fri', 'sat'];
 const openingHours = {
     [weekDays[2]]: {
       open: 12,
@@ -627,7 +627,7 @@ const openingHours = {
       open: 11,
       close: 23,
     },
-    [`day-${2 + 4}`]: {
+    [weekDays[5]]: {
       open: 0, // open 24 hours
       close: 24,
     },
@@ -661,13 +661,29 @@ const restaurant = {
   },
 };
 
+if(restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+  // WITH optional chaining
+
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+// Example
+const days = ['mon', 'tues', 'wed', 'thu', 'fri', 'sat'];
+
+for(const day of days){
+  const open = restaurant.openingHours[day]?.open ?? 'closed'
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+/*
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Delhi',
   mainIndex: 2,
   starterIndex: 2,
 })
-/*
 ////////////////////////
 // for-of loop`
 
