@@ -326,3 +326,18 @@ for(const book of books){
 };
 
 console.log(pageSum);
+
+// 8.2
+
+const allAuthors = [];
+
+for(const book of books){
+  if(typeof(book.author) === 'string'){
+    allAuthors.push(book.author);
+  }else{
+      for(const author of book.author){
+      allAuthors.push(author);
+    }
+  }
+};
+console.log(allAuthors);
