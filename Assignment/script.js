@@ -315,3 +315,14 @@ for (let i = 0; i < books.length; i++) {
   
 }
 console.log(books);
+
+// Looping Arrays: The for-of Loop
+// 8.1
+
+let pageSum = 0;
+
+for(const book of books){
+    pageSum += book.pages;
+};
+
+console.log(pageSum);
