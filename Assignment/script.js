@@ -307,7 +307,7 @@ for (let i = 0; i < books.length; i++) {
   books[i].edition ||= 1;
   
 }
-*/
+
 //7.2
 
 for (let i = 0; i < books.length; i++) {
@@ -315,7 +315,7 @@ for (let i = 0; i < books.length; i++) {
   
 }
 console.log(books);
-
+*/
 // Looping Arrays: The for-of Loop
 // 8.1
 
@@ -341,3 +341,9 @@ for(const book of books){
   }
 };
 console.log(allAuthors);
+
+// 8.3
+
+for(const [i, author] of allAuthors.entries()){
+  console.log(`${i + 1}. ${author}`);
+};
