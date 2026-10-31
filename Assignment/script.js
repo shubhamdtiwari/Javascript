@@ -365,6 +365,8 @@ const newBook = {
 
 console.log(newBook);
 
+//9.2
+
 const pages = 880;
 
 const newBook2 = {
@@ -373,3 +375,11 @@ const newBook2 = {
   pages,
 };
 console.log(newBook2);
+
+// Optional Chaining (?.)
+// 10.1
+
+function getFirstKeyword(book){
+  console.log(book.keywords?.[0]);
+}
+getFirstKeyword(newBook2);
