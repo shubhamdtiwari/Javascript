@@ -76,7 +76,21 @@ printGoals(...game.scored);
 team1 < team2 && console.log(`team 1 is more likely to win`);
 */
 // Challenge #2
+// 1.
+// for(const [key, name] of Object.entries(game.scored)){
+//     console.log(`Goal ${Number(key) + 1}: ${name}`);
+// };
 
-for(const [key, name] of Object.entries(game.scored)){
+for(const [key, name] of game.scored.entries()){
     console.log(`Goal ${key + 1}: ${name}`);
+};
+
+// 2.
+let avg = 0;
+// let count = 0;
+for(const value of Object.values(game.odds)){
+    avg += value;
+    // count++;
 }
+// console.log(avg/count);
+console.log(avg / Object.values(game.odds).length);
