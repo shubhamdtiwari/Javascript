@@ -41,7 +41,7 @@ x: 3.25,
 team2: 6.5,
 },
 };
-
+/*
 // 1.
 const [players1, players2] = game.players;
 console.log(players1);
@@ -74,3 +74,9 @@ printGoals(...game.scored);
 
 // 7
 team1 < team2 && console.log(`team 1 is more likely to win`);
+*/
+// Challenge #2
+
+for(const [key, name] of Object.entries(game.scored)){
+    console.log(`Goal ${key + 1}: ${name}`);
+}
