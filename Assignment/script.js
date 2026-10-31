@@ -383,3 +383,6 @@ function getFirstKeyword(book){
   console.log(book.keywords?.[0]);
 }
 getFirstKeyword(newBook2);
+
+// Looping Objects: Object Keys, Values and Entries
+// 11.1

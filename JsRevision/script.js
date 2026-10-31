@@ -661,6 +661,22 @@ const restaurant = {
   },
 };
 
+// Propety NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open ${properties.length} days: `;
+
+for(const day of properties){
+  openStr += `${day}, `;
+}
+
+console.log(openStr);
+
+/*
+
+///////////////////////////////////\
+// Optional chaining
 if(restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
@@ -677,7 +693,7 @@ for(const day of days){
   console.log(`On ${day}, we open at ${open}`);
 }
 
-/*
+
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Delhi',
