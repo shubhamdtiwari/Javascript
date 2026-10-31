@@ -102,6 +102,6 @@ console.log(avg / Object.values(game.odds).length);
 // console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
 
 for(const [team, value] of Object.entries(game.odds)){
-    const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
-    console.log(`Odd of ${teamStr}: ${value}`);
+    // const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`
+    console.log(`Odd of ${team === 'x' ? 'draw' : `victory ${game[team]}`}: ${value}`);
 }
