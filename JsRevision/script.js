@@ -668,8 +668,10 @@ const oredrSet = new Set([
   'Pasta',
   'Risotto',
   'Pasta',
-  
-])
+
+]);
+console.log(set);
+console.log(new Set('Jonas'));
 /*
 //////////////////////////////////////
 // Propety NAMES
