@@ -40,6 +40,7 @@ team1: 1.33,
 x: 3.25,
 team2: 6.5,
 },
+scorers,
 };
 /*
 // 1.
@@ -105,3 +106,10 @@ for(const [team, value] of Object.entries(game.odds)){
     // const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`
     console.log(`Odd of ${team === 'x' ? 'draw' : `victory ${game[team]}`}: ${value}`);
 }
+
+// 4.
+const scorers = {
+    [game.scored[0]]: 2,
+};
+
+console.log(game.scorers);

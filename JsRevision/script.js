@@ -661,6 +661,17 @@ const restaurant = {
   },
 };
 
+// sets
+
+const oredrSet = new Set([
+  'Pizza',
+  'Pasta',
+  'Risotto',
+  'Pasta',
+  
+])
+/*
+//////////////////////////////////////
 // Propety NAMES
 const properties = Object.keys(openingHours);
 console.log(properties);
@@ -684,7 +695,7 @@ for (const [key, {open, close}] of entries){
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
 
-/*
+
 
 ///////////////////////////////////\
 // Optional chaining
