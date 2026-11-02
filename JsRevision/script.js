@@ -660,7 +660,40 @@ const restaurant = {
     console.log(others);
   },
 };
+//////////////////////////////////
+// New Operations to make Sets Useful
 
+const italianFoods = new Set([
+  'pasta',
+  'gnocchi',
+  'tomatoes',
+  'olive oil',
+  'garlic',
+  'basil',
+]);
+
+const mexicanFood = new Set([
+  'tortillas',
+  'beans',
+  'rice',
+  'tomatoes',
+  'avocado',
+  'garlic',
+]);
+
+const commonFoods = italianFoods.intersection(mexicanFood);
+console.log(commonFoods);
+console.log([...commonFoods]);
+
+const italianMexicanFusion = italianFoods.union(mexicanFood);
+console.log('Union:', italianMexicanFusion);
+
+console.log([...new Set([...italianFoods, ...mexicanFood])]);
+
+const uniqueItalianFood = italianFoods.difference(mexicanFood);
+console.log('Differnce italian', uniqueItalianFood);
+/*
+////////////////////////////////////
 // sets
 
 const ordersSet = new Set([
@@ -684,7 +717,14 @@ ordersSet.add('Garlic Bread');
 ordersSet.delete('Risotto');
 console.log(ordersSet);
 
-/*
+for(const order of ordersSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+
 //////////////////////////////////////
 // Propety NAMES
 const properties = Object.keys(openingHours);
