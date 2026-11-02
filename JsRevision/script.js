@@ -665,13 +665,18 @@ const restaurant = {
 
 const oredrSet = new Set([
   'Pizza',
+  'Pizza',
   'Pasta',
   'Risotto',
   'Pasta',
-
+  'Pizza',
 ]);
-console.log(set);
+console.log(oredrSet);
+
 console.log(new Set('Jonas'));
+
+console.log(oredrSet.size);
+
 /*
 //////////////////////////////////////
 // Propety NAMES

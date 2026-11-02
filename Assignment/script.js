@@ -315,7 +315,7 @@ for (let i = 0; i < books.length; i++) {
   
 }
 console.log(books);
-*/
+
 // Looping Arrays: The for-of Loop
 // 8.1
 
@@ -383,6 +383,12 @@ function getFirstKeyword(book){
   console.log(book.keywords?.[0]);
 }
 getFirstKeyword(newBook2);
-
+*/
 // Looping Objects: Object Keys, Values and Entries
 // 11.1
+const entries = [];
+
+for(const key of Object.entries(books[0].thirdParty.goodreads)){
+  entries.push(key);
+};
+console.log(entries);
