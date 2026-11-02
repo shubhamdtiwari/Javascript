@@ -663,7 +663,7 @@ const restaurant = {
 
 // sets
 
-const oredrSet = new Set([
+const ordersSet = new Set([
   'Pizza',
   'Pizza',
   'Pasta',
@@ -671,11 +671,18 @@ const oredrSet = new Set([
   'Pasta',
   'Pizza',
 ]);
-console.log(oredrSet);
+console.log(ordersSet);
 
 console.log(new Set('Jonas'));
 
-console.log(oredrSet.size);
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+
+ordersSet.delete('Risotto');
+console.log(ordersSet);
 
 /*
 //////////////////////////////////////
