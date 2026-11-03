@@ -660,6 +660,16 @@ const restaurant = {
     console.log(others);
   },
 };
+//maps
+const rest = new Map();
+
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest.set('categories', ['Italian', 'Pizeria', 'Vehetaian', 'Organic']).set('open', 11).set('close', 23).set(true, 'We are open :D').set(false, 'We are closed :(')
+
+/*
 //////////////////////////////////
 // New Operations to make Sets Useful
 
@@ -692,7 +702,11 @@ console.log([...new Set([...italianFoods, ...mexicanFood])]);
 
 const uniqueItalianFood = italianFoods.difference(mexicanFood);
 console.log('Differnce italian', uniqueItalianFood);
-/*
+
+const uniqueItalianAndMexicanFood = italianFoods.symmetricDifference(mexicanFood);
+console.log(uniqueItalianAndMexicanFood);
+
+
 ////////////////////////////////////
 // sets
 
