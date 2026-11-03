@@ -684,6 +684,13 @@ rest.get(time > rest.get("open") && time < rest.get("close"));
 console.log(rest.has("categories"));
 rest.delete(2);
 console.log(rest);
+console.log(rest.size);
+
+rest.set([1, 2], "Test");
+console.log(rest);
+console.log(rest.size);
+
+rest.get([1, 2]);
 
 /*
 //////////////////////////////////
