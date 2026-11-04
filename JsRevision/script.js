@@ -678,11 +678,29 @@ console.log(Object.entries(openingHours));
 const hoursMap = new Map(Object.entries(openingHours));
 console.log(hoursMap);
 
+
+//Quiz App
+console.log(question.get('question'));
 for (const [key, value] of question){
   if(typeof key === 'number'){
     console.log(`Answer ${key}: ${value}`);
   }
 }
+const answer = Number(prompt("Your answer"));
+console.log(answer);
+
+// if (answer === 3) {
+//   console.log(question.get(true));
+// } else {
+//   console.log(question.get(false));
+// }
+
+// answer === question.get("correct")
+//   ? console.log(question.get(true))
+//   : console.log(question.get(false));
+
+console.log(question.get(answer === question.get("correct")));
+
 
 /*
 /////////////////////////////////////
