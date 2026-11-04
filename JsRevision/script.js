@@ -665,6 +665,7 @@ const rest = new Map();
 
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze, Italy');
+
 console.log(rest.set(2, 'Lisbon, Portugal'));
 
 rest
@@ -686,11 +687,15 @@ rest.delete(2);
 console.log(rest);
 console.log(rest.size);
 
-rest.set([1, 2], "Test");
+const arr = [1, 2];
+rest.set(arr, "Test");
+rest.set(document.querySelector("h1"), "Heading");
 console.log(rest);
 console.log(rest.size);
 
-rest.get([1, 2]);
+console.log(rest.get(arr));
+
+
 
 /*
 //////////////////////////////////
