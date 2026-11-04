@@ -660,6 +660,32 @@ const restaurant = {
     console.log(others);
   },
 };
+
+const question = new Map([
+  ['question', 'Whst is the best programming language in the world'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again!'],
+]);
+console.log(question);
+
+//Convert Object to map
+console.log(Object.entries(openingHours));
+
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+for (const [key, value] of question){
+  if(typeof key === 'number'){
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+
+/*
+/////////////////////////////////////
 //maps
 const rest = new Map();
 
@@ -696,8 +722,6 @@ console.log(rest.size);
 console.log(rest.get(arr));
 
 
-
-/*
 //////////////////////////////////
 // New Operations to make Sets Useful
 
