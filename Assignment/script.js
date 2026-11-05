@@ -454,10 +454,23 @@ console.log(entries2);
 
 const allKeywords = [];
 
+// for (const book of books) {
+//   for (const keyword of book.keywords) {
+//     allKeywords.push(keyword);
+//   }
+// }
+
+// by using destructuring
+
 for (const book of books) {
-  for (const keyword of book.keywords) {
-    allKeywords.push(keyword);
-  }
+  allKeywords.push(...book.keywords);
 }
 
 console.log(allKeywords);
+
+// 12.2
+
+const uniqueKeywords = new Set(allKeywords);
+console.log(uniqueKeywords);
+
+//
