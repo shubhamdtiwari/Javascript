@@ -473,4 +473,17 @@ console.log(allKeywords);
 const uniqueKeywords = new Set(allKeywords);
 console.log(uniqueKeywords);
 
-//
+// 12.3
+
+uniqueKeywords.add("coding");
+uniqueKeywords.add("science");
+
+// 12.4
+
+uniqueKeywords.delete("business");
+
+//12.5
+
+const uniqueKeywordsArr = [...uniqueKeywords];
+console.log(uniqueKeywordsArr);
+
