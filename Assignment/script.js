@@ -495,8 +495,8 @@ console.log(uniqueKeywords);
 // Maps: Fundamentals
 // 13.1
 const bookMap = new Map([
-  ['title', 'Clean Code'], 
-  // ['author', 'Robert C. Martin']
+  ["title", "Clean Code"],
+  ["author", "Robert C. Martin"],
 ]);
 console.log(bookMap);
 
@@ -513,3 +513,14 @@ console.log(bookMap.size);
 
 // 13.5
 bookMap.has('author') && console.log('The author of book is known');
+
+// Maps: Iteration
+// 14.1
+const firstBookMap = new Map(Object.entries(books[0]));
+console.log(firstBookMap);
+
+// 14.2
+
+for(const [key, value] of firstBookMap){
+  typeof value === 'number' && console.log(key);
+}
