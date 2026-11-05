@@ -448,7 +448,7 @@ console.log(entries);
 const entries2 = Object.entries(books[0].thirdParty.goodreads);
 
 console.log(entries2);
-*/
+
 // Sets
 // 12.1
 
@@ -487,3 +487,29 @@ uniqueKeywords.delete("business");
 const uniqueKeywordsArr = [...uniqueKeywords];
 console.log(uniqueKeywordsArr);
 
+// 12.6
+
+uniqueKeywords.clear();
+console.log(uniqueKeywords);
+*/
+// Maps: Fundamentals
+// 13.1
+const bookMap = new Map([
+  ['title', 'Clean Code'], 
+  // ['author', 'Robert C. Martin']
+]);
+console.log(bookMap);
+
+// 13.2
+bookMap.set('pages',464);
+console.log(bookMap);
+
+// 13.3
+
+console.log(`${bookMap.get('title')} by ${bookMap.get('author')}`);
+
+// 13.4
+console.log(bookMap.size);
+
+// 13.5
+bookMap.has('author') && console.log('The author of book is known');
