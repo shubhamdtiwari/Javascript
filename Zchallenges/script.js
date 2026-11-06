@@ -130,24 +130,21 @@ const gameEvents = new Map([
 ]);
 
 // 1.
-const events = new Set();
-for(const [key, value] of gameEvents){
-    events.add(value);const gameEvents = new Map([
-[17, '⚽ GOAL'],
-[36, '🔁 Substitution'],
-[47, '⚽ GOAL'],
-[61, '🔁 Substitution'],
-[64, '🔶 Yellow card'],
-[69, '🔴 Red card'],
-[70, '🔁 Substitution'],
-[72, '🔁 Substitution'],
-[76, '⚽ GOAL'],
-[80, '⚽ GOAL'],
-[92, '🔶 Yellow card'],
-]);
+const eventsSet = new Set();
+for (const [key, value] of gameEvents) {
+  eventsSet.add(value);
 }
+console.log(eventsSet);
+
+const events = [...eventsSet];
 console.log(events);
 
 // 2.
 gameEvents.delete(64);
 console.log(gameEvents);
+
+// 3.
+// const numOfevents = gameEvents.size;
+// console.log(numOfevents);
+
+console.log(`An event happend, on average, every ${90 / gameEvents.size} minutes`);
