@@ -674,6 +674,29 @@ console.log(airline.length);
 console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
 
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-3));
+console.log(airline.slice(1, -3));
+
+const cheakMiddleSeat = function (seat) {
+  // B and E are middle
+
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') console.log('You got the middle seat');
+  else console.log('You got lucky');
+};
+
+cheakMiddleSeat('11B');
+cheakMiddleSeat('14C');
+cheakMiddleSeat('1E');
+
+
+
 /*
 ////////////////////////////////
 // MAps
