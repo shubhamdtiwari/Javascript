@@ -660,7 +660,23 @@ const restaurant = {
     console.log(others);
   },
 };
+// working with string
 
+const airline = 'TAP Air Portugal';
+const plane = 'A232';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log('A454e'[4]);
+
+console.log(airline.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+
+/*
+////////////////////////////////
+// MAps
 const question = new Map([
   ['question', 'Whst is the best programming language in the world'],
   [1, 'C'],
@@ -709,7 +725,7 @@ console.log([...question.values()]);
 
 
 
-/*
+
 /////////////////////////////////////
 //maps
 const rest = new Map();
