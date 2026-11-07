@@ -535,8 +535,23 @@ console.log(books[0].ISBN[8]);
 
 // 15.2
 
-const quote = 'A computer once beat me at chess, but it was no match for me at kick boxing';
+const quote =
+  "A computer once beat me at chess, but it was no match for me at kick boxing";
 
-console.log(quote.indexOf('chess'));
-console.log(quote.slice(quote.lastIndexOf(' ') + 1));
+// 15.2
+console.log(quote.indexOf("chess"));
 
+// 15.3
+console.log(quote.slice(quote.lastIndexOf(" ") + 1));
+
+// 15.4
+
+function isContributor(author) {
+  if (author.slice(author.lastIndexOf(" ") + 1) === "(Contributor)") {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
+isContributor("Julie Sussman (Contributor)");
+isContributor("Robert Sedgewick");
