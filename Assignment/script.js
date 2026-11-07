@@ -491,7 +491,7 @@ console.log(uniqueKeywordsArr);
 
 uniqueKeywords.clear();
 console.log(uniqueKeywords);
-*/
+
 // Maps: Fundamentals
 // 13.1
 const bookMap = new Map([
@@ -524,3 +524,11 @@ console.log(firstBookMap);
 for(const [key, value] of firstBookMap){
   typeof value === 'number' && console.log(key);
 }
+*/
+// Working with Strings - Part 1
+// 15.1
+
+console.log(books[0].ISBN[6]);
+console.log(books[0].ISBN[4]);
+console.log(books[0].ISBN[9]);
+console.log(books[0].ISBN[8]);

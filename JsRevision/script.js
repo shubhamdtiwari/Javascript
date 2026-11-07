@@ -695,6 +695,21 @@ cheakMiddleSeat('11B');
 cheakMiddleSeat('14C');
 cheakMiddleSeat('1E');
 
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalization in name
+const passenger = 'jOnAS';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+console.log(passengerCorrect);
+
+// cheak email
+const email = 'hello@shubh.io';
+const loginEmail = '   Hello@Shubh.Io \n';
+
 
 
 /*
