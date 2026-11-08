@@ -675,13 +675,32 @@ const capitalName = function(name){
   const names = name.split(' ');
   const namesUpper = [];
 
-  for(const word of names){
-    namesUpper.push(word[0].toUpperCase() + word.slice(1));
+  for (const word of names) {
+    // namesUpper.push(word[0].toUpperCase() + word.slice(1));
+
+    namesUpper.push(word.replace(word[0], word[0].toUpperCase()));
   }
   console.log(namesUpper.join(' '));
 }
 
 capitalName('jessica ann smith davis');
+
+// padding
+
+const message = 'Go to gate 23';
+console.log(message.padStart(20, '*').padEnd(30, '*'));
+
+
+const maskedCard = function(num){
+  const str = num + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length,'*');
+};
+
+console.log(maskedCard(5676474753568795));
+console.log(maskedCard(458987564));
+
+
 
 /*
 ////////////////////////////////////////
