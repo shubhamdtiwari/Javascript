@@ -660,7 +660,31 @@ const restaurant = {
     console.log(others);
   },
 };
+// Working with string part :- 3
 
+// split and join
+console.log('a+very+nice+string'.split('+'));
+console.log('Shubham Tiwari'.split(' '));
+
+const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+const capitalName = function(name){
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for(const word of names){
+    namesUpper.push(word[0].toUpperCase() + word.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+}
+
+capitalName('jessica ann smith davis');
+
+/*
+////////////////////////////////////////
 // Working with string part 2
 // Fix capitalization in name
 const passenger = 'jOnAS';
@@ -711,7 +735,7 @@ cheakBaggage('I have a laptop, some food and a pocket Knife');
 cheakBaggage('Socks and camera');
 cheakBaggage('Got some snacks and a gun for protection');
 
-/*
+
 ////////////////////////////////////
 // working with string part - 1
 
