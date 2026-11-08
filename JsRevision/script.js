@@ -660,10 +660,63 @@ const restaurant = {
     console.log(others);
   },
 };
-// working with string
+
+// Working with string part 2
+// Fix capitalization in name
+const passenger = 'jOnAS';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+console.log(passengerCorrect);
+
+// cheak email
+const email = 'hello@shubh.io';
+const loginEmail = '   Hello@Shubh.Io \n';
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = loginEmail.trim();
+console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+// replacing
+const priceGB = '288,97£';
+const priceUS = priceGB.replace('£', '$');
+console.log(priceUS);
+
+const announcement =
+  'All passengers come to bording door 23. Boarding door 23!';
+
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+
+// Booleans
+const plane = 'A32neo';
+console.log(plane.includes('A320'));
+
+// practise exercise
+
+const cheakBaggage = function(items){
+  const baggage = items.toLowerCase();
+
+  if(baggage.includes('knife') || baggage.includes('gun')){
+    console.log('You are not allowed on board');
+  }else{
+    console.log('Welcome aboard!');
+  }
+};
+
+cheakBaggage('I have a laptop, some food and a pocket Knife');
+cheakBaggage('Socks and camera');
+cheakBaggage('Got some snacks and a gun for protection');
+
+/*
+////////////////////////////////////
+// working with string part - 1
 
 const airline = 'TAP Air Portugal';
-const plane = 'A232';
+// const plane = 'A232';
 
 console.log(plane[0]);
 console.log(plane[1]);
@@ -698,31 +751,6 @@ cheakMiddleSeat('1E');
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
 
-// Fix capitalization in name
-const passenger = 'jOnAS';
-const passengerLower = passenger.toLowerCase();
-const passengerCorrect =
-  passengerLower[0].toUpperCase() + passengerLower.slice(1);
-
-console.log(passengerCorrect);
-
-// cheak email
-const email = 'hello@shubh.io';
-const loginEmail = '   Hello@Shubh.Io \n';
-const lowerEmail = loginEmail.toLowerCase();
-const trimmedEmail = loginEmail.trim();
-console.log(trimmedEmail);
-
-const normalizedEmail = loginEmail.toLowerCase().trim();
-console.log(normalizedEmail);
-
-// replacing
-const priceGB = '288,97£';
-const priceUS = priceGB.replace('£', '$');
-console.log(priceUS);
-
-
-/*
 ////////////////////////////////
 // MAps
 const question = new Map([
