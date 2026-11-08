@@ -581,3 +581,23 @@ function normalizeAuthorName(author) {
 }
 normalizeAuthorName("  JuliE sussMan (Contributor)");
 normalizeAuthorName("Julie Sussman (Contributor)");
+
+// 16.2
+
+function logBookTheme(title){
+  title = title.toLowerCase();
+
+  if(title.startsWith('computer')){
+    console.log("This book is about computers");
+  }else if(title.includes('algorithms') && title.includes('structures')){
+    console.log("This book is about algorithms and data structures" );
+  }else if(title.endsWith('system') || title.endsWith('systems') && !title.includes('operating')){
+    console.log("This book is about some systems, but definitely not about operating systems");
+  }else{
+    console.log('Other Books');
+  }
+}
+
+for(const book of books){
+  logBookTheme(book.title);
+}
