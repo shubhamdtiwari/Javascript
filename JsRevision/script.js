@@ -709,7 +709,17 @@ console.log(passengerCorrect);
 // cheak email
 const email = 'hello@shubh.io';
 const loginEmail = '   Hello@Shubh.Io \n';
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = loginEmail.trim();
+console.log(trimmedEmail);
 
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+// replacing
+const priceGB = '288,97£';
+const priceUS = priceGB.replace('£', '$');
+console.log(priceUS);
 
 
 /*

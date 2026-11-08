@@ -555,3 +555,6 @@ function isContributor(author) {
 }
 isContributor("Julie Sussman (Contributor)");
 isContributor("Robert Sedgewick");
+
+// Working with Strings - Part 2
+// 16.1
