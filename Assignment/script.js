@@ -524,7 +524,7 @@ console.log(firstBookMap);
 for(const [key, value] of firstBookMap){
   typeof value === 'number' && console.log(key);
 }
-*/
+
 // Working with Strings - Part 1
 // 15.1
 
@@ -555,6 +555,29 @@ function isContributor(author) {
 }
 isContributor("Julie Sussman (Contributor)");
 isContributor("Robert Sedgewick");
-
+*/
 // Working with Strings - Part 2
 // 16.1
+
+function normalizeAuthorName(author) {
+  author = author.trim();
+  const firstName = author.slice(0, author.indexOf(" "));
+
+  let lastName = " ";
+
+  if (author.indexOf(" ") === author.lastIndexOf(" ")) {
+    lastName = author.slice(author.indexOf(" ") + 1, author.length);
+  } else {
+    lastName = author.slice(author.indexOf(" ") + 1, author.lastIndexOf(" "));
+  }
+
+  const capitalFirstName =
+    firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
+
+  const capitalLastName =
+    lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+
+  console.log(capitalFirstName + " " + capitalLastName);
+}
+normalizeAuthorName("  JuliE sussMan (Contributor)");
+normalizeAuthorName("Julie Sussman (Contributor)");
