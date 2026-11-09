@@ -601,7 +601,7 @@ function logBookTheme(title){
 for(const book of books){
   logBookTheme(book.title);
 }
-*/
+
 
 // Working with Strings - Part 3
 //17.1
@@ -616,3 +616,34 @@ const logBookCategories = function(str){
 
 const bookCategories = 'science;computing;computer science;algorithms;business;operating systems;networking;electronics';
 logBookCategories(bookCategories);
+*/
+// 17.2
+const getKeywordsAsString = function (books) {
+  const keywords = [];
+  for (const book of books) {
+    keywords.push(...book.keywords);
+  }
+  const uniqueKeywords = [...new Set(keywords)];
+
+  return uniqueKeywords.join(";");
+};
+
+console.log(getKeywordsAsString(books));
+
+// 17.3
+
+const logBookChapters = function (bookchap) {
+  for (const [el, num] of bookchap) {
+    console.log(el.padEnd(20, '_') + ' '+ num);
+  }
+};
+
+const bookChapters = [
+  ["The Basics", 14],
+  ["Sorting", 254],
+  ["Searching", 372],
+  ["Graphs", 526],
+  ["Strings", 706],
+];
+
+logBookChapters(bookChapters);
