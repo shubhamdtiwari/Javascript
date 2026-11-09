@@ -555,7 +555,7 @@ function isContributor(author) {
 }
 isContributor("Julie Sussman (Contributor)");
 isContributor("Robert Sedgewick");
-*/
+
 // Working with Strings - Part 2
 // 16.1
 
@@ -601,3 +601,18 @@ function logBookTheme(title){
 for(const book of books){
   logBookTheme(book.title);
 }
+*/
+
+// Working with Strings - Part 3
+//17.1
+
+const logBookCategories = function(str){
+  str = str.split(';');
+
+  for(const s of str){
+    console.log(s);
+  }
+}
+
+const bookCategories = 'science;computing;computer science;algorithms;business;operating systems;networking;electronics';
+logBookCategories(bookCategories);
