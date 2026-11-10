@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 // Assignment
 // JavaScript Fundamentals - part 1
 // var, let, const
@@ -1206,20 +1206,24 @@ console.log(rest2);
 
 */
 
-
 ////////////////////////////////////////
 
 // More About function
 
 const booking = [];
 
-const createBooking = function(flightNum, numPassemgers, price){
-
+const createBooking = function (
+  flightNum,
+  numPassemgers = 1,
+  price = 190 * numPassemgers,
+) {
   const booking = {
     flightNum,
     numPassemgers,
-    price
-  }
+    price,
+  };
   console.log(booking);
   booking.push(booking);
-}
+};
+
+createBooking('LH123');
