@@ -112,7 +112,7 @@ const scorers = {
 };
 
 console.log(game.scorers);
-*/
+
 // Challenge #3
 
 const gameEvents = new Map([
@@ -154,3 +154,9 @@ console.log(`An event happend, on average, every ${90 / gameEvents.size} minutes
 for(const [key, value] of gameEvents){
   key < 45 ? console.log(`[FIRST HALF]${key}: ${value}`) : console.log(`[SECOND HALF]${key}: ${value}`);
 }
+
+*/
+// Challenge #4
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));

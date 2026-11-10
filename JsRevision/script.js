@@ -616,7 +616,7 @@ jessicaClone.family.push('Alena');
 
 console.log('Original:' , jessica1);
 console.log('clone:', jessicaClone);
-*/
+
 const weekDays = ['mon', 'tues', 'wed', 'thu', 'fri', 'sat'];
 const openingHours = {
     [weekDays[2]]: {
@@ -1205,3 +1205,21 @@ console.log(rest1);
 console.log(rest2);
 
 */
+
+
+////////////////////////////////////////
+
+// More About function
+
+const booking = [];
+
+const createBooking = function(flightNum, numPassemgers, price){
+
+  const booking = {
+    flightNum,
+    numPassemgers,
+    price
+  }
+  console.log(booking);
+  booking.push(booking);
+}
