@@ -1210,7 +1210,7 @@ console.log(rest2);
 
 // More About function
 
-const booking = [];
+const bookings = [];
 
 const createBooking = function (
   flightNum,
@@ -1223,7 +1223,11 @@ const createBooking = function (
     price,
   };
   console.log(booking);
-  booking.push(booking);
+  bookings.push(booking);
 };
 
 createBooking('LH123');
+createBooking('LH123', 2, 880);
+createBooking('LH123', 2);
+createBooking('LH123', 5);
+

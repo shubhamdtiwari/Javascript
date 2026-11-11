@@ -160,3 +160,20 @@ for(const [key, value] of gameEvents){
 
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
+
+document.querySelector("button").addEventListener("click", function () {
+  const textarea = document.querySelector("textarea");
+
+  const msg = textarea.value.split("\n");
+
+  for (let [i, e] of msg.entries()) {
+    e = e.trim().toLowerCase();
+    const camelCase =
+      e[0].toUpperCase() +
+      e.slice(1, e.indexOf("_")) +
+      e[e.indexOf("_") + 1].toUpperCase() +
+      e.slice(e.indexOf("_") + 2);
+
+    console.log(`${camelCase.padEnd(20)}${"✅".repeat(i + 1)}`);
+  }
+});
