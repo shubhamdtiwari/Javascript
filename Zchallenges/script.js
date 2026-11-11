@@ -166,13 +166,23 @@ document.querySelector("button").addEventListener("click", function () {
 
   const msg = textarea.value.split("\n");
 
-  for (let [i, e] of msg.entries()) {
-    e = e.trim().toLowerCase();
-    const camelCase =
-      e[0].toUpperCase() +
-      e.slice(1, e.indexOf("_")) +
-      e[e.indexOf("_") + 1].toUpperCase() +
-      e.slice(e.indexOf("_") + 2);
+  // for (let [i, e] of msg.entries()) {
+  //   e = e.trim().toLowerCase();
+  //   const camelCase =
+  //     e[0].toLowerCase() +
+  //     e.slice(1, e.indexOf("_")) +
+  //     e[e.indexOf("_") + 1].toUpperCase() +
+  //     e.slice(e.indexOf("_") + 2);
+
+  //   console.log(`${camelCase.padEnd(20)}${"✅".repeat(i + 1)}`);
+  // }
+
+  // other method
+
+  for(const [i,row] of msg.entries()){
+    const [first,second] = row.toLowerCase().trim().split('_');
+
+    const camelCase = `${first}${second.replace(second[0], second[0].toUpperCase())}`;
 
     console.log(`${camelCase.padEnd(20)}${"✅".repeat(i + 1)}`);
   }
