@@ -1204,11 +1204,12 @@ rest1.owner &&= '<ANYONMUS>'
 console.log(rest1);
 console.log(rest2);
 
-*/
+
 
 ////////////////////////////////////////
 
 // More About function
+// Default parameters
 
 const bookings = [];
 
@@ -1230,4 +1231,25 @@ createBooking('LH123');
 createBooking('LH123', 2, 880);
 createBooking('LH123', 2);
 createBooking('LH123', 5);
+*/
 
+const flight = 'LH121';
+const jonas = {
+  name: 'Jonas Schmedtmann',
+  passport: 44564642343,
+};
+
+const cheakIn = function (flightNum, passenger) {
+  flightNum = 'LH999';
+  passenger.name = 'Mr. ' + passenger.name;
+
+  if (passenger.passport === 44564642343) {
+    alert('Cheaked In!');
+  } else {
+    alert('Wrong passport');
+  }
+};
+
+cheakIn(flight, jonas);
+console.log(flight);
+console.log(jonas);
