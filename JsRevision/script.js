@@ -1231,7 +1231,7 @@ createBooking('LH123');
 createBooking('LH123', 2, 880);
 createBooking('LH123', 2);
 createBooking('LH123', 5);
-*/
+
 
 const flight = 'LH121';
 const jonas = {
@@ -1244,7 +1244,7 @@ const cheakIn = function (flightNum, passenger) {
   passenger.name = 'Mr. ' + passenger.name;
 
   if (passenger.passport === 44564642343) {
-    alert('Cheaked In!');
+    // alert('Cheaked In!');
   } else {
     alert('Wrong passport');
   }
@@ -1253,3 +1253,37 @@ const cheakIn = function (flightNum, passenger) {
 cheakIn(flight, jonas);
 console.log(flight);
 console.log(jonas);
+
+
+// Is the same as doing
+
+const newPassport = function(person){
+  person.passport = Math.trunc(Math.random() * 10000000000);
+}
+
+newPassport(jonas);
+cheakIn(flight, jonas)
+*/
+////////////////////////////////
+
+const oneWord = function(str){
+  return str.replace(/ /g,'').toLowerCase();
+};
+
+const upperFirstWord = function(str){
+  const [first, ...other] = str.split(' ');
+  return [first.toUpperCase(), ...other].join(' ');
+};
+
+// Higher order function
+
+const transformer = function(str, fn){
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+  console.log(`transformed by: ${fn.name}`);
+}
+
+transformer('JavaScript is the best!', upperFirstWord);
+
+transformer('JavaScript is the best!', oneWord);
+
