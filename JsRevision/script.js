@@ -1263,7 +1263,7 @@ const newPassport = function(person){
 
 newPassport(jonas);
 cheakIn(flight, jonas)
-*/
+
 ////////////////////////////////
 
 const oneWord = function(str){
@@ -1287,3 +1287,29 @@ transformer('JavaScript is the best!', upperFirstWord);
 
 transformer('JavaScript is the best!', oneWord);
 
+// JS use callbacks all the time
+const high5 = function() {
+  console.log('👋');
+}
+
+document.body.addEventListener('click', high5);
+
+['shubh', 'ram', 'sam'].forEach(high5)
+*/
+
+///////////////////
+// Functions returning function
+
+const greet = function(greeting) {
+  return function(name) {
+    console.log(`${greeting} ${name}`);
+  }
+}
+
+const greeterHey = greet('Hey');
+greeterHey('jonas');
+greeterHey('Shubh');
+
+const greetArrow = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArrow('Hello')('Shubham');
