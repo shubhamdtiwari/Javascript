@@ -1366,3 +1366,29 @@ book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData);
+
+// Bind method
+
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(airIndia);
+const bookLX = book.bind(swiss);
+
+bookEW(23, 'Sharah');
+
+const bookEW23 = book.bind(airIndia, 23);
+bookEW23('Shubham');
+bookEW23('Martha Cooper');
+
+// with event listner
+
+airIndia.planes = 300;
+airIndia.buyNewPlane = function(){
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', airIndia.buyNewPlane.bind(airIndia));
