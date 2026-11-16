@@ -1313,7 +1313,7 @@ greeterHey('Shubh');
 const greetArrow = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArrow('Hello')('Shubham');
-*/
+
 
 ///////////////////////////////////////
 // the call and apply method
@@ -1415,3 +1415,29 @@ console.log(addTaxRate(0.23)(100));
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT2(23));
+*/
+
+// immediately invoked function expression
+
+(function () {
+  console.log('This will never run again');
+})();
+
+(() => console.log('This will NOT run again'))();
+
+// CLOUSERS
+
+const secureBooking = function () {
+  let passenger = 0;
+
+  return function () {
+    passenger++;
+    console.log(`${passenger} ${passenger === 1 ? 'passenger' : 'passengers'}`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
