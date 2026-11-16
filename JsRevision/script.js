@@ -1415,7 +1415,7 @@ console.log(addTaxRate(0.23)(100));
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT2(23));
-*/
+
 
 // immediately invoked function expression
 
@@ -1441,3 +1441,47 @@ const booker = secureBooking();
 booker();
 booker();
 booker();
+
+*/
+
+// more of closure
+
+// Example 1
+let f;
+
+const g = function(){
+  const a = 10;
+
+  f = function(){
+    console.log(a * 10);
+  };
+};
+
+const h = function(){
+  const b = 777;
+  f = function(){
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+
+// Re-assigning f function
+h();
+f();
+
+// example 2
+
+const boardPassenger = function(n, wait){
+  const perGroup = n / 3;
+
+  setTimeout(function(){
+    console.log(`We are now boarding ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+}
+
+boardPassenger(180, 3)
