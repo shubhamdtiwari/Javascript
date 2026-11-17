@@ -1442,8 +1442,6 @@ booker();
 booker();
 booker();
 
-*/
-
 // more of closure
 
 // Example 1
@@ -1484,4 +1482,38 @@ const boardPassenger = function(n, wait){
   console.log(`Will start boarding in ${wait} seconds`);
 }
 
-boardPassenger(180, 3)
+boardPassenger(180, 3);
+
+*/
+/////////////////////////////
+// Arrays methods
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+// SLICE
+
+console.log(arr.slice(3));
+console.log(arr.slice(2,4));
+console.log(arr.slice(-2));
+console.log(arr.slice(-1));
+
+// Splice
+
+arr.splice(-1);
+console.log(arr);
+arr.splice(1,2);
+console.log(arr);
+
+// REVERSE
+arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j','i','h','g', 'j'];
+console.log(arr2.reverse());
+console.log(arr2);
+
+// CONCAT
+const letters = arr.concat(arr2);
+console.log(letters);
+console.log([...arr, ...arr2]);
+
+// JOIN
+console.log((letters.join('-')));
