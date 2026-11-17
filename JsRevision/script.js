@@ -1484,7 +1484,7 @@ const boardPassenger = function(n, wait){
 
 boardPassenger(180, 3);
 
-*/
+
 /////////////////////////////
 // Arrays methods
 
@@ -1517,3 +1517,16 @@ console.log([...arr, ...arr2]);
 
 // JOIN
 console.log((letters.join('-')));
+
+*/
+
+// AT method
+
+const arr = [1, 6,68];
+console.log(arr[0]);
+console.log(arr.at(0));
+
+//getting last elment;
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
+console.log(arr.at(-1));
