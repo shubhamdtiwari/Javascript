@@ -1518,7 +1518,7 @@ console.log([...arr, ...arr2]);
 // JOIN
 console.log((letters.join('-')));
 
-*/
+
 
 // AT method
 
@@ -1530,3 +1530,26 @@ console.log(arr.at(0));
 console.log(arr[arr.length - 1]);
 console.log(arr.slice(-1)[0]);
 console.log(arr.at(-1));
+
+*/
+
+const movements = [234, 644, -434, 780, -987, 345, 100];
+
+// for(const movement of movements){
+for(const [i, movement] of movements.entries())
+  if(movement > 0){
+    console.log(`Movement ${i}: You Deposited ${movement}`);
+  }else{
+    console.log(`Movement ${i}: You Withdrew ${Math.abs(movement)}`);
+  }
+}
+
+console.log('---FOREACH---');
+
+movements.forEach(function(movement, i , arr){
+   if(movement > 0){
+    console.log(`Movement ${i}: You Deposited ${movement}`);
+  }else{
+    console.log(`Movement ${i}: You Withdrew ${Math.abs(movement)}`);
+  }
+});
