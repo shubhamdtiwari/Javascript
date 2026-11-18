@@ -1536,10 +1536,10 @@ console.log(arr.at(-1));
 const movements = [234, 644, -434, 780, -987, 345, 100];
 
 // for(const movement of movements){
-for(const [i, movement] of movements.entries())
-  if(movement > 0){
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
     console.log(`Movement ${i}: You Deposited ${movement}`);
-  }else{
+  } else {
     console.log(`Movement ${i}: You Withdrew ${Math.abs(movement)}`);
   }
 }
@@ -1553,3 +1553,23 @@ movements.forEach(function(movement, i , arr){
     console.log(`Movement ${i}: You Withdrew ${Math.abs(movement)}`);
   }
 });
+
+// for maps
+
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach(function(value, key, map){
+  console.log(`${key}: ${value}`);
+});
+
+// sets
+
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+console.log(currenciesUnique);
+currenciesUnique.forEach(function(value, key, set){
+  console.log(`${key}: ${value}`);
+})
