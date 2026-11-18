@@ -1581,8 +1581,23 @@ const movements = [234, 644, -434, 780, -987, 345, 100];
 
 const eurToUsd = 1.1;
 
-const movementsUSD = movements.map(function(mov){
-  return mov * eurToUsd;
-});
+// const movementsUSD = movements.map(function(mov){
+//   return mov * eurToUsd;
+// });
+const movementsUSD = movements.map(mov => mov * eurToUsd );
 console.log(movements);
 console.log(movementsUSD);
+
+// doing same as above by for-of method
+
+const movementsUSDfor = [];
+for(const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
+const movementsDescriptions = movements.map((mov, i, arr) => {
+  if(mov > 0){
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
+  }else{
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+  }
+})
