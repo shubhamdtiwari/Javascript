@@ -1531,7 +1531,7 @@ console.log(arr[arr.length - 1]);
 console.log(arr.slice(-1)[0]);
 console.log(arr.at(-1));
 
-*/
+
 
 const movements = [234, 644, -434, 780, -987, 345, 100];
 
@@ -1573,3 +1573,16 @@ console.log(currenciesUnique);
 currenciesUnique.forEach(function(value, key, set){
   console.log(`${key}: ${value}`);
 })
+
+*/
+
+// map method
+const movements = [234, 644, -434, 780, -987, 345, 100];
+
+const eurToUsd = 1.1;
+
+const movementsUSD = movements.map(function(mov){
+  return mov * eurToUsd;
+});
+console.log(movements);
+console.log(movementsUSD);
