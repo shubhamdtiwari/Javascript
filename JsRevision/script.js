@@ -1605,7 +1605,7 @@ const movementsDescriptions = movements.map((mov, i) => {
 
 console.log(movementsDescriptions);
 
-*/
+
 
 //filter methods
 
@@ -1625,3 +1625,16 @@ console.log(depositsFor);
 
 const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals);
+
+*/
+
+// reduce method
+
+const movements = [234, 644, -434, 780, -987, 345, 100];
+
+const balance = movements.reduce(function(acc, cur,i,arr){
+  console.log(`Iteration ${i} : ${acc}`);
+  return  acc + cur;
+}, 0);
+
+console.log(balance);
