@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 const game = {
   team1: "Bayern Munich",
   team2: "Borrussia Dortmund",
@@ -155,7 +155,7 @@ for(const [key, value] of gameEvents){
   key < 45 ? console.log(`[FIRST HALF]${key}: ${value}`) : console.log(`[SECOND HALF]${key}: ${value}`);
 }
 
-*/
+
 // Challenge #4
 
 document.body.append(document.createElement('textarea'));
@@ -187,3 +187,45 @@ document.querySelector("button").addEventListener("click", function () {
     console.log(`${camelCase.padEnd(20)}${"✅".repeat(i + 1)}`);
   }
 });
+
+*/
+
+// A Closer Look at Functions
+
+// Coding Challenge #1
+
+const poll = {
+question: "What is your favourite programming language?",
+options: ["0: JavaScript", "1: Python", "2: Rust", "3:C++"],
+answers: new Array(4).fill(0),
+registerNewAnswer(){
+  const ans = Number(prompt(`${this.question} \n ${this.options.join('\n')} \n (Write Option Number)`));
+
+  // registering ans
+  ans < this.options.length && typeof(ans) === 'number' && this.answers[ans]++;
+
+  this.displayResult();
+  this.displayResult('string');
+
+},
+displayResult(type = 'array'){
+  if(type === 'array'){
+    console.log(this.answers);
+  }else if(type === 'string'){
+    console.log(`Poll result are ${this.answers.join(', ')}`);
+  }
+}
+};
+
+document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll));
+
+
+poll.displayResult.call({answers: [5, 2, 3]}, 'string');
+
+poll.displayResult.bind({answers: [5, 2, 3]})('string');
+
+const ans = {
+  answers: [2,5,5,7,4],
+}
+
+poll.displayResult.bind(ans)('string');
