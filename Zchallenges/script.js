@@ -188,7 +188,7 @@ document.querySelector("button").addEventListener("click", function () {
   }
 });
 
-*/
+
 
 // A Closer Look at Functions
 
@@ -229,3 +229,16 @@ const ans = {
 }
 
 poll.displayResult.bind(ans)('string');
+
+*/
+
+// challenge #2
+
+(function () {
+const header = document.querySelector('h1');
+header.style.color = 'red';
+
+document.querySelector('body').addEventListener('click', function(){
+  header.style.color = 'blue';
+})
+})();
