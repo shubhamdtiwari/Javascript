@@ -230,7 +230,7 @@ const ans = {
 
 poll.displayResult.bind(ans)('string');
 
-*/
+
 
 // challenge #2
 
@@ -242,3 +242,18 @@ document.querySelector('body').addEventListener('click', function(){
   header.style.color = 'blue';
 })
 })();
+
+*/
+//////////////////////////
+// Working With Arrays
+// Challenge #1
+
+function cheackDogs(dogsJulia, dogsKate){
+  const finalArr = dogsJulia.slice(1, -2).concat(dogsKate);
+
+  finalArr.forEach((age, i )=> {
+    console.log(`Dog number ${i + 1} is ${age >= 3 ? `an adult, and is ${age} years old` : 'still a puppy'}`);
+  });
+};
+
+cheackDogs([3, 5, 2, 12, 7],[4, 1, 15, 8, 3]);
