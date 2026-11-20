@@ -243,7 +243,7 @@ document.querySelector('body').addEventListener('click', function(){
 })
 })();
 
-*/
+
 //////////////////////////
 // Working With Arrays
 // Challenge #1
@@ -257,3 +257,20 @@ function cheackDogs(dogsJulia, dogsKate){
 };
 
 cheackDogs([3, 5, 2, 12, 7],[4, 1, 15, 8, 3]);
+cheackDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+
+*/
+// Challenge #2
+function calcAverageHumanAge(ages) {
+  const humanAge = 
+  ages
+    .map(age => 
+      age <= 2 ? 2 * age : 16 + age * 4)
+    .filter(age => age > 18);
+
+  const avgAge = humanAge.reduce((acc, cur,i) => acc + cur ,0);
+
+  return avgAge / humanAge.length;
+}
+
+console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
