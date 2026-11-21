@@ -1626,7 +1626,7 @@ console.log(depositsFor);
 const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals);
 
-*/
+
 
 // reduce method
 
@@ -1648,3 +1648,15 @@ const maxValue = movements.reduce(function(acc, cur){
 }, movements[0]);
 
 console.log(maxValue);
+
+*/
+
+const movements = [234, 644, -434, 780, -987, 345, 100];
+const eurToUsd = 1.1;
+
+const totalDepositeUSD = movements
+  .filter((mov) => mov > 0)
+  .map((mov) => mov * eurToUsd)
+  .reduce((acc, cur) => acc + cur, 0);
+
+console.log(totalDepositeUSD);

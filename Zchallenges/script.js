@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /*
 const game = {
   team1: "Bayern Munich",
@@ -262,13 +262,11 @@ cheackDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 */
 // Challenge #2
 function calcAverageHumanAge(ages) {
-  const humanAge = 
-  ages
-    .map(age => 
-      age <= 2 ? 2 * age : 16 + age * 4)
-    .filter(age => age > 18);
+  const humanAge = ages
+    .map((age) => (age <= 2 ? 2 * age : 16 + age * 4))
+    .filter((age) => age > 18);
 
-  const avgAge = humanAge.reduce((acc, cur,i) => acc + cur ,0);
+  const avgAge = humanAge.reduce((acc, cur, i) => acc + cur, 0);
 
   return avgAge / humanAge.length;
 }
