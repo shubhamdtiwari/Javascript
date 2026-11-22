@@ -1682,3 +1682,16 @@ console.log(lastWithdrawalIndex);
 const largeMov = movements.findLastIndex(mov => Math.abs(mov > 2000));
 
 console.log(`Your last large movement was ${largeMov} movements ago`);
+
+
+// Equality 
+console.log(movements.includes(-100));
+
+// some and every method
+// condition
+const anyDeposits = movements.some(mov => mov > 0);
+console.log(anyDeposits);
+
+// every
+
+console.log(movements.every(mov => mov > 0));
