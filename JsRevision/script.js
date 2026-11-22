@@ -1661,7 +1661,7 @@ const totalDepositeUSD = movements
 
 console.log(totalDepositeUSD);
 
-*/
+
 const movements = [234, 644, -434, 7890, -987, 345, 100];
 
 const firstWithdrawal = movements.find((mov) => mov < 0);
@@ -1695,3 +1695,9 @@ console.log(anyDeposits);
 // every
 
 console.log(movements.every(mov => mov > 0));
+
+*/
+
+// flat and flatmap
+const arr = [[1, 2,3 ], [4,5,6],7,8];
+console.log(arr.flat());
