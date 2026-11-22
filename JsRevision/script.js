@@ -1704,3 +1704,32 @@ console.log(arr.flat());
 
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat(2));
+
+// sorting in arrays
+
+const owner = ['Shubham', 'Vikash', 'Bala', 'Adam'];
+console.log(owner.sort());
+
+const movements = [234, 644, -434, 7890, -987, 345, 100];
+
+// console.log(movements.sort());
+
+// return < 0, A,B (keep order)
+// return > 0, A, B (switch order)
+
+//Ascending
+// movements.sort((a, b) => {
+//   if(a > b) return 1;
+//   if(b > a) return -1;
+// });
+movements.sort((a, b) => a - b);
+console.log(movements);
+
+
+// decending
+movements.sort((a, b) => {
+  // if(a > b) return -1;
+  // if(b > a) return 1;
+  b - a
+});
+console.log(movements);
