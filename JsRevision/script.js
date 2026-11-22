@@ -1649,7 +1649,7 @@ const maxValue = movements.reduce(function(acc, cur){
 
 console.log(maxValue);
 
-*/
+
 
 const movements = [234, 644, -434, 780, -987, 345, 100];
 const eurToUsd = 1.1;
@@ -1661,4 +1661,24 @@ const totalDepositeUSD = movements
 
 console.log(totalDepositeUSD);
 
+*/
+const movements = [234, 644, -434, 7890, -987, 345, 100];
 
+const firstWithdrawal = movements.find((mov) => mov < 0);
+console.log(movements);
+console.log(firstWithdrawal);
+
+/////////////////////
+// the new findLast and findLastIndex Methods
+
+const lastWithdrawal = movements.findLast((mov) => mov < 0);
+console.log(lastWithdrawal);
+
+const lastWithdrawalIndex = movements.findLastIndex(mov => mov < 0);
+console.log(lastWithdrawalIndex);
+
+// 'Your last large movement was X movements ago'
+
+const largeMov = movements.findLastIndex(mov => Math.abs(mov > 2000));
+
+console.log(`Your last large movement was ${largeMov} movements ago`);
