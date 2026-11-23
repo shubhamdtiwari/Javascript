@@ -1769,17 +1769,18 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
-
-const groupedByActivity = Object.groupBy(accounts, acc => {
+const groupedByActivity = Object.groupBy(accounts, (acc) => {
   const movementCount = acc.movements.length;
 
-  if(movementCount >= 8) return 'very active';
-  if(movementCount >= 4) return 'active';
-  if(movementCount >= 1) return 'moderate';
+  if (movementCount >= 8) return 'very active';
+  if (movementCount >= 4) return 'active';
+  if (movementCount >= 1) return 'moderate';
   return 'inactive';
-
 });
 
 console.log(groupedByActivity);
 
-const groupedAccounts = Object.groupBy(accounts, acc => acc.type)
+// const groupedAccounts = Object.groupBy(accounts, (acc) => acc.type);
+
+const groupedAccounts = Object.groupBy(accounts, ({type}) => type);
+console.log(groupedAccounts);
