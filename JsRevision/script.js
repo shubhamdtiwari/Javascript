@@ -1733,7 +1733,7 @@ movements.sort((a, b) => {
   b - a
 });
 console.log(movements);
-*/
+
 
 const account1 = {
   owner: 'Jonas Schmedtmann',
@@ -1784,3 +1784,17 @@ console.log(groupedByActivity);
 
 const groupedAccounts = Object.groupBy(accounts, ({type}) => type);
 console.log(groupedAccounts);
+
+*/
+
+// more ways to create and fill arrays
+
+console.log([1,2,3,4,5,6]);
+console.log(new Array(1,2,34,4,56,7,8));
+
+// Empty Arrays and fill method
+const x = new Array(7);
+console.log(x);
+
+x.fill(1,3,5);
+console.log(x);
