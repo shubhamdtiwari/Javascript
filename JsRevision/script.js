@@ -1789,12 +1789,30 @@ console.log(groupedAccounts);
 
 // more ways to create and fill arrays
 
-console.log([1,2,3,4,5,6]);
-console.log(new Array(1,2,34,4,56,7,8));
+console.log([1, 2, 3, 4, 5, 6]);
+console.log(new Array(1, 2, 34, 4, 56, 7, 8));
 
 // Empty Arrays and fill method
 const x = new Array(7);
 console.log(x);
 
-x.fill(1,3,5);
+x.fill(1, 3, 5);
 console.log(x);
+
+x.fill(23, 2, 6);
+console.log(x);
+
+// Array.from
+
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+
+const randomdice = Array.from({ length: 100 }, () =>
+  Math.trunc(Math.random() * 6 + 1),
+);
+console.log(randomdice);
+const random = Math.random() * 10;
+console.log(random);
