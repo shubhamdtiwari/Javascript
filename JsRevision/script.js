@@ -1814,7 +1814,7 @@ const randomdice = Array.from({ length: 100 }, () =>
   Math.trunc(Math.random() * 6 + 1),
 );
 console.log(randomdice);
-*/
+
 
 const movements = [234, 644, -434, 7890, -987, 345, 100];
 
@@ -1828,5 +1828,44 @@ console.log(movements);
 // changing el
 // movements[0] = 209;
 const newMov = movements.with(1, 2000);
-
+console.log(newMov);
 console.log(movements);
+
+*/
+///////////////////////////////////////
+// nummbers , dates , intl and timers
+
+console.log(23 === 23.0);
+
+
+// Decimal base 10  - 0 to 9 
+// binary base 2 - 0 & 1
+
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 === 0.3); // false
+
+// Conversion;
+
+console.log(Number('23'));
+console.log(+'23');
+
+// Parsing
+console.log(Number.parseInt('30px')); //30
+console.log(Number.parseInt('we30')); // NaN
+
+console.log(Number.parseInt('    2.5rem')); // 2
+console.log(Number.parseFloat('2.5rem  ')); // 2.5
+
+// console.log(parseFloat('  45rem  '));
+
+console.log(Number.isNaN(20)); // false
+console.log(Number.isNaN('20')); // false
+console.log(Number.isNaN(+'20X')); // true
+console.log(Number.isNaN(20 / 3)); // false
+
+// cheaking if value is number
+console.log(Number.isFinite(20)); // true
+console.log(Number.isFinite('20')); // false
+console.log(Number.isFinite(+'20X'));// false
+console.log(Number.isFinite(23 / 0)); // false
+
