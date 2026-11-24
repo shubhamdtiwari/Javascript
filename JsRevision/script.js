@@ -1785,7 +1785,7 @@ console.log(groupedByActivity);
 const groupedAccounts = Object.groupBy(accounts, ({type}) => type);
 console.log(groupedAccounts);
 
-*/
+
 
 // more ways to create and fill arrays
 
@@ -1814,5 +1814,19 @@ const randomdice = Array.from({ length: 100 }, () =>
   Math.trunc(Math.random() * 6 + 1),
 );
 console.log(randomdice);
-const random = Math.random() * 10;
-console.log(random);
+*/
+
+const movements = [234, 644, -434, 7890, -987, 345, 100];
+
+console.log(movements);
+// const reverseMov = movements.reverse();
+// const reverseMov = movements.slice().reverse();
+const reverseMov = movements.toReversed();
+console.log(reverseMov);
+console.log(movements);
+
+// changing el
+// movements[0] = 209;
+const newMov = movements.with(1, 2000);
+
+console.log(movements);
