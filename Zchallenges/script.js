@@ -294,7 +294,9 @@ const dogs = [
 ];
 
 // 1.
-dogs.forEach((dog) => (dog.recommendedFood = dog.weight ** 0.75 * 28));
+dogs.forEach(
+  (dog) => (dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28)),
+);
 console.log(dogs);
 
 // 2.
@@ -327,13 +329,21 @@ console.log(`${ownersEatTooLittle.join(' and ')}'s dogs eat too little!`);
 console.log(dogs.some(dog => dog.curFood === dog.recommendedFood))
 
 //6
-const dogEatingOk = (dogs.filter(dog => dog.curFood > (dog.recommendedFood * 0.90) && dog.curFood < (dog.recommendedFood *
-1.10)));
+const cheakEatingOk = (dog) =>
+  dog.curFood > dog.recommendedFood * 0.9 &&
+  dog.curFood < dog.recommendedFood * 1.1;
+
+console.log(dogs.every(cheakEatingOk));
 
 /// 7 
-const okAmount = []
-dogs.map(dog => {
-  if(dog.curFood > (dog.recommendedFood * 0.90) && dog.curFood < (dog.recommendedFood *
-1.10)) okAmount.push(...dog.owners);
-});
-console.log(okAmount);
+// const okAmount = []
+// dogs.map(dog => {
+//   if(dog.curFood > (dog.recommendedFood * 0.90) && dog.curFood < (dog.recommendedFood *
+// 1.10)) okAmount.push(...dog.owners);
+// });
+// console.log(okAmount);
+const dogsEatingOkay = dogs.filter(cheakEatingOk);
+console.log(dogsEatingOkay);
+
+//8
+const 
