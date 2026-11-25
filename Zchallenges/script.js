@@ -289,6 +289,7 @@ const dogs = [
   { weight: 22, curFood: 250, owners: ["Alice", "Bob"] },
   { weight: 8, curFood: 200, owners: ["Matilda"] },
   { weight: 13, curFood: 275, owners: ["Sarah", "John"] },
+  { weight: 18, curFood: 244, owners: ["Leo"] },
   { weight: 32, curFood: 340, owners: ["Michael"] },
 ];
 
@@ -324,3 +325,15 @@ console.log(`${ownersEatTooLittle.join(' and ')}'s dogs eat too little!`);
 
 //5
 console.log(dogs.some(dog => dog.curFood === dog.recommendedFood))
+
+//6
+const dogEatingOk = (dogs.filter(dog => dog.curFood > (dog.recommendedFood * 0.90) && dog.curFood < (dog.recommendedFood *
+1.10)));
+
+/// 7 
+const okAmount = []
+dogs.map(dog => {
+  if(dog.curFood > (dog.recommendedFood * 0.90) && dog.curFood < (dog.recommendedFood *
+1.10)) okAmount.push(...dog.owners);
+});
+console.log(okAmount);
