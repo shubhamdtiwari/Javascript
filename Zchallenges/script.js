@@ -301,3 +301,16 @@ dogs.find(dog => {
   if(dog.owners.includes('Sarah'))
     console.log(`It's eating too ${dog.curFood > dog.recommendedFood ? 'much': 'little'}`);
 })
+
+//3
+const ownersEatTooMuch = [];
+const ownersEatTooLittle = [];
+dogs.map(dog => {
+  if(dog.curFood > dog.recommendedFood){
+    ownersEatTooMuch.push(...dog.owners);
+  }else{
+    ownersEatTooLittle.push(...dog.owners);
+  }
+});
+
+console.log(ownersEatTooLittle, ownersEatTooMuch);
