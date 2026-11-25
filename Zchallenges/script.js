@@ -292,4 +292,12 @@ const dogs = [
   { weight: 32, curFood: 340, owners: ["Michael"] },
 ];
 
-dogs.forEach();
+// 1.
+dogs.forEach((dog) => (dog.recommendedFood = dog.weight ** 0.75 * 28));
+console.log(dogs);
+
+// 2.
+dogs.find(dog => {
+  if(dog.owners.includes('Sarah'))
+    console.log(`It's eating too ${dog.curFood > dog.recommendedFood ? 'much': 'little'}`);
+})
