@@ -1831,7 +1831,7 @@ const newMov = movements.with(1, 2000);
 console.log(newMov);
 console.log(movements);
 
-*/
+
 ///////////////////////////////////////
 // nummbers , dates , intl and timers
 
@@ -1868,4 +1868,8 @@ console.log(Number.isFinite(20)); // true
 console.log(Number.isFinite('20')); // false
 console.log(Number.isFinite(+'20X'));// false
 console.log(Number.isFinite(23 / 0)); // false
+*/
+////////////////////////////////
+// Math andround
+
 

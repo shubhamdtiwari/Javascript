@@ -282,3 +282,5 @@ function calcAverageHumanAge(ages) {
     .filter((age) => age > 18)
     .reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 }
+
+// Coding Challenge #4
