@@ -1868,7 +1868,7 @@ console.log(Number.isFinite(20)); // true
 console.log(Number.isFinite('20')); // false
 console.log(Number.isFinite(+'20X'));// false
 console.log(Number.isFinite(23 / 0)); // false
-*/
+
 ////////////////////////////////
 // Math and round
 
@@ -1913,3 +1913,49 @@ console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
 console.log((2.75645).toFixed(2));
 console.log(+(2.756).toFixed(2));
+
+// remaider operator
+
+console.log(5 % 2);
+console.log(5 / 2);
+
+
+console.log(6 % 2);
+console.log(6 / 2);
+
+console.log(7 % 2);
+console.log(7 / 2);
+
+const isEven = n => n % 2 === 0;
+console.log(isEven(4));
+console.log(isEven(41));
+console.log(isEven(454));
+
+// numeric separator
+
+const num = 12_323_354;
+console.log(num);
+
+*/
+// BigInt
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+
+console.log(5647547865795684573264428709n);
+
+console.log(BigInt(564754728709));
+
+console.log(100000n + 1000000n);
+
+const huge = 86557645347643264899687n;
+const num = 635476;
+console.log(huge + BigInt(num));
+
+// exception
+console.log(20n > 2);
+console.log(20n === 20);
+console.log(20n == '20');
+
+
