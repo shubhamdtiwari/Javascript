@@ -1936,7 +1936,7 @@ console.log(isEven(454));
 const num = 12_323_354;
 console.log(num);
 
-*/
+
 // BigInt
 
 console.log(2 ** 53 - 1);
@@ -1957,5 +1957,35 @@ console.log(huge + BigInt(num));
 console.log(20n > 2);
 console.log(20n === 20);
 console.log(20n == '20');
+*/
+// Date and time
 
+const now = new Date();
+console.log(now);
 
+console.log(new Date('Nov 27 2026 02:17:27'));
+console.log(new Date('December 24, 2026'));
+console.log(new Date(0));
+console.log(new Date(2037, 10, 19, 10, 15, 24, 5));
+console.log(new Date(2037, 10, 19));
+
+// Working with date
+const future = new Date(2026, 11, 23, 12, 43);
+
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+console.log(future.getHours());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+
+console.log(new Date(1798009980000));
+
+console.log(Date.now());
+
+future.setFullYear(2040);
+console.log(future);
