@@ -346,4 +346,4 @@ const dogsEatingOkay = dogs.filter(cheakEatingOk);
 console.log(dogsEatingOkay);
 
 //8
-const 
+
