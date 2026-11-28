@@ -1957,7 +1957,7 @@ console.log(huge + BigInt(num));
 console.log(20n > 2);
 console.log(20n === 20);
 console.log(20n == '20');
-*/
+
 // Date and time
 
 const now = new Date();
@@ -1989,3 +1989,12 @@ console.log(Date.now());
 
 future.setFullYear(2040);
 console.log(future);
+*/
+
+const future = new Date(2026, 11, 23, 12, 43);
+console.log(+future); // changing to number value
+
+const calcDaysPassed = (date1, date2) => Math.abs((date2 - date1) / (1000 * 60 * 60 * 24));
+
+const day1 = calcDaysPassed(new Date(2037, 3,4), new Date(2037, 3,14));
+console.log(day1);
