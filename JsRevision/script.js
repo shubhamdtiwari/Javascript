@@ -1998,7 +1998,7 @@ const calcDaysPassed = (date1, date2) => Math.abs((date2 - date1) / (1000 * 60 *
 
 const day1 = calcDaysPassed(new Date(2037, 3,4), new Date(2037, 3,14));
 console.log(day1);
-*/
+
 
 const num = 567887789.82;
 
@@ -2011,4 +2011,28 @@ console.log('US:     ',new Intl.NumberFormat('en-US',options).format(num));
 console.log('Germany:',new Intl.NumberFormat('de-DE', options).format(num));
 console.log('India:   ',new Intl.NumberFormat('hi-IN', options).format(num));
 console.log(navigator.language, new Intl.NumberFormat(navigator.language).format(num));
+
+*/
+
+const ingredients = ['olives', 'spinach'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
+  3000,
+  ...ingredients,
+);
+console.log('Waiting...');
+
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+
+// setinterval
+
+setInterval(function () {
+  const options = {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  }
+  const now = new Date();
+  console.log(new Intl.DateTimeFormat(navigation.language, options).format(now));
+}, 1000);
 
